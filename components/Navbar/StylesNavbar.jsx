@@ -1,0 +1,81 @@
+import styled from "styled-components";
+
+export const ContainerNav = styled.div`
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0rem 0.75rem 0rem 0.75rem;
+  align-items: center;
+  width: 100%;
+  height: 3.2rem;
+  background-color: #272727;
+  border-bottom: solid #535353 1px;
+`;
+
+export const Seccion = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 5rem;
+    :hover {
+      cursor: pointer;
+    }
+    
+  }
+  .browser {
+    display: flex;
+    width: 14rem;
+    background-color: #4d4d4d;
+    color: ${({ theme }) => theme.text};
+    margin: 0rem 0.7rem 0rem 0.7rem;
+    height: 2.2rem;
+    align-items: center;
+    padding: 0rem 0.75rem 0rem 0.75rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+
+    input{
+      border: 0;
+      background-color: #4d4d4d;
+      outline: none;
+      text-align: justify;
+    }
+  }
+`;
+
+export const ContainSeccionsViews = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 2.8rem;
+  transition: all 0.3s;
+  font-size: 1.3rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.15rem 0.15rem;
+  color: white;
+  :hover {
+    background-color: #4d4d4d;
+    cursor: pointer;
+  }
+`;
+
+export const ContainSeccionCtrls = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  border-radius: 5rem;
+  margin: 0.25rem 0.25rem;
+  background-color: #4d4d4d;
+  color: #eee;
+  :hover {
+    background-color:#7e7e7e;
+    cursor: pointer;
+  }
+`;
