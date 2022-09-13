@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const ContainerNav = styled.div`
   display: flex;
@@ -10,6 +10,7 @@ export const ContainerNav = styled.div`
   height: 3.2rem;
   background-color: #272727;
   border-bottom: solid #535353 1px;
+
 `;
 
 export const Seccion = styled.div`
@@ -35,14 +36,21 @@ export const Seccion = styled.div`
     align-items: center;
     padding: 0rem 0.75rem 0rem 0.75rem;
     border-radius: 2rem 2rem 2rem 2rem;
+    @media(max-width: 1024px){
+      width: 100%;
+    }
 
     input{
       border: 0;
       background-color: #4d4d4d;
       outline: none;
       text-align: justify;
+      @media(max-width: 1024px){
+        display: none;
+      }
     }
   }
+
 `;
 
 export const ContainSeccionsViews = styled.div`
@@ -59,6 +67,9 @@ export const ContainSeccionsViews = styled.div`
   :hover {
     background-color: #4d4d4d;
     cursor: pointer;
+  }
+  @media(max-width: 1024px){
+    display: none;
   }
 `;
 

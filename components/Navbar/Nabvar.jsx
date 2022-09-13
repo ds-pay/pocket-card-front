@@ -1,27 +1,13 @@
 import React from "react";
-import { Seccion, ContainSeccionsViews, ContainSeccionCtrls} from "./StylesNavbar";
+import { ContainerNav, Seccion, ContainSeccionsViews, ContainSeccionCtrls} from "./StylesNavbar";
 import { FaHome, FaBell } from "react-icons/fa";
 import { HiUsers, HiUser, HiViewGridAdd } from "react-icons/hi";
-import { CgScreen } from "react-icons/cg";
 import { ImNewspaper } from 'react-icons/im'
-import { MdPolicy } from 'react-icons/md'
-import { MdViewCarousel } from "react-icons/md";
-import { BsChatDotsFill } from "react-icons/bs";
+import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
+import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { TiArrowSortedDown } from 'react-icons/ti';
-import styled from 'styled-components'
 
-const ContainerNav = styled.div`
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-  padding: 0rem 0.75rem 0rem 0.75rem;
-  align-items: center;
-  width: 100%;
-  height: 3.2rem;
-  background-color: #272727;
-  border-bottom: solid #535353 1px;
-`;
 
 const Nabvar = () => {
   const SeccionViews = [
@@ -41,6 +27,7 @@ const Nabvar = () => {
       id: "user",
       icon: <HiUser />,
     },
+
     // {
     //   id: "carousel",
     //   icon: <MdViewCarousel />,
@@ -49,20 +36,20 @@ const Nabvar = () => {
 
   const SeccionLogsCtrls = [
     {
-      id: "view-grid",
-      icon: <HiViewGridAdd />,
-    },
-    {
-      id: "chat",
-      icon: <BsChatDotsFill />,
+      id: "ctrl-theme",
+      icon: <BsFillSunFill />,
     },
     {
       id: "bell",
       icon: <FaBell />,
     },
     {
-      id: "arrow-down",
-      icon: <TiArrowSortedDown />,
+      id: "img",
+      icon: <img src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
+    },
+    {
+      id: "burguer-menu",
+      icon: <GiHamburgerMenu />,
     },
   ];
 
@@ -75,16 +62,16 @@ const Nabvar = () => {
         </div>
       </Seccion>
       <Seccion>
-        {SeccionViews.map((sec, index) => (
-          <ContainSeccionsViews id={sec.id} key={index}>
-            {sec.icon}
+        {SeccionViews.map((viw, index) => (
+          <ContainSeccionsViews id={viw.id} key={index}>
+            {viw.icon}
           </ContainSeccionsViews>
         ))}
       </Seccion>
       <Seccion>
-        {SeccionLogsCtrls.map((sec, index) => (
-          <ContainSeccionCtrls id={sec.id} key={index}>
-            {sec.icon}
+        {SeccionLogsCtrls.map((logs, index) => (
+          <ContainSeccionCtrls id={logs.id} key={index}>
+            {logs.icon}   
           </ContainSeccionCtrls>
         ))}
       </Seccion>
