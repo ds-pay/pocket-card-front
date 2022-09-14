@@ -17,6 +17,7 @@ export const Seccion = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
   img {
     width: 2.3rem;
     height: 2.3rem;
@@ -75,6 +76,9 @@ export const ContainSeccionsViews = styled.div`
 
 export const ContainSeccionCtrls = styled.div`
   display: flex;
+  /* display: ${({isView}) => !isView ? "flex" : "none"}; */
+  transform: ${({ handleSun }) => handleSun ? "rotate(180deg)" : "rotate(0)"};
+  transition: all 0.5s;
   justify-content: center;
   align-items: center;
   width: 2.2rem;
@@ -88,5 +92,8 @@ export const ContainSeccionCtrls = styled.div`
   :hover {
     background-color:#7e7e7e;
     cursor: pointer;
+  }
+  @media(max-width: 1024px){
+    display: flex;
   }
 `;
