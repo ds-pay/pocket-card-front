@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const ContainerDropOne = styled.div`
+export const ContainerDropdown = styled.div`
     display: flex;
     flex-direction: column;
     right: 0;
@@ -14,7 +14,7 @@ export const ContainerDropOne = styled.div`
     opacity: ${({ handleBurguer }) => !handleBurguer ? 0 : 1};
 `;
 
-export const ContainerSeccion = styled.div`
+export const DrpdownBurguer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;

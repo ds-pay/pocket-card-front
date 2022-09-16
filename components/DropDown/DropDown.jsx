@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContainerDropOne, ContainerSeccion, Seccion } from './StyleDropDown'
+import { ContainerDropdown, DrpdownBurguer, Seccion } from './StyleDropDown'
 import { HiUser } from "react-icons/hi";
 import { GoGear } from "react-icons/go";
 import { FaArrowRight } from "react-icons/fa"
@@ -28,8 +28,8 @@ const DropDown = ({ handleBurguer }) => {
     ]
 
   return (
-    <ContainerDropOne handleBurguer={handleBurguer} >
-        <ContainerSeccion>
+    <ContainerDropdown handleBurguer={handleBurguer} >
+        <DrpdownBurguer>
             {SeccionConfig.map((sec, index) => (
                 <Seccion id={sec.id} key={index}>
                     <div isJustify={true} className="seccion-1"> 
@@ -41,8 +41,9 @@ const DropDown = ({ handleBurguer }) => {
                     </div>
                 </Seccion>
             ))}
-        </ContainerSeccion>
-    </ContainerDropOne>
+        </DrpdownBurguer>
+        
+    </ContainerDropdown>
   )
 }
 
