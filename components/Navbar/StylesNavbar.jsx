@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const ContainerNav = styled.div`
   display: flex;
+  position: sticky;
   justify-content: center;
   justify-content: space-between;
   padding: 0rem 0.75rem 0rem 0.75rem;
@@ -10,7 +11,6 @@ export const ContainerNav = styled.div`
   height: 3.2rem;
   background-color: #272727;
   border-bottom: solid #535353 1px;
-
 `;
 
 export const Seccion = styled.div`
@@ -18,7 +18,7 @@ export const Seccion = styled.div`
   justify-content: center;
   align-items: center;
   
-  img {
+  .imgUser {
     width: 2.3rem;
     height: 2.3rem;
     border-radius: 5rem;
@@ -77,7 +77,7 @@ export const ContainSeccionsViews = styled.div`
 export const ContainSeccionCtrls = styled.div`
   display: flex;
   /* display: ${({isView}) => !isView ? "flex" : "none"}; */
-  transform: ${({ handleSun }) => handleSun ? "rotate(180deg)" : "rotate(0)"};
+  transform: ${({ handle }) => handle? "rotate(360deg)" : "rotate(0)"};
   transition: all 0.5s;
   justify-content: center;
   align-items: center;

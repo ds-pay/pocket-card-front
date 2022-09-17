@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import { ContainerNav, Seccion, ContainSeccionsViews, ContainSeccionCtrls} from "./StylesNavbar";
 import { FaHome, FaBell } from "react-icons/fa";
 import { HiUsers, HiUser, HiViewGridAdd } from "react-icons/hi";
@@ -7,13 +7,15 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { TiArrowSortedDown } from 'react-icons/ti';
-import DropDown from '../DropDown/DropDown'
+import DropDownBurguer from '../DropDown/DropDownBurguer'
+import DropDownNotifications from '../DropDown/DropDownNotifications'
 
 
-const Nabvar = () => {
+const Navbar: FC = () => {
 
-  const [ handleSun, setHandleSun ] = useState(false)
+  const [ handleSun, setHandleSun ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false)
+  const [ handleBell, setHandleBell ] = useState(true)
 
 
   const SeccionViews = [
@@ -56,11 +58,13 @@ const Nabvar = () => {
       state: true,
       id: "bell",
       icon: <FaBell />,
+      ctrol: handleBell,
+      funcion: setHandleBell
     },
     {
       state: true,
       id: "img",
-      icon: <img src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
+      icon: <img className="imgUser" src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
     },
     {
       state: false,
@@ -86,16 +90,17 @@ const Nabvar = () => {
           </ContainSeccionsViews>
         ))}
       </Seccion>
-      <Seccion>
+{/*       <Seccion>
         {SeccionLogsCtrls.map((logs, index) => (
-          <ContainSeccionCtrls onClick={() => logs.funcion(!logs.ctrol)} handleSun={logs.ctrol} isView={logs.state} id={logs.id} key={index}>
+          <ContainSeccionCtrls onClick={() => logs.funcion(!logs.ctrol)} handle={logs.ctrol} isView={logs.state} id={logs.id} key={index}>
             {logs.icon}   
           </ContainSeccionCtrls>
         ))}
-        <DropDown handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
-      </Seccion>
+        <DropDownBurguer handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
+        <DropDownNotifications handleBell={handleBell} setHandleBell={setHandleBell}/>
+      </Seccion> */}
     </ContainerNav>
   );
 };
 
-export default Nabvar;
+export default Navbar;
