@@ -65,6 +65,7 @@ export const ContainSeccionsViews = styled.div`
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
   color: white;
+  background-color: ${({isSelected}) => isSelected ? "#4d4d4d" : null };
   :hover {
     background-color: #4d4d4d;
     cursor: pointer;

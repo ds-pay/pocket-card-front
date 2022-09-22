@@ -5,6 +5,7 @@ export const ContainerDropdown = styled.div`
   flex-direction: column;
   right: 0;
   top: 3.5rem;
+  z-index: -1;
   position: absolute;
   background-color: #272727;
   border: solid #535353 1px;
@@ -12,10 +13,10 @@ export const ContainerDropdown = styled.div`
   animation: slideOpen 0.5s;
   @keyframes slideOpen {
     0% {
-      transform: translateX(100%);
+      transform: translateY(-100%);
     }
     100% {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 `;
@@ -59,9 +60,20 @@ export const Seccion = styled.div`
 
 export const ContianerNotifications = styled.div`
   display: ${({ handleBell }) => (!handleBell ? "flex" : "none")};
+  animation: slideOpen 0.5s;
+  @keyframes slideOpen {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  z-index: -1;
   flex-direction: column;
-  right: 6rem;
+  right: 0rem;
   top: 3.5rem;
+  width: 30rem;
   position: absolute;
   background-color: #272727;
   border: solid #535353 1px;
@@ -70,31 +82,53 @@ export const ContianerNotifications = styled.div`
   height: 20rem;
   overflow: scroll;
   overflow-x: hidden;
+  @media(max-width: 1024px){
+    right: 0rem;
+    top: 3.5rem;
+    width: 20rem;
+    height: 100vh
+  }
 `;
 
 export const SeccionNotifications = styled.div`
   display: flex;
+  padding: 1rem 0.7rem 1rem 0.7rem;
   justify-content: center;
   align-items: center;
   .ContainerImg {
+    width: 40%;
+    padding: 0rem 0rem 0.25rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      width: 10rem;
-      height: 16rem;
+      width: 9rem;
+      height: 6rem;
       object-fit: cover;
-      border-radius: 1rem 1rem 1rem 1rem;
+      border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+  }
+  .ContainerPromo{
+    width: 60%;
+    padding: 0rem 0rem 0rem 0.25rem;
+    h1{
+        margin: 0;
+        font-size: 1rem;
+    }
+    p{
+        margin: 0;
+        font-size: 0.8rem;
     }
   }
   .ContainerTime {
     display: flex;
     justify-content: space-between;
-    height: 7rem;
+    height: 3rem;
     div {
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
+  
 `;

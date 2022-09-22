@@ -1,22 +1,27 @@
 import React, { useState, FC } from "react";
-import { ContainerNav, Seccion, ContainSeccionsViews, ContainSeccionCtrls} from "./StylesNavbar";
+import { ContainerNav, Seccion, ContainSeccionCtrls} from "./StylesNavbar";
 import { FaHome, FaBell } from "react-icons/fa";
 import { HiUsers, HiUser, HiViewGridAdd } from "react-icons/hi";
 import { ImNewspaper } from 'react-icons/im'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BiSearchAlt2 } from "react-icons/bi";
-import { TiArrowSortedDown } from 'react-icons/ti';
 import DropDownBurguer from '../DropDown/DropDownBurguer'
 import DropDownNotifications from '../DropDown/DropDownNotifications'
+import Search from './Search'
+import SeccionMedium from './SeccionMedium'
+import SeccionRight from './SeccionRight'
 
 
-const Navbar: FC = () => {
+const Navbar = () => {
 
   const [ handleSun, setHandleSun ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false)
   const [ handleBell, setHandleBell ] = useState(true)
+  const [ selection, setSelection ] = useState("home") 
 
+  const selectionViw = (mira) => {
+    setSelection(mira)
+  }
 
   const SeccionViews = [
     {
@@ -39,11 +44,6 @@ const Navbar: FC = () => {
       id: "user",
       icon: <HiUser />,
     },
-
-    // {
-    //   id: "carousel",
-    //   icon: <MdViewCarousel />,
-    // },
   ];
 
   const SeccionLogsCtrls = [
@@ -78,27 +78,16 @@ const Navbar: FC = () => {
   return (
     <ContainerNav>
       <Seccion>
-        <div className="browser">
-          <input type="text" placeholder="Busca en Pocket" />
-          <BiSearchAlt2 />
-        </div>
+        <Search/>
       </Seccion>
       <Seccion>
-        {SeccionViews.map((viw, index) => (
-          <ContainSeccionsViews id={viw.id} key={index}>
-            {viw.icon}
-          </ContainSeccionsViews>
-        ))}
+        <SeccionMedium selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
       </Seccion>
-{/*       <Seccion>
-        {SeccionLogsCtrls.map((logs, index) => (
-          <ContainSeccionCtrls onClick={() => logs.funcion(!logs.ctrol)} handle={logs.ctrol} isView={logs.state} id={logs.id} key={index}>
-            {logs.icon}   
-          </ContainSeccionCtrls>
-        ))}
-        <DropDownBurguer handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
-        <DropDownNotifications handleBell={handleBell} setHandleBell={setHandleBell}/>
-      </Seccion> */}
+      <Seccion>
+        <SeccionRight SeccionLogsCtrls={SeccionLogsCtrls}/>
+      </Seccion>
+      <DropDownBurguer handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
+      <DropDownNotifications handleBell={handleBell} setHandleBell={setHandleBell}/>
     </ContainerNav>
   );
 };
