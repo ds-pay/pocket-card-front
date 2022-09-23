@@ -14,10 +14,11 @@ import SeccionRight from './SeccionRight'
 
 const Navbar = () => {
 
-  const [ handleSun, setHandleSun ] = useState(true)
+  const [ handleTheme, setHandleTheme ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false)
   const [ handleBell, setHandleBell ] = useState(true)
   const [ selection, setSelection ] = useState("home") 
+  const [ theme, setTheme ] = useState("light")
 
   const selectionViw = (mira) => {
     setSelection(mira)
@@ -50,30 +51,35 @@ const Navbar = () => {
     {
       state: true,
       id: "ctrl-theme",
-      icon: <BsFillSunFill />,
-      ctrol: handleSun,
-      funcion: setHandleSun
+      icon1: theme === "light"? <BsFillMoonFill /> : <BsFillSunFill />,
+      ctrol: handleTheme,
+      funcion: setHandleTheme,
+      const: HandleTheme
     },
     {
       state: true,
       id: "bell",
-      icon: <FaBell />,
+      icon1: <FaBell />,
       ctrol: handleBell,
       funcion: setHandleBell
     },
     {
       state: true,
       id: "img",
-      icon: <img className="imgUser" src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
+      icon1: <img className="imgUser" src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
     },
     {
       state: false,
       id: "burguer-menu",
-      icon: <GiHamburgerMenu />,
+      icon1: <GiHamburgerMenu />,
       ctrol: handleBurguer,
       funcion: setHandleBurguer
     },
   ];
+
+  function HandleTheme () {
+    setTheme(theme === "light"? "dark" : "light")
+  }
 
   return (
     <ContainerNav>
