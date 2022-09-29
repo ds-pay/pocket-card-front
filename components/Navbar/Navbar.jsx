@@ -19,8 +19,8 @@ const Navbar = () => {
   const [ handleBell, setHandleBell ] = useState(true)
   const [ selection, setSelection ] = useState("home") 
 
-  const selectionViw = (mira) => {
-    setSelection(mira)
+  const selectionViw = (sec) => {
+    setSelection(sec)
   }
 
   const SeccionViews = [
