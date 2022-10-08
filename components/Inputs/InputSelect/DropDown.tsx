@@ -1,18 +1,29 @@
 import { Container } from './StylesInputs'
-import { ContentPropsDrop } from './Interfaces'
+import { DropDownProps, dataSelect } from './Interfaces'
+import { useEffect, useRef } from 'react'
 
 
 
-function DropDown({ contentdropDown, isSelection, selectNewValue }: ContentPropsDrop) {
-
-
+function DropDown({ dataSelectList, isActive, handleSelect, setIsActive}: DropDownProps) {
   
+  const handleClick = (selection: dataSelect) =>{
+    handleSelect(selection)
+    setIsActive(false)
+  }
+
+ const menuRef = useRef();
+
+  useEffect(() => (
+  document.addEventListener("mouseup", (event) => {
+     console.log(event.target)
+  })
+  ),[]);
 
   return (
-    <Container isSelection={isSelection}>
-      {contentdropDown.map((log, index) => (
-        <div onClick={() => {}} key={index}>
-          <h1>{log.label}</h1>
+    <Container ref={menuRef} isActive={isActive}>
+      {dataSelectList?.map((dataSelect:dataSelect, index:number) => (
+        <div onClick={() => handleClick(dataSelect)} key={index}>
+          <h1>{dataSelect.label}</h1>
         </div>
       ))}
     </Container>

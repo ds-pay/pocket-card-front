@@ -1,81 +1,62 @@
 import React, { useState } from "react";
-import DropDown from './DropDown'
-import {
-  AiFillLinkedin,
-  AiOutlineTwitter,
-  AiFillYoutube,
-} from "react-icons/ai";
-import { BsInstagram, BsFacebook } from "react-icons/bs";
+import DropDown from "./DropDown";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { ContainerInput, ContainerDrop } from "./StylesInputs";
-import { ContentDropDown } from './Interfaces'
+import { InputSelectProps, dataSelect } from "./Interfaces";
 
-const InputSelect = () => {
+const InputSelect = ({
+  dataSelectList,
+  useIcons,
+}: InputSelectProps) => {
+  const [isActive, setIsActive] = useState(false);
+  const [currentSelection, setCurrentSelection] = useState<dataSelect>();
 
-  const [selection, setSelection] = useState(true);
-  const [currentId, setCurrentId] = useState("facebook");
+  const handleSelect = (selection: dataSelect) => {
+    setCurrentSelection(selection);
+  };
 
+  const viewSelection = () => {
+    return (
+      <span className={`no-selection ${currentSelection && "selection-title"}`}>
+        {currentSelection ? currentSelection.label : "Selecciona una opción"}
+      </span>
+    );
+  };
 
-  const ContentDropDown: ContentDropDown[] = [
-    {
-      id: "facebook",
-      icon: <BsFacebook />,
-      label: "Facebook",
-    },
-    {
-      id: "linkedin",
-      icon: <AiFillLinkedin />,
-      label: "Linkedin",
-    },
-    {
-      id: "instagram",
-      icon: <BsInstagram />,
-      label: "Instagram",
-    },
-    {
-      id: "twitter",
-      icon: <AiOutlineTwitter />,
-      label: "Twitter",
-    },
-    {
-      id: "youtube",
-      icon: <AiFillYoutube />,
-      label: "Youtube",
-    },
-  ];
-
-  const selectNewValue = (id: string) => {
-    setCurrentId(id)
+  const viewIconSelection = () => {
+    return (
+      useIcons && (
+        <span className="selection-icon">
+          {currentSelection && currentSelection.icon}
+        </span>
+      )
+    );
   };
 
   return (
     <>
       <ContainerInput
-        id="drop"
-        onClick={() => setSelection(!selection)}
-        isSelection={selection}
+        onClick={() => setIsActive(!isActive)}
+        isActive={isActive}
       >
-        <span className="drop-title-icon">
-          <div className="svg-logo"><BsFacebook /></div>
-          <span className="drop-title-text">
-            <h3>Fecabook</h3>
-          </span>
-        </span>
-        <span className="drop-arrow">
-          <div>
+        <div className="input-content">
+          {viewIconSelection()}
+          {viewSelection()}
+          <span className="selection-arrow">
             <TiArrowSortedDown />
-          </div>
-        </span>
+          </span>
+        </div>
       </ContainerInput>
       <ContainerDrop>
         <DropDown
-          isSelection={selection}
-          contentdropDown={ContentDropDown}
-          selectNewValue={selectNewValue}
+          dataSelectList={dataSelectList}
+          isActive={isActive}
+          handleSelect={handleSelect}
+          setIsActive={setIsActive}
         />
       </ContainerDrop>
     </>
   );
 };
 
-export default InputSelect
+export default InputSelect;

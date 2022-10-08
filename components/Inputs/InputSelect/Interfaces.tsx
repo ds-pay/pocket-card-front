@@ -1,15 +1,23 @@
-export interface ContentPropsDrop {
-    contentdropDown: ContentDropDown[],
-    isSelection: boolean,
-    selectNewValue: (id: string) => void,
-};
-
-export interface ContentDropDown {
-    id: string,
-    icon: any,
-    label: string
-};
-
-export interface InputSelect {
-    input: any,
+export interface InputSelectProps {
+    dataSelectList: dataSelect[]
+    useIcons?: boolean
 }
+
+export interface DropDownProps {
+    dataSelectList: dataSelect[]
+    isActive: boolean
+    handleSelect: (slection: dataSelect) => void
+    setIsActive: (value: boolean) => void
+};
+
+export interface dataSelect {
+    id: string
+    icon?: any
+    label: string
+    value: any
+};
+
+export interface ContainerDropProps {
+    isActive: boolean
+    ref?:any
+  }

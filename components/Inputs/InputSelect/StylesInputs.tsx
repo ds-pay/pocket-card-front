@@ -1,12 +1,9 @@
 import styled from "styled-components";
+import {ContainerDropProps} from './Interfaces'
 
-interface DropProps {
-    isSelection: boolean,
-}
-
-
-export const ContainerInput = styled.div<DropProps>`
-  width: 20rem;
+export const ContainerInput = styled.div<ContainerDropProps>`
+  max-width: 20rem;
+  width:90%;
   height: 3rem;
   color: #b9b9b9;
   display: flex;
@@ -14,43 +11,48 @@ export const ContainerInput = styled.div<DropProps>`
   justify-content: center;
   border-radius: 1rem;
   border: none;
-  box-shadow: ${({ isSelection }) => !isSelection ? "0px 0px 4px 1px #638cfd" : "none"};
+  box-shadow: ${({ isActive }) =>
+    !isActive ? "0px 0px 4px 1px #638cfd" : "none"};
   background-color: #474a50;
   transition: all 0.2s;
   :hover {
     color: #dddddd;
     cursor: pointer;
-  }
+  };
   span {
     width: 30%;
-  }
-  .drop-title-icon {
-    width: 50%;
+  };
+  .input-content {
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 1rem 0 1rem;
+  };
+  .selection-icon {
+    width: 10%;
+    display: flex;
+    justify-content: center;
     .svg-logo {
       margin: 0.5rem;
     }
-    .drop-title-text {
-      margin: 0.5rem;
-    }
+  };
+  .selection-title {
+    font-weight: bold;
+  };
+  .no-selection{
+    margin: 0.5rem;
+    width: 80%;
   }
-  .drop-arrow {
-    width: 50%;
+  .selection-arrow {
+    width: 10%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 1rem;
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s;
-      transform: ${({ isSelection }) =>
-        !isSelection ? "rotate(180deg)" : "rotate(0)"};
-    }
-  }
+    justify-content: center;
+    transition: all 0.3s;
+    transform: ${({ isActive }) =>
+      !isActive ? "rotate(180deg)" : "rotate(0)"};
+  };
 `;
 
 export const ContainerDrop = styled.div`
@@ -61,13 +63,13 @@ export const ContainerDrop = styled.div`
   align-items: flex-start;
 `;
 
-export const Container = styled.div<DropProps>`
+export const Container = styled.div<ContainerDropProps>`
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20rem;
-  height: ${({isSelection}) => isSelection? "0rem" : "20rem"};
+  height: ${({ isActive }) => (isActive ? "20rem" : "0rem")};
   margin: 0.4rem;
   border-radius: 1rem;
   flex-direction: column;
@@ -86,8 +88,8 @@ export const Container = styled.div<DropProps>`
     margin: 0.3rem 0.5rem 0.3rem 0.9rem;
     border-radius: 1rem;
     overflow: hidden;
-    opacity: ${({isSelection}) => isSelection? "0": "1"};
-    transition: ${({isSelection}) => isSelection? "all 0.1s" : "all 0.5s"};
+    opacity: ${({ isActive }) => (isActive ? "1" : "0")};
+    transition: ${({ isActive }) => (isActive ? "all 0.5s" : "all 0.1s")};
     :hover {
       background-color: #383b3d;
       color: #dddddd;
