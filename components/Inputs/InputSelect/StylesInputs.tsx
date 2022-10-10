@@ -12,7 +12,7 @@ export const ContainerInput = styled.div<ContainerDropProps>`
   border-radius: 1rem;
   border: none;
   box-shadow: ${({ isActive }) =>
-    !isActive ? "0px 0px 4px 1px #638cfd" : "none"};
+    isActive ? "0px 0px 4px 1px #638cfd" : "none"};
   background-color: #474a50;
   transition: all 0.2s;
   :hover {
@@ -51,7 +51,7 @@ export const ContainerInput = styled.div<ContainerDropProps>`
     justify-content: center;
     transition: all 0.3s;
     transform: ${({ isActive }) =>
-      !isActive ? "rotate(180deg)" : "rotate(0)"};
+      isActive ? "rotate(180deg)" : "rotate(0)"};
   };
 `;
 
