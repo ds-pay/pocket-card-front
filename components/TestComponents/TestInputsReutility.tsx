@@ -1,6 +1,10 @@
 import React from 'react'
 import InputText from '../Inputs/InputText/InputText'
 import { ContainerTests } from './StylesTets'
+import InputDate from '../Inputs/InputDate/InputDate'
+import { MuiPickersUtilsProvider } from '@material-ui/pickers'
+import DateFnsUtils from '@date-io/date-fns'
+
 
 const TestInputsReutility = () => {
 
@@ -31,12 +35,21 @@ const TestInputsReutility = () => {
   return (
     <>
         <ContainerTests>
-            {ArrayInputsText.map((sec, index) => (
-                <div className='containe-inputs' key={index}>
-                    <InputText name={sec.name} color={sec.color} type={sec.type} />
-                </div>
-            ))}
+            <div className='input-text'>
+                {ArrayInputsText.map((sec, index) => (
+                    <div className='containe-input-text' key={index}>
+                        <InputText name={sec.name} color={sec.color} type={sec.type} />
+                    </div>
+                ))}
+            </div>
+
+            <div className='input-date'>
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <InputDate/>
+                </MuiPickersUtilsProvider>
+            </div>
         </ContainerTests>
+
     </>
   )
 }
