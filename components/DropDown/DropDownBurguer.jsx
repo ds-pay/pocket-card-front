@@ -24,31 +24,29 @@ const DropDown = ({ handleBurguer }) => {
       description: "Cerrar Sesión",
     },
   ];
-  const render = () => {
-    if (!handleBurguer) return;
-    return (
-      <ContainerDropdown handleBurguer={handleBurguer}>
-        <DrpdownBurguer>
-          {SeccionConfig.map((sec, index) => (
-            <Seccion id={sec.id} key={index}>
-              <div isJustify={true} className="seccion-1">
-                {sec.icon}
-                <p>{sec.description}</p>
-              </div>
-              <div isJustify={false} className="seccion-2">
-                {sec.arrow}
-              </div>
-            </Seccion>
-          ))}
-        </DrpdownBurguer>
-      </ContainerDropdown>
-    );
-  };
+  // const render = () => {
+  //   if (!handleBurguer) return;
+  //   return (
+
+  //   );
+  // };
 
   return (
-    <Fragment>
-        {render()}
-    </Fragment>
+    <ContainerDropdown handleBurguer={handleBurguer}>
+    <DrpdownBurguer handleBurguer={handleBurguer}>
+      {SeccionConfig.map((sec, index) => (
+        <Seccion  id={sec.id} key={index}>
+          <div isJustify={true} className="seccion-1">
+            {sec.icon}
+            <p>{sec.description}</p>
+          </div>
+          <div isJustify={false} className="seccion-2">
+            {sec.arrow}
+          </div>
+        </Seccion>
+      ))}
+    </DrpdownBurguer>
+  </ContainerDropdown>
   );
 };
 

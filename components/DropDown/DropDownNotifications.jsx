@@ -43,7 +43,7 @@ const DropDownNotifications = ({ handleBell }) => {
   return (
     <ContianerNotifications handleBell={handleBell}>
         {Notifications.map((sec, index) => (
-            <SeccionNotifications key={index}>
+            <SeccionNotifications handleBell={handleBell} key={index}>
                 <div className='ContainerImg'>
                   <img src={sec.img} alt={sec.alt} />
                 </div>

@@ -20,8 +20,8 @@ const Navbar = () => {
   const [ selection, setSelection ] = useState("home") 
   const [ theme, setTheme ] = useState("light")
 
-  const selectionViw = (mira) => {
-    setSelection(mira)
+  const selectionViw = (sec) => {
+    setSelection(sec)
   }
 
   const SeccionViews = [
