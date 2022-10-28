@@ -4,10 +4,8 @@ import { TiArrowSortedDown } from "react-icons/ti";
 import { ContainerInput, ContainerDrop } from "./StylesInputs";
 import { InputSelectProps, dataSelect } from "./Interfaces";
 
-const InputSelect = ({
-  dataSelectList,
-  useIcons,
-}: InputSelectProps) => {
+const InputSelect = ({ dataSelectList, useIcons,}: InputSelectProps) => {
+
   const [isActive, setIsActive] = useState(false);
   const [currentSelection, setCurrentSelection] = useState<dataSelect>();
 
@@ -35,9 +33,7 @@ const InputSelect = ({
 
   return (
     <>
-      <ContainerInput
-        onClick={() => setIsActive(!isActive)}
-        isActive={isActive}
+      <ContainerInput onClick={() => setIsActive(!isActive)} isActive={isActive}
       >
         <div className="input-content">
           {viewIconSelection()}

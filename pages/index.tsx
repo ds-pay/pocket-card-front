@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-// import Navbar from '../components/Navbar/Navbar'
+import Navbar from '../components/Navbar/Navbar'
 import InputSelect from "../components/Inputs/InputSelect/InputSelect";
-import InputText from "../components/Inputs/InputText/InputText"
+import TestInputsReutility from '../components/TestComponents/TestInputsReutility'
 import {
   AiFillLinkedin,
   AiOutlineTwitter,
@@ -13,6 +13,7 @@ import {
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 
 const Home: NextPage = () => {
+
   const ContentDropDown = [
     {
       id: "facebook",
@@ -45,15 +46,16 @@ const Home: NextPage = () => {
       value: "youtube",
     },
   ];
+
   return (
     <div className={styles.container}>
-      {/* <Navbar/>       */}
-      <div style={{display: "flex"}}>
+      <Navbar/>
+      <div style={{display: "flex", flexDirection: "column"}}>
         <div style={{width: "30rem"}}>
           <InputSelect dataSelectList={ContentDropDown} useIcons={true} />
         </div>
-        <div>
-          <InputText/>
+        <div style={{display: "flex", flexDirection: "row"}}>
+         <TestInputsReutility/>
         </div>
       </div>
       <Head>

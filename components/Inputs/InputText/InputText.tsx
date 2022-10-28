@@ -1,16 +1,16 @@
-import React from "react";
 import { ContainInputText } from "./StylesInputsText";
+import { dataText } from './Interface'
 
-const InputText = () => {
+const InputText = ({ name, color, type}: dataText)  => {
 
   return (
     <>
-      <ContainInputText>
+      <ContainInputText IsColor={color}>
         <form className="form">
-          <input type="text" required />
+          <input type={type} required />
           <label className="lbl-name" >
             <span className="text-name">
-                Nombre
+              {name}
             </span>
           </label>
         </form>

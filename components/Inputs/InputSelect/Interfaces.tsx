@@ -1,7 +1,7 @@
 export interface InputSelectProps {
     dataSelectList: dataSelect[]
     useIcons?: boolean
-}
+};
 
 export interface DropDownProps {
     dataSelectList: dataSelect[]
@@ -20,4 +20,4 @@ export interface dataSelect {
 export interface ContainerDropProps {
     isActive: boolean
     ref?:any
-  }
+};
