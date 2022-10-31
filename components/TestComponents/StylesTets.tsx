@@ -21,6 +21,9 @@ export const ContainerTests = styled.div`
     }
 
     .input-date{
-
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 2rem 0 2rem 0;
     }
 `;  

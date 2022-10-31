@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import InputText from '../Inputs/InputText/InputText'
 import { ContainerTests } from './StylesTets'
-import InputDate from '../Inputs/InputDate/InputDate'
+import InputDate from '../Inputs/InputDate/InputDate.jsx'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import DateFnsUtils from '@date-io/date-fns'
+import esLocale from 'date-fns/locale/es'
 
 
 const TestInputsReutility = () => {
@@ -44,7 +45,7 @@ const TestInputsReutility = () => {
             </div>
 
             <div className='input-date'>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
                     <InputDate/>
                 </MuiPickersUtilsProvider>
             </div>
