@@ -1,16 +1,34 @@
 import React from 'react'
-import { Overlay, ModalContainer, HeaderModal } from './StylesModal'
+import { Overlay, ModalContainer, ModalHeader, ModalClose } from './StylesModal'
+import { FiX } from 'react-icons/fi'
 
-const ModalReusable = () => {
+const ModalReusable = ({
+    children, 
+    stateModal, 
+    setStateModal,
+    title,
+    isTitle,
+    isOverlay,
+    modalPositionY,
+    modalPositionX
+}) => {
   return (
     <>
-        <Overlay>
-            <ModalContainer>
-                <HeaderModal>
-                    <h1>Contenido</h1>
-                </HeaderModal>
-            </ModalContainer>
-        </Overlay>
+        {stateModal &&
+            <Overlay modalPositionY={modalPositionY} modalPositionX={modalPositionX} isOverlay={isOverlay}>
+                <ModalContainer>
+                    {isTitle && 
+                        <ModalHeader>
+                            <h3>{title}</h3>
+                        </ModalHeader>
+                    }
+                    <ModalClose onClick={() => setStateModal(!stateModal)}>
+                        <FiX/>
+                    </ModalClose>
+                    {children}
+                </ModalContainer>
+            </Overlay>
+        }
     </>
   )
 }

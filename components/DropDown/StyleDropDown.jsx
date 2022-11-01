@@ -9,7 +9,7 @@ export const ContainerDropdown = styled.div`
   background-color: #272727;
   border-radius: 1rem 0rem 0rem 1rem;
   transition: 0.5s;
-  height: ${({ handleBurguer }) => !handleBurguer ? "0rem" : "20rem"};
+  height: ${({ handleBurguer }) => (!handleBurguer ? "0rem" : "20rem")};
 `;
 
 export const DrpdownBurguer = styled.div`
@@ -21,7 +21,7 @@ export const DrpdownBurguer = styled.div`
   width: 20rem;
   padding: 0.5rem;
   transition: 0.5s;
-  opacity: ${({handleBurguer}) => !handleBurguer? "0": "1"};
+  opacity: ${({ handleBurguer }) => (!handleBurguer ? "0" : "1")};
 `;
 
 export const Seccion = styled.div`
@@ -58,7 +58,7 @@ export const ContianerNotifications = styled.div`
   display: flex;
   flex-direction: column;
   right: 0rem;
-  top: 3.50rem;
+  top: 3.5rem;
   width: 30rem;
   position: absolute;
   background-color: #272727;
@@ -69,13 +69,14 @@ export const ContianerNotifications = styled.div`
   overflow-x: hidden;
   transition: 0.5s;
   height: ${({ handleBell }) => (handleBell ? "0rem" : "20rem")};
-  /* border: ${({ handleBell }) => (handleBell ? "none" : "solid #535353 0.5px")}; */
+  /* border: ${({ handleBell }) =>
+    handleBell ? "none" : "solid #535353 0.5px"}; */
 
-  @media(max-width: 1024px){
+  @media (max-width: 1024px) {
     right: 0rem;
     top: 3.5rem;
     width: 20rem;
-    height: 100vh
+    height: 100vh;
   }
 `;
 
@@ -84,8 +85,12 @@ export const SeccionNotifications = styled.div`
   padding: 1rem 0.7rem 1rem 0.7rem;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
-  opacity: ${({handleBell}) => handleBell? "0": "1"};
+  transition: 0.5s all ease;
+  opacity: ${({ handleBell }) => (handleBell ? "0" : "1")};
+  :hover {
+    background-color: #616161;
+    cursor: pointer;
+  }
   .ContainerImg {
     width: 40%;
     padding: 0rem 0rem 0.25rem 0rem;
@@ -102,13 +107,13 @@ export const SeccionNotifications = styled.div`
   .ContainerPromo {
     width: 60%;
     padding: 0rem 0rem 0rem 0.25rem;
-    h1{
-        margin: 0;
-        font-size: 1rem;
+    h1 {
+      margin: 0;
+      font-size: 1rem;
     }
-    p{
-        margin: 0;
-        font-size: 0.8rem;
+    p {
+      margin: 0;
+      font-size: 0.8rem;
     }
   }
   .ContainerTime {
@@ -119,6 +124,22 @@ export const SeccionNotifications = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+`;
+
+export const ContentModal = styled.div`
+  .ContainerImg {
+    width: 100%;
+    padding: 0.03rem 0.20rem 0.03rem 0.20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30rem;
+      height: 18rem;
+      object-fit: cover;
+      border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
     }
   }
 `;
