@@ -24,6 +24,7 @@ const DropDownNotifications = ({ handleBell }) => {
       conditions: "terminos y condiciones",
       rocket: <IoIosRocket />,
       issue: "Vence: 12/12/2022",
+      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
     },
     {
       id: "notificcaion-2",
@@ -36,6 +37,7 @@ const DropDownNotifications = ({ handleBell }) => {
       conditions: "terminos y condiciones",
       rocket: <IoIosRocket />,
       issue: "Vence: 12/12/2022",
+      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
     },
     {
       id: "notificcaion-3",
@@ -48,6 +50,7 @@ const DropDownNotifications = ({ handleBell }) => {
       conditions: "terminos y condiciones",
       rocket: <IoIosRocket />,
       issue: "Vence: 12/12/2022",
+      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
     },
   ];
 
@@ -88,17 +91,21 @@ const DropDownNotifications = ({ handleBell }) => {
                   <img src={sec.img} alt={sec.alt} />
                 </div>
                 <div className="ContainerPromo">
-                  <h1>{sec.title}</h1>
-                  <h1>{sec.discount}</h1>
-                  <p>{sec.conditions}</p>
+                  <div className="ContainerTitle">
+                    <h1>{sec.title}</h1>
+                    <h1>{sec.discount}</h1>
+                  </div>
                   <div className="ContainerTime">
-                    <div move={true}>
-                      {sec.rocket}
+                    <div move={false}>
+                      <p>{sec.conditions}</p>
+                      <p>{sec.issue}</p>
                       <p>{sec.time}</p>
                     </div>
-                    <div move={false}>
-                      <p>{sec.issue}</p>
-                    </div>
+                  </div>
+                  <div className="ContainerParagraph">
+                    <p>
+                      {sec.paragraph}
+                    </p>
                   </div>
                 </div>
               </ContentModal>

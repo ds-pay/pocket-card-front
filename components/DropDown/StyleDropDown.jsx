@@ -131,7 +131,7 @@ export const SeccionNotifications = styled.div`
 export const ContentModal = styled.div`
   .ContainerImg {
     width: 100%;
-    padding: 0.03rem 0.20rem 0.03rem 0.20rem;
+    padding: 0.03rem 0.2rem 0.03rem 0.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,6 +140,39 @@ export const ContentModal = styled.div`
       height: 18rem;
       object-fit: cover;
       border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+  }
+  .ContainerPromo {
+    width: 100%;
+    padding: 0rem 0rem 0rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    .ContainerTitle {
+      display: flex;
+      justify-content: space-around;
+      h1 {
+        margin: 1rem 0 0 0;
+        font-size: 2rem;
+      }
+    }
+    .ContainerTime {
+      display: flex;
+      justify-content: space-evenly;
+      height: 3rem;
+      font-size: 0.9rem;
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0.6rem;
+      }
+    }
+    .ContainerParagraph{
+      display: flex;
+      width: 100%;
+      padding: 1rem;
+      text-align: justify;
     }
   }
 `;
