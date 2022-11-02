@@ -6,7 +6,6 @@ const SeccionRight = ({ SeccionLogsCtrls }) => {
   function FuntionActivate(s){
     console.log("me he activado")
     s.funcion(!s.ctrol)
-    s.const()
   }  
 
   return (
