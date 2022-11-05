@@ -11,11 +11,14 @@ export const ContainerLogin = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30rem;
+  width: 25rem;
   height: 40rem;
   background-color: #272727;
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
+  transition: 1s all ease;
+  transform: translateX(65%);
+
 
   .img-user,
   .seccionLogin {
@@ -24,13 +27,13 @@ export const ContainerLogin = styled.div`
 
   .img-user {
     position: absolute;
-    top: 8rem;
+    top: -3rem;
     background-color: #272727;
     padding: 1rem;
     border-radius: 6rem 6rem 6rem 6rem;
     /* border-bottom: solid white 2px; */
     img {
-      width: 9rem;
+      width: 5rem;
     }
   }
 
@@ -88,10 +91,10 @@ export const ContainerLogin = styled.div`
 `;
 
 export const Login = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ContainerNetworks = styled.div`
@@ -132,14 +135,22 @@ export const ContainerNetworks = styled.div`
 `;
 
 export const ContainerCard = styled.div`
-  z-index: -1;
+  position: absolute;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30rem;
-  height: 51rem;
+  width: 27rem;
+  height: 47rem;
   background-color: #5c5c5c;
   border-radius: 2rem;
+  transition: 1s all ease;
+  animation: translation 0.5s;
+  
+  @keyframes translation {
+    100% { transform: translateX(-30%) }
+  }
 `;
 
 // const LoginPage = styled.div`

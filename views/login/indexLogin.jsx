@@ -1,20 +1,16 @@
-import React from "react";
-import {
-  ContainerLogin,
-  ContainerCard,
-  ContainerNetworks,
-  Login,
-  ContainerPrimary
-} from "./stylesIndexLogin";
+import React, { useState, useEffect } from "react";
+import { ContainerLogin, ContainerCard, ContainerNetworks, Login, ContainerPrimary } from "./stylesIndexLogin";
 import InputText from "../../components/Inputs/InputText/InputText";
-import {
-  FaUserAlt,
-  FaLock,
-  FaFacebookSquare,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaUserAlt, FaLock, FaFacebookSquare, FaInstagram, } from "react-icons/fa";
 
 const LoginView = () => {
+
+  const [ open , setOpen ] = useState(false)
+
+  useEffect(() =>{
+    setOpen(!open)
+  },[])
+
   const ArrayInputsText = [
     {
       name: "ID Pocket Card",
@@ -46,10 +42,10 @@ const LoginView = () => {
   return (
     <>
       <ContainerPrimary >
-        <ContainerCard>
+        <ContainerCard translate={open}>
           <h1>Holis como estas</h1>
         </ContainerCard>
-        <ContainerLogin>
+        <ContainerLogin translate={open}>
           <Login>
             <div className="img-user">
               <img src="/img/image/user.png" alt="userImg" />
