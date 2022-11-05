@@ -4,11 +4,7 @@ import {
   ContainerCard,
   ContainerNetworks,
   Login,
-  ContainerBanner,
-  ContainerTitleBanner,
-  WaveTopBanner,
-  DiamondContainerBanner,
-  WaveBottomBanner,
+  ContainerPrimary
 } from "./stylesIndexLogin";
 import InputText from "../../components/Inputs/InputText/InputText";
 import {
@@ -49,7 +45,7 @@ const LoginView = () => {
 
   return (
     <>
-      <div style={{display: "flex", flexDirection:"row", justifyContent: "center", alignItems: "center"}}>
+      <ContainerPrimary >
         <ContainerCard>
           <h1>Holis como estas</h1>
         </ContainerCard>
@@ -88,7 +84,7 @@ const LoginView = () => {
             </div>
           </ContainerNetworks>
         </ContainerLogin>
-      </div>
+      </ContainerPrimary>
     </>
   );
 };

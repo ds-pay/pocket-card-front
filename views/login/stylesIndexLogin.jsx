@@ -1,5 +1,12 @@
 import styled from "@emotion/styled";
 
+export const ContainerPrimary = styled.div`
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center;
+`;
+
 export const ContainerLogin = styled.div`
   display: flex;
   justify-content: center;
@@ -9,7 +16,6 @@ export const ContainerLogin = styled.div`
   background-color: #272727;
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
-  position: absolute;
 
   .img-user,
   .seccionLogin {
@@ -126,7 +132,7 @@ export const ContainerNetworks = styled.div`
 `;
 
 export const ContainerCard = styled.div`
-  z-index: 1;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,4 +141,15 @@ export const ContainerCard = styled.div`
   background-color: #5c5c5c;
   border-radius: 2rem;
 `;
+
+// const LoginPage = styled.div`
+//   display: flex;
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 100vh;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+// `;
 
