@@ -5,6 +5,7 @@ export const ContainerPrimary = styled.div`
   flex-direction: row; 
   justify-content: center; 
   align-items: center;
+  z-index: -1;
 `;
 
 export const ContainerLogin = styled.div`
@@ -18,6 +19,12 @@ export const ContainerLogin = styled.div`
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   transform: translateX(65%);
+  animation: translationForm 0.5s;
+  
+  @keyframes translationForm {
+    0% { transform: translate(0)}
+    100% { transform: translateX(65%) }
+  }
 
 
   .img-user,
@@ -146,9 +153,11 @@ export const ContainerCard = styled.div`
   background-color: #5c5c5c;
   border-radius: 2rem;
   transition: 1s all ease;
+  transform: translateX(-30%);
   animation: translation 0.5s;
   
   @keyframes translation {
+    0% { transform: translate(0)}
     100% { transform: translateX(-30%) }
   }
 `;
