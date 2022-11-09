@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
+import { match } from "assert";
 
 export const ContainerPrimary = styled.div`
   display: flex; 
   flex-direction: row; 
   justify-content: center; 
   align-items: center;
-  z-index: -1;
 `;
 
 export const ContainerLogin = styled.div`
@@ -19,7 +19,7 @@ export const ContainerLogin = styled.div`
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   transform: translateX(65%);
-  animation: translationForm 0.5s;
+  animation: translationForm 1s;
   
   @keyframes translationForm {
     0% { transform: translate(0)}
@@ -150,26 +150,68 @@ export const ContainerCard = styled.div`
   align-items: center;
   width: 27rem;
   height: 47rem;
-  background-color: #5c5c5c;
+  background-color: #000000;
   border-radius: 2rem;
   transition: 1s all ease;
   transform: translateX(-30%);
-  animation: translation 0.5s;
-  
+  animation: translation 1s;
+  overflow: hidden;
+
   @keyframes translation {
-    0% { transform: translate(0)}
-    100% { transform: translateX(-30%) }
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+  }
+  .conteiner-title {
+    position: absolute;
+    h1 {
+    }
+
+    img {
+      width: 12rem;
+    }
+  }
+
+  .container-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    .bubbles {
+      position: relative;
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      span {
+        height: 30px;
+        width: 30px;
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+        animation: animate 10s linear infinite;
+
+        /* :nth-child(even) {
+          background-color: #ff2d75;
+          margin: 0 4px;
+          border-radius: 50%;
+          box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+        } */
+      }
+      @keyframes animate {
+        0% {
+          transform: translateY(100vh) scale(0);
+        }
+        100% {
+          transform: translateY(-10vh) scale(1);
+        }
+      }
+    }
   }
 `;
 
-// const LoginPage = styled.div`
-//   display: flex;
-//   margin: 0;
-//   padding: 0;
-//   width: 100%;
-//   height: 100vh;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-// `;
+
 

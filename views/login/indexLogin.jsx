@@ -5,12 +5,6 @@ import { FaUserAlt, FaLock, FaFacebookSquare, FaInstagram, } from "react-icons/f
 
 const LoginView = () => {
 
-  const [ open , setOpen ] = useState(false)
-
-  useEffect(() =>{
-    setOpen(!open)
-  },[])
-
   const ArrayInputsText = [
     {
       name: "ID Pocket Card",
@@ -39,13 +33,128 @@ const LoginView = () => {
     },
   ];
 
+  const ArrayStyle = [
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+    {
+      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
+    },
+  ]
+  const ArrayStyleTest = [
+    {
+      random: Math.random() * 30,
+      color: "#329642" ,
+      boxshadow: "0 0 0 10px #32964244, 0 0 50px #329642, 0 0 100px #329642"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#F3E830",
+      boxshadow: "0 0 0 10px #F3E83044, 0 0 50px #F3E830, 0 0 100px #F3E830"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#B72035",
+      boxshadow: "0 0 0 10px #B7203544, 0 0 50px #B72035, 0 0 100px #B72035"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#B21F66",
+      boxshadow: "0 0 0 10px #B21F6644, 0 0 50px #B21F66, 0 0 100px #B21F66"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#399F9E",
+      boxshadow: "0 0 0 10px #399F9E44, 0 0 50px #399F9E, 0 0 100px #399F9E"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#736625",
+      boxshadow: "0 0 0 10px #73662544, 0 0 50px #736625, 0 0 100px #736625"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#FF1F5A",
+      boxshadow: "0 0 0 10px #FF1F5A44, 0 0 50px #FF1F5A, 0 0 100px #FF1F5A"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#1C257A",
+      boxshadow: "0 0 0 10px #1C257A44, 0 0 50px #1C257A, 0 0 100px #1C257A"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#2980B9",
+      boxshadow: "0 0 0 10px #2980B944, 0 0 50px #2980B9, 0 0 100px #2980B9"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#329642",
+      boxshadow: "0 0 0 10px #32964244, 0 0 50px #329642, 0 0 100px #329642"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#F3E830",
+      boxshadow: "0 0 0 10px #F3E83044, 0 0 50px #F3E830, 0 0 100px #F3E830"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#2980B9",
+      boxshadow: "0 0 0 10px #2980B944, 0 0 50px #2980B9, 0 0 100px #2980B9"
+    },
+  ]
+
   return (
     <>
-      <ContainerPrimary >
-        <ContainerCard translate={open}>
-          <h1>Holis como estas</h1>
+      <ContainerPrimary>
+        <ContainerCard>
+          <div className="conteiner-title">
+            <h1>Bienvenido a...</h1>
+            <img src="/img/icons/logo-pocket-white.png" alt="" />
+          </div>
+          {/* <h1>holis</h1> */}
+          <div className="container-animation">
+            <div className="bubbles" >
+            <span ></span>
+            {ArrayStyleTest.map((sec, index) => (
+              <>
+                <span inputColor="white" style={{boxShadow: `${sec.boxshadow}`, background: `${sec.color}`,animationDuration: `calc( 125s / ${parseInt(sec.random)})`}}></span>
+              </>
+            ))}
+            </div>
+          </div>
         </ContainerCard>
-        <ContainerLogin translate={open}>
+        <ContainerLogin>
           <Login>
             <div className="img-user">
               <img src="/img/image/user.png" alt="userImg" />
