@@ -85,7 +85,7 @@ const DropDownNotifications = ({ handleBell }) => {
       {Notifications.map((sec, index) => (
         <div>
           {sec.id == idSelected ? (
-            <Modal stateModal={stateModal} setStateModal={setStateModal}>
+            <Modal key={index} stateModal={stateModal} setStateModal={setStateModal}>
               <ContentModal>
                 <div className="ContainerImg">
                   <img src={sec.img} alt={sec.alt} />
