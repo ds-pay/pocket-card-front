@@ -150,11 +150,13 @@ export const ContainerCard = styled.div`
   align-items: center;
   width: 27rem;
   height: 47rem;
-  background-color: #000000;
+  /* background: #272727; */
+  background: var(--nextui-colors-backgroundCard);
+  /* background: ${({isDark}) => isDark ? "#272727" : "#a32727"}; */
   border-radius: 2rem;
   transition: 1s all ease;
   transform: translateX(-30%);
-  animation: translation 1s;
+  animation: translation 0.3s;
   overflow: hidden;
 
   @keyframes translation {

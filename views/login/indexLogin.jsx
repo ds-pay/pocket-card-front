@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { ContainerLogin, ContainerCard, ContainerNetworks, Login, ContainerPrimary } from "./stylesIndexLogin";
 import InputText from "../../components/Inputs/InputText/InputText";
 import { FaUserAlt, FaLock, FaFacebookSquare, FaInstagram, } from "react-icons/fa";
+import { useTheme } from "@nextui-org/react";
 
 const LoginView = () => {
+
+  const { isDark } = useTheme()
 
   const ArrayInputsText = [
     {
@@ -33,44 +36,6 @@ const LoginView = () => {
     },
   ];
 
-  const ArrayStyle = [
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-    {
-      stylr: <span style={{animationDuration: `calc( 125s / ${parseInt(Math.random() * 30)})`}}></span>
-    },
-  ]
   const ArrayStyleTest = [
     {
       random: Math.random() * 30,
@@ -137,10 +102,12 @@ const LoginView = () => {
   return (
     <>
       <ContainerPrimary>
-        <ContainerCard>
+        <ContainerCard isDark={isDark}>
           <div className="conteiner-title">
             <h1>Bienvenido a...</h1>
-            <img src="/img/icons/logo-pocket-white.png" alt="" />
+            { isDark 
+            ? <img src="/img/icons/logo-pocket-white.png" alt="" /> 
+            : <img src="/img/icons/logo-pocket.png" alt="" />}
           </div>
           {/* <h1>holis</h1> */}
           <div className="container-animation">

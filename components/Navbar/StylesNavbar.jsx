@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { theme } from "@nextui-org/react";
 
 export const ContainerNav = styled.div`
   display: flex;
@@ -9,7 +10,10 @@ export const ContainerNav = styled.div`
   align-items: center;
   width: 100%;
   height: 3.2rem;
-  background-color: #272727;
+  background-color: ${({isDark}) => isDark ? "#272727" : "#a32727"};
+  transition: 0.3s all ease;
+  /* background: ${theme?.colors.bgIconPrimary}; */
+  /* background-color: #272727; */
   border-bottom: solid #535353 1px;
 `;
 
@@ -65,9 +69,9 @@ export const ContainSeccionsViews = styled.div`
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
   color: white;
-  background-color: ${({isSelected}) => isSelected ? "#4d4d4d" : null };
+  background-color: ${({isSelected, isDark}) => isSelected ? isDark ? "#4d4d4d" : "#e64747" : null };
   :hover {
-    background-color: #4d4d4d;
+    background-color: ${({isDark}) => isDark ? "#4d4d4d" : "#e64747" };
     cursor: pointer;
   }
   @media(max-width: 1024px){

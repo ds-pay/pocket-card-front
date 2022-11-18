@@ -5,7 +5,7 @@ import { HiUsers, HiUser, HiViewGridAdd } from "react-icons/hi";
 import { ImNewspaper } from 'react-icons/im'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from "react-icons/gi";
-import { changeTheme, useTheme } from '@nextui-org/react'
+import { changeTheme, Text, useTheme } from '@nextui-org/react'
 import DropDownBurguer from '../DropDown/DropDownBurguer'
 import DropDownNotifications from '../DropDown/DropDownNotifications'
 import Search from './Search'
@@ -20,11 +20,11 @@ const Navbar = () => {
   const [ handleBell, setHandleBell ] = useState(true)
   const [ selection, setSelection ] = useState("home") 
 
-  const { isDark } = useTheme();
+  const { isDark, } = useTheme();
   
   const handleChange = () => {
     const nextTheme = isDark ? 'light' : 'dark';
-    window.localStorage.setItem('data-theme', nextTheme);
+    window.localStorage.setItem('theme', nextTheme);
     changeTheme(nextTheme);
   }
 
@@ -59,7 +59,7 @@ const Navbar = () => {
     {
       state: true,
       id: "ctrl-theme",
-      icon1: isDark ? <BsFillSunFill /> : <BsFillMoonFill />,
+      icon1: isDark ? <BsFillMoonFill /> : <BsFillSunFill />,
       ctrol: isDark,
       funcion: handleChange,
     },
@@ -85,18 +85,18 @@ const Navbar = () => {
   ];
 
   return (
-    <ContainerNav>
-      <Seccion>
+    <ContainerNav isDark={isDark} >
+      <Seccion isDark={isDark}>
         <Search/>
       </Seccion>
       <Seccion>
-        <SeccionMedium selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
+        <SeccionMedium isDark={isDark} selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
       </Seccion>
       <Seccion>
-        <SeccionRight SeccionLogsCtrls={SeccionLogsCtrls}/>
+        <SeccionRight isDark={isDark} SeccionLogsCtrls={SeccionLogsCtrls}/>
       </Seccion>
-      <DropDownBurguer handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
-      <DropDownNotifications handleBell={handleBell} setHandleBell={setHandleBell}/>
+      <DropDownBurguer isDark={isDark} handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
+      <DropDownNotifications isDark={isDark} handleBell={handleBell} setHandleBell={setHandleBell}/>
     </ContainerNav>
   );
 };
