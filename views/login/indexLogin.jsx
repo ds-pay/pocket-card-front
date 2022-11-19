@@ -105,9 +105,7 @@ const LoginView = () => {
         <ContainerCard isDark={isDark}>
           <div className="conteiner-title">
             <h1>Bienvenido a...</h1>
-            { isDark 
-            ? <img src="/img/icons/logo-pocket-white.png" alt="" /> 
-            : <img src="/img/icons/logo-pocket.png" alt="" />}
+            <img src="/img/icons/logo-pocket-white.png" alt="" /> 
           </div>
           {/* <h1>holis</h1> */}
           <div className="container-animation">

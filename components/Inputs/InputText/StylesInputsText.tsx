@@ -50,7 +50,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             color: ${({ IsColor }) => IsColor ? "#fff" : "#2ecece"};
         }
         input:focus + .lbl-name .text-name, input:valid + .lbl-name .text-name{
-            transform: translateY(-150%);
+            transform: translateY(-120%);
             font-size: 14px;
             color: ${({ IsColor }) => IsColor ? "#2ecece" : "#fff"};
         }

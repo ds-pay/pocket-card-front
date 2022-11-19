@@ -14,13 +14,18 @@ export const ContainerLogin = styled.div`
   align-items: center;
   width: 25rem;
   height: 40rem;
-  background-color: #272727;
+  background-color: var(--nextui-colors-bgCardLogin);
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   transform: translateX(65%);
   animation: translationForm 1s;
-  
+  -webkit-box-shadow: 0px 0px 5px 0px #666666;
+  -moz-box-shadow: 0px 0px 5px 0px #666666;
+  box-shadow: 0px 0px 5px 0px #666666;
+  h1, h3{
+    color: var(--nextui-colors-textColorCardAnimate);
+  }  
   @keyframes translationForm {
     0% { transform: translate(0)}
     100% { transform: translateX(65%) }
@@ -35,10 +40,12 @@ export const ContainerLogin = styled.div`
   .img-user {
     position: absolute;
     top: -3rem;
-    background-color: #272727;
+    background-color: var(--nextui-colors-backgroundNavbar);
     padding: 1rem;
     border-radius: 6rem 6rem 6rem 6rem;
-    /* border-bottom: solid white 2px; */
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
     img {
       width: 5rem;
     }
@@ -74,7 +81,7 @@ export const ContainerLogin = styled.div`
       }
       .container-img {
         padding: 1rem;
-        background-color: #5c5c5c;
+        background-color: var(--nextui-colors-bgIconPrimary);
         border-radius: 0.2rem;
       }
     }
@@ -82,15 +89,18 @@ export const ContainerLogin = styled.div`
   .container-button {
     width: 70%;
     height: 2.3rem;
+    h1{
+      color: var(--nextui-colors-textColorCardAnimate);
+    } 
     button {
       width: 100%;
       height: 100%;
-      background-color: #5c5c5c;
+      background-color: var(--nextui-colors-bgIconPrimary);
       transition: 0.3s all ease;
       border: none;
       border-radius: 0.3rem;
       :hover {
-        background-color: #272727;
+        background-color: var(--nextui-colors-bgThridGlass);
         cursor: pointer;
       }
     }
@@ -112,6 +122,7 @@ export const ContainerNetworks = styled.div`
   height: 3rem;
   margin: 1rem 0 0 0;
 
+
   .text-networks {
     border-top: solid white 1px;
     width: 180%;
@@ -129,12 +140,12 @@ export const ContainerNetworks = styled.div`
       justify-content: center;
       align-items: center;
       margin: 0.5rem 1.3rem 0.5rem 1.3rem;
-      background-color: #5c5c5c;
+      background-color: var(--nextui-colors-bgIconPrimary);
       padding: 0.5rem;
       border-radius: 0.5rem;
       transition: 0.3s all ease;
       :hover {
-        background-color: #272727;
+        background-color: var(--nextui-colors-bgThridGlass);
         cursor: pointer;
       }
     }
@@ -150,14 +161,16 @@ export const ContainerCard = styled.div`
   align-items: center;
   width: 27rem;
   height: 47rem;
-  /* background: #272727; */
-  background: var(--nextui-colors-backgroundCard);
-  /* background: ${({isDark}) => isDark ? "#272727" : "#a32727"}; */
+  background: var(--nextui-colors-bgLoginCardAnimation);
   border-radius: 2rem;
   transition: 1s all ease;
   transform: translateX(-30%);
   animation: translation 0.3s;
   overflow: hidden;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+  color: var(--nextui-colors-textColorCardAnimate);
 
   @keyframes translation {
     0% {
@@ -168,12 +181,18 @@ export const ContainerCard = styled.div`
     }
   }
   .conteiner-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
+    
     h1 {
+      filter: drop-shadow( 0px 0px 10px #a5a5a5)
     }
 
     img {
       width: 12rem;
+      filter: drop-shadow( 0px 0px 10px #d1d1d1);
     }
   }
 
@@ -195,13 +214,6 @@ export const ContainerCard = styled.div`
         border-radius: 50%;
         box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
         animation: animate 10s linear infinite;
-
-        /* :nth-child(even) {
-          background-color: #ff2d75;
-          margin: 0 4px;
-          border-radius: 50%;
-          box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
-        } */
       }
       @keyframes animate {
         0% {
