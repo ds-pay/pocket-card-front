@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { theme } from "@nextui-org/react";
 
 export const ContainerNav = styled.div`
   display: flex;
@@ -9,8 +10,8 @@ export const ContainerNav = styled.div`
   align-items: center;
   width: 100%;
   height: 3.2rem;
-  background-color: #272727;
-  border-bottom: solid #535353 1px;
+  background-color: var(--nextui-colors-backgroundNavbar);
+  border-bottom: solid var(--nextui-colors-bgIconPrimary) 1px;
 `;
 
 export const Seccion = styled.div`
@@ -30,7 +31,7 @@ export const Seccion = styled.div`
   .browser {
     display: flex;
     width: 14rem;
-    background-color: #4d4d4d;
+    background-color: var(--nextui-colors-bgIconPrimary);
     color: ${({ theme }) => theme.text};
     margin: 0rem 0.7rem 0rem 0.7rem;
     height: 2.2rem;
@@ -43,9 +44,10 @@ export const Seccion = styled.div`
 
     input{
       border: 0;
-      background-color: #4d4d4d;
+      background-color: var(--nextui-colors-bgIconPrimary);
       outline: none;
       text-align: justify;
+      color: var(--nextui-colors-textColor);
       @media(max-width: 1024px){
         display: none;
       }
@@ -65,9 +67,9 @@ export const ContainSeccionsViews = styled.div`
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
   color: white;
-  background-color: ${({isSelected}) => isSelected ? "#4d4d4d" : null };
+  background-color: ${({ isSelected }) => isSelected ? " var(--nextui-colors-bgIconPrimary)": null };
   :hover {
-    background-color: #4d4d4d;
+    background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;
   }
   @media(max-width: 1024px){
@@ -78,6 +80,7 @@ export const ContainSeccionsViews = styled.div`
 export const ContainSeccionCtrls = styled.div`
   display: flex;
   animation:  ${({ handle }) => handle? "rotation 0.5s" : "rotationReverse 0.5s"};
+  transition: 0.3s all ease;
   @keyframes rotation {
     0%{
       transform: rotate(0deg);
@@ -94,7 +97,7 @@ export const ContainSeccionCtrls = styled.div`
       transform: rotate(0deg);
     }
   }
-  transition: all 0.5s;
+  transition: all 0.3s;
   justify-content: center;
   align-items: center;
   width: 2.2rem;
@@ -103,10 +106,10 @@ export const ContainSeccionCtrls = styled.div`
   font-size: 1.1rem;
   border-radius: 5rem;
   margin: 0.25rem 0.25rem;
-  background-color: #4d4d4d;
+  background-color:  var(--nextui-colors-bgIconPrimary);
   color: #eee;
   :hover {
-    background-color:#7e7e7e;
+    background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;
   }
   @media(max-width: 1024px){

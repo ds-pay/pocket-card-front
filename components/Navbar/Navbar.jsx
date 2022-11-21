@@ -5,6 +5,7 @@ import { HiUsers, HiUser, HiViewGridAdd } from "react-icons/hi";
 import { ImNewspaper } from 'react-icons/im'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from "react-icons/gi";
+import { changeTheme, Text, useTheme } from '@nextui-org/react'
 import DropDownBurguer from '../DropDown/DropDownBurguer'
 import DropDownNotifications from '../DropDown/DropDownNotifications'
 import Search from './Search'
@@ -14,11 +15,18 @@ import SeccionRight from './SeccionRight'
 
 const Navbar = () => {
 
-  const [ handleTheme, setHandleTheme ] = useState(true)
+  // const [ handleTheme, setHandleTheme ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false)
   const [ handleBell, setHandleBell ] = useState(true)
   const [ selection, setSelection ] = useState("home") 
-  const [ theme, setTheme ] = useState("light")
+
+  const { isDark, } = useTheme();
+  
+  const handleChange = () => {
+    const nextTheme = isDark ? 'light' : 'dark';
+    window.localStorage.setItem('theme', nextTheme);
+    changeTheme(nextTheme);
+  }
 
   const selectionViw = (sec) => {
     setSelection(sec)
@@ -51,10 +59,9 @@ const Navbar = () => {
     {
       state: true,
       id: "ctrl-theme",
-      icon1: theme === "light"? <BsFillMoonFill /> : <BsFillSunFill />,
-      ctrol: handleTheme,
-      funcion: setHandleTheme,
-      const: HandleTheme
+      icon1: isDark ? <BsFillMoonFill /> : <BsFillSunFill />,
+      ctrol: isDark,
+      funcion: handleChange,
     },
     {
       state: true,
@@ -77,23 +84,19 @@ const Navbar = () => {
     },
   ];
 
-  function HandleTheme () {
-    setTheme(theme === "light"? "dark" : "light")
-  }
-
   return (
-    <ContainerNav>
-      <Seccion>
+    <ContainerNav isDark={isDark} >
+      <Seccion isDark={isDark}>
         <Search/>
       </Seccion>
       <Seccion>
-        <SeccionMedium selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
+        <SeccionMedium isDark={isDark} selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
       </Seccion>
       <Seccion>
-        <SeccionRight SeccionLogsCtrls={SeccionLogsCtrls}/>
+        <SeccionRight isDark={isDark} SeccionLogsCtrls={SeccionLogsCtrls}/>
       </Seccion>
-      <DropDownBurguer handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
-      <DropDownNotifications handleBell={handleBell} setHandleBell={setHandleBell}/>
+      <DropDownBurguer isDark={isDark} handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
+      <DropDownNotifications isDark={isDark} handleBell={handleBell} setHandleBell={setHandleBell}/>
     </ContainerNav>
   );
 };
