@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { match } from "assert";
 
 export const ContainerPrimary = styled.div`
   display: flex; 
@@ -12,8 +11,9 @@ export const ContainerLogin = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 40rem;
+  width: 22rem;
+  height: 28rem;
+  padding: 0 0 0 1.3rem;
   background-color: var(--nextui-colors-bgCardLogin);
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
@@ -26,29 +26,16 @@ export const ContainerLogin = styled.div`
   h1, h3{
     color: var(--nextui-colors-textColorCardAnimate);
   }  
+  h1{
+    font-size: 2.5rem;
+  }
   @keyframes translationForm {
     0% { transform: translate(0)}
     100% { transform: translateX(65%) }
   }
 
-
-  .img-user,
   .seccionLogin {
     display: flex;
-  }
-
-  .img-user {
-    position: absolute;
-    top: -3rem;
-    background-color: var(--nextui-colors-backgroundNavbar);
-    padding: 1rem;
-    border-radius: 6rem 6rem 6rem 6rem;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
-    img {
-      width: 5rem;
-    }
   }
 
   .container-title {
@@ -72,17 +59,20 @@ export const ContainerLogin = styled.div`
     .container {
       display: flex;
       margin: 1rem 0 1rem 0;
-      .container-img,
+      p{
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 0;
+        color: #ff5959;
+      }
       .container-text {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         margin: 0 0.5rem 0 0.5rem;
-      }
-      .container-img {
-        padding: 1rem;
-        background-color: var(--nextui-colors-bgIconPrimary);
-        border-radius: 0.2rem;
+        height: 2.5rem;
       }
     }
   }
@@ -92,7 +82,7 @@ export const ContainerLogin = styled.div`
     h1{
       color: var(--nextui-colors-textColorCardAnimate);
     } 
-    button {
+    input {
       width: 100%;
       height: 100%;
       background-color: var(--nextui-colors-bgIconPrimary);
@@ -114,44 +104,6 @@ export const Login = styled.div`
   justify-content: center;
 `;
 
-export const ContainerNetworks = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  height: 3rem;
-  margin: 1rem 0 0 0;
-
-
-  .text-networks {
-    border-top: solid white 1px;
-    width: 180%;
-    text-align: center;
-    font-family: 'Roboto',sans-serif;
-    padding: 10px 0px 0px 0px;
-  }
-  .networks {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .network {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0.5rem 1.3rem 0.5rem 1.3rem;
-      background-color: var(--nextui-colors-bgIconPrimary);
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      transition: 0.3s all ease;
-      :hover {
-        background-color: var(--nextui-colors-bgThridGlass);
-        cursor: pointer;
-      }
-    }
-  }
-`;
-
 export const ContainerCard = styled.div`
   position: absolute;
   z-index: 1;
@@ -159,8 +111,8 @@ export const ContainerCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 27rem;
-  height: 47rem;
+  width: 24rem;
+  height: 35rem;
   background: var(--nextui-colors-bgLoginCardAnimation);
   border-radius: 2rem;
   transition: 1s all ease;
@@ -187,6 +139,7 @@ export const ContainerCard = styled.div`
     position: absolute;
     
     h1 {
+      font-size: 2.5rem;
       filter: drop-shadow( 0px 0px 10px #a5a5a5)
     }
 
@@ -208,8 +161,8 @@ export const ContainerCard = styled.div`
       height: 100vh;
       width: 100%;
       span {
-        height: 30px;
-        width: 30px;
+        height: 18px;
+        width: 18px;
         margin: 0 4px;
         border-radius: 50%;
         box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;

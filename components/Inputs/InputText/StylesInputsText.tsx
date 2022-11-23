@@ -6,6 +6,14 @@ export const ContainInputText = styled.div<ContainTextProps>`
     justify-content: center;
     align-items: center;
     width: 13rem;
+    position: relative;
+    .eye-pass{
+        display: flex;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        color: var(--nextui-colors-bgThridGlass);
+    }
     .form{
         width: 100%;
         height: 3rem;
@@ -28,7 +36,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             width: 100%;
             height: 100%;
             pointer-events: none;
-            border-bottom: ${({ IsColor }) => IsColor ? "1px solid #c7c7c7" : "1px solid #2ecece"};
+            border-bottom: ${({ IsColor }) => IsColor ? "1px solid #c7c7c7" : "1px solid var(--nextui-colors-bgThridGlass)"};
         }
         .lbl-name:after{
             content: '';
@@ -37,8 +45,8 @@ export const ContainInputText = styled.div<ContainTextProps>`
             bottom: -1px;
             width: 100%;
             height: 100%;
-            border-bottom: ${({ IsColor }) => IsColor ? "3px solid #2ecece" : "1px solid #c7c7c7"};
-            border-bottom: 3px solid #2ecece;
+            border-bottom: ${({ IsColor }) => IsColor ? "3px solid var(--nextui-colors-bgThridGlass)" : "1px solid #c7c7c7"};
+            border-bottom: 3px solid var(--nextui-colors-bgThridGlass);
             transform: translateX(-100%);
             transition: all 0.3s ease;
         }
@@ -47,15 +55,19 @@ export const ContainInputText = styled.div<ContainTextProps>`
             bottom: 5px;
             left: 0;
             transition: all 0.3s ease;
-            color: ${({ IsColor }) => IsColor ? "#fff" : "#2ecece"};
+            color: ${({ IsColor }) => IsColor ? "#fff" : "var(--nextui-colors-bgThridGlass)"};
         }
         input:focus + .lbl-name .text-name, input:valid + .lbl-name .text-name{
             transform: translateY(-120%);
             font-size: 14px;
-            color: ${({ IsColor }) => IsColor ? "#2ecece" : "#fff"};
+            color: ${({ IsColor }) => IsColor ? "var(--nextui-colors-bgThridGlass)" : "#fff"};
         }
         input:focus + .lbl-name:after, input:valid + .lbl-name:after{
             transform: translateX(0%);
+        }
+        span{
+            position: relative;
+            z-index: 5;
         }
     }
 `;

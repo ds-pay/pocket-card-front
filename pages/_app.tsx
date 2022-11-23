@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
-import { createTheme, getDocumentTheme, NextUIProvider, useTheme } from "@nextui-org/react";
+import { createTheme, getDocumentTheme, NextUIProvider } from "@nextui-org/react";
 import '../styles/globals.css';
-
-
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(false);
-
-
+  
   const darkTheme = createTheme({
     type: 'dark',
     theme: {

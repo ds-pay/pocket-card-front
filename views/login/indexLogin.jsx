@@ -3,38 +3,38 @@ import { ContainerLogin, ContainerCard, ContainerNetworks, Login, ContainerPrima
 import InputText from "../../components/Inputs/InputText/InputText";
 import { FaUserAlt, FaLock, FaFacebookSquare, FaInstagram, } from "react-icons/fa";
 import { useTheme } from "@nextui-org/react";
+import { useForm } from "react-hook-form";
 
 const LoginView = () => {
-
-  const { isDark } = useTheme()
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const { isDark } = useTheme();
 
   const ArrayInputsText = [
     {
+      id: "idpocket",
       name: "ID Pocket Card",
       color: true,
-      type: "email",
+      type: "text",
       img: <FaUserAlt />,
+      regis: "idpocket",
+      error: errors.idpocket?.type === "required" && (<p>El campo ID Pocket Card es requerido</p>)
     },
     {
+      id: "pass",
       name: "Password",
       color: true,
       type: "password",
       img: <FaLock />,
+      regis: "password",
+      eyetrue: true,
+      error: errors.password?.type === "required" && (<p>El campo Password es requerido</p>)
     },
   ];
 
-  const ArrayNetworks = [
-    {
-      id: "facebook",
-      img: <FaFacebookSquare size={"2rem"} />,
-      alt: "facebook",
-    },
-    {
-      id: "instagram",
-      img: <FaInstagram size={"2rem"} />,
-      alt: "instagram",
-    },
-  ];
+  const onSubmit = (data) => {
+    console.log(data)
+  };
+
 
   const ArrayStyleTest = [
     {
@@ -97,6 +97,21 @@ const LoginView = () => {
       color: "#2980B9",
       boxshadow: "0 0 0 10px #2980B944, 0 0 50px #2980B9, 0 0 100px #2980B9"
     },
+    {
+      random: Math.random() * 30,
+      color: "#B21F66",
+      boxshadow: "0 0 0 10px #B21F6644, 0 0 50px #B21F66, 0 0 100px #B21F66"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#399F9E",
+      boxshadow: "0 0 0 10px #399F9E44, 0 0 50px #399F9E, 0 0 100px #399F9E"
+    },
+    {
+      random: Math.random() * 30,
+      color: "#736625",
+      boxshadow: "0 0 0 10px #73662544, 0 0 50px #736625, 0 0 100px #736625"
+    },
   ]
 
   return (
@@ -105,29 +120,34 @@ const LoginView = () => {
         <ContainerCard isDark={isDark}>
           <div className="conteiner-title">
             <h1>Bienvenido a...</h1>
-            <img src="/img/icons/logo-pocket-white.png" alt="" /> 
+            <img src="/img/icons/logo-pocket-white.png" alt="" />
           </div>
-          {/* <h1>holis</h1> */}
           <div className="container-animation">
-            <div className="bubbles" >
-            <span ></span>
-            {ArrayStyleTest.map((sec, index) => (
-              <>
-                <span inputColor="white" style={{boxShadow: `${sec.boxshadow}`, background: `${sec.color}`,animationDuration: `calc( 125s / ${parseInt(sec.random)})`}}></span>
-              </>
-            ))}
+            <div className="bubbles">
+              <span></span>
+              {ArrayStyleTest.map((sec, index) => (
+                <>
+                  <span
+                    inputColor="white"
+                    style={{
+                      boxShadow: `${sec.boxshadow}`,
+                      background: `${sec.color}`,
+                      animationDuration: `calc( 125s / ${parseInt(
+                        sec.random
+                      )})`,
+                    }}
+                  ></span>
+                </>
+              ))}
             </div>
           </div>
         </ContainerCard>
         <ContainerLogin>
           <Login>
-            <div className="img-user">
-              <img src="/img/image/user.png" alt="userImg" />
-            </div>
             <div className="container-title">
               <h1>Iniciar Sesion</h1>
             </div>
-            <div className="seccionLogin">
+            <form className="seccionLogin" onSubmit={handleSubmit(onSubmit)}>
               {ArrayInputsText.map((sec, index) => (
                 <div className="container">
                   <div className="container-img">{sec.img}</div>
@@ -136,23 +156,22 @@ const LoginView = () => {
                       name={sec.name}
                       color={sec.color}
                       type={sec.type}
+                      regis={{
+                        ...register(sec.regis, {
+                          required: true,
+                        }),
+                      }}
+                      eyetrue={sec.eyetrue}
                     />
+                    {sec.error}
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="container-button">
-              <button>Login</button>
-            </div>
+              <div className="container-button">
+                <input type="submit" value="Login" />
+              </div>
+            </form>
           </Login>
-          <ContainerNetworks>
-            <h3 className="text-networks">Nuestras Redes</h3>
-            <div className="networks">
-              {ArrayNetworks.map((sec, index) => (
-                <div className="network">{sec.img}</div>
-              ))}
-            </div>
-          </ContainerNetworks>
         </ContainerLogin>
       </ContainerPrimary>
     </>
