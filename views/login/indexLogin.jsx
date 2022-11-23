@@ -122,7 +122,6 @@ const LoginView = () => {
             <h1>Bienvenido a...</h1>
             <img src="/img/icons/logo-pocket-white.png" alt="" />
           </div>
-          {/* <h1>holis</h1> */}
           <div className="container-animation">
             <div className="bubbles">
               <span></span>

@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { match } from "assert";
 
 export const ContainerPrimary = styled.div`
   display: flex; 
@@ -67,7 +66,6 @@ export const ContainerLogin = styled.div`
         padding: 0;
         color: #ff5959;
       }
-      .container-img,
       .container-text {
         display: flex;
         justify-content: center;
@@ -75,13 +73,6 @@ export const ContainerLogin = styled.div`
         flex-direction: column;
         margin: 0 0.5rem 0 0.5rem;
         height: 2.5rem;
-      }
-      .container-img {
-        padding: 1rem;
-        width: 3rem;
-        height: 3rem;
-        background-color: var(--nextui-colors-bgIconPrimary);
-        border-radius: 0.2rem;
       }
     }
   }
