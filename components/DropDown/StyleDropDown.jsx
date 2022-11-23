@@ -10,6 +10,7 @@ export const ContainerDropdown = styled.div`
   border-radius: 1rem 0rem 0rem 1rem;
   transition: 0.5s;
   height: ${({ handleBurguer }) => (!handleBurguer ? "0rem" : "20rem")};
+  
 `;
 
 export const DrpdownBurguer = styled.div`
@@ -73,10 +74,10 @@ export const ContianerNotifications = styled.div`
     handleBell ? "none" : "solid #535353 0.5px"}; */
 
   @media (max-width: 1024px) {
+    height: ${({ handleBell }) => (handleBell ? "0rem" : "20rem")};
     right: 0rem;
     top: 3.5rem;
     width: 20rem;
-    height: 100vh;
   }
 `;
 

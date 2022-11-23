@@ -23,6 +23,9 @@ export const ContainerLogin = styled.div`
   -webkit-box-shadow: 0px 0px 5px 0px #666666;
   -moz-box-shadow: 0px 0px 5px 0px #666666;
   box-shadow: 0px 0px 5px 0px #666666;
+  @media(max-width: 900px) {
+    transform: translateX(0);
+  }
   h1, h3{
     color: var(--nextui-colors-textColorCardAnimate);
   }  
@@ -123,6 +126,9 @@ export const ContainerCard = styled.div`
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
   color: var(--nextui-colors-textColorCardAnimate);
+  @media(max-width: 900px) {
+    display: none;
+  }
 
   @keyframes translation {
     0% {
