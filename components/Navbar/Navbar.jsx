@@ -1,9 +1,10 @@
 import React, { useState, FC } from "react";
 import { ContainerNav, Seccion, ContainSeccionCtrls} from "./StylesNavbar";
 import { FaHome, FaBell } from "react-icons/fa";
-import { HiUsers, HiUser, HiViewGridAdd } from "react-icons/hi";
+import { HiUser } from "react-icons/hi";
 import { ImNewspaper } from 'react-icons/im'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
+import { BiCategoryAlt } from 'react-icons/bi'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { changeTheme, Text, useTheme } from '@nextui-org/react'
 import DropDownBurguer from '../DropDown/DropDownBurguer'
@@ -40,13 +41,13 @@ const Navbar = () => {
     },
     {
       state: true,
-      id: "screen",
+      id: "news",
       icon: <ImNewspaper />,
     },
     {
       state: true,
-      id: "users",
-      icon: <HiUsers />,
+      id: "category",
+      icon: <BiCategoryAlt />,
     },
     {
       state: true,

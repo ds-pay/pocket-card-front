@@ -18,7 +18,6 @@ const LoginPage = styled.div`
 const loginPage = () => {
   return (
     <>
-      <Navbar />
       <LoginPage>
         <LoginView />
       </LoginPage>
