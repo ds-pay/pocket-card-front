@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
 import { createTheme, getDocumentTheme, NextUIProvider } from "@nextui-org/react";
 import '../styles/globals.css';
+import Navbar from '../components/Navbar/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(false);
@@ -107,6 +108,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
+        {/* <Navbar /> */}
         <Component {...pageProps} />
       </NextUIProvider>
     </>
