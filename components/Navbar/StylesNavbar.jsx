@@ -18,7 +18,7 @@ export const Seccion = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   .imgUser {
     width: 2.3rem;
     height: 2.3rem;
@@ -26,7 +26,6 @@ export const Seccion = styled.div`
     :hover {
       cursor: pointer;
     }
-    
   }
   .browser {
     display: flex;
@@ -38,22 +37,29 @@ export const Seccion = styled.div`
     align-items: center;
     padding: 0rem 0.75rem 0rem 0.75rem;
     border-radius: 2rem 2rem 2rem 2rem;
-    @media(max-width: 1024px){
+    @media (max-width: 1024px) {
       width: 100%;
+      cursor: pointer;
+      :focus {
+        transform: translateY(-120%);
+        font-size: 14px;
+        color: ${({ IsColor }) => IsColor ? "var(--nextui-colors-bgThridGlass)" :   "#fff"};
+      }
+      :focus {
+        transform: translateX(0%);
+      }
     }
-
-    input{
+    input {
       border: 0;
       background-color: var(--nextui-colors-bgIconPrimary);
       outline: none;
       text-align: justify;
       color: var(--nextui-colors-textColor);
-      @media(max-width: 1024px){
+      @media (max-width: 1024px) {
         display: none;
       }
     }
   }
-
 `;
 
 export const ContainSeccionsViews = styled.div`

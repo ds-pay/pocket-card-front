@@ -5,8 +5,7 @@ import ReactHookForm from '../views/reactHookForm/ReactHookForm'
 const Form = () => {
   return (
     <>
-        <Navbar />
-        <ReactHookForm />
+      <ReactHookForm />
     </>
   )
 }
