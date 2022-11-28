@@ -20,59 +20,105 @@ export const Content = styled.div`
   height: 100%;
   margin: 1rem 0rem 1rem 0rem;
   align-items: flex-start;
+  align-content: space-between;
   white-space: nowrap;
   overflow: hidden;
   color: white;
+  .title {
+    transition: 0.5s all ease;
+    width: ${({ isActivate }) => (isActivate ? "60%" : "90%")};
+    border-bottom: 0.2px solid white;
+    margin: 0rem 0.8rem 0rem 1rem;
+    text-align: left;
+  }
   .container {
     display: flex;
-    align-content: space-between;
-    margin: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0.3rem 1rem 0.3rem 1rem;
+    width: ${({ isActivate }) => (isActivate ? "56%" : "90%")} ;
+    height: 3rem;
+    border-radius: 0.5rem;
+    transition: 0.5s all ease;
+    justify-content: space-between;
+    background: ${({ idSelected }) => idSelected ? "var(--nextui-colors-bgThridGlass)" : null} ;
+    :hover{
+      background-color: var(--nextui-colors-bgThridGlass);
+      cursor: pointer;
+    }
     .contain-img,
-    .contain-label,
-    .contain-notifi {
+    .contain-label{
+      display: flex;
+      justify-content: ${({leftIsTrue}) => !leftIsTrue ? "flex-start" : "flex-end"};
+      align-items: center;
+      transition: 0.5s all ease;
+    }
+    .contain-img {
+      margin: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .contain-label {
+      width: 100%;
+      opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
+      h3{
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+    .contain-notifi{
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .contain-img {
-        margin: 0.5rem 0.2rem 0.5rem 0.2rem;
-    }
-    .contain-label{
+      width: 2.9rem;
+      height: 1.8rem;
+      border-radius: 1rem;
+      background: var(--nextui-colors-bgIconPrimary);
+      margin: 0.5rem;
+      transition: 0.7s all ease;
+      opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
+      white-space: normal;
+      overflow: hidden;
+      h3{
         font-size: 1rem;
+        margin: 0;
+      }
     }
   }
 `;
 
 export const Head = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  white-space: nowrap;
-  height: 5rem;
   color: white;
-  .contain-logo,
-  .contain-name {
+  .content {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .contain-logo {
-    padding: 1rem;
     margin: 0.5rem;
-  }
-  .contain-name {
-    flex-wrap: nowrap;
-    position: relative;
+    white-space: normal;
     overflow: hidden;
     transition: 0.5s all ease;
-    opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
+    width: 100%;
+
+    .contain-logo, .contain-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contain-logo {
+      margin: 0.6rem;
+    }
+    .contain-name {
+      white-space: normal;
+      overflow: hidden;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
   }
 `;
 
 export const ButtonArrow = styled.div`
     width: 1.85rem;
     height: 1.85rem;
-    background-color: blue;
+    background-color: var(--nextui-colors-bgThridGlass);
     position: absolute;
     display: flex;
     justify-content: center;
