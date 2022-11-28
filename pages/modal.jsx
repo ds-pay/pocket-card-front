@@ -73,7 +73,6 @@ const ModalTest = () => {
                 <Button onClick={() => setStateModal(!stateModal)}>Cerrar</Button>
             </Content>
         </ModalReusable>
-        <Navbar/>
     </div>
   )
 }

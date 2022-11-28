@@ -23,18 +23,36 @@ export const ContainerLogin = styled.div`
   -webkit-box-shadow: 0px 0px 5px 0px #666666;
   -moz-box-shadow: 0px 0px 5px 0px #666666;
   box-shadow: 0px 0px 5px 0px #666666;
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     transform: translateX(0);
   }
-  h1, h3{
+  h1,
+  h3 {
     color: var(--nextui-colors-textColorCardAnimate);
-  }  
-  h1{
+  }
+  h1 {
     font-size: 2.5rem;
   }
   @keyframes translationForm {
-    0% { transform: translate(0)}
-    100% { transform: translateX(65%) }
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translateX(65%);
+    }
+  }
+
+  .container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--nextui-colors-bgIconPrimary);
+    border-radius: 0.2rem;
   }
 
   .seccionLogin {
@@ -62,7 +80,7 @@ export const ContainerLogin = styled.div`
     .container {
       display: flex;
       margin: 1rem 0 1rem 0;
-      p{
+      p {
         font-family: sans-serif;
         font-weight: 600;
         font-size: 12px;
@@ -82,9 +100,9 @@ export const ContainerLogin = styled.div`
   .container-button {
     width: 70%;
     height: 2.3rem;
-    h1{
+    h1 {
       color: var(--nextui-colors-textColorCardAnimate);
-    } 
+    }
     input {
       width: 100%;
       height: 100%;
