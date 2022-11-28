@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
 import { createTheme, getDocumentTheme, NextUIProvider } from "@nextui-org/react";
 import '../styles/globals.css';
+import Navbar from '../components/Navbar/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(false);
@@ -18,6 +19,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         bgSecondGlass: "rgba( 152, 148, 187, 0.80 )",
 
         bgThridGlass: "#989a9d",
+        
+        bgAdminMenu: "#3c3e41" ,
 
         bgLoginCardAnimation: "#2b2b2b",
         bgCardLogin: "#3c3e41",
@@ -57,6 +60,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         bgPrimaryGlass: "rgba( 152, 148, 187, 0.95 )",
         //background card ya vistas
         bgSecondGlass: "rgba( 152, 148, 187, 0.70 )",
+
+        bgAdminMenu: "#d4d4d4" ,
+
 
         bgThridGlass: "#b4abf5",
         bgCardLogin: "#5a51a0",
@@ -107,6 +113,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
+        <Navbar />
         <Component {...pageProps} />
       </NextUIProvider>
     </>

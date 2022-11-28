@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 // import Head from "next/head";
 // import Image from "next/image";
 // import styles from "../styles/Home.module.css";
-import Navbar from '../components/Navbar/Navbar'
 import InputSelect from "../components/Inputs/InputSelect/InputSelect";
 import TestInputsReutility from '../components/TestComponents/TestInputsReutility'
 import {
@@ -20,8 +19,9 @@ const Container = styled.div`
     width: 100%;
   }
   .container-test-input{
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
   }
 `;
 
@@ -62,13 +62,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Navbar/>
       <Container>
         <div className="container-input-select">
           <InputSelect dataSelectList={ContentDropDown} useIcons={true} />
         </div>
         <div className="container-test-input">
-         <TestInputsReutility/>
+         {/* <TestInputsReutility/> */}
         </div>
       </Container>
     </>
