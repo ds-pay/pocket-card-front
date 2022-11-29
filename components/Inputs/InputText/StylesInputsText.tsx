@@ -3,9 +3,9 @@ import { ContainTextProps } from  './Interface'
 
 export const ContainInputText = styled.div<ContainTextProps>`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 13rem;
+    width: 100%;
     position: relative;
     .eye-pass{
         display: flex;
@@ -17,7 +17,6 @@ export const ContainInputText = styled.div<ContainTextProps>`
     .form{
         width: 100%;
         height: 3rem;
-        max-width: 40rem;
         position: relative;
         overflow: hidden;
         input{

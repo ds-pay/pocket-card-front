@@ -1,8 +1,11 @@
 import React from 'react'
+import FormularioCrearCliente from './FormularioCrearCliente'
 
 const index = () => {
   return (
-    <div>Cuentas</div>
+    <>
+      <FormularioCrearCliente />
+    </>
   )
 }
 

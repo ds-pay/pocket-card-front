@@ -2,8 +2,6 @@ import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
     width: ${({isActivate}) => isActivate ? "4rem" : "15.5rem" };
     height: 100%;
@@ -11,6 +9,7 @@ export const SidebarContainer = styled.div`
     position: absolute;
     transition: 0.5s all ease;
     white-space: nowrap;
+    z-index: 1;
 `;
 
 export const Content = styled.div`
@@ -31,55 +30,57 @@ export const Content = styled.div`
     margin: 0rem 0.8rem 0rem 1rem;
     text-align: left;
   }
-  .container {
+`;
+
+export const ContainerSeccion = styled.div`
+  display: flex;
+  margin: 0.3rem 1rem 0.3rem 1rem;
+  width: ${({ isActivate }) => (isActivate ? "56%" : "90%")};
+  height: 3rem;
+  border-radius: 0.5rem;
+  transition: 0.5s all ease;
+  justify-content: space-between;
+  background-color: ${({ isSelected }) => isSelected ? "var(--nextui-colors-bgThridGlass)" : null} ;
+  :hover {
+    background-color: var(--nextui-colors-bgThridGlass);
+    cursor: pointer;
+  }
+  .contain-img,
+  .contain-label {
     display: flex;
-    margin: 0.3rem 1rem 0.3rem 1rem;
-    width: ${({ isActivate }) => (isActivate ? "56%" : "90%")} ;
-    height: 3rem;
-    border-radius: 0.5rem;
+    justify-content: ${({ leftIsTrue }) =>
+      !leftIsTrue ? "flex-start" : "flex-end"};
+    align-items: center;
     transition: 0.5s all ease;
-    justify-content: space-between;
-    background: ${({ idSelected }) => idSelected ? "var(--nextui-colors-bgThridGlass)" : null} ;
-    :hover{
-      background-color: var(--nextui-colors-bgThridGlass);
-      cursor: pointer;
+  }
+  .contain-img {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .contain-label {
+    width: 100%;
+    opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
+    h3 {
+      font-size: 1rem;
+      margin: 0;
     }
-    .contain-img,
-    .contain-label{
-      display: flex;
-      justify-content: ${({leftIsTrue}) => !leftIsTrue ? "flex-start" : "flex-end"};
-      align-items: center;
-      transition: 0.5s all ease;
-    }
-    .contain-img {
-      margin: 0.5rem;
-      font-size: 1.2rem;
-    }
-    .contain-label {
-      width: 100%;
-      opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
-      h3{
-        font-size: 1rem;
-        margin: 0;
-      }
-    }
-    .contain-notifi{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 2.9rem;
-      height: 1.8rem;
-      border-radius: 1rem;
-      background: var(--nextui-colors-bgIconPrimary);
-      margin: 0.5rem;
-      transition: 0.7s all ease;
-      opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
-      white-space: normal;
-      overflow: hidden;
-      h3{
-        font-size: 1rem;
-        margin: 0;
-      }
+  }
+  .contain-notifi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.9rem;
+    height: 1.8rem;
+    border-radius: 1rem;
+    background: var(--nextui-colors-bgIconPrimary);
+    margin: 0.5rem;
+    transition: 0.7s all ease;
+    opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
+    white-space: normal;
+    overflow: hidden;
+    h3 {
+      font-size: 1rem;
+      margin: 0;
     }
   }
 `;

@@ -2,8 +2,7 @@ import styled from "styled-components";
 import {ContainerDropProps} from './Interfaces'
 
 export const ContainerInput = styled.div<ContainerDropProps>`
-  max-width: 20rem;
-  width:90%;
+  width:100%;
   height: 3rem;
   color: #b9b9b9;
   display: flex;
@@ -18,9 +17,6 @@ export const ContainerInput = styled.div<ContainerDropProps>`
   :hover {
     color: #dddddd;
     cursor: pointer;
-  };
-  span {
-    width: 30%;
   };
   .input-content {
     width: 100%;
@@ -56,20 +52,20 @@ export const ContainerInput = styled.div<ContainerDropProps>`
 `;
 
 export const ContainerDrop = styled.div`
-  width: 20rem;
-  height: 19rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 `;
 
 export const Container = styled.div<ContainerDropProps>`
-  position: absolute;
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 20rem;
-  height: ${({ isActive }) => (isActive ? "20rem" : "0rem")};
+  width: 100%;
+  height: ${({ isActive }) => (isActive ? "15rem" : "0")};
   margin: 0.4rem;
   border-radius: 1rem;
   flex-direction: column;
