@@ -22,7 +22,7 @@ const InputText = ({ name, color, type, regis, eyetrue, id }: dataText) => {
                 required
               />
               <label className="lbl-name">
-                <span className="text-name">{name}</span>
+                <div className="text-name">{name}</div>
               </label>
             </>
           ) : (
