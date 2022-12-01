@@ -209,8 +209,6 @@ const index = ({ children }) => {
     )
   }
   
-  //Me muevo hacia adelante y hacia atrás sobre lo que ya es mío, tu erecto pene delicioso y pidiendo más... Suave pero firme, suave pero seguido. Te abrazo al rededor del cuello me encanta la sensación de saber que me sientes tuya.
-  //Y te dejo allí por qué nos pillan chauuuu😅
   return (
     <Container>
       <Content>

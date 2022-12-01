@@ -3,10 +3,11 @@ import { ContainTextProps } from  './Interface'
 
 export const ContainInputText = styled.div<ContainTextProps>`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 13rem;
+    width: 100%;
     position: relative;
+    z-index: 0;
     .eye-pass{
         display: flex;
         position: absolute;
@@ -17,7 +18,6 @@ export const ContainInputText = styled.div<ContainTextProps>`
     .form{
         width: 100%;
         height: 3rem;
-        max-width: 40rem;
         position: relative;
         overflow: hidden;
         input{
@@ -30,6 +30,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             outline: 0px;
         }
         .lbl-name{
+            z-index: 0;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -65,9 +66,8 @@ export const ContainInputText = styled.div<ContainTextProps>`
         input:focus + .lbl-name:after, input:valid + .lbl-name:after{
             transform: translateX(0%);
         }
-        span{
+        div{
             position: relative;
-            z-index: 5;
         }
     }
 `;
