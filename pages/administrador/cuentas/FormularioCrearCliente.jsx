@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerNewClient, ContentUp, ContentDown } from "./StylesCuentas";
+import { ContainerCarForm, UpFormClient, DownFormClient } from "./StylesCuentas";
 import InputSelect from "../../../components/Inputs/InputSelect/InputSelect";
 import InputText from '../../../components/Inputs/InputText/InputText';
 import { MdDriveFileRenameOutline } from "react-icons/md";
@@ -65,9 +65,9 @@ const FormularioCrearCliente = () => {
 
 
   return (
-    <ContainerNewClient>
-      <ContentUp>
-        <div className="conainer-header">
+    <ContainerCarForm>
+      <UpFormClient>
+        <div className="container-header">
           <div className="container-img">
             <BsFillCreditCard2FrontFill />
           </div>
@@ -92,7 +92,7 @@ const FormularioCrearCliente = () => {
               <h3>Tipo de Credencial</h3>
               <InputSelect dataSelectList={ArrayCredencial} icon={false} />
             </div>
-            <div className="container-id-pocket">
+            <div className="inputtext">
               <InputText
                 id={"id"}
                 name={"ID Credencial Pocket Card"}
@@ -102,10 +102,10 @@ const FormularioCrearCliente = () => {
             </div>
           </div>
         </div>
-      </ContentUp>
-      <ContentDown>
+      </UpFormClient>
+      <DownFormClient>
         <div className="content-down">
-          <div className="conainer-header">
+          <div className="container-header">
             <div className="container-img">
               <FaUserAlt />
             </div>
@@ -115,8 +115,8 @@ const FormularioCrearCliente = () => {
           </div>
           {ArrayInfoClient.map((sec, index) => (
             <div className="container-inputs">
-              <div className="container-img">{sec.img}</div>
-              <div className="container-info-client">
+              <div className="img">{sec.img}</div>
+              <div className="inputtext">
                 <InputText
                   id={sec.id}
                   name={sec.name}
@@ -133,10 +133,10 @@ const FormularioCrearCliente = () => {
             </div>
           ))}
         </div>
-      </ContentDown>
+      </DownFormClient>
       {/* <InputSelect dataSelectList={ContentDropDown} useIcons={false} />
         <InputSelect dataSelectList={ContentDropDown} useIcons={false} /> */}
-    </ContainerNewClient>
+    </ContainerCarForm>
   );
 };
 

@@ -24,7 +24,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             width: 100%;
             height: 100%;
             background: none;
-            color: #fff;
+            color: #1f1f1f;
             padding-top: 20px;
             border: none;
             outline: 0px;
@@ -37,7 +37,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             width: 100%;
             height: 100%;
             pointer-events: none;
-            border-bottom: ${({ IsColor }) => IsColor ? "1px solid #c7c7c7" : "1px solid var(--nextui-colors-bgThridGlass)"};
+            border-bottom: ${({ IsColor }) => IsColor ? "1px solid #1f1f1f" : "1px solid var(--nextui-colors-bgThridGlass)"};
         }
         .lbl-name:after{
             content: '';
@@ -55,8 +55,9 @@ export const ContainInputText = styled.div<ContainTextProps>`
             position: absolute;
             bottom: 5px;
             left: 0;
+            transform: translateY(-30%);
             transition: all 0.3s ease;
-            color: ${({ IsColor }) => IsColor ? "#fff" : "var(--nextui-colors-bgThridGlass)"};
+            color: ${({ IsColor }) => IsColor ? "#1f1f1f" : "var(--nextui-colors-bgThridGlass)"};
         }
         input:focus + .lbl-name .text-name, input:valid + .lbl-name .text-name{
             transform: translateY(-120%);

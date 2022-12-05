@@ -4,7 +4,7 @@ import {ContainerDropProps} from './Interfaces'
 export const ContainerInput = styled.div<ContainerDropProps>`
   width:100%;
   height: 3rem;
-  color: white;
+  color: var(--nextui-colors-textFormColor);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,10 +12,10 @@ export const ContainerInput = styled.div<ContainerDropProps>`
   border: none;
   box-shadow: ${({ isActive }) =>
     isActive ? "0px 0px 4px 1px #638cfd" : "none"};
-  background-color: var(--nextui-colors-bgIconPrimary);
+  background-color: var(--nextui-colors-bgInputText);
   transition: all 0.2s;
   :hover {
-    color: #dddddd;
+    color: black;
     cursor: pointer;
   };
   .input-content {
@@ -60,15 +60,15 @@ export const ContainerDrop = styled.div`
 export const Container = styled.div<ContainerDropProps>`
   position: absolute;
   display: flex;
-  width: calc(100% - 60%);
+  width: calc(100% - 70%);
   justify-content: flex-start;
   align-items: flex-start;
   height: ${({ isActive }) => (isActive ? "10rem" : "0")};
   margin: 0.4rem;
   border-radius: 1rem;
   flex-direction: column;
-  color: white;
-  background-color:  var(--nextui-colors-bgLoginCardAnimation);
+  color: var(--nextui-colors-textFormColor);
+  background-color:  #d0d2d4;
   align-items: flex-start;
   transition: all 0.5s;
   @media (max-width: 1024px){
@@ -88,8 +88,7 @@ export const Container = styled.div<ContainerDropProps>`
     opacity: ${({ isActive }) => (isActive ? "1" : "0")};
     transition: ${({ isActive }) => (isActive ? "all 0.5s" : "all 0.1s")};
     :hover {
-      background-color: var(--nextui-colors-bgThridGlass);
-      color: #dddddd;
+      background-color:#ebeef3;
       cursor: pointer;
     }
     h1 {
