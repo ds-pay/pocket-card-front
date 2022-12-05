@@ -8,8 +8,9 @@ import { useForm } from "react-hook-form";
 const LoginView = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
   const { isDark } = useTheme();
+  const [ isCommerce, setIsCommerce ] = useState()
 
-  const ArrayInputsText = [
+  const LoginClient = [
     {
       id: "idpocket",
       name: "ID Pocket Card",
@@ -18,6 +19,28 @@ const LoginView = () => {
       img: <FaUserAlt />,
       regis: "idpocket",
       error: errors.idpocket?.type === "required" && (<p>El campo ID Pocket Card es requerido</p>)
+    },
+    {
+      id: "pass",
+      name: "Password",
+      color: true,
+      type: "password",
+      img: <FaLock />,
+      regis: "password",
+      eyetrue: true,
+      error: errors.password?.type === "required" && (<p>El campo Password es requerido</p>)
+    },
+  ];
+
+  const LogiCommerce = [
+    {
+      id: "emailcommerce",
+      name: "Correo Electronico",
+      color: true,
+      type: "text",
+      img: <FaUserAlt />,
+      regis: "emailcommerce",
+      error: errors.emailcommerce?.type === "required" && (<p>El campo Correo es requerido</p>)
     },
     {
       id: "pass",
@@ -148,30 +171,57 @@ const LoginView = () => {
               <h1>Iniciar Sesion</h1>
             </div>
             <form className="seccionLogin" onSubmit={handleSubmit(onSubmit)}>
-              {ArrayInputsText.map((sec, index) => (
-                <div className="container">
-                  <div className="container-img">{sec.img}</div>
-                  <div className="container-text">
-                    <InputText
-                      name={sec.name}
-                      color={sec.color}
-                      type={sec.type}
-                      regis={{
-                        ...register(sec.regis, {
-                          required: true,
-                        }),
-                      }}
-                      eyetrue={sec.eyetrue}
-                    />
-                    {sec.error}
+              {isCommerce 
+                ?LogiCommerce.map((sec, index) => (
+                  <div className="container">
+                    <div className="container-img">{sec.img}</div>
+                    <div className="container-text">
+                      <InputText
+                        name={sec.name}
+                        color={sec.color}
+                        type={sec.type}
+                        regis={{
+                          ...register(sec.regis, {
+                            required: true,
+                          }),
+                        }}
+                        eyetrue={sec.eyetrue}
+                      />
+                      {sec.error}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )) 
+                :LoginClient.map((sec, index) => (
+                  <div className="container">
+                    <div className="container-img">{sec.img}</div>
+                    <div className="container-text">
+                      <InputText
+                        name={sec.name}
+                        color={sec.color}
+                        type={sec.type}
+                        regis={{
+                          ...register(sec.regis, {
+                            required: true,
+                          }),
+                        }}
+                        eyetrue={sec.eyetrue}
+                      />
+                      {sec.error}
+                    </div>
+                  </div>
+                )) }
               <div className="container-button">
                 <input type="submit" value="Login" />
               </div>
             </form>
           </Login>
+          <div className="boton-switch" onClick={() => setIsCommerce(!isCommerce)}>
+            {
+              isCommerce 
+              ? <p>¿Eres Cliente?</p>
+              : <p>¿Eres Comercio?</p>
+            }
+          </div>
         </ContainerLogin>
       </ContainerPrimary>
     </>
