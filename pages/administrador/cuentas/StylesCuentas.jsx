@@ -1,45 +1,40 @@
 import styled from "@emotion/styled";
 
-export const ContainerNewClient = styled.form`
-    background-color: var(--nextui-colors-bgCardLogin);
-    width: 90%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    @media (max-width: 1024px){
-        height: 100%;
-    }
-`;
-
-export const ContentUp = styled.div`
+export const ContainerCarForm = styled.form`
+  background-color: var(--nextui-colors-backgroundForm);
+  width: 90%;
+  height: 90%;
   display: flex;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
-  padding: 1rem;
-  .conainer-header {
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  @media (max-width: 1024px) {
+    height: 100%;
+  }
+  .container-header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid var(--nextui-colors-textFormColor);
+    border-bottom: 1px solid var(--nextui-colors-textFormColor);
     margin: 0.5rem;
     .container-img,
     .container-title {
-      color: white;
+      color: var(--nextui-colors-textFormColor);
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .container-img {
       margin: 0 0.5rem 0 0.5rem;
+      font-size: 1.5rem;
       width: 3rem;
       height: 3rem;
-      font-size: 1.5rem;
       border-radius: 0.2rem;
     }
     .container-title {
@@ -49,16 +44,52 @@ export const ContentUp = styled.div`
       }
     }
   }
+  .inputtext {
+    background-color: var(--nextui-colors-bgInputText);
+    margin: 0.25rem;
+    padding: 0.25rem 0.25rem 0 0.5rem;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0.5rem 0 0.5rem;
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+    color: var(--nextui-colors-textFormColor);
+    background-color: var(--nextui-colors-bgInputText);
+    border-radius: 0.2rem;
+  }
+`;
+
+export const UpFormClient = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: 1rem;
+
   .content-up {
     display: flex;
     width: 100%;
     height: 100%;
-    @media (max-width: 1024px){
-        flex-direction: column;
+    justify-content: center;
+    @media (max-width: 1024px) {
+      flex-direction: column;
     }
     .content-left,
     .content-right {
-      width: 100%;
+      width: 45%;
       height: 100%;
       padding: 0.5rem;
     }
@@ -70,7 +101,7 @@ export const ContentUp = styled.div`
         justify-content: flex-start;
         h3 {
           font-size: 15px;
-          color: var(--nextui-colors-textColorCardAnimate);
+          color: var(--nextui-colors-textFormColor);
         }
       }
     }
@@ -81,30 +112,18 @@ export const ContentUp = styled.div`
       .content-credencial {
         margin: 0.5rem 0 0.5rem 0;
         h3 {
-          color: var(--nextui-colors-textColorCardAnimate);
+          color: var(--nextui-colors-textFormColor);
           font-size: 15px;
-          color: white;
         }
-      }
-      .container-id-pocket {
-        background-color: var(--nextui-colors-bgIconPrimary);
-        padding: 0.25rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        border-radius: 0.5rem;
       }
     }
   }
 `;
 
-export const ContentDown = styled.div`
+export const DownFormClient = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-
-  /* color: var(--nextui-colors-textColorCardAnimate); */
   .content-down {
     padding: 1rem;
     display: flex;
@@ -113,166 +132,44 @@ export const ContentDown = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .conainer-header {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
-      margin: 0.5rem;
-      .container-img,
-      .container-title {
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .container-img {
-        margin: 0 0.5rem 0 0.5rem;
-        font-size: 1.5rem;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 0.2rem;
-      }
-      .container-title {
-        h3 {
-          font-size: 1rem;
-          margin: 0;
-        }
-      }
-    }
+
     .container-inputs {
       display: flex;
-      width: 100%;
+      width: 90%;
       align-items: center;
-      .container-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 0.5rem 0 0.5rem;
-        font-size: 1.8rem;
-        width: 3rem;
-        height: 3rem;
-        color: white;
-        background-color: var(--nextui-colors-bgIconPrimary);
-        border-radius: 0.2rem;
-      }
-      .container-info-client {
-        background-color: var(--nextui-colors-bgIconPrimary);
-        margin: 0.25rem;
-        padding: 0.25rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0.5rem;
-        h3 {
-          font-size: 15px;
-        }
-      }
     }
   }
 `;
 
-export const ContainerNewCommerce = styled.form`
-  background-color: var(--nextui-colors-bgCardLogin);
-  width: 90%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  @media (max-width: 1024px) {
-    height: 100%;
-  }
-`;
-
-export const UpComerce = styled.div`
+export const UpFormComerce = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 2rem 1rem 2rem ;
-  .container-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    margin: 0.5rem;
-    .container-img,
-    .container-title {
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .container-img {
-      margin: 0 0.5rem 0 0.5rem;
-      font-size: 1.5rem;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.2rem;
-    }
-    .container-title {
-      h3 {
-        font-size: 1rem;
-        margin: 0;
-      }
-    }
-  }
-  .conteiner-load-img{
+  padding: 1rem 2rem 1rem 2rem;
+
+  .conteiner-load-img {
     width: 100%;
     height: 100%;
   }
 `;
 
-export const DownComerce = styled.div`
+export const DownFormComerce = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
   flex-direction: column;
   padding: 1rem 2rem 1rem 2rem;
-  .container-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    margin: 0.5rem;
-    .container-img,
-    .container-title {
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .container-img {
-      margin: 0 0.5rem 0 0.5rem;
-      font-size: 1.5rem;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.2rem;
-    }
-    .container-title {
-      h3 {
-        font-size: 1rem;
-        margin: 0;
-      }
-    }
-  }
-  .content-down{
+
+  .content-down {
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: space-around;
     .content-left,
     .content-right {
-      width: 50%;
+      width: 45%;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -282,71 +179,21 @@ export const DownComerce = styled.div`
       display: flex;
       flex-direction: column;
       .container-inputs {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      margin: 0.5rem 0 0.5rem 0;
-      .container-img {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 0.5rem 0 0.5rem;
-        font-size: 1.8rem;
-        width: 3rem;
-        height: 3rem;
-        color: white;
-        background-color: var(--nextui-colors-bgIconPrimary);
-        border-radius: 0.2rem;
-      }
-      .container-info-client {
-        background-color: var(--nextui-colors-bgIconPrimary);
-        margin: 0.25rem;
-        padding: 0.25rem;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0.5rem;
-        h3 {
-          font-size: 15px;
-        }
+        align-items: center;
+        margin: 0.5rem 0 0.5rem 0;
       }
     }
   }
-    }
-    .content-right {
-      display: flex;
-      flex-direction: column;
-      .container-inputs {
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    .container-inputs {
       display: flex;
       width: 100%;
       align-items: center;
       margin: 0.5rem 0 0.5rem 0;
-      .container-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 0.5rem 0 0.5rem;
-        font-size: 1.8rem;
-        width: 3rem;
-        height: 3rem;
-        color: white;
-        background-color: var(--nextui-colors-bgIconPrimary);
-        border-radius: 0.2rem;
-      }
-      .container-info-client {
-        background-color: var(--nextui-colors-bgIconPrimary);
-        margin: 0.25rem;
-        padding: 0.25rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0.5rem;
-        h3 {
-          font-size: 15px;
-        }
-      }
     }
-    }
+  }
 `;

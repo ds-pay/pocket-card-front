@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContainerNewCommerce, UpComerce, DownComerce } from './StylesCuentas';
+import { ContainerCarForm, UpFormComerce, DownFormComerce } from './StylesCuentas';
 import { FaImages, FaBoxes } from 'react-icons/fa'
 import { MdDriveFileRenameOutline } from 'react-icons/md'
 import InputText from '../../../components/Inputs/InputText/InputText';
@@ -13,7 +13,7 @@ const FormularioCrearComercio = () => {
       id: "idcomercio",
       name: "ID Comercio",
       color: true,
-      type: "idcomercio",
+      type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "idcomercio",
       error: errors.idcomercio?.type === "required" && (<p>El campo ID es Requerido</p>),
@@ -22,7 +22,7 @@ const FormularioCrearComercio = () => {
       id: "nombre",
       name: "Nombre",
       color: true,
-      type: "nombre",
+      type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "nombre",
       error: errors.nombre?.type === "required" && (<p>El campo Nombre es Requerido</p>),
@@ -31,7 +31,7 @@ const FormularioCrearComercio = () => {
       id: "apellido",
       name: "Apellido",
       color: true,
-      type: "apellido",
+      type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "apellido",
       error: errors.apellido?.type === "required" && (<p>El campo Apellido es Requerido</p>),
@@ -40,7 +40,7 @@ const FormularioCrearComercio = () => {
       id: "nit",
       name: "Nit/Cedula",
       color: true,
-      type: "nit",
+      type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "nit",
       error: errors.nit?.type === "required" && (<p>El campo Nit es Requerido</p>),
@@ -49,46 +49,46 @@ const FormularioCrearComercio = () => {
 
   const ArrayRight = [
     {
-      id: "idcomercio",
-      name: "ID Comercio",
+      id: "telefonoprimary",
+      name: "Telefono Primario",
       color: true,
       type: "text",
       img: <MdDriveFileRenameOutline />,
-      regis: "idcomercio",
-      error: errors.idcomercio?.type === "required" && (<p>El campo ID es Requerido</p>),
+      regis: "telefonoprimary",
+      error: errors.telefonoprimary?.type === "required" && (<p>El campo ID es Requerido</p>),
     },
     {
-      id: "nombre",
-      name: "Nombre",
+      id: "telefonosecundary",
+      name: "Telefono Secundario",
       color: true,
       type: "text",
       img: <MdDriveFileRenameOutline />,
-      regis: "nombre",
-      error: errors.nombre?.type === "required" && (<p>El campo Nombre es Requerido</p>),
+      regis: "telefonosecundary",
+      error: errors.telefonosecundary?.type === "required" && (<p>El campo Nombre es Requerido</p>),
     },
     {
-      id: "apellido",
-      name: "Apellido",
+      id: "email",
+      name: "Correo Electronico",
       color: true,
       type: "text",
       img: <MdDriveFileRenameOutline />,
-      regis: "apellido",
-      error: errors.apellido?.type === "required" && (<p>El campo Apellido es Requerido</p>),
+      regis: "email",
+      error: errors.email?.type === "required" && (<p>El campo Apellido es Requerido</p>),
     },
     {
-      id: "nit",
-      name: "Nit/Cedula",
+      id: "contraseña",
+      name: "Contrasesña",
       color: true,
       type: "text",
       img: <MdDriveFileRenameOutline />,
-      regis: "nit",
-      error: errors.nit?.type === "required" && (<p>El campo Nit es Requerido</p>),
+      regis: "contraseña",
+      error: errors.contraseña?.type === "required" && (<p>El campo Nit es Requerido</p>),
     },
   ]
 
   return (
-    <ContainerNewCommerce>
-      <UpComerce>
+    <ContainerCarForm>
+      <UpFormComerce>
         <div className="container-header">
           <div className="container-img">
             <FaImages />
@@ -98,8 +98,8 @@ const FormularioCrearComercio = () => {
           </div>
         </div>
         <div className="conteiner-load-img"></div>
-      </UpComerce>
-      <DownComerce>
+      </UpFormComerce>
+      <DownFormComerce>
         <div className="container-header">
           <div className="container-img">
             <FaBoxes />
@@ -112,8 +112,8 @@ const FormularioCrearComercio = () => {
           <div className="content-left">
             {ArrayLeft.map((sec, index) => (
               <div className="container-inputs" key={index}>
-                <div className="container-img">{sec.img}</div>
-                <div className="container-info-client">
+                <div className="img">{sec.img}</div>
+                <div className="inputtext">
                   <InputText
                     id={sec.id}
                     name={sec.name}
@@ -131,10 +131,10 @@ const FormularioCrearComercio = () => {
             ))}
           </div>
           <div className="content-right">
-            {ArrayLeft.map((sec, index) => (
+            {ArrayRight.map((sec, index) => (
               <div className="container-inputs" key={index}>
-                <div className="container-img">{sec.img}</div>
-                <div className="container-info-client">
+                <div className="img">{sec.img}</div>
+                <div className="inputtext">
                   <InputText
                     id={sec.id}
                     name={sec.name}
@@ -152,8 +152,8 @@ const FormularioCrearComercio = () => {
             ))}
           </div>
         </div>
-      </DownComerce>
-    </ContainerNewCommerce>
+      </DownFormComerce>
+    </ContainerCarForm>
   );
 }
 

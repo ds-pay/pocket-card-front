@@ -19,11 +19,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         bgSecondGlass: "rgba( 152, 148, 187, 0.80 )",
 
         bgThridGlass: "#989a9d",
-        
+        backgroundForm: "#505355",
         bgAdminMenu: "#3c3e41" ,
 
         bgLoginCardAnimation: "#2b2b2b",
         bgCardLogin: "#3c3e41",
+        textFormColor: "#464646",
+
         //Sombreado del narvbar y cards notifications
         boxShadowPrimary: "0 8px 32px 0 rgba( 218, 220, 225, 0.10 )",
         // tono claro de letra - icon
@@ -55,20 +57,24 @@ function MyApp({ Component, pageProps }: AppProps) {
     theme: {
       colors: {
         //background de los iconos del narvbar
-        bgIconPrimary: "#9894BB",
+        bgIconPrimary: "#7a788a",
+        bgImputText: "#b4aafd",
         //background de los iconos del narvbar glass
         bgPrimaryGlass: "rgba( 152, 148, 187, 0.95 )",
         //background card ya vistas
         bgSecondGlass: "rgba( 152, 148, 187, 0.70 )",
 
         bgAdminMenu: "#d4d4d4" ,
-
-
+        backgroundForm: "#ffffff",
+        bgInputText: "#ebeef3",
         bgThridGlass: "#b4abf5",
         bgCardLogin: "#5a51a0",
 
+
         bgLoginCardAnimation: "#362b80",
         textColorCardAnimate: "#e6e6e6",
+        textFormColor: "#464646",
+
         //Sombreado del narvbar y cards notifications
         boxShadowPrimary: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
         // tono oscuro de letra
@@ -113,7 +119,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
-        {/* <Navbar /> */}
+        {/* <Navbar />  */}
         <Component {...pageProps} />
       </NextUIProvider>
     </>

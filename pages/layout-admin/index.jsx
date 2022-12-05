@@ -59,7 +59,6 @@ const index = () => {
     },
   ]
 
-
   return (
     <>
       <Sidebar isSelected={isSelected} setIsSelected={setIsSelected} />

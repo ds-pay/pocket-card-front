@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import FormularioCrearCliente from './FormularioCrearCliente'
 import FormularioCrearComercio from './FormularioCrearComercio'
-import { MdGroups, MdCloudUpload } from 'react-icons/md'
+import { MdGroups, MdCloudUpload, MdOutlineArrowBack } from 'react-icons/md'
 import { RiUserAddFill, RiUserSearchFill } from 'react-icons/ri'
 import styled from '@emotion/styled'
 
@@ -12,36 +12,56 @@ const ContentCard = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  
-  .cardContent{
+
+  .cardContent {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
 
-    h3{
+    h3 {
       cursor: pointer;
     }
-    .card{
+    .card {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 10rem;
       height: 12rem;
-      background-color: aqua;
+      background-color: var(--nextui-colors-backgroundForm);
+      color: var(--nextui-colors-textFormColor);
       border-radius: 1rem;
       transition: 0.3s all ease;
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
       cursor: pointer;
-      :hover{
+      :hover {
         transform: scale(1.2, 1.2);
       }
-      .container-icon{
+      .container-icon {
         font-size: 3rem;
       }
     }
   }
+`;
 
+const BottonBack = styled.div`
+  position: absolute;
+  padding: 0.5rem;
+  background-color: var(--nextui-colors-backgroundNavbar);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 0.5rem;
+  transition: 0.5s all ease;
+  :hover {
+    background-color: var(--nextui-colors-bgThridGlass);
+    cursor: pointer;
+  }
 `;
 
 const index = () => {
@@ -82,11 +102,6 @@ const index = () => {
   ];
 
   const handleCreateSection = () =>{
-    // if ( section === "formClient" ){
-    //   return <><FormularioCrearCliente /></>
-    // } else {
-    //   return <><FormularioCrearComercio /></>
-    // }
     return (
       <>
         {SeleccionSeccion.map((sec,index) => (
@@ -103,7 +118,7 @@ const index = () => {
     <>
       { isSelection
       ? <>
-          <div onClick={() => setIsSelection(!isSelection) }>regresar</div>
+          <BottonBack onClick={() => setIsSelection(!isSelection) }> <MdOutlineArrowBack/>Back</BottonBack>
           {handleCreateSection()}
         </>
       : <ContentCard>
