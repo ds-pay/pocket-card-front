@@ -19,12 +19,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         bgSecondGlass: "rgba( 152, 148, 187, 0.80 )",
 
         bgThridGlass: "#989a9d",
-        backgroundForm: "#505355",
+        backgroundForm: "#5c5c5c",
+        bgInputText: "#797979",
         bgAdminMenu: "#3c3e41" ,
 
         bgLoginCardAnimation: "#2b2b2b",
         bgCardLogin: "#3c3e41",
-        textFormColor: "#464646",
+        textFormColor: "#ffffff",
 
         //Sombreado del narvbar y cards notifications
         boxShadowPrimary: "0 8px 32px 0 rgba( 218, 220, 225, 0.10 )",
@@ -71,7 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         bgCardLogin: "#5a51a0",
 
 
-        bgLoginCardAnimation: "#362b80",
+        bgLoginCardAnimation: "#5040b9",
         textColorCardAnimate: "#e6e6e6",
         textFormColor: "#464646",
 
@@ -119,7 +120,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
-        {/* <Navbar />  */}
+        <Navbar /> 
         <Component {...pageProps} />
       </NextUIProvider>
     </>

@@ -14,21 +14,21 @@ export const ContainerLogin = styled.div`
   width: 22rem;
   height: 28rem;
   padding: 0 0 0 1.3rem;
-  background-color: var(--nextui-colors-bgCardLogin);
+  background-color: var(--nextui-colors-backgroundForm);
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   transform: translateX(65%);
   animation: translationForm 1s;
-  -webkit-box-shadow: 0px 0px 5px 0px #666666;
-  -moz-box-shadow: 0px 0px 5px 0px #666666;
-  box-shadow: 0px 0px 5px 0px #666666;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
   @media (max-width: 900px) {
     transform: translateX(0);
   }
   h1,
   h3 {
-    color: var(--nextui-colors-textColorCardAnimate);
+    color: var(--nextui-colors-textFormColor);
   }
   h1 {
     font-size: 2.5rem;
@@ -50,8 +50,9 @@ export const ContainerLogin = styled.div`
     margin: 0 0.5rem 0 0.5rem;
     padding: 1rem;
     width: 3rem;
-    height: 3rem;
-    background-color: var(--nextui-colors-bgIconPrimary);
+    height: 100%;
+    background-color: var(--nextui-colors-bgInputText);
+    color: var(--nextui-colors-textFormColor);
     border-radius: 0.2rem;
   }
 
@@ -88,12 +89,14 @@ export const ContainerLogin = styled.div`
         color: #ff5959;
       }
       .container-text {
+        background-color: var(--nextui-colors-bgInputText);
+        margin: 0.25rem;
+        padding: 0.25rem 0.25rem 0 0.5rem;
+        width: 13.6rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        margin: 0 0.5rem 0 0.5rem;
-        height: 2.5rem;
+        align-items: center;
+        border-radius: 0.5rem;
       }
     }
   }
@@ -106,14 +109,21 @@ export const ContainerLogin = styled.div`
     input {
       width: 100%;
       height: 100%;
-      background-color: var(--nextui-colors-bgIconPrimary);
+      background-color: var(--nextui-colors-bgInputText);
       transition: 0.3s all ease;
       border: none;
       border-radius: 0.3rem;
       :hover {
-        background-color: var(--nextui-colors-bgThridGlass);
+        background-color: #d1cbff;
         cursor: pointer;
       }
+    }
+  }
+  .boton-switch{
+    color: var(--nextui-colors-textFormColor);
+    :hover{
+      cursor: pointer;
+      color: var(--nextui-colors-textColorCardAnimate);
     }
   }
 `;
