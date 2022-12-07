@@ -94,7 +94,7 @@ const FormularioCrearComercio = () => {
             <FaImages />
           </div>
           <div className="container-title">
-            <h3>Logo del Cliente</h3>
+            <h3>Logo del Comercio</h3>
           </div>
         </div>
         <div className="conteiner-load-img"></div>

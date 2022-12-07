@@ -19,9 +19,8 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 0 2rem;
+  flex-direction: column;
+  margin: 0 0 0 4rem;
 `;
 
 
