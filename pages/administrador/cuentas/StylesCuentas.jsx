@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const ContainerCarForm = styled.form`
   background-color: var(--nextui-colors-backgroundForm);
   width: 90%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,8 +12,15 @@ export const ContainerCarForm = styled.form`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.5s all ease;
   @media (max-width: 1024px) {
     height: 100%;
+    width: 80%;
+    top: 1rem;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
   .container-header {
     width: 100%;
@@ -53,8 +60,12 @@ export const ContainerCarForm = styled.form`
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
+    transition: 0.5s all ease;
     h3 {
       font-size: 15px;
+    }
+    @media (max-width: 1024px){
+      background-color: var(--nextui-colors-backgroundForm);
     }
   }
   .img {
@@ -69,6 +80,10 @@ export const ContainerCarForm = styled.form`
     color: var(--nextui-colors-textFormColor);
     background-color: var(--nextui-colors-bgInputText);
     border-radius: 0.2rem;
+    transition: 0.5s all ease;
+    @media (max-width: 1024px){
+      background-color: var(--nextui-colors-backgroundForm);
+    }
   }
 `;
 
@@ -86,12 +101,16 @@ export const UpFormClient = styled.div`
     justify-content: center;
     @media (max-width: 1024px) {
       flex-direction: column;
+      align-items: center;
     }
     .content-left,
     .content-right {
       width: 45%;
       height: 100%;
       padding: 0.5rem;
+      @media (max-width: 1024px) {
+      width: 80%;
+      }
     }
     .content-left {
       .content-credencial {
@@ -167,6 +186,10 @@ export const DownFormComerce = styled.div`
     width: 100%;
     height: 100%;
     justify-content: space-around;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
     .content-left,
     .content-right {
       width: 45%;
@@ -174,6 +197,9 @@ export const DownFormComerce = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      @media (max-width: 1024px) {
+        width: 90%;
+      }
     }
     .content-left {
       display: flex;

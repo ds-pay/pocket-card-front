@@ -1,60 +1,93 @@
-import React, { useState } from 'react'
-import FormularioCrearCliente from './FormularioCrearCliente'
-import FormularioCrearComercio from './FormularioCrearComercio'
-import { MdGroups, MdCloudUpload, MdOutlineArrowBack } from 'react-icons/md'
-import { RiUserAddFill, RiUserSearchFill } from 'react-icons/ri'
-import styled from '@emotion/styled'
+import React, { useState } from "react";
+import FormularioCrearCliente from "./FormularioCrearCliente";
+import FormularioCrearComercio from "./FormularioCrearComercio";
+import { MdOutlineGroupAdd, MdCloudUpload } from "react-icons/md";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { RiUserAddFill, RiUserSearchFill } from "react-icons/ri";
+import styled from "@emotion/styled";
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
 const ContentCard = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  height: 5.5rem;
 
   .cardContent {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    background-color: var(--nextui-colors-bgInputText);
 
-    h3 {
-      cursor: pointer;
-    }
-    .card {
-      display: flex;
-      flex-direction: column;
+    @media (max-width: 1024px) {
       justify-content: center;
-      align-items: center;
-      width: 10rem;
-      height: 12rem;
-      background-color: var(--nextui-colors-backgroundForm);
-      color: var(--nextui-colors-textFormColor);
-      border-radius: 1rem;
-      transition: 0.3s all ease;
-      -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
-      -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
-      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-      :hover {
-        transform: scale(1.2, 1.2);
-      }
-      .container-icon {
-        font-size: 3rem;
-      }
     }
   }
 `;
 
-const BottonBack = styled.div`
+const Card = styled.div`
+  width: 10rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  color: var(--nextui-colors-textFormColor);
+  border-radius: 1rem;
+  transition: 0.3s all ease;
+  background-color: ${({ isSelection }) =>
+    isSelection ? "var(--nextui-colors-backgroundForm)" : null};
+  @media (max-width: 1024px) {
+    width: 3rem;
+    height: 3rem;
+    .container-icon {
+      font-size: 1.5rem;
+    }
+  }
+  :hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    background-color: var(--nextui-colors-backgroundForm);
+  }
+  .container-icon {
+  }
+  .container-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+`;
+
+const Content = styled.div`
   position: absolute;
+  top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+`;
+
+const BottonBack = styled.div`
+  width: 5rem;
+  position: relative;
   padding: 0.5rem;
   background-color: var(--nextui-colors-backgroundNavbar);
-  top: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   color: white;
   border-radius: 0.5rem;
   transition: 0.5s all ease;
@@ -62,79 +95,90 @@ const BottonBack = styled.div`
     background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;
   }
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const index = () => {
-  const [ isSelection, setIsSelection ] = useState(false)
-  const [ section, setSection ] = useState("")
-  
+  const [isSelection, setIsSelection] = useState(false);
+  const [section, setSection] = useState("");
 
   const handleClick = (id) => {
-    setIsSelection(!isSelection)
-    setSection(id)
-  }
+    setIsSelection(!isSelection);
+    setSection(id);
+  };
 
   const SeleccionSeccion = [
     {
       id: "search",
       content: <FormularioCrearComercio />,
       Label: "Buscar Cuenta",
-      icon: <RiUserSearchFill />
+      icon: <RiUserSearchFill />,
     },
     {
       id: "formClient",
       content: <FormularioCrearCliente />,
       Label: "Crear Cliente",
-      icon: <RiUserAddFill />
+      icon: <RiUserAddFill />,
     },
     {
       id: "formCommerce",
       content: <FormularioCrearComercio />,
       Label: "Crear Comercio",
-      icon: <MdGroups />
+      icon: <MdOutlineGroupAdd />,
     },
     {
       id: "bulkload",
       content: <FormularioCrearComercio />,
       Label: "Carga Masiva",
-      icon: <MdCloudUpload />
-    }
+      icon: <MdCloudUpload />,
+    },
   ];
 
-  const handleCreateSection = () =>{
+  const handleCreateSection = () => {
     return (
       <>
-        {SeleccionSeccion.map((sec,index) => (
-          section === sec.id
-          ? sec.content
-          :null
-        ))}
+        {SeleccionSeccion.map((sec, index) =>
+          section === sec.id ? sec.content : null
+        )}
       </>
-    )
+    );
   };
 
-
   return (
-    <>
-      { isSelection
-      ? <>
-          <BottonBack onClick={() => setIsSelection(!isSelection) }> <MdOutlineArrowBack/>Back</BottonBack>
-          {handleCreateSection()}
-        </>
-      : <ContentCard>
-          <h1>Elige una opcion</h1>
-          <div className='cardContent'>
-            {SeleccionSeccion.map((sec, index) => (
-              <div className='card' onClick={ () => handleClick(sec.id)}>
-                <div className='container-icon'>{sec.icon}</div>
-                {sec.Label}
-              </div>
-            ))}
+    <Container>
+      <ContentCard>
+        <div className="cardContent">
+          {SeleccionSeccion.map((sec, index) => (
+            <Card
+              isSelection={section === sec.id ? true : false}
+              className="card"
+              onClick={() => handleClick(sec.id)}
+            >
+              <div className="container-icon">{sec.icon}</div>
+              <div className="container-label">{sec.Label}</div>
+            </Card>
+          ))}
+        </div>
+      </ContentCard>
+      <Content>
+        {isSelection ? (
+          <>
+            {/* <BottonBack onClick={() => setIsSelection(!isSelection)}>
+              Close
+              <AiFillCloseCircle />
+            </BottonBack> */}
+            {handleCreateSection()}
+          </>
+        ) : (
+          <div>
+            <h4>Elige una opcion en el menu de arriba</h4>
           </div>
-        </ContentCard>
-      }
-    </>
-  )
-}
+        )}
+      </Content>
+    </Container>
+  );
+};
 
-export default index
+export default index;

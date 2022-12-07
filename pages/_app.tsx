@@ -120,7 +120,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
-        <Navbar /> 
+        {/* <Navbar />  */}
         <Component {...pageProps} />
       </NextUIProvider>
     </>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {ContainerDropProps} from './Interfaces'
 
 export const ContainerInput = styled.div<ContainerDropProps>`
-  width:100%;
+  width: 100%;
   height: 3rem;
   color: var(--nextui-colors-textFormColor);
   display: flex;
@@ -13,11 +13,14 @@ export const ContainerInput = styled.div<ContainerDropProps>`
   box-shadow: ${({ isActive }) =>
     isActive ? "0px 0px 4px 1px #638cfd" : "none"};
   background-color: var(--nextui-colors-bgInputText);
-  transition: all 0.2s;
+  transition: all 0.5s;
   :hover {
     color: black;
     cursor: pointer;
-  };
+  }
+  @media (max-width: 1024px) {
+    background-color: var(--nextui-colors-backgroundForm);
+  }
   .input-content {
     width: 100%;
     display: flex;
@@ -25,7 +28,7 @@ export const ContainerInput = styled.div<ContainerDropProps>`
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem 0 1rem;
-  };
+  }
   .selection-icon {
     width: 10%;
     display: flex;
@@ -33,20 +36,18 @@ export const ContainerInput = styled.div<ContainerDropProps>`
     .svg-logo {
       margin: 0.5rem;
     }
-  };
+  }
   .selection-title {
     font-weight: bold;
-  };
-  .no-selection{
-
+  }
+  .no-selection {
   }
   .selection-arrow {
     display: flex;
     justify-content: center;
     transition: all 0.3s;
-    transform: ${({ isActive }) =>
-      isActive ? "rotate(180deg)" : "rotate(0)"};
-  };
+    transform: ${({ isActive }) => (isActive ? "rotate(180deg)" : "rotate(0)")};
+  }
 `;
 
 export const ContainerDrop = styled.div`
