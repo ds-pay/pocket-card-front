@@ -5,9 +5,11 @@ export const ContainerPrimary = styled.div`
   flex-direction: row; 
   justify-content: center; 
   align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
-export const ContainerLogin = styled.div`
+export const ContainerLoginClient = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +25,130 @@ export const ContainerLogin = styled.div`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
+  transform: ${({isCommerce}) => isCommerce ? "translateX(20%)" : "translateX(115%)"};
+  @media (max-width: 900px) {
+    transform: translateX(0);
+  }
+  h1,
+  h3 {
+    color: var(--nextui-colors-textFormColor);
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  @keyframes translationForm {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translateX(65%);
+    }
+  }
+
+  .container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0.5rem 0 0.5rem;
+    padding: 1rem;
+    width: 3rem;
+    height: 100%;
+    background-color: var(--nextui-colors-bgInputText);
+    color: var(--nextui-colors-textFormColor);
+    border-radius: 0.2rem;
+  }
+
+  .seccionLogin {
+    display: flex;
+  }
+
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .seccionLogin {
+    width: 25rem;
+    height: 15rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container {
+      display: flex;
+      margin: 1rem 0 1rem 0;
+      p {
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 0;
+        color: #ff5959;
+      }
+      .container-text {
+        background-color: var(--nextui-colors-bgInputText);
+        margin: 0.25rem;
+        padding: 0.25rem 0.25rem 0 0.5rem;
+        width: 13.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+  .container-button {
+    width: 70%;
+    height: 2.3rem;
+    h1 {
+      color: var(--nextui-colors-textColorCardAnimate);
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      background-color: var(--nextui-colors-bgInputText);
+      transition: 0.3s all ease;
+      border: none;
+      border-radius: 0.3rem;
+      :hover {
+        background-color: #d1cbff;
+        cursor: pointer;
+      }
+    }
+  }
+  .boton-switch{
+    color: var(--nextui-colors-textFormColor);
+    :hover{
+      cursor: pointer;
+      color: var(--nextui-colors-textColorCardAnimate);
+    }
+  }
+`;
+
+export const ContainerLoginCommerce = styled.div`
+z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22rem;
+  height: 28rem;
+  padding: 0 0 0 1.3rem;
+  background-color: var(--nextui-colors-backgroundForm);
+  flex-direction: column;
+  border-radius: 1rem 1rem 1rem 1rem;
+  transition: 1s all ease;
+  transform: translateX(65%);
+  animation: translationForm 1s;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
+  transform: ${({isCommerce}) => isCommerce ? "translateX(15%)" : "translateX(-80%)"};
   @media (max-width: 900px) {
     transform: translateX(0);
   }
@@ -137,7 +263,7 @@ export const Login = styled.div`
 
 export const ContainerCard = styled.div`
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
