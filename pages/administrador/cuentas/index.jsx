@@ -16,12 +16,12 @@ const Container = styled.div`
 const ContentCard = styled.div`
   display: flex;
   width: 100%;
-  height: 5.5rem;
+  height: 5rem;
 
   .cardContent {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     border-radius: 1rem;
     margin: 0.5rem;
@@ -34,8 +34,8 @@ const ContentCard = styled.div`
 `;
 
 const Card = styled.div`
-  width: 10rem;
-  height: 4rem;
+  width: 9rem;
+  height: 3rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -70,14 +70,12 @@ const Card = styled.div`
 `;
 
 const Content = styled.div`
-  position: absolute;
-  top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: 100%;
 `;
 
 const BottonBack = styled.div`

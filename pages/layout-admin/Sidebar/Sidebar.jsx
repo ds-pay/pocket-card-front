@@ -102,7 +102,6 @@ const Sidebar = ({ isSelected, setIsSelected }) => {
           </ContainerSeccion>
         ))}
       </Content>
-      <Content></Content>
     </SidebarContainer>
   );
 };
