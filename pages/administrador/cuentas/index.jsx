@@ -14,48 +14,54 @@ const Container = styled.div`
 `;
 
 const ContentCard = styled.div`
+  position: absolute;
   display: flex;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
+  top: 0;
+  background: var(--nextui-colors-backgroundNavbar);
 
   .cardContent {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    background-color: var(--nextui-colors-bgInputText);
-
-    @media (max-width: 1024px) {
-      justify-content: center;
-    }
   }
 `;
 
 const Card = styled.div`
+  position: relative;
   width: 9rem;
-  height: 3rem;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 0rem 0.5rem 0rem 0.5rem;
-  color: var(--nextui-colors-textFormColor);
-  border-radius: 1rem;
+  color: ${({ isSelection }) =>
+    !isSelection ? "var(--nextui-colors-textColorCardAnimate)" : "var(--nextui-colors-textFormColor)"};
+  border-radius: 1rem 1rem 0 0;
   transition: 0.3s all ease;
   background-color: ${({ isSelection }) =>
     isSelection ? "var(--nextui-colors-backgroundForm)" : null};
   @media (max-width: 1024px) {
     width: 3rem;
     height: 3rem;
+    border-radius: 1rem;
     .container-icon {
       font-size: 1.5rem;
     }
   }
+
   :hover {
     cursor: pointer;
-    transform: scale(1.1, 1.1);
+    color: var(--nextui-colors-textFormColor);
     background-color: var(--nextui-colors-backgroundForm);
+    .curva-izquierda {
+      box-shadow: 4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm);
+    }
+    .curva-derecha {
+      box-shadow: -4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm);
+    }
   }
   .container-icon {
   }
@@ -67,9 +73,34 @@ const Card = styled.div`
       display: none;
     }
   }
+
+  .curva-izquierda,
+  .curva-derecha {
+    position: absolute;
+    width: 0.8rem;
+    height: 1rem;
+    bottom: 0;
+    transition: 0.4s all ease;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+  .curva-izquierda {
+    left: -0.8rem;
+    border-bottom-right-radius: 20px;
+    box-shadow: ${({ isSelection }) =>
+    isSelection ? "4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm)" : null};
+  }
+  .curva-derecha {
+    right: -0.8rem;
+    border-bottom-left-radius: 30px;
+    box-shadow: ${({ isSelection }) =>
+    isSelection ? "-4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm)" : null};
+  }
 `;
 
 const Content = styled.div`
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,6 +185,8 @@ const index = () => {
               className="card"
               onClick={() => handleClick(sec.id)}
             >
+              <div className="curva-izquierda"></div>
+              <div className="curva-derecha"></div>
               <div className="container-icon">{sec.icon}</div>
               <div className="container-label">{sec.Label}</div>
             </Card>
@@ -161,19 +194,11 @@ const index = () => {
         </div>
       </ContentCard>
       <Content>
-        {isSelection ? (
+        {isSelection &&
           <>
-            {/* <BottonBack onClick={() => setIsSelection(!isSelection)}>
-              Close
-              <AiFillCloseCircle />
-            </BottonBack> */}
             {handleCreateSection()}
           </>
-        ) : (
-          <div>
-            <h4>Elige una opcion en el menu de arriba</h4>
-          </div>
-        )}
+        }
       </Content>
     </Container>
   );

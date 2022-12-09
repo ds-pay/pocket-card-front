@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const ContainerCarForm = styled.form`
   background-color: var(--nextui-colors-backgroundForm);
-  width: 90%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,11 +11,11 @@ export const ContainerCarForm = styled.form`
   border-radius: 1rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
   transition: 0.5s all ease;
   @media (max-width: 1024px) {
     height: 100%;
-    width: 80%;
+    width: 100%;
     top: 1rem;
     background: none;
     -webkit-box-shadow: none;
@@ -52,8 +52,9 @@ export const ContainerCarForm = styled.form`
     }
   }
   .inputtext {
+    z-index: 0;
     background-color: var(--nextui-colors-bgInputText);
-    margin: 0.25rem;
+    margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
 
     width: 100%;
@@ -109,7 +110,7 @@ export const UpFormClient = styled.div`
       height: 100%;
       padding: 0.5rem;
       @media (max-width: 1024px) {
-      width: 80%;
+      width: 100%;
       }
     }
     .content-left {
@@ -127,7 +128,7 @@ export const UpFormClient = styled.div`
     .content-right {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       .content-credencial {
         margin: 0.5rem 0 0.5rem 0;
         h3 {
@@ -156,6 +157,9 @@ export const DownFormClient = styled.div`
       display: flex;
       width: 90%;
       align-items: center;
+      @media (max-width: 1024px){
+        width: 100%;
+      }
     }
   }
 `;
