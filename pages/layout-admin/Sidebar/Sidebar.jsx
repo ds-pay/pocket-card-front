@@ -1,67 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { SidebarContainer, Content, Head, ButtonArrow, ContainerSeccion} from "./StylesSidebar";
-import { IoMdNotifications, IoLogoPlaystation } from "react-icons/io";
-import { SiTheconversation } from "react-icons/si";
-import { HiUser } from "react-icons/hi";
-import { FaNewspaper } from "react-icons/fa";
-import { TbAntennaBars5, TbSlideshow } from "react-icons/tb";
-import { MdKeyboardArrowLeft, MdDoNotDisturbOnTotalSilence } from "react-icons/md";
-// import Cuentas from './cuentas'
-// import Convenios from './convenios'
-// import Bonos from './bonos'
-// import SlideShow from './slider'
-// import Noticias from './noticias'
-// import Notificaciones from './notificaciones'
-// import Estadisticas from './stadistics'
+import { IoLogoPlaystation } from "react-icons/io";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
-const Sidebar = ({ isSelected, setIsSelected }) => {
+const Sidebar = ({ isSelected, setIsSelected, ContentMenu }) => {
   const [isActivate, setIsActivate] = useState(true);
 
   const handleClick = (id) => {
     setIsSelected(id);
   };
-
-  const ContentSidebar = [
-    {
-      id: "cuentas",
-      img: <HiUser />,
-      label: "Cuentas",
-    },
-    {
-      id: "convenios",
-      img: <SiTheconversation />,
-      label: "Convenios",
-    },
-    {
-      id: "bonos",
-      img: <MdDoNotDisturbOnTotalSilence />,
-      label: "Bonos",
-    },
-    {
-      id: "slider",
-      img: <TbSlideshow />,
-      label: "Slider Show",
-    },
-    {
-      id: "noticias",
-      img: <FaNewspaper />,
-      label: "Noticias",
-      notifications: "15",
-      notifyBolean: true,
-    },
-    {
-      id: "notificaciones",
-      img: <IoMdNotifications />,
-      label: "Notificaciones",
-      notifications: "15",
-      notifyBolean: true,
-    },
-    {
-      id: "estadisticas",
-      img: <TbAntennaBars5 />,
-      label: "Estadisticas",
-    },
-  ];
 
   return (
     <SidebarContainer isActivate={isActivate}>
@@ -81,7 +28,7 @@ const Sidebar = ({ isSelected, setIsSelected }) => {
       </Head>
       <Content isActivate={isActivate}>
         <p className="title">Menu</p>
-        {ContentSidebar.map((sec, index) => (
+        {ContentMenu.map((sec, index) => (
           <ContainerSeccion
             isActivate={isActivate}
             key={index}
