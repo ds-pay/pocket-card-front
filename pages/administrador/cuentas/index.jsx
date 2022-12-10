@@ -56,14 +56,9 @@ const Card = styled.div`
     cursor: pointer;
     color: var(--nextui-colors-textFormColor);
     background-color: var(--nextui-colors-backgroundForm);
-    .curva-izquierda {
-      box-shadow: 4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm);
-    }
-    .curva-derecha {
-      box-shadow: -4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm);
-    }
   }
   .container-icon {
+    font-size: 1.2rem;
   }
   .container-label {
     display: flex;

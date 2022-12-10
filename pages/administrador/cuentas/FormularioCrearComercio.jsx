@@ -2,6 +2,7 @@ import React from 'react'
 import { ContainerCarForm, UpFormComerce, DownFormComerce } from './StylesCuentas';
 import { FaImages, FaBoxes } from 'react-icons/fa'
 import { MdDriveFileRenameOutline } from 'react-icons/md'
+import { IoImageSharp } from 'react-icons/io'
 import InputText from '../../../components/Inputs/InputText/InputText';
 import { useForm } from "react-hook-form";
 
@@ -97,7 +98,10 @@ const FormularioCrearComercio = () => {
             <h3>Logo del Comercio</h3>
           </div>
         </div>
-        <div className="conteiner-load-img"></div>
+        <div className="conteiner-load-img">
+          <div>
+          </div>
+        </div>
       </UpFormComerce>
       <DownFormComerce>
         <div className="container-header">

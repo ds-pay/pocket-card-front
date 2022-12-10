@@ -29,7 +29,6 @@ export const ContainerCarForm = styled.form`
     justify-content: flex-start;
     border-top: 1px solid var(--nextui-colors-textFormColor);
     border-bottom: 1px solid var(--nextui-colors-textFormColor);
-    margin: 0.5rem;
     .container-img,
     .container-title {
       color: var(--nextui-colors-textFormColor);
@@ -131,6 +130,7 @@ export const UpFormClient = styled.div`
       justify-content: center;
       .content-credencial {
         margin: 0.5rem 0 0.5rem 0;
+        z-index: 2;
         h3 {
           color: var(--nextui-colors-textFormColor);
           font-size: 15px;
@@ -170,7 +170,7 @@ export const UpFormComerce = styled.div`
   height: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem;
 
   .conteiner-load-img {
     width: 100%;
@@ -183,7 +183,7 @@ export const DownFormComerce = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem;
 
   .content-down {
     display: flex;
@@ -202,7 +202,7 @@ export const DownFormComerce = styled.div`
       justify-content: center;
       align-items: center;
       @media (max-width: 1024px) {
-        width: 90%;
+        width: 100%;
       }
     }
     .content-left {
