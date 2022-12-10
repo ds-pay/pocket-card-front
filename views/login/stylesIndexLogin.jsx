@@ -21,7 +21,6 @@ export const ContainerLoginClient = styled.div`
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   transform: translateX(65%);
-  animation: translationForm 1s;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
@@ -35,14 +34,6 @@ export const ContainerLoginClient = styled.div`
   }
   h1 {
     font-size: 2.5rem;
-  }
-  @keyframes translationForm {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translateX(65%);
-    }
   }
 
   .container-img {
@@ -124,6 +115,7 @@ export const ContainerLoginClient = styled.div`
   }
   .boton-switch{
     color: var(--nextui-colors-textFormColor);
+    transition: 0.3s all ease;
     :hover{
       cursor: pointer;
       color: var(--nextui-colors-textColorCardAnimate);
@@ -164,7 +156,7 @@ z-index: 1;
       transform: translate(0);
     }
     100% {
-      transform: translateX(65%);
+      transform: translateX(15%);
     }
   }
 
@@ -247,6 +239,7 @@ z-index: 1;
   }
   .boton-switch{
     color: var(--nextui-colors-textFormColor);
+    transition: 0.3s all ease;
     :hover{
       cursor: pointer;
       color: var(--nextui-colors-textColorCardAnimate);

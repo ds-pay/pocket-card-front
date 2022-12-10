@@ -1,15 +1,15 @@
 import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: ${({isActivate}) => isActivate ? "4rem" : "15.5rem" };
-    height: 100%;
-    background: var(--nextui-colors-backgroundNavbar);
-    position: absolute;
-    transition: 0.5s all ease;
-    white-space: nowrap;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: ${({ isActivate }) => (isActivate ? "4rem" : "15.5rem")};
+  height: 100%;
+  background: var(--nextui-colors-backgroundNavbar);
+  position: absolute;
+  transition: 0.5s all ease;
+  white-space: nowrap;
+  z-index: 1;
 `;
 
 export const Content = styled.div`
