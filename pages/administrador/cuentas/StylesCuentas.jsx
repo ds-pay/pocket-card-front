@@ -172,7 +172,7 @@ export const UpFormComerce = styled.div`
   align-items: center;
   padding: 1rem;
 
-  .conteiner-load-img {
+  .dropzone{
     width: 100%;
     height: 100%;
   }

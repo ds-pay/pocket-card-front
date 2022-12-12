@@ -3,11 +3,19 @@ import { ContainerCarForm, UpFormComerce, DownFormComerce } from './StylesCuenta
 import { FaImages, FaBoxes } from 'react-icons/fa'
 import { MdDriveFileRenameOutline } from 'react-icons/md'
 import { IoImageSharp } from 'react-icons/io'
-import InputText from '../../../components/Inputs/InputText/InputText';
+import InputText from '../../../components/Inputs/InputText/InputText'; 
 import { useForm } from "react-hook-form";
+import Dropzone from "dropzone";
 
 const FormularioCrearComercio = () => {
-  const { register, formState: { errors }, handleSubmit } = useForm()
+  const { register, formState: { errors }, handleSubmit } = useForm();
+
+  let myDropzone = new Dropzone('dropzone', {
+    url: '/'
+  })
+  myDropzone.on("addedfile", file => {
+    console.log(`File added: ${file.name}`);
+  });
 
   const ArrayLeft = [
     {
@@ -98,9 +106,10 @@ const FormularioCrearComercio = () => {
             <h3>Logo del Comercio</h3>
           </div>
         </div>
-        <div className="conteiner-load-img">
-          <div>
-          </div>
+        <div>
+          <form action="" id='dropzone' className='dropzone'>
+
+          </form>
         </div>
       </UpFormComerce>
       <DownFormComerce>

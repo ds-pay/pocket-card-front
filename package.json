@@ -17,6 +17,7 @@
     "@mui/material": "^5.10.4",
     "@nextui-org/react": "^1.0.0-beta.10",
     "date-fns": "^2.29.3",
+    "dropzone": "^6.0.0-beta.2",
     "next": "12.2.5",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
