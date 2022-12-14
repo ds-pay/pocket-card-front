@@ -16,7 +16,6 @@ export const ContainerCarForm = styled.form`
   @media (max-width: 1024px) {
     height: 100%;
     width: 100%;
-    top: 1rem;
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -171,10 +170,27 @@ export const UpFormComerce = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  @media (max-width: 1024px) {
+    padding: 0.5rem;
+  }
 
-  .dropzone{
-    width: 100%;
-    height: 100%;
+  .container-dropzone {
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 0 0;
+    width: 13rem;
+    height: 13rem;
+    display: flex;
+    text-align: justify;
+    cursor: pointer;
+    @media (max-width: 1024px) {
+      width: 8rem;
+      height: 8rem;
+      margin: .55rem 0 0 0;
+      .parrafo-drop {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -183,7 +199,10 @@ export const DownFormComerce = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+  @media (max-width: 1024px) {
+    padding: 0.5rem;
+  }
 
   .content-down {
     display: flex;
