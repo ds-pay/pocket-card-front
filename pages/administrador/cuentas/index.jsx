@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormularioCrearCliente from "./FormularioCrearCliente";
 import FormularioCrearComercio from "./FormularioCrearComercio";
-import Submenu from "../../layout-admin/Submenu/Submenu";
+import Submenu from "../../../components/Submenu/Submenu";
 import { MdOutlineGroupAdd, MdCloudUpload } from "react-icons/md";
 import { RiUserAddFill, RiUserSearchFill } from "react-icons/ri";
 import styled from "@emotion/styled";

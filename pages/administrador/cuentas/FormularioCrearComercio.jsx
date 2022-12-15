@@ -7,7 +7,7 @@ import {
 import { FaImages, FaBoxes } from "react-icons/fa";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { BiImageAdd } from "react-icons/bi";
-import { RiImageAddFill } from "react-icons/ri";
+
 import InputText from "../../../components/Inputs/InputText/InputText";
 import { useForm } from "react-hook-form";
 import Dropozone from "../../../components/Dropzone/Dropozone";
@@ -125,9 +125,8 @@ const FormularioCrearComercio = () => {
           </div>
         </div>
         <div className="container-dropzone">
-          <Dropozone>
-            <RiImageAddFill size={120} />
-            <p className="parrafo-drop">Arrastra el logo</p>
+          <Dropozone text={"Arratra el Logo"} requiredfile={"image/*"}>
+
           </Dropozone>
         </div>
       </UpFormComerce>

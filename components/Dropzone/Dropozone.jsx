@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React, { useCallback, useState, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
+import { RiImageAddFill } from "react-icons/ri";
 
 const ContentImg = styled.div`
 position: relative;
@@ -22,7 +23,7 @@ position: relative;
 `;
 
 
-const Dropozone = ({ children }) => {
+const Dropozone = ({ text, requiredfile, children }) => {
   const [selectedImage, setSelectedImage] = useState([]);
   const [ istrue, setIstrue] = useState(false)
 
@@ -54,7 +55,7 @@ const Dropozone = ({ children }) => {
     borderColor: "#ff1744",
   };
   const onDrop = useCallback((acceptFiles) => {-
-    setIstrue(true)
+    setIstrue(!istrue)
     setSelectedImage(
       acceptFiles.map((file) =>
         Object.assign(file, {
@@ -89,7 +90,7 @@ const Dropozone = ({ children }) => {
     <>
       <div {...getRootProps({ style })}>
         <div {...getInputProps}></div>
-        {istrue ?selected_Image : children}
+        {istrue ? selected_Image :  <><RiImageAddFill size={110} /> <p className="parrafo-drop">{text}</p></> }
       </div>
     </>
   );

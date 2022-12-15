@@ -88,7 +88,7 @@ const FormularioCrearCliente = () => {
             ))}
           </div>
           <div className="content-right">
-            <div className="content-credencial" >
+            <div className="content-credencial">
               <h3>Tipo de Credencial</h3>
               <InputSelect dataSelectList={ArrayCredencial} icon={false} />
             </div>
@@ -104,15 +104,15 @@ const FormularioCrearCliente = () => {
         </div>
       </UpFormClient>
       <DownFormClient>
-        <div className="content-down">
-          <div className="container-header">
-            <div className="container-img">
-              <FaUserAlt />
-            </div>
-            <div className="container-title">
-              <h3>Informacion del Cliente</h3>
-            </div>
+        <div className="container-header">
+          <div className="container-img">
+            <FaUserAlt />
           </div>
+          <div className="container-title">
+            <h3>Informacion del Cliente</h3>
+          </div>
+        </div>
+        <div className="content-down">
           {ArrayInfoClient.map((sec, index) => (
             <div className="container-inputs">
               <div className="img">{sec.img}</div>
@@ -134,8 +134,6 @@ const FormularioCrearCliente = () => {
           ))}
         </div>
       </DownFormClient>
-      {/* <InputSelect dataSelectList={ContentDropDown} useIcons={false} />
-        <InputSelect dataSelectList={ContentDropDown} useIcons={false} /> */}
     </ContainerCarForm>
   );
 };

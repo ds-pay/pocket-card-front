@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import Sidebar from './Sidebar/Sidebar';
+import Sidebar from '../../components/Sidebar/Sidebar';
 import Cuentas from '../administrador/cuentas'
 import Convenios from '../administrador/convenios'
 import Bonos from '../administrador/bonos'
@@ -31,7 +31,7 @@ const Content = styled.div`
 
 
 const index = () => {
-  const [isSelected, setIsSelected] = useState("cuentas");
+  const [isSelected, setIsSelected] = useState("bonos");
   
   const ContentMenu = [
     {

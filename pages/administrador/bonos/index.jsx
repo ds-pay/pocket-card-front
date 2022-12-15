@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Crearbono from "./Crearbono";
 import GestionarBonus from "./GestionarBonus";
 import GestionarBonosClientes from "./GestionarBonosClientes";
-import Submenu from "../../layout-admin/Submenu/Submenu";
-import { MdOutlineGroupAdd, MdCloudUpload } from "react-icons/md";
-import { RiUserAddFill, RiUserSearchFill } from "react-icons/ri";
+import Submenu from "../../../components/Submenu/Submenu";
+import { FaGift, FaGifts } from "react-icons/fa";
+
 import styled from "@emotion/styled";
 
 const Container = styled.div`
@@ -38,19 +38,19 @@ const index = () => {
       id: "create",
       content: <Crearbono />,
       Label: "Crear Bono",
-      icon: <RiUserSearchFill />,
+      icon: <FaGift />,
     },
     {
       id: "gesbonus",
       content: <GestionarBonus />,
       Label: "Gestionar Bonos",
-      icon: <RiUserAddFill />,
+      icon: <FaGifts />,
     },
     {
       id: "gesbonusclient",
       content: <GestionarBonosClientes />,
       Label: "Bonos Cliente",
-      icon: <MdOutlineGroupAdd />,
+      icon: <FaGift />,
     },
   ];
 
