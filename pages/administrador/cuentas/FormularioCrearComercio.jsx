@@ -1,13 +1,23 @@
-import React from 'react'
-import { ContainerCarForm, UpFormComerce, DownFormComerce } from './StylesCuentas';
-import { FaImages, FaBoxes } from 'react-icons/fa'
-import { MdDriveFileRenameOutline } from 'react-icons/md'
-import { IoImageSharp } from 'react-icons/io'
-import InputText from '../../../components/Inputs/InputText/InputText';
+import React, { useEffect } from "react";
+import {
+  ContainerCarForm,
+  UpFormComerce,
+  DownFormComerce,
+} from "./StylesCuentas";
+import { FaImages, FaBoxes } from "react-icons/fa";
+import { MdDriveFileRenameOutline } from "react-icons/md";
+import { BiImageAdd } from "react-icons/bi";
+import { RiImageAddFill } from "react-icons/ri";
+import InputText from "../../../components/Inputs/InputText/InputText";
 import { useForm } from "react-hook-form";
+import Dropozone from "../../../components/Dropzone/Dropozone";
 
 const FormularioCrearComercio = () => {
-  const { register, formState: { errors }, handleSubmit } = useForm()
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   const ArrayLeft = [
     {
@@ -17,7 +27,9 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "idcomercio",
-      error: errors.idcomercio?.type === "required" && (<p>El campo ID es Requerido</p>),
+      error: errors.idcomercio?.type === "required" && (
+        <p>El campo ID es Requerido</p>
+      ),
     },
     {
       id: "nombre",
@@ -26,7 +38,9 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "nombre",
-      error: errors.nombre?.type === "required" && (<p>El campo Nombre es Requerido</p>),
+      error: errors.nombre?.type === "required" && (
+        <p>El campo Nombre es Requerido</p>
+      ),
     },
     {
       id: "apellido",
@@ -35,7 +49,9 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "apellido",
-      error: errors.apellido?.type === "required" && (<p>El campo Apellido es Requerido</p>),
+      error: errors.apellido?.type === "required" && (
+        <p>El campo Apellido es Requerido</p>
+      ),
     },
     {
       id: "nit",
@@ -44,9 +60,11 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "nit",
-      error: errors.nit?.type === "required" && (<p>El campo Nit es Requerido</p>),
+      error: errors.nit?.type === "required" && (
+        <p>El campo Nit es Requerido</p>
+      ),
     },
-  ]
+  ];
 
   const ArrayRight = [
     {
@@ -56,7 +74,9 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "telefonoprimary",
-      error: errors.telefonoprimary?.type === "required" && (<p>El campo ID es Requerido</p>),
+      error: errors.telefonoprimary?.type === "required" && (
+        <p>El campo ID es Requerido</p>
+      ),
     },
     {
       id: "telefonosecundary",
@@ -65,7 +85,9 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "telefonosecundary",
-      error: errors.telefonosecundary?.type === "required" && (<p>El campo Nombre es Requerido</p>),
+      error: errors.telefonosecundary?.type === "required" && (
+        <p>El campo Nombre es Requerido</p>
+      ),
     },
     {
       id: "email",
@@ -74,7 +96,9 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "email",
-      error: errors.email?.type === "required" && (<p>El campo Apellido es Requerido</p>),
+      error: errors.email?.type === "required" && (
+        <p>El campo Apellido es Requerido</p>
+      ),
     },
     {
       id: "contraseña",
@@ -83,9 +107,11 @@ const FormularioCrearComercio = () => {
       type: "text",
       img: <MdDriveFileRenameOutline />,
       regis: "contraseña",
-      error: errors.contraseña?.type === "required" && (<p>El campo Nit es Requerido</p>),
+      error: errors.contraseña?.type === "required" && (
+        <p>El campo Nit es Requerido</p>
+      ),
     },
-  ]
+  ];
 
   return (
     <ContainerCarForm>
@@ -98,9 +124,11 @@ const FormularioCrearComercio = () => {
             <h3>Logo del Comercio</h3>
           </div>
         </div>
-        <div className="conteiner-load-img">
-          <div>
-          </div>
+        <div className="container-dropzone">
+          <Dropozone>
+            <RiImageAddFill size={120} />
+            <p className="parrafo-drop">Arrastra el logo</p>
+          </Dropozone>
         </div>
       </UpFormComerce>
       <DownFormComerce>
@@ -159,6 +187,6 @@ const FormularioCrearComercio = () => {
       </DownFormComerce>
     </ContainerCarForm>
   );
-}
+};
 
-export default FormularioCrearComercio
+export default FormularioCrearComercio;
