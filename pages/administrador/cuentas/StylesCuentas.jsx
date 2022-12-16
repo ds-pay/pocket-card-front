@@ -187,7 +187,7 @@ export const UpFormComerce = styled.div`
     cursor: pointer;
     @media (max-width: 1024px) {
       width: 8rem;
-      height: 8rem;
+      height: 8rem; 
       margin: .55rem 0 0 0;
       .parrafo-drop {
         display: none;
