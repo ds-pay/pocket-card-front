@@ -1,8 +1,10 @@
 import React from 'react'
+import { ContainerCardForm } from './StylesBonos'
+
 
 const GestionarBonus = () => {
   return (
-    <div>GestionarBonus</div>
+    <ContainerCardForm>GestionarBonus</ContainerCardForm>
   )
 }
 
