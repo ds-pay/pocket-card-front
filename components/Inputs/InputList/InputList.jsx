@@ -1,73 +1,50 @@
 import React, { useEffect, useState } from "react";
-import InputTextArea from "../InputTextArea/InputTextArea";
-import { Container } from "./StylesInputList";
 
 const InputList = () => {
-  const [value, setValue] = useState([]);
-  const [ errores, setErrores ] = useState({});
+  const [values, setValues] = useState([]);
+  const [errors, setErrors] = useState({});
   const [submitForm, setSubmitForm] = useState(false);
 
-  useEffect( () => {
+
+  useEffect(() => {
     if (submitForm) {
-        const noErrores = Object.keys(errores).length === 0;
+      const noErrors = Object.keys(errors).length === 0;
 
-        if(noErrores){
-            setSubmitForm(false)
-            setValue([])
-        }
+      if (noErrors) {
+        setSubmitForm(false);
+        setValues([]);
+      }
     }
-  },[errores])
+  }, [errors]);
 
-  const handleChange = e => {
-    setValue({ ...value, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const handlesubmit = e =>{
+  const handlesubmit = (e) => {
     e.preventDefault();
-    const erroresValidacion = validar(value)
-    setErrores(erroresValidacion);
     setSubmitForm(true);
+    // const errorsValidation = validate(values);
+    // setErrors(errorsValidation);
   };
 
-  const handleBlur = e => {
-    const erroresValidacion = validar(value);
-    let er = {
-        [e]: erroresValidacion[e]
-    }
-    setErrores(er)
+  // const handleBlur = (e) => {
+  //   // const errorsValidation = validate(values);
+  //   // let er = {
+  //   //   [e]: errorsValidation[e],
+  //   // };
+  //   // setErrors(er);
+  // };
+
+
+
+  return {
+    values,
+    errors,
+    handlesubmit,
+    handleChange,
+    // handleBlur
   }
-
-  const arrayTA = [
-    {
-      label: "Textos",
-      id: "conv-textos",
-      isBorderNone: true,
-      type: "parrafos",
-      value: [],
-      onChange: handleChange,
-      onBlur: (e) => handleBlur(e.target.name)
-    },
-  ];
-
-  return (
-    <Container>
-      <form className="contain-form">
-        {arrayTA.map((sec, index) => (
-          <InputTextArea
-            key={index}
-            label={sec.label}
-            id={sec.id}
-            isBorderNone={sec.isBorderNone}
-            type={sec.type}
-            value={sec.value}
-            onChange={sec.onChange}
-            onBlur={sec.onBlur}
-          />
-        ))}
-        <button  onClick={handlesubmit}> add</button>
-      </form>
-    </Container>
-  );
 };
 
 export default InputList;

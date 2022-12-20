@@ -1,8 +1,9 @@
 import React from 'react'
 import { Container, TextArea } from './StylesInputTextArea'
 
-const InputTextArea = ({ label, isBgNone, isBorderNone, regis, placeholder, name, id, cols, rows, onChange, onBlur, value, type }) => {
+const InputTextArea = ({ data, label, isBgNone, isBorderNone, regis, placeholder, name, id, cols, rows, onChange, onBlur, value, type, disabled }) => {
 
+  // const { label, id, type, value, onChange, onBlur } = data
 
   return (
     <Container>
@@ -20,6 +21,7 @@ const InputTextArea = ({ label, isBgNone, isBorderNone, regis, placeholder, name
         onBlur={onBlur}
         value={value}
         type={type}
+        disabled={disabled}
       >
 
       </TextArea>
