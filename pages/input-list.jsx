@@ -1,28 +1,35 @@
 import React from 'react'
 import InputList from '../components/Inputs/InputList/InputList'
-import InputTextArea from '../components/Inputs/InputTextArea/InputTextArea';
 import styled from "@emotion/styled";
-import {STATE_INICIAL_CONVENIO} from './administrador/convenios/config'
 import InputTextAreaArray from '../components/Inputs/InputTextArea/InputTextAreaArray';
+import Navbar from '../components/Navbar/Navbar'
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 
   .contain-form {
-    width: 100%;
-    height: 100%;
+    width: 50rem;
+    height: 50rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    .contain-add{
-      background: black;
-      color: white;
-      cursor: pointer;
+    align-items: flex-start;
+    background-color: var(--nextui-colors-backgroundForm);
+    overflow-y: scroll;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    ::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border:1px solid black;
     }
   }
 `;
@@ -38,7 +45,7 @@ function validateAgreement(values){
   return errors
 }
 
-const inputlist = ({ agreement=null }) => {
+const inputlist = () => {
 
   const {values, errors, handlesubmit, handleChange} = InputList()
 
@@ -47,7 +54,7 @@ const inputlist = ({ agreement=null }) => {
   const arrayTA = [
     {
       section: "textos",
-      label: "Textos y Busqueda",
+      label: "Escribe Textos",
       icon: "align-left",
       contInputs: [
         {
@@ -73,8 +80,8 @@ const inputlist = ({ agreement=null }) => {
 
   const handleViewForm = (array) => {
     return array.map((sec, index) => (
-      <div key={index}>
-        <label>{sec.label}</label>
+      <div key={index} style={{textAlign: "center"}}>
+        <label><h1>{sec.label}</h1></label>
         <div>
           <div key={index}>{loadInputs(sec.contInputs)}</div>
         </div>
@@ -83,11 +90,11 @@ const inputlist = ({ agreement=null }) => {
   }
 
   return (
-    <Container>
-      <div>
-        {handleViewForm(arrayTA)}
-      </div>
-    </Container>
+    <>
+      <Container>
+        <div className="contain-form">{handleViewForm(arrayTA)}</div>
+      </Container>
+    </>
   );
 }
 

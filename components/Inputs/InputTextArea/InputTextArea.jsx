@@ -1,13 +1,27 @@
-import React from 'react'
-import { Container, TextArea } from './StylesInputTextArea'
+import React from "react";
+import { Container, TextArea } from "./StylesInputTextArea";
 
-const InputTextArea = ({ data, label, isBgNone, isBorderNone, regis, placeholder, name, id, cols, rows, onChange, onBlur, value, type, disabled }) => {
-
-  // const { label, id, type, value, onChange, onBlur } = data
+const InputTextArea = ({
+  data,
+  label,
+  isBgNone,
+  isBorderNone,
+  regis,
+  placeholder,
+  name,
+  id,
+  cols,
+  rows,
+  onChange,
+  onBlur,
+  value,
+  type,
+  disabled,
+  isMargin,
+}) => {
 
   return (
     <Container>
-      <label htmlFor={id}>{label}</label>
       <TextArea
         {...regis}
         isBgNone={isBgNone}
@@ -22,11 +36,10 @@ const InputTextArea = ({ data, label, isBgNone, isBorderNone, regis, placeholder
         value={value}
         type={type}
         disabled={disabled}
-      >
-
-      </TextArea>
+        isMargin={isMargin}
+      ></TextArea>
     </Container>
   );
-}
+};
 
-export default InputTextArea
+export default InputTextArea;

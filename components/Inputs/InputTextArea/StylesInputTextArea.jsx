@@ -1,62 +1,72 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 `;
 
 export const TextArea = styled.textarea`
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: ${({isBorderNone}) => isBorderNone? "none" : null};
-    background: ${({isBgNone}) => isBgNone ? "none" : null};
-    margin: 1rem 0 1rem 0;
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: ${({ isBorderNone }) => (isBorderNone ? "none" : null)};
+  background: ${({ isBgNone }) => (isBgNone ? "none" : null)};
+  margin: ${({isMargin}) => isMargin ? "0" : "1rem 0 1rem 0"};
 `;
 
 export const ConteinerGeneral = styled.div`
   display: flex;
-  margin-top: 1rem;
-  width: 70rem;
+  width: 100%;
   flex-direction: column;
-  .button-style{
-    width: 2.5rem;
-    height: 2.5rem;
-  }
 `;
 
 export const ContainerInput = styled.div`
   display: flex;
-  width: 100%;
+  width: 40rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   @media (max-width: 1000px) {
     flex-direction: column;
   }
+
+  .contain-input {
+    width: 100%;
+    border-radius: 0.3rem;
+    background-color: var(--nextui-colors-bgInputText);
+  }
 `;
 
 export const InputAdd = styled.div`
   display: flex;
-  width: 70rem;
+  width: 100%;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   margin-top: 1rem;
+
+  .contain-input {
+    width: 100%;
+    border-radius: 0.3rem;
+    background-color: ${({isBackground}) => isBackground ? "var(--nextui-colors-bgInputText)" : null} ;;
+  }
   @media (max-width: 1000px) {
     flex-direction: column;
   }
 `;
-
 
 export const ContainerList = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
   align-items: center;
+
   @media (max-width: 1000px) {
     flex-direction: column;
   }
@@ -64,8 +74,7 @@ export const ContainerList = styled.div`
 
 export const OptionsList = styled.div`
   display: flex;
-  width: 8.5rem;
-  margin-top: 1.5rem;
+  width: 9rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;

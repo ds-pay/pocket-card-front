@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import InputTextArea from "./InputTextArea";
-import {IoMdTrash} from 'react-icons/io';
-import {AiFillEdit} from 'react-icons/ai';
-import {HiSave} from 'react-icons/hi'
+import { IoMdTrash } from 'react-icons/io';
+import { AiFillEdit } from 'react-icons/ai';
+import { HiSave } from 'react-icons/hi';
+import { BiUpArrow, BiDownArrow } from 'react-icons/bi';
+import { GrAddCircle } from 'react-icons/gr'
 import {
   ConteinerGeneral,
   ContainerList,
@@ -11,6 +13,7 @@ import {
   ContainerInput,
   InputAdd
 } from "./StylesInputTextArea";
+import ButtonIcon from "../../Buttons/ButtonIcon";
 
 const InputTextAreaArray = ({
   data,
@@ -56,6 +59,28 @@ const InputTextAreaArray = ({
     setIndexChange("");
   };
 
+  const handleUpText = (index) => {
+    if(index !== 0){
+      let arr = [...listTexts];
+      let value = arr[index];
+      arr.splice(index, 1);
+      arr.splice(index - 1, 0, value);
+      setListTexts(arr);
+      updateToForm(arr)
+    }
+  };
+
+  const handleDownText = (index) => {
+    if(index < listTexts.length) {
+      let arr = [...listTexts];
+      let value = arr[index];
+      arr.splice(index, 1);
+      arr.splice(index + 1, 0, value);
+      setListTexts(arr);
+      updateToForm(arr);
+    }
+  } 
+
   const updateToForm = (list) => {
     let name = id;
     let value = list;
@@ -71,29 +96,38 @@ const InputTextAreaArray = ({
   return (
     <ConteinerGeneral>
       <ContainerInput>
-        <InputTextArea
-          isBorderNone={isBorderNone}
-          label={label}
-          id={id}
-          type={"area"}
-          value={valueNewText}
-          onChange={(e) => setValueNewText(e.target.value)}
-          onBlur={onBlur}
-        />
-        <button onClick={addTextArea}>Agregar</button>
+        <div className="contain-input">
+          <InputTextArea
+            isBorderNone={isBorderNone}
+            isBgNone={true}
+            id={id}
+            type={"area"}
+            value={valueNewText}
+            onChange={(e) => setValueNewText(e.target.value)}
+            onBlur={onBlur}
+            label={label}
+            isMargin={true}
+          />
+        </div>
+        <OptionsList>
+          <ButtonIcon icon={<GrAddCircle/>} func={addTextArea} text={"Agregar"} />
+        </OptionsList>
       </ContainerInput>
       {listTexts &&
         listTexts.map((ltext, index) => (
-          <ContainerList key={index}>
-            <InputAdd>
-              <label> Texto nº {parseInt(index) + 1}</label>
-              <InputTextArea
-                value={indexChange === index ? changedText : ltext}
-                onChange={(e) => setChangedText(e.target.value)}
-                disabled={indexChange === index ? false : true}
-                isBgNone={indexChange === index ? false : true}
-                isBorderNone={indexChange === index ? true : false}
-              />
+          <ContainerList  key={index}>
+            <InputAdd isBackground={indexChange === index ? false : true}>
+              <label > Texto nº {parseInt(index) + 1}</label>
+              <div className="contain-input">
+                <InputTextArea
+                  value={indexChange === index ? changedText : ltext}
+                  onChange={(e) => setChangedText(e.target.value)}
+                  disabled={indexChange === index ? false : true}
+                  isBgNone={indexChange === index ? false : true}
+                  isBorderNone={indexChange === index ? false : true}
+                  isMargin={true}
+                />
+              </div>
             </InputAdd>
             <OptionsList>
               {indexChange === index ? (
@@ -101,9 +135,11 @@ const InputTextAreaArray = ({
                   <HiSave/>
                 </button>
               ) : (
-                <button className="button-style" onClick={() => handleActivateEdit(index)}><AiFillEdit/></button>
+                <ButtonIcon className="button-style" icon={<AiFillEdit/>} func={() => handleActivateEdit(index)}/>
               )}
-              <button className="button-style" onClick={() => handleDelete(index)}><IoMdTrash/></button>
+              <ButtonIcon className="button-style" icon={<IoMdTrash/>} func={() => handleDelete(index)}/>
+              <ButtonIcon className="button-style" icon={<BiDownArrow/>} func={() => handleDownText(index)}/>
+              <ButtonIcon className="button-style" icon={<BiUpArrow/>} func={() => handleUpText(index)}/>
             </OptionsList>
           </ContainerList>
         ))}
