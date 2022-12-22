@@ -143,7 +143,7 @@ const Crearbono = () => {
             ))}
           </div>
           <div className="content-right">
-          {ArrayRight.map((sec, index) => (
+            {ArrayRight.map((sec, index) => (
               <div className="container-inputs" key={index}>
                 <div className="img">{sec.img}</div>
                 <div className="inputtext">

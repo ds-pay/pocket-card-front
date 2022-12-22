@@ -41,6 +41,7 @@ export const ContainerCardForm = styled.form`
       width: 3rem;
       height: 3rem;
       border-radius: 0.2rem;
+      
     }
     .container-title {
       h3 {
@@ -54,6 +55,9 @@ export const ContainerCardForm = styled.form`
     background-color: var(--nextui-colors-bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 
     width: 100%;
     display: flex;
@@ -63,7 +67,7 @@ export const ContainerCardForm = styled.form`
     h3 {
       font-size: 15px;
     }
-    @media (max-width: 1024px){
+    @media (max-width: 1024px) {
       background-color: var(--nextui-colors-backgroundForm);
     }
   }
@@ -80,7 +84,10 @@ export const ContainerCardForm = styled.form`
     background-color: var(--nextui-colors-bgInputText);
     border-radius: 0.2rem;
     transition: 0.5s all ease;
-    @media (max-width: 1024px){
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    @media (max-width: 1024px) {
       background-color: var(--nextui-colors-backgroundForm);
     }
   }

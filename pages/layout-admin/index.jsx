@@ -19,6 +19,11 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  @media(max-width: 600px){
+    height: 100vh;
+  }
 `;
 
 const Content = styled.div`
@@ -84,13 +89,15 @@ const index = () => {
 
   return (
     <>
-      <Sidebar ContentMenu={ContentMenu} isSelected={isSelected} setIsSelected={setIsSelected} />
       <Container>
-        {ContentMenu.map((sec, index) => (
-          isSelected === sec.id 
-          ?<Content> {sec.route} </Content>
-          : null
-        ))}
+        <Sidebar
+          ContentMenu={ContentMenu}
+          isSelected={isSelected}
+          setIsSelected={setIsSelected}
+        />
+        {ContentMenu.map((sec, index) =>
+          isSelected === sec.id ? <Content> {sec.route} </Content> : null
+        )}
       </Container>
     </>
   );

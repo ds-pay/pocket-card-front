@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const TextArea = styled.textarea`
-  padding: ${({isMargin}) => isMargin ? "0.5rem" : null} ;
+  /* padding: ${({isMargin}) => isMargin ? "0.5rem" : null} ; */
   display: flex;
   width: 100%;
   border: ${({ isBorderNone }) => (isBorderNone ? "none" : null)};

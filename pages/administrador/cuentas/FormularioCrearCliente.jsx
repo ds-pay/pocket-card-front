@@ -78,18 +78,20 @@ const FormularioCrearCliente = () => {
         <div className="content-up">
           <div className="content-left">
             {ArrayCredencial.map((sec, index) => (
-              <div className="content-credencial">
+              <>
                 <h3>{sec.label}</h3>
-                <InputSelect
-                  dataSelectList={ArrayCredencial}
-                  useIcons={false}
-                />
-              </div>
+                <div className="content-credencial">
+                  <InputSelect
+                    dataSelectList={ArrayCredencial}
+                    useIcons={false}
+                  />
+                </div>
+              </>
             ))}
           </div>
           <div className="content-right">
+            <h3>Tipo de Credencial</h3>
             <div className="content-credencial">
-              <h3>Tipo de Credencial</h3>
               <InputSelect dataSelectList={ArrayCredencial} icon={false} />
             </div>
             <div className="inputtext">

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FormularioCrearCliente from "./FormularioCrearCliente";
 import FormularioCrearComercio from "./FormularioCrearComercio";
+import BuscarCliente from "./BuscarCliente";
+import CargaMasiva from "./CargaMasiva";
 import Submenu from "../../../components/Submenu/Submenu";
 import { MdOutlineGroupAdd, MdCloudUpload } from "react-icons/md";
 import { RiUserAddFill, RiUserSearchFill } from "react-icons/ri";
@@ -35,7 +37,7 @@ const index = () => {
   const SeleccionSeccion = [
     {
       id: "search",
-      content: <FormularioCrearComercio />,
+      content: <BuscarCliente />,
       Label: "Buscar Cuenta",
       icon: <RiUserSearchFill />,
     },
@@ -53,7 +55,7 @@ const index = () => {
     },
     {
       id: "bulkload",
-      content: <FormularioCrearComercio />,
+      content: <CargaMasiva />,
       Label: "Carga Masiva",
       icon: <MdCloudUpload />,
     },
