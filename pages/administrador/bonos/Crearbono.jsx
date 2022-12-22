@@ -24,6 +24,7 @@ const Crearbono = () => {
       placeholder: "Terminos Texto 1",
       img: <MdDriveFileRenameOutline />,
       regis: "texto1",
+      isMargin: true,
       error: errors.texto1?.type === "required" && (
         <p>El campo ID es Requerido</p>
       ),
@@ -36,6 +37,7 @@ const Crearbono = () => {
       placeholder: "Terminos Texto 2",
       img: <MdDriveFileRenameOutline />,
       regis: "text2",
+      isMargin: true,
       error: errors.text2?.type === "required" && (
         <p>El campo ID es Requerido</p>
       ),
@@ -51,6 +53,7 @@ const Crearbono = () => {
       placeholder: "Terminos Texto 3",
       img: <MdDriveFileRenameOutline />,
       regis: "text3",
+      isMargin: true,
       error: errors.text3?.type === "required" && (
         <p>El campo ID es Requerido</p>
       ),
@@ -63,6 +66,7 @@ const Crearbono = () => {
       placeholder: "Terminos Texto 4",
       img: <MdDriveFileRenameOutline />,
       regis: "text4",
+      isMargin: true,
       error: errors.text4?.type === "required" && (
         <p>El campo ID es Requerido</p>
       ),
@@ -126,6 +130,7 @@ const Crearbono = () => {
                     id={sec.id}
                     name={sec.name}
                     placeholder={sec.placeholder}
+                    isMargin={sec.isMargin}
                     regis={{
                       ...register(sec.regis, {
                         required: true,
@@ -148,6 +153,7 @@ const Crearbono = () => {
                     id={sec.id}
                     name={sec.name}
                     placeholder={sec.placeholder}
+                    isMargin={sec.isMargin}
                     regis={{
                       ...register(sec.regis, {
                         required: true,
