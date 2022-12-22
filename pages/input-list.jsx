@@ -1,8 +1,8 @@
-import React from 'react'
-import InputList from '../components/Inputs/InputList/InputList'
+import React from "react";
+import InputList from "../components/Inputs/InputList/InputList";
 import styled from "@emotion/styled";
-import InputTextAreaArray from '../components/Inputs/InputTextArea/InputTextAreaArray';
-import Navbar from '../components/Navbar/Navbar'
+import InputTextAreaArray from "../components/Inputs/InputTextArea/InputTextAreaArray";
+import Navbar from "../components/Navbar/Navbar";
 
 const Container = styled.div`
   width: 100%;
@@ -11,7 +11,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 
   .contain-form {
     width: 50rem;
@@ -23,33 +22,31 @@ const Container = styled.div`
     overflow-y: scroll;
     border-radius: 1rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     ::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 15px;
-        height: 15px;
-        border:1px solid black;
+      -webkit-appearance: none;
+      width: 15px;
+      height: 15px;
+      border: 1px solid black;
     }
   }
 `;
 
+function validateAgreement(values) {
+  let errors = {};
 
-function validateAgreement(values){
-  let errors = {}
-
-  if (values.conv_textos.length===0) {
-    errors.conv_textos = "Debe anexar almenos un parrafo"
+  if (values.conv_textos.length === 0) {
+    errors.conv_textos = "Debe anexar almenos un parrafo";
   }
 
-  return errors
+  return errors;
 }
 
 const inputlist = () => {
+  const { values, errors, handlesubmit, handleChange } = InputList();
 
-  const {values, errors, handlesubmit, handleChange} = InputList()
-
-  const {conv_textos} = values
+  const { conv_textos } = values;
 
   const arrayTA = [
     {
@@ -72,22 +69,33 @@ const inputlist = () => {
 
   const loadInputs = (arrInputs) => {
     return arrInputs.map((input, index) => {
-      if(input.type==="parrafos"){
-        return <InputTextAreaArray key={index} label={input.label} id={input.id} isBorderNone={true} value={input.value} onChange={input.onChange} />
+      if (input.type === "parrafos") {
+        return (
+          <InputTextAreaArray
+            key={index}
+            label={input.label}
+            id={input.id}
+            isBorderNone={true}
+            value={input.value}
+            onChange={input.onChange}
+          />
+        );
       }
-    })
-  }
+    });
+  };
 
   const handleViewForm = (array) => {
     return array.map((sec, index) => (
-      <div key={index} style={{textAlign: "center"}}>
-        <label><h1>{sec.label}</h1></label>
+      <div key={index} style={{ textAlign: "center" }}>
+        <label>
+          <h1>{sec.label}</h1>
+        </label>
         <div>
           <div key={index}>{loadInputs(sec.contInputs)}</div>
         </div>
       </div>
     ));
-  }
+  };
 
   return (
     <>
@@ -96,6 +104,6 @@ const inputlist = () => {
       </Container>
     </>
   );
-}
+};
 
-export default inputlist
+export default inputlist;

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import InputTextArea from "./InputTextArea";
 import { IoMdTrash } from 'react-icons/io';
 import { AiFillEdit } from 'react-icons/ai';
-import { HiSave } from 'react-icons/hi';
+import { FaSave } from 'react-icons/fa';
 import { BiUpArrow, BiDownArrow } from 'react-icons/bi';
 import { GrAddCircle } from 'react-icons/gr'
+import { GiCancel } from 'react-icons/gi'
 import {
   ConteinerGeneral,
   ContainerList,
@@ -14,6 +15,7 @@ import {
   InputAdd
 } from "./StylesInputTextArea";
 import ButtonIcon from "../../Buttons/ButtonIcon";
+import Modal from "../../Modal/ModalReusable";
 
 const InputTextAreaArray = ({
   data,
@@ -28,6 +30,7 @@ const InputTextAreaArray = ({
   const [changedText, setChangedText] = useState("");
   const [indexChange, setIndexChange] = useState("");
   const [valueNewText, setValueNewText] = useState("");
+  const [stateModal, setStateModal] = useState(false)
 
   const addTextArea = () => {
     if (valueNewText) {
@@ -93,6 +96,11 @@ const InputTextAreaArray = ({
     onChange(a);
   };
 
+  const handleClickModal = () => {
+    handleDelete()
+    setStateModal(!stateModal)
+  }
+
   return (
     <ConteinerGeneral>
       <ContainerInput>
@@ -110,14 +118,18 @@ const InputTextAreaArray = ({
           />
         </div>
         <OptionsList>
-          <ButtonIcon icon={<GrAddCircle/>} func={addTextArea} text={"Agregar"} />
+          <ButtonIcon
+            icon={<GrAddCircle />}
+            func={addTextArea}
+            text={"Agregar"}
+          />
         </OptionsList>
       </ContainerInput>
       {listTexts &&
         listTexts.map((ltext, index) => (
-          <ContainerList  key={index}>
+          <ContainerList key={index}>
             <InputAdd isBackground={indexChange === index ? false : true}>
-              <label > Texto nº {parseInt(index) + 1}</label>
+              <label> Texto nº {parseInt(index) + 1}</label>
               <div className="contain-input">
                 <InputTextArea
                   value={indexChange === index ? changedText : ltext}
@@ -131,18 +143,42 @@ const InputTextAreaArray = ({
             </InputAdd>
             <OptionsList>
               {indexChange === index ? (
-                <button className="button-style" onClick={() => handleSaveTextChanged(index)}>
-                  <HiSave/>
-                </button>
+                <ButtonIcon icon={<FaSave />} func={() => handleSaveTextChanged(index)}/>
+                  
               ) : (
-                <ButtonIcon className="button-style" icon={<AiFillEdit/>} func={() => handleActivateEdit(index)}/>
+                <ButtonIcon
+                  className="button-style"
+                  icon={<AiFillEdit />}
+                  func={() => handleActivateEdit(index)}
+                />
               )}
-              <ButtonIcon className="button-style" icon={<IoMdTrash/>} func={() => handleDelete(index)}/>
-              <ButtonIcon className="button-style" icon={<BiDownArrow/>} func={() => handleDownText(index)}/>
-              <ButtonIcon className="button-style" icon={<BiUpArrow/>} func={() => handleUpText(index)}/>
+              <ButtonIcon
+                className="button-style"
+                icon={<IoMdTrash />}
+                func={() => setStateModal(!stateModal)}
+              />
+              <ButtonIcon
+                className="button-style"
+                icon={<BiDownArrow />}
+                func={() => handleDownText(index)}
+              />
+              <ButtonIcon
+                className="button-style"
+                icon={<BiUpArrow />}
+                func={() => handleUpText(index)}
+              />
             </OptionsList>
           </ContainerList>
         ))}
+      <Modal stateModal={stateModal} setStateModal={setStateModal}>
+        <div style={{display: "flex", flexDirection: "column" ,justifyContent: "flex-start", alignItems: "center" }}>
+          <h1>¿Estas seguro de eliminarlo?</h1>
+          <div style={{display: "flex"}}>
+            <ButtonIcon func={handleClickModal} icon={<IoMdTrash/>} text={"Eliminar"} />
+            <ButtonIcon func={()=>setStateModal(!stateModal)} icon={<GiCancel/>} text={"Cancelar"} />
+          </div>
+        </div>
+      </Modal>
     </ConteinerGeneral>
   );
 };

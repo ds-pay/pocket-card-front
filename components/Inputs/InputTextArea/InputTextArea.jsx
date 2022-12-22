@@ -26,7 +26,7 @@ const InputTextArea = ({
         {...regis}
         isBgNone={isBgNone}
         isBorderNone={isBorderNone}
-        placeholder={label}
+        placeholder={label || placeholder}
         name={name}
         id={id}
         cols={cols}
