@@ -54,7 +54,9 @@ export const ContainerCardForm = styled.form`
     background-color: var(--nextui-colors-bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
-
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -80,6 +82,9 @@ export const ContainerCardForm = styled.form`
     background-color: var(--nextui-colors-bgInputText);
     border-radius: 0.2rem;
     transition: 0.5s all ease;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media (max-width: 1024px){
       background-color: var(--nextui-colors-backgroundForm);
     }
@@ -100,12 +105,14 @@ export const UpFormBonus = styled.div`
   .container-dropzone {
     justify-content: center;
     align-items: center;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0.5rem 0;
     width: 13rem;
-    height: 13rem;
     display: flex;
     text-align: justify;
     cursor: pointer;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media (max-width: 1024px) {
       width: 8rem;
       height: 8rem;
