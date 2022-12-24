@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FormularioCrearCliente from "./FormularioCrearCliente";
 import FormularioCrearComercio from "./FormularioCrearComercio";
-import BuscarCliente from "./BuscarCliente";
-import CargaMasiva from "./CargaMasiva";
+import FormularioBuscarCliente from "./FormularioBuscarCliente";
+import FormularioCargaMasiva from "./FormularioCargaMasiva";
 import Submenu from "../../../components/Submenu/Submenu";
 import { MdOutlineGroupAdd, MdCloudUpload } from "react-icons/md";
 import { RiUserAddFill, RiUserSearchFill } from "react-icons/ri";
@@ -16,7 +16,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  margin-top: 4rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,8 @@ const index = () => {
   const SeleccionSeccion = [
     {
       id: "search",
-      content: <BuscarCliente />,
+
+      content: <FormularioBuscarCliente />,
       Label: "Buscar Cuenta",
       icon: <RiUserSearchFill />,
     },
@@ -55,7 +56,7 @@ const index = () => {
     },
     {
       id: "bulkload",
-      content: <CargaMasiva />,
+      content: <FormularioCargaMasiva />,
       Label: "Carga Masiva",
       icon: <MdCloudUpload />,
     },

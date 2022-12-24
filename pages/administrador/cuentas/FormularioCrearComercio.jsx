@@ -126,7 +126,7 @@ const FormularioCrearComercio = () => {
         </div>
         <div className="container-dropzone">
           <Dropozone text={"Arratra el Logo"} requiredfile={"image/*"}>
-
+            
           </Dropozone>
         </div>
       </UpFormComerce>

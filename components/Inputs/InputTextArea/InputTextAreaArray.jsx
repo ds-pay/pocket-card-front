@@ -144,7 +144,7 @@ const InputTextAreaArray = ({
             <OptionsList>
               {indexChange === index ? (
                 <ButtonIcon icon={<FaSave />} func={() => handleSaveTextChanged(index)}/>
-                  
+
               ) : (
                 <ButtonIcon
                   className="button-style"
