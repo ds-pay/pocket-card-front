@@ -20,6 +20,9 @@ export const ContentCard = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1024px) {
+      padding-left: 4rem;
+    }
   }
 `;
 

@@ -9,7 +9,7 @@ export const SidebarContainer = styled.div`
   position: absolute;
   transition: 0.5s all ease;
   white-space: nowrap;
-  z-index: 1;
+  z-index: 100;
 `;
 
 export const Content = styled.div`
