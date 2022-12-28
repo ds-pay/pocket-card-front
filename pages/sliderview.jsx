@@ -70,7 +70,7 @@ const sliderview = () => {
 
   return (
     <Container>
-        <SliderMultiControl array={ArraySlaider} />
+        <SliderMultiControl array={ArraySlaider} timeSecond={3000}/>
     </Container>
   )
 }

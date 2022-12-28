@@ -13,6 +13,7 @@ export const Slider = styled.div`
   position: relative;
   width: 500%;
   height: 50rem;
+  transition: 0.5s all ease;
   @media only screen and (max-width: 1000px) {
     height: 100vh;
   }
@@ -29,6 +30,7 @@ export const BoxNumber = styled.div`
   @media only screen and (max-width: 650px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    height: 30%;
   }
   .background {
     z-index: 1;
@@ -46,11 +48,11 @@ export const BoxNumber = styled.div`
       width: 65%;
     }
     @media only screen and (max-width: 650px) {
-      width: 100%;
-      left: 0;
-      bottom: 0;
-      height: 54%;
-      transform: skewX(0deg);
+      width: 65%;
+      top: 0;
+      height: 100%;
+      padding: 0;
+      transform: skewX(8deg);
     }
     ::before {
       content: "";
@@ -63,9 +65,7 @@ export const BoxNumber = styled.div`
       pointer-events: none;
       transform: skewX(10deg);
       @media only screen and (max-width: 800px) {
-        width: 120%;
-        bottom: 0;
-        transform: skewX(0deg);
+        display: none;
       }
     }
   }
@@ -77,6 +77,20 @@ export const Details = styled.div`
   grid-column: 1 / span 1;
   grid-row: 1/-1;
   transition: all 0.5s ease;
+
+  text-align: justify;
+  @media only screen and (max-width: 800px){
+    padding: 1rem;
+    width: 50%;
+    overflow: hidden;
+    h1{
+      font-size: 1rem;
+      margin: 0;
+    }
+    p{
+      font-size: 0.5rem;
+    }
+  }
 `;
 
 export const Trails = styled.div`
@@ -86,7 +100,10 @@ export const Trails = styled.div`
   width: 100%;
   height: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  @media only screen and (max-width: 800px){
+    bottom: 38rem;
+  }
 `;
 
 export const Trail = styled.div`
@@ -108,6 +125,13 @@ export const Trail = styled.div`
     position: relative;
     bottom: -1.5rem;
     font-size: 1rem;
+  }
+  @media only screen and (max-width: 800px){
+    width: 1rem;
+    height: 1rem;
+    h1{
+      display: none;
+    }
   }
 `;
 
@@ -135,6 +159,11 @@ export const Arrows = styled.div`
       background-color: rgba(0, 0, 0, 0.9);
       cursor: pointer;
     }
+  }
+  @media only screen and (max-width: 800px){
+    bottom: 44.8rem;
+    justify-content: flex-end;
+    display: none;
   }
 `;
 
