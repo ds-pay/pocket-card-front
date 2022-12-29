@@ -1,16 +1,23 @@
 import React from "react";
-import { ContainerCarForm, UpFormClient, DownFormClient } from "./StylesCuentas";
+import {
+  ContainerCarForm,
+  UpFormClient,
+  DownFormClient,
+} from "./StylesCuentas";
 import InputSelect from "../../../components/Inputs/InputSelect/InputSelect";
-import InputText from '../../../components/Inputs/InputText/InputText';
+import InputText from "../../../components/Inputs/InputText/InputText";
 import { MdDriveFileRenameOutline } from "react-icons/md";
 import { HiOutlineIdentification } from "react-icons/hi";
-import { BsFillCreditCard2FrontFill } from "react-icons/bs"
+import { BsFillCreditCard2FrontFill } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 
 const FormularioCrearCliente = () => {
-
-  const { register, formState: { errors }, handleSubmit } = useForm()
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   const ArrayCredencial = [
     {
@@ -31,6 +38,12 @@ const FormularioCrearCliente = () => {
       icon: "",
       value: "comercio",
     },
+    {
+      id: "credencial",
+      label: "Tipo de Credencial",
+      icon: "",
+      value: "comercio",
+    },
   ];
 
   const ArrayInfoClient = [
@@ -41,7 +54,9 @@ const FormularioCrearCliente = () => {
       type: "nombre",
       img: <MdDriveFileRenameOutline />,
       regis: "name",
-      error: errors.name?.type === "required" && (<p>El campo Nombre es Requerido</p>),
+      error: errors.name?.type === "required" && (
+        <p>El campo Nombre es Requerido</p>
+      ),
     },
     {
       id: "apellido",
@@ -50,7 +65,9 @@ const FormularioCrearCliente = () => {
       type: "apellido",
       img: <MdDriveFileRenameOutline />,
       regis: "apellido",
-      error: errors.apellido?.type === "required" && (<p>El campo Nombre es Requerido</p>),
+      error: errors.apellido?.type === "required" && (
+        <p>El campo Nombre es Requerido</p>
+      ),
     },
     {
       id: "cedula",
@@ -59,10 +76,12 @@ const FormularioCrearCliente = () => {
       type: "cedula",
       img: <HiOutlineIdentification />,
       regis: "cedula",
-      error: errors.cedula?.type === "required" && (<p>El campo Nombre es Requerido</p>),
+      error: errors.cedula?.type === "required" && (
+        <p>El campo Nombre es Requerido</p>
+      ),
     },
-  ]
-
+    
+  ];
 
   return (
     <ContainerCarForm>
@@ -90,10 +109,19 @@ const FormularioCrearCliente = () => {
             ))}
           </div>
           <div className="content-right">
-            <h3>Tipo de Credencial</h3>
-            <div className="content-credencial">
-              <InputSelect dataSelectList={ArrayCredencial} icon={false} />
-            </div>
+            {ArrayCredencial.map((sec, index) =>
+              sec.id === "credencial" ? (
+                <>
+                  <h3>{sec.label}</h3>
+                  <div className="content-credencial">
+                    <InputSelect
+                      dataSelectList={ArrayCredencial}
+                      useIcons={false}
+                    />
+                  </div>
+                </>
+              ) : null
+            )}
             <div className="inputtext">
               <InputText
                 id={"id"}

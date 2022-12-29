@@ -13,6 +13,7 @@ export const Slider = styled.div`
   position: relative;
   width: 500%;
   height: 50rem;
+  border-radius: 3rem;
   transition: 0.5s all ease;
   @media only screen and (max-width: 1000px) {
     height: 100vh;
