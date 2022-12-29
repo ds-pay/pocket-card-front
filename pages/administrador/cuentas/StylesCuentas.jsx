@@ -132,6 +132,10 @@ export const UpFormClient = styled.div`
         margin: 0.5rem 0 0.5rem 0;
         border-radius: 1rem;
         justify-content: flex-start;
+<<<<<<< HEAD
+=======
+        border-radius: 0.5rem;
+>>>>>>> 4f9b14bcebe99c0df2d8348982fe1cb5e4cfc47c
         -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -151,7 +155,12 @@ export const UpFormClient = styled.div`
       }
       .content-credencial {
         margin: 0.5rem 0 0.5rem 0;
+<<<<<<< HEAD
         border-radius: 1rem;
+=======
+        z-index: 2;
+        border-radius: 0.5rem;
+>>>>>>> 4f9b14bcebe99c0df2d8348982fe1cb5e4cfc47c
         -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
