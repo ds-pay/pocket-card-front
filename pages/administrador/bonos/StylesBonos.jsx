@@ -46,6 +46,7 @@ export const ContainerCardForm = styled.form`
       width: 3rem;
       height: 3rem;
       border-radius: 0.2rem;
+      
     }
     .container-title {
       h3 {
@@ -62,6 +63,10 @@ export const ContainerCardForm = styled.form`
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 09c8fec1b38517b122c5953357c4418885ec5ccf
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -70,7 +75,11 @@ export const ContainerCardForm = styled.form`
     h3 {
       font-size: 15px;
     }
+<<<<<<< HEAD
+    @media (max-width: 1024px) {
+=======
     @media (max-width: 1500px){
+>>>>>>> 09c8fec1b38517b122c5953357c4418885ec5ccf
       background-color: var(--nextui-colors-backgroundForm);
     }
   }
@@ -90,7 +99,11 @@ export const ContainerCardForm = styled.form`
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
+    @media (max-width: 1024px) {
+=======
     @media (max-width: 1500px){
+>>>>>>> 09c8fec1b38517b122c5953357c4418885ec5ccf
       background-color: var(--nextui-colors-backgroundForm);
     }
   }
