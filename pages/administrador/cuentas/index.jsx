@@ -37,10 +37,6 @@ const index = () => {
   const SeleccionSeccion = [
     {
       id: "search",
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f9b14bcebe99c0df2d8348982fe1cb5e4cfc47c
       content: <FormularioBuscarCliente />,
       Label: "Buscar Cuenta",
       icon: <RiUserSearchFill />,
