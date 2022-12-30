@@ -373,6 +373,11 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@fontsource/russo-one@^4.5.10":
+  "integrity" "sha512-edOwIA+t6mPuazeOoLzpphr0FYmEBpGoYjAILF4ANzh1tx/4O4gh+1zrC1NcjB1B/4HnuBm/RkOO9f1T+ckKuQ=="
+  "resolved" "https://registry.npmjs.org/@fontsource/russo-one/-/russo-one-4.5.10.tgz"
+  "version" "4.5.10"
+
 "@formatjs/ecma402-abstract@1.13.0":
   "integrity" "sha512-CQ8Ykd51jYD1n05dtoX6ns6B9n/+6ZAxnWUAonvHC4kkuAemROYBhHkEB4tm1uVrRlE7gLDqXkAnY51Y0pRCWQ=="
   "resolved" "https://registry.npmjs.org/@formatjs/ecma402-abstract/-/ecma402-abstract-1.13.0.tgz"
