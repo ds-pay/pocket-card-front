@@ -17,6 +17,7 @@
     "@material-ui/pickers": "^3.3.10",
     "@mui/material": "^5.10.4",
     "@nextui-org/react": "^1.0.0-beta.10",
+    "axios": "^1.2.2",
     "date-fns": "^2.29.3",
     "dropzone": "^6.0.0-beta.2",
     "next": "12.2.5",
