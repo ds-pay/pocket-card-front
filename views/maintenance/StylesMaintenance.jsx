@@ -671,6 +671,10 @@ export const Content = styled.div`
         border-radius: 50%;
         background-color: #fff;
         box-shadow: 0 0 40px 12px white;
+        @media only screen and (max-width: 800px) {
+          width: 10rem;
+          height: 10rem;
+        }
         .face {
           position: absolute;
           display: flex;
@@ -688,6 +692,11 @@ export const Content = styled.div`
             right: 6rem;
             z-index: 6;
             position: absolute;
+            @media only screen and (max-width: 650px) {
+              top: -1.9rem;
+              left: 1.5rem;
+              right: 5.5rem;
+            }
             img {
             }
           }
@@ -706,6 +715,11 @@ export const Content = styled.div`
             height: 3rem;
             top: 0rem;
             z-index: 5;
+            @media only screen and (max-width: 650px) {
+              width: 90%;
+              top: 0.7rem;
+              height: 2rem;
+            }
           }
           .band-2 {
             background: rgb(233, 233, 233);
@@ -723,6 +737,13 @@ export const Content = styled.div`
             top: 0.3rem;
             left: -2.7rem;
             z-index: 4;
+            @media only screen and (max-width: 650px) {
+              width: 80%;
+              top: 0.5rem;
+              height: 2rem;
+              left: -0.8rem;
+              top: 1rem;
+            }
           }
 
           .mouth {
@@ -734,6 +755,11 @@ export const Content = styled.div`
             background-color: white;
             border-top: 3px solid black;
             border-radius: 0.5rem 1.5rem;
+            @media only screen and (max-width: 650px) {
+              width: 2rem;
+              height: 2.5rem;
+              top: 0;
+            }
           }
           .eyes {
             display: flex;
@@ -751,6 +777,10 @@ export const Content = styled.div`
               background-color: black;
               border-bottom: 3px solid black;
               border-radius: 2rem 2rem 2rem 2rem;
+              @media only screen and (max-width: 650px) {
+                height: 3rem;
+                width: 2rem;
+              }
               .pupil {
                 top: 0.3rem;
                 left: 0.1rem;
@@ -759,15 +789,21 @@ export const Content = styled.div`
                 height: 1.5rem;
                 border-radius: 1rem;
                 background-color: #ffffff;
+                @media only screen and (max-width: 650px) {
+                  height: 1.2rem;
+                  width: 0.8rem;
+                }
               }
             }
           }
         }
       }
       h1 {
-        font-size: 10rem;
+        font-size: 8rem;
         font-weight: 600;
         filter: drop-shadow(5px 4px 10px white);
+        @media only screen and (max-width: 650px) {
+        }
       }
     }
     h2 {
@@ -775,6 +811,10 @@ export const Content = styled.div`
       font-size: 3rem;
       text-align: justify;
       filter: drop-shadow(5px 4px 10px white);
+      @media only screen and (max-width: 650px) {
+        font-size: 2.2rem;
+        text-align: center;
+      }
     }
     button {
       z-index: 5;
