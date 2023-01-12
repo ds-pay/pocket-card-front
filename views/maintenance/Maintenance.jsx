@@ -1,70 +1,76 @@
-import React from 'react'
-import { Container, Content } from './StylesMaintenance'
+import React from "react";
+import { Container, Content } from "./StylesMaintenance";
+import { useRouter } from 'next/router'
 
 const Maintenance = () => {
 
-    const arrayStars = [
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-        {id: "star-1",class: "star-1"},
-    ]
+  const router = useRouter()
+  const handleClick = () => {
+    router.push("/test-connection")
+  }
+
+  const arrayStars = [
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+    { id: "star-1", class: "star-1" },
+  ];
 
   return (
     <Container>
@@ -75,7 +81,7 @@ const Maintenance = () => {
       </div>
       <Content>
         <div className="title-content">
-          <div className='title'>
+          <div className="title">
             <div className="moon">
               <div className="face">
                 <div className="band-1"></div>
@@ -97,11 +103,11 @@ const Maintenance = () => {
             <h1>ops!</h1>
           </div>
           <h2>Disculpanos, estamos en mantimiento por el momento.</h2>
-          <button>Regresar</button>
+          <button onClick={() => handleClick()}>Recargar</button>
         </div>
       </Content>
     </Container>
   );
-}
+};
 
-export default Maintenance
+export default Maintenance;
