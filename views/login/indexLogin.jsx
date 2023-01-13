@@ -15,15 +15,42 @@ import {
 import { MdOutlineBusiness } from 'react-icons/md'
 import { useTheme } from "@nextui-org/react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const LoginView = () => {
+  const [isCommerce, setIsCommerce] = useState(false);
+  const [idPocket, setIdPocket] = useState("");
+  const [password, setPassword] = useState("");
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
   const { isDark } = useTheme();
-  const [isCommerce, setIsCommerce] = useState();
+  
+  const onSubmitClient = async (data) => {
+    setIdPocket(data.idpocket)
+    setPassword(data.passwordpock)
+    try {
+      const response = await axios.post('http://localhost:3001/api/login', { idpocket: data.idpocket, passwordpock: data.passwordpock });
+      console.log(response.data);
+      alert(response.data.message);
+    } catch (error) {
+      console.error(error);
+      alert(error.response.data.message)
+    }
+  };
+  const onSubmitCommerce = async (data) => {
+    try {
+      const response = await axios.post('http://localhost:3001/api/login', { email: data.emailcommerce, password: data.password });
+      console.log(response.data);
+      alert(response.data.message);
+    } catch (error) {
+      console.error(error);
+      alert(error.response.data.message)
+    }
+  };
 
   const LoginClient = [
     {
@@ -38,14 +65,14 @@ const LoginView = () => {
       ),
     },
     {
-      id: "pass",
+      id: "passwordpock",
       name: "Password",
       color: true,
       type: "password",
       img: <FaLock />,
-      regis: "password",
+      regis: "passwordpock",
       eyetrue: true,
-      error: errors.password?.type === "required" && (
+      error: errors.passwordpock?.type === "required" && (
         <p>El campo Password es requerido</p>
       ),
     },
@@ -56,7 +83,7 @@ const LoginView = () => {
       id: "emailcommerce",
       name: "Correo Electronico",
       color: true,
-      type: "text",
+      type: "mail",
       img: <MdOutlineBusiness />,
       regis: "emailcommerce",
       error: errors.emailcommerce?.type === "required" && (
@@ -77,9 +104,6 @@ const LoginView = () => {
     },
   ];
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
 
   const ArrayStyleTest = [
     {
@@ -190,46 +214,9 @@ const LoginView = () => {
           <ContainerLoginClient isCommerce={isCommerce}>
             <Login>
               <div className="container-title">
-                <h1>Iniciar Comercio</h1>
-              </div>
-              <form className="seccionLogin" onSubmit={handleSubmit(onSubmit)}>
-                {LogiCommerce.map((sec, index) => (
-                  <div className="container">
-                    <div className="container-img">{sec.img}</div>
-                    <div className="container-text">
-                      <InputText
-                        name={sec.name}
-                        color={sec.color}
-                        type={sec.type}
-                        regis={{
-                          ...register(sec.regis, {
-                            required: true,
-                          }),
-                        }}
-                        eyetrue={sec.eyetrue}
-                      />
-                      {sec.error}
-                    </div>
-                  </div>
-                ))}
-                <div className="container-button">
-                  <input type="submit" value="Login" />
-                </div>
-              </form>
-            </Login>
-            <div
-              className="boton-switch"
-              onClick={() => setIsCommerce(!isCommerce)}
-            >
-              <p>¿Eres Cliente?</p>
-            </div>
-          </ContainerLoginClient>
-          <ContainerLoginCommerce isCommerce={isCommerce}>
-            <Login>
-              <div className="container-title">
                 <h1>Iniciar Cliente</h1>
               </div>
-              <form className="seccionLogin" onSubmit={handleSubmit(onSubmit)}>
+              <form className="seccionLogin" onSubmit={handleSubmit(onSubmitClient)}>
                 {LoginClient.map((sec, index) => (
                   <div className="container">
                     <div className="container-img">{sec.img}</div>
@@ -259,6 +246,43 @@ const LoginView = () => {
               onClick={() => setIsCommerce(!isCommerce)}
             >
               <p>¿Eres Comercio?</p>
+            </div>
+          </ContainerLoginClient>
+          <ContainerLoginCommerce isCommerce={isCommerce}>
+            <Login>
+              <div className="container-title">
+                <h1>Iniciar Comercio</h1>
+              </div>
+              <form className="seccionLogin" onSubmit={handleSubmit(onSubmitCommerce)}>
+                {LogiCommerce.map((sec, index) => (
+                  <div className="container">
+                    <div className="container-img">{sec.img}</div>
+                    <div className="container-text">
+                      <InputText
+                        name={sec.name}
+                        color={sec.color}
+                        type={sec.type}
+                        regis={{
+                          ...register(sec.regis, {
+                            required: true,
+                          }),
+                        }}
+                        eyetrue={sec.eyetrue}
+                      />
+                      {sec.error}
+                    </div>
+                  </div>
+                ))}
+                <div className="container-button">
+                  <input type="submit" value="Login" />
+                </div>
+              </form>
+            </Login>
+            <div
+              className="boton-switch"
+              onClick={() => setIsCommerce(!isCommerce)}
+            >
+              <p>¿Eres Cliente?</p>
             </div>
           </ContainerLoginCommerce>
       </ContainerPrimary>
