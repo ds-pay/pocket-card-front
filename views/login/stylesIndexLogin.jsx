@@ -10,6 +10,7 @@ export const ContainerPrimary = styled.div`
 `;
 
 export const ContainerLoginClient = styled.div`
+z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +22,7 @@ export const ContainerLoginClient = styled.div`
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   transform: translateX(65%);
+  animation: translationX 1s;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
@@ -35,6 +37,7 @@ export const ContainerLoginClient = styled.div`
   h1 {
     font-size: 2.5rem;
   }
+
 
   .container-img {
     display: flex;
@@ -124,7 +127,7 @@ export const ContainerLoginClient = styled.div`
 `;
 
 export const ContainerLoginCommerce = styled.div`
-z-index: 1;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,10 +156,10 @@ z-index: 1;
   }
   @keyframes translationForm {
     0% {
-      transform: translate(0);
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(15%);
+      transform: translateX(-15%);
     }
   }
 
@@ -267,7 +270,7 @@ export const ContainerCard = styled.div`
   border-radius: 2rem;
   transition: 1s all ease;
   transform: translateX(-30%);
-  animation: translation 0.3s;
+  animation: translation 1s;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);

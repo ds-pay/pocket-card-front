@@ -1,41 +1,25 @@
 import React, { useState, useEffect } from "react";
-import {
-  ContainerLoginClient,
-  ContainerCard,
-  ContainerNetworks,
-  ContainerLoginCommerce,
-  Login,
-  ContainerPrimary,
-} from "./stylesIndexLogin";
-import InputText from "../../components/Inputs/InputText/InputText";
-import {
-  FaUserAlt,
-  FaLock
-} from "react-icons/fa";
-import { MdOutlineBusiness } from 'react-icons/md'
+import { ContainerCard, ContainerPrimary } from "./stylesIndexLogin";
 import { useTheme } from "@nextui-org/react";
-import { useForm } from "react-hook-form";
 import axios from "axios";
+import LoginClient from "./LoginClient";
+import LoginCommerce from "./LoginCommerce";
+import Router from "next/router";
 
 const LoginView = () => {
   const [isCommerce, setIsCommerce] = useState(false);
-  const [idPocket, setIdPocket] = useState("");
-  const [password, setPassword] = useState("");
-
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  // const [idPocket, setIdPocket] = useState("");
+  // const [password, setPassword] = useState("");
   const { isDark } = useTheme();
   
   const onSubmitClient = async (data) => {
-    setIdPocket(data.idpocket)
-    setPassword(data.passwordpock)
+    // setIdPocket(data.idpocket)
+    // setPassword(data.passwordpock)
     try {
       const response = await axios.post('http://localhost:3001/api/login', { idpocket: data.idpocket, passwordpock: data.passwordpock });
       console.log(response.data);
-      alert(response.data.message);
+      alert(response.data.message)
+      Router.push("/layout-admin")
     } catch (error) {
       console.error(error);
       alert(error.response.data.message)
@@ -46,63 +30,12 @@ const LoginView = () => {
       const response = await axios.post('http://localhost:3001/api/login', { email: data.emailcommerce, password: data.password });
       console.log(response.data);
       alert(response.data.message);
+      Router.push("/")
     } catch (error) {
       console.error(error);
       alert(error.response.data.message)
     }
   };
-
-  const LoginClient = [
-    {
-      id: "idpocket",
-      name: "ID Pocket Card",
-      color: true,
-      type: "text",
-      img: <FaUserAlt />,
-      regis: "idpocket",
-      error: errors.idpocket?.type === "required" && (
-        <p>El campo ID Pocket Card es requerido</p>
-      ),
-    },
-    {
-      id: "passwordpock",
-      name: "Password",
-      color: true,
-      type: "password",
-      img: <FaLock />,
-      regis: "passwordpock",
-      eyetrue: true,
-      error: errors.passwordpock?.type === "required" && (
-        <p>El campo Password es requerido</p>
-      ),
-    },
-  ];
-
-  const LogiCommerce = [
-    {
-      id: "emailcommerce",
-      name: "Correo Electronico",
-      color: true,
-      type: "mail",
-      img: <MdOutlineBusiness />,
-      regis: "emailcommerce",
-      error: errors.emailcommerce?.type === "required" && (
-        <p>El campo Correo es requerido</p>
-      ),
-    },
-    {
-      id: "pass",
-      name: "Password",
-      color: true,
-      type: "password",
-      img: <FaLock />,
-      regis: "password",
-      eyetrue: true,
-      error: errors.password?.type === "required" && (
-        <p>El campo Password es requerido</p>
-      ),
-    },
-  ];
 
 
   const ArrayStyleTest = [
@@ -211,80 +144,9 @@ const LoginView = () => {
             </div>
           </div>
         </ContainerCard>
-          <ContainerLoginClient isCommerce={isCommerce}>
-            <Login>
-              <div className="container-title">
-                <h1>Iniciar Cliente</h1>
-              </div>
-              <form className="seccionLogin" onSubmit={handleSubmit(onSubmitClient)}>
-                {LoginClient.map((sec, index) => (
-                  <div className="container">
-                    <div className="container-img">{sec.img}</div>
-                    <div className="container-text">
-                      <InputText
-                        name={sec.name}
-                        color={sec.color}
-                        type={sec.type}
-                        regis={{
-                          ...register(sec.regis, {
-                            required: true,
-                          }),
-                        }}
-                        eyetrue={sec.eyetrue}
-                      />
-                      {sec.error}
-                    </div>
-                  </div>
-                ))}
-                <div className="container-button">
-                  <input type="submit" value="Login" />
-                </div>
-              </form>
-            </Login>
-            <div
-              className="boton-switch"
-              onClick={() => setIsCommerce(!isCommerce)}
-            >
-              <p>¿Eres Comercio?</p>
-            </div>
-          </ContainerLoginClient>
-          <ContainerLoginCommerce isCommerce={isCommerce}>
-            <Login>
-              <div className="container-title">
-                <h1>Iniciar Comercio</h1>
-              </div>
-              <form className="seccionLogin" onSubmit={handleSubmit(onSubmitCommerce)}>
-                {LogiCommerce.map((sec, index) => (
-                  <div className="container">
-                    <div className="container-img">{sec.img}</div>
-                    <div className="container-text">
-                      <InputText
-                        name={sec.name}
-                        color={sec.color}
-                        type={sec.type}
-                        regis={{
-                          ...register(sec.regis, {
-                            required: true,
-                          }),
-                        }}
-                        eyetrue={sec.eyetrue}
-                      />
-                      {sec.error}
-                    </div>
-                  </div>
-                ))}
-                <div className="container-button">
-                  <input type="submit" value="Login" />
-                </div>
-              </form>
-            </Login>
-            <div
-              className="boton-switch"
-              onClick={() => setIsCommerce(!isCommerce)}
-            >
-              <p>¿Eres Cliente?</p>
-            </div>
-          </ContainerLoginCommerce>
+        <LoginClient setIsCommerce={setIsCommerce} isCommerce={isCommerce} onSubmitClient={onSubmitClient} />
+        <LoginCommerce setIsCommerce={setIsCommerce} isCommerce={isCommerce} onSubmitCommerce={onSubmitCommerce}/>
+        
       </ContainerPrimary>
     </>
   );

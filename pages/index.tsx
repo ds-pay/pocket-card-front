@@ -67,7 +67,7 @@ const Home: NextPage = () => {
           <InputSelect dataSelectList={ContentDropDown} useIcons={true} />
         </div>
         <div className="container-test-input">
-         {/* <TestInputsReutility/> */}
+         {/* <TestInputsReutility/> */}<h1>Hola Comercio Correo@correo.com</h1>
         </div>
       </Container>
     </>
