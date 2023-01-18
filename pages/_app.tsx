@@ -40,8 +40,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         //Hover del item en el navbar
         bghoverItemNavbar:"#525357",
         // fondo
+        backGradiente2: "#111111  ",
         background: "#0e0f0f",
-
         bgPrimary: "#242526",
         bgSecondary: "#383839",
         bgInput:"#484a4d",
@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         bgLoginCardAnimation: "#5040b9",
         textColorCardAnimate: "#e6e6e6",
-        textFormColor: "#464646",
+        textFormColor: "#ffffff",
 
         //Sombreado del narvbar y cards notifications
         boxShadowPrimary: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
@@ -87,6 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         //Hover del item en el navbar
         bghoverItemNavbar:"#f4f2f2",
         // fondo
+        backGradiente2: "#28224a ",
         background: "#ececec",
         borderInput:"1px solid #c0c0c0",
         bgPrimary: "#4c52ad",
