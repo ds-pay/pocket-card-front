@@ -10,6 +10,7 @@ export const ContainerNav = styled.div`
   align-items: center;
   width: 100%;
   height: 3.2rem;
+  z-index: 10;
   background-color: var(--nextui-colors-backgroundNavbar);
   border-bottom: solid var(--nextui-colors-bgIconPrimary) 1px;
 `;
@@ -37,7 +38,7 @@ export const Seccion = styled.div`
     align-items: center;
     padding: 0rem 0.75rem 0rem 0.75rem;
     border-radius: 2rem 2rem 2rem 2rem;
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
     @media (max-width: 1024px) {
       width: 100%;
       cursor: pointer;
@@ -48,7 +49,7 @@ export const Seccion = styled.div`
       outline: none;
       text-align: justify;
       ::placeholder{
-        color: var(--nextui-colors-textFormColor);
+        color: var(--nextui-colors-colorTextOrdinary);
       
 
       }
@@ -69,7 +70,7 @@ export const ContainSeccionsViews = styled.div`
   font-size: 1.3rem;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
-  color: var(--nextui-colors-textFormColor);
+  color: var(--nextui-colors-colorTextOrdinary);
   background-color: ${({ isSelected }) => isSelected ? " var(--nextui-colors-bgCardLogin)" : null};
   :hover {
     background-color: var(--nextui-colors-bgThridGlass);
@@ -110,7 +111,7 @@ export const ContainSeccionCtrls = styled.div`
   border-radius: 5rem;
   margin: 0.25rem 0.25rem;
   background-color:  var(--nextui-colors-bgCardLogin);
-  color: var(--nextui-colors-textFormColor);
+  color: var(--nextui-colors-colorTextOrdinary);
   :hover {
     background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;

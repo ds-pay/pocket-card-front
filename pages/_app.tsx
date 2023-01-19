@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         bgLoginCardAnimation: "#2b2b2b",
         bgCardLogin: "#3c3e41",
         textFormColor: "#ffffff",
+        colorTextOrdinary: "#ffffff",
 
         //Sombreado del narvbar y cards notifications
         boxShadowPrimary: "0 8px 32px 0 rgba( 218, 220, 225, 0.10 )",
@@ -74,7 +75,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         bgLoginCardAnimation: "#5040b9",
         textColorCardAnimate: "#e6e6e6",
-        textFormColor: "#ffffff",
+        textFormColor: "#000000",
+        colorTextOrdinary: "#ffffff",
 
         //Sombreado del narvbar y cards notifications
         boxShadowPrimary: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",

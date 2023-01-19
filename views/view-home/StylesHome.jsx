@@ -17,7 +17,7 @@ export const ContentPock = styled.div`
     width: 100%;
     height: 10rem;
     background: linear-gradient(0deg, var(--nextui-colors-backgroundNavbar) , var(--nextui-colors-backGradiente2) );
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
 
     h1{
         font-size: 2rem;
@@ -58,7 +58,7 @@ export const BodyHead = styled.div`
     height: 10rem;
     margin: 2rem 0;
     background-color: var(--nextui-colors-backgroundNavbar);
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
     @media(max-width: 1336px){
         height: 17rem;
     }
@@ -94,7 +94,7 @@ export const ActivationCard = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: var(--nextui-colors-backgroundNavbar);
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
     width: 100%;
     height: 30rem;
     margin: 5rem 0;
@@ -123,7 +123,7 @@ export const ContainerCard = styled.div`
     justify-content: space-evenly;
     align-items: center;
     padding: 3rem;
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
     width: 100%;
     height: 20rem;
     @media(max-width: 1340px){
