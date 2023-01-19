@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar/Navbar';
 function MyApp({ Component, pageProps }: AppProps) {
   const [isDark, setIsDark] = useState(false);
   
-  const darkTheme = createTheme({
+  const darkTheme = createTheme({  
     type: 'dark',
     theme: {
       colors: {

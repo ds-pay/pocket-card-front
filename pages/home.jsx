@@ -1,9 +1,9 @@
 import React from 'react'
-import Primary from '../views/view-primary/Primary'
+import Home from '../views/view-home/Home'
 
 const primary = () => {
   return (
-    <Primary />
+    <Home />
   )
 }
 
