@@ -17,11 +17,11 @@ export const ContentPock = styled.div`
     width: 100%;
     height: 10rem;
     background: linear-gradient(0deg, var(--nextui-colors-backgroundNavbar) , var(--nextui-colors-backGradiente2) );
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
 
     h1{
         font-size: 2rem;
-        @media(max-width: 1024px){
+        @media(max-width: 1336px){
             font-size:1.5rem;
         }
     }
@@ -30,7 +30,7 @@ export const ContentPock = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @media(max-width: 1024px){
+        @media(max-width: 1336px){
             width: 18rem;
 
         }
@@ -58,8 +58,8 @@ export const BodyHead = styled.div`
     height: 10rem;
     margin: 2rem 0;
     background-color: var(--nextui-colors-backgroundNavbar);
-    color: var(--nextui-colors-textFormColor);
-    @media(max-width: 1024px){
+    color: var(--nextui-colors-colorTextOrdinary);
+    @media(max-width: 1336px){
         height: 17rem;
     }
     @media(max-width: 600px){
@@ -69,7 +69,7 @@ export const BodyHead = styled.div`
     h1{
         margin: 0.5rem 0;
         font-size: 2rem;
-        @media(max-width: 1024px){
+        @media(max-width: 1336px){
             font-size: 1.3rem;
         }
     }
@@ -77,7 +77,7 @@ export const BodyHead = styled.div`
         text-align: center;
         font-weight: 200;
         padding: 0 2rem;
-        @media(max-width: 1024px){
+        @media(max-width: 1336px){
             font-size: 1rem;
             text-align: justify;
         }
@@ -94,12 +94,20 @@ export const ActivationCard = styled.div`
     align-items: center;
     flex-direction: column;
     background-color: var(--nextui-colors-backgroundNavbar);
-    color: var(--nextui-colors-textFormColor);
+    color: var(--nextui-colors-colorTextOrdinary);
     width: 100%;
-    height: 26rem;
+    height: 30rem;
     margin: 5rem 0;
-    @media(max-width: 1024px){
-        align-items: flex-start;
+    @media(max-width: 1336px){
+        height: 50rem;
+        justify-content: flex-start;
+        h1{
+            text-align: center;
+        }
+    }
+    @media(max-width: 720px){
+        height: 95rem;
+        justify-content: flex-start;
         h1{
             text-align: center;
         }
@@ -114,13 +122,15 @@ export const ContainerCard = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--nextui-colors-textFormColor);
+    padding: 3rem;
+    color: var(--nextui-colors-colorTextOrdinary);
     width: 100%;
-    @media(max-width: 1113px){
+    height: 20rem;
+    @media(max-width: 1340px){
         width: 100%;
-        overflow: hidden;
-        justify-content: flex-start;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
     }
 `;
 
@@ -130,23 +140,26 @@ export const Card = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 18rem;
-    width: 17rem;
+    height: 20rem;
+    width: 19rem;
     background-color:var(--nextui-colors-bgInputText) ;
     color: black;
     border-radius: 2rem;
     padding: 0 0.2rem;
+    @media(max-width: 1336px){
+        margin: 1rem;
+    }
     .img{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 6rem;
-        height: 6rem;
+        width: 8rem;
+        height: 8rem;
         border-radius: 50rem;
         object-fit: cover;
         img{
-            width: 5rem;
-            height: 5rem;
+            width: 7rem;
+            height: 7rem;
         }
     }
     .numberindex{
@@ -154,11 +167,11 @@ export const Card = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
         top: 1rem;
         left: -2.5rem;
-        width: 4rem;
-        height: 4rem;
+        width: 4.5rem;
+        height: 4.5rem;
         background-color: #21c69b;
         border: 5px solid var(--nextui-colors-backgroundNavbar);
         border-radius: 50rem;

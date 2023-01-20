@@ -35,7 +35,7 @@ const Content = styled.div`
 
 
 const index = () => {
-  const [isSelected, setIsSelected] = useState("bonos");
+  const [isSelected, setIsSelected] = useState("convenios");
   
   const ContentMenu = [
     {

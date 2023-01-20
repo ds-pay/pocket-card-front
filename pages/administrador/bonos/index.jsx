@@ -37,19 +37,19 @@ const index = () => {
     {
       id: "create",
       content: <Crearbono />,
-      Label: "Crear Bono",
+      label: "Crear Bono",
       icon: <FaGift />,
     },
     {
       id: "gesbonus",
       content: <GestionarBonus />,
-      Label: "Gestionar Bonos",
+      label: "Gestionar Bonos",
       icon: <FaGifts />,
     },
     {
       id: "gesbonusclient",
       content: <GestionarBonosClientes />,
-      Label: "Bonos Cliente",
+      label: "Bonos Cliente",
       icon: <FaGift />,
     },
   ];

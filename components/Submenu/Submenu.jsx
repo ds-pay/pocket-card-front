@@ -14,7 +14,7 @@ const Submenu = ({array, section, handleClick}) => {
             <div className="curva-izquierda"></div>
             <div className="curva-derecha"></div>
             <div className="container-icon">{sec.icon}</div>
-            <div className="container-label">{sec.Label}</div>
+            <div className="container-label">{sec.label}</div>
             {/* <div></div> */}
           </Card>
         ))}

@@ -38,25 +38,25 @@ const index = () => {
     {
       id: "search",
       content: <FormularioBuscarCliente />,
-      Label: "Buscar Cuenta",
+      label: "Buscar Cuenta",
       icon: <RiUserSearchFill />,
     },
     {
       id: "formClient",
       content: <FormularioCrearCliente />,
-      Label: "Crear Cliente",
+      label: "Crear Cliente",
       icon: <RiUserAddFill />,
     },
     {
       id: "formCommerce",
       content: <FormularioCrearComercio />,
-      Label: "Crear Comercio",
+      label: "Crear Comercio",
       icon: <MdOutlineGroupAdd />,
     },
     {
       id: "bulkload",
       content: <FormularioCargaMasiva />,
-      Label: "Carga Masiva",
+      label: "Carga Masiva",
       icon: <MdCloudUpload />,
     },
   ];
