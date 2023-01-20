@@ -99,6 +99,7 @@ const inputlist = () => {
 
   return (
     <>
+    <Navbar/>
       <Container>
         <div className="contain-form">{handleViewForm(arrayTA)}</div>
       </Container>

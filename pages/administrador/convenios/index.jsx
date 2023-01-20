@@ -3,8 +3,9 @@ import Submenu from '../../../components/Submenu/Submenu'
 import styled from '@emotion/styled'
 import NuevoConvenio from './NuevoConvenio'
 import BuscarConvenio from './BuscarConvenio'
+import EditarConvenio from './EditarConvenio'
 import { FiPlusCircle } from 'react-icons/fi'
-import { FaSearch } from 'react-icons/fa'
+import { FaSearch, FaEdit } from 'react-icons/fa'
 
 const Container = styled.div`
   display: flex;
@@ -35,16 +36,22 @@ const index = () => {
 
   const SelectionSeccion = [
     {
+      id: "searchagreements",
+      label: "Buscar Convenio",
+      content: <BuscarConvenio/>,
+      icon: <FaSearch/>
+    },
+    {
       id: "createagreements",
       label: "Nuevo Convenio",
       content: <NuevoConvenio />,
       icon: <FiPlusCircle />
     },
     {
-      id: "searchagreements",
-      label: "Buscar Convenio",
-      content: <BuscarConvenio/>,
-      icon: <FaSearch/>
+      id: "editagreements",
+      label: "Editar Convenio",
+      content: <EditarConvenio/>,
+      icon: <FaEdit/>
     },
   ];
 
