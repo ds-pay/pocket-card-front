@@ -8,6 +8,8 @@ import Dropozone from '../../../components/Dropzone/Dropozone';
 import InputSelect from '../../../components/Inputs/InputSelect/InputSelect';
 import InputText from '../../../components/Inputs/InputText/InputText';
 import InputTextArea from '../../../components/Inputs/InputTextArea/InputTextArea';
+import InputList from '../../../components/Inputs/InputList/InputList';
+import InputTextAreaArray from '../../../components/Inputs/InputTextArea/InputTextAreaArray';
 
 const NuevoConvenio = () => {
 
@@ -16,6 +18,7 @@ const NuevoConvenio = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
+  
 
   const ArrayTextArea = [
     {
@@ -45,6 +48,35 @@ const NuevoConvenio = () => {
       ),
     },
   ];
+
+  const funTextAreaArrray = () => {
+    const { values, errors, handlesubmit, handleChange } = InputList();
+    const { conv_textos } = values;
+    const ArrayTA = [
+      {
+        label: "Texto",
+        id: "conv_textos",
+        type: "parrafos",
+        value: conv_textos,
+        onChange: handleChange,
+        placeholder: "",
+        rows: 3,
+      },
+    ]
+
+    return ArrayTA.map((input, index) => (
+      <div className='textarearray'>
+        <InputTextAreaArray
+          key={index}
+          label={input.label}
+          id={input.id}
+          isBorderNone={true}
+          value={input.value}
+          onChange={input.onChange}
+        />
+      </div>
+    ))
+  }
 
   const funConvenio = (id) => {
     
@@ -279,9 +311,7 @@ const NuevoConvenio = () => {
           :null
         ))}
         </div>
-        <div className='textarearray'>
-          
-        </div>
+        {funTextAreaArrray()}
       </ContainText>
     </ContainerCardForm>
   )

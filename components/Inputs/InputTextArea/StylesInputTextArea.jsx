@@ -24,7 +24,6 @@ export const ConteinerGeneral = styled.div`
 
 export const ContainerInput = styled.div`
   display: flex;
-  width: 40rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -66,7 +65,6 @@ export const InputAdd = styled.div`
 
 export const ContainerList = styled.div`
   display: flex;
-  width: 40rem;
   flex-direction: row;
   align-items: center;
 

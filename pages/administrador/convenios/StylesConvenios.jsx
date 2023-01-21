@@ -15,7 +15,7 @@ export const ContainerCardForm = styled.form`
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
   transition: 0.5s all ease;
-  @media (max-width: 1500px) {
+  @media (max-width: 1024px) {
     padding-left: 3.5rem;
     height: 46rem;
     width: 98%;
@@ -71,7 +71,7 @@ export const ContainerCardForm = styled.form`
     h3 {
       font-size: 15px;
     }
-    @media (max-width: 1500px){
+    @media (max-width: 1024px){
       background-color: var(--nextui-colors-backgroundForm);
     }
   }
@@ -91,7 +91,7 @@ export const ContainerCardForm = styled.form`
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-    @media (max-width: 1500px){
+    @media (max-width: 1024px){
       background-color: var(--nextui-colors-backgroundForm);
     }
   }
@@ -150,7 +150,7 @@ export const ContainInfo = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
     }
     .content-left,
@@ -160,7 +160,7 @@ export const ContainInfo = styled.div`
       width: 50%;
       height: 100%;
       padding: 0.5rem;
-      @media (max-width: 1024px) {
+      @media (max-width: 1500px) {
         width: 100%;
       }
     }
@@ -212,20 +212,24 @@ export const ContainText = styled.div`
   align-items: flex-start;
   flex-direction: column;
   .content-input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media (max-width: 1024px) {
       width: 100%;
-      height: 100%;
+    }
+    .container-textarea {
       display: flex;
-      justify-content: center;
+      width: 100%;
       align-items: center;
-      flex-direction: column;
-      @media (max-width: 1024px) {
-        width: 100%;
-      }
-      .container-textarea {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        margin: 0.5rem 0 0.5rem 0;
-      }
+      margin: 0.5rem 0 0.5rem 0;
+    }
+  }
+  .textarearray{
+    width: 100%;
+    margin: 0 0.5rem;
   }
 `;

@@ -33,15 +33,15 @@ const Container = styled.div`
   }
 `;
 
-function validateAgreement(values) {
-  let errors = {};
+// function validateAgreement(values) {
+//   let errors = {};
 
-  if (values.conv_textos.length === 0) {
-    errors.conv_textos = "Debe anexar almenos un parrafo";
-  }
+//   if (values.conv_textos.length === 0) {
+//     errors.conv_textos = "Debe anexar almenos un parrafo";
+//   }
 
-  return errors;
-}
+//   return errors;
+// }
 
 const inputlist = () => {
   const { values, errors, handlesubmit, handleChange } = InputList();
