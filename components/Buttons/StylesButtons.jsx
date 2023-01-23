@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.div`
   display: flex;
   border: none;
-  margin: 0.1rem;
+  margin: 0.1rem 0.34rem;
+  padding: 0.3rem;
   background-color: var(--nextui-colors-bgInputText);
   cursor: pointer;
   transition: 0.5s all ease;

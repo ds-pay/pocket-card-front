@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  ContainerCarForm,
-  UpFormClient,
-  DownFormClient,
-} from "./StylesCuentas";
+import { ContainerCarForm, UpFormClient, DownFormClient } from "./StylesCuentas";
 import InputSelect from "../../../components/Inputs/InputSelect/InputSelect";
 import InputText from "../../../components/Inputs/InputText/InputText";
 import { MdDriveFileRenameOutline } from "react-icons/md";
@@ -27,7 +23,7 @@ const FormularioCrearCliente = () => {
       value: "cobertura",
     },
     {
-      id: "vigencia ",
+      id: "vigencia",
       label: "Vigencia de la Credencial",
       icon: "",
       value: "vigencia",
@@ -80,8 +76,54 @@ const FormularioCrearCliente = () => {
         <p>El campo Nombre es Requerido</p>
       ),
     },
-    
+
   ];
+
+  const Credencial = () => {
+    return (
+      ArrayCredencial.map((sec, index) => (
+        sec.id === "cobertura" ||
+        sec.id === "vigencia" ||
+        sec.id === "comercio"
+          ? (
+            <>
+              <h3>{sec.label}</h3>
+              <div className="content-credencial">
+                <InputSelect
+                  dataSelectList={ArrayCredencial}
+                  useIcons={false}
+                />
+              </div>
+            </>
+          )
+          : null
+      ))
+    )
+  };
+
+  const InfoCliente = () => {
+    return (
+      ArrayInfoClient.map((sec, index) => (
+        <div className="container-inputs">
+          <div className="img">{sec.img}</div>
+          <div className="inputtext">
+            <InputText
+              id={sec.id}
+              name={sec.name}
+              color={sec.color}
+              type={sec.type}
+              regis={{
+                ...register(sec.regis, {
+                  required: true,
+                }),
+              }}
+            />
+            {sec.error}
+          </div>
+        </div>
+      ))
+    )
+  }
 
   return (
     <ContainerCarForm>
@@ -96,17 +138,7 @@ const FormularioCrearCliente = () => {
         </div>
         <div className="content-up">
           <div className="content-left">
-            {ArrayCredencial.map((sec, index) => (
-              <>
-                <h3>{sec.label}</h3>
-                <div className="content-credencial">
-                  <InputSelect
-                    dataSelectList={ArrayCredencial}
-                    useIcons={false}
-                  />
-                </div>
-              </>
-            ))}
+            {Credencial()}
           </div>
           <div className="content-right">
             {ArrayCredencial.map((sec, index) =>
@@ -143,25 +175,7 @@ const FormularioCrearCliente = () => {
           </div>
         </div>
         <div className="content-down">
-          {ArrayInfoClient.map((sec, index) => (
-            <div className="container-inputs">
-              <div className="img">{sec.img}</div>
-              <div className="inputtext">
-                <InputText
-                  id={sec.id}
-                  name={sec.name}
-                  color={sec.color}
-                  type={sec.type}
-                  regis={{
-                    ...register(sec.regis, {
-                      required: true,
-                    }),
-                  }}
-                />
-                {sec.error}
-              </div>
-            </div>
-          ))}
+          {InfoCliente()}
         </div>
       </DownFormClient>
     </ContainerCarForm>
