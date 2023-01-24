@@ -232,4 +232,7 @@ export const ContainText = styled.div`
     width: 100%;
     margin: 0 0.5rem;
   }
+  .inputlink{
+    width: 100%;
+  }
 `;

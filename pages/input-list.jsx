@@ -3,6 +3,7 @@ import InputList from "../components/Inputs/InputList/InputList";
 import styled from "@emotion/styled";
 import InputTextAreaArray from "../components/Inputs/InputTextArea/InputTextAreaArray";
 import Navbar from "../components/Navbar/Navbar";
+import InputLink from "../components/Inputs/InputLink/InputLink";
 
 const Container = styled.div`
   width: 100%;
@@ -46,7 +47,7 @@ const Container = styled.div`
 const inputlist = () => {
   const { values, errors, handlesubmit, handleChange } = InputList();
 
-  const { conv_textos } = values;
+  const { conv_textos, conv_links } = values;
 
   const arrayTA = [
     {
@@ -84,6 +85,17 @@ const inputlist = () => {
     });
   };
 
+  const Array = [
+    {
+      label: "Selecciona Red",
+      id: "conv_links",
+      value: conv_links,
+      onChange: handleChange,
+      onBlur: (e)=>handleBlur(e.target.name),
+      type:"links"
+    },
+  ]
+
   const handleViewForm = (array) => {
     return array.map((sec, index) => (
       <div key={index} style={{ textAlign: "center" }}>
@@ -101,7 +113,11 @@ const inputlist = () => {
     <>
     <Navbar/>
       <Container>
-        <div className="contain-form">{handleViewForm(arrayTA)}</div>
+      <h1>Elige tu Red Social</h1>
+
+        <div className="contain-form">
+          <InputLink data={Array}/>
+        </div>
       </Container>
     </>
   );

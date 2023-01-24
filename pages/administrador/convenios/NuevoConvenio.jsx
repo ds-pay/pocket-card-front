@@ -10,6 +10,7 @@ import InputText from '../../../components/Inputs/InputText/InputText';
 import InputTextArea from '../../../components/Inputs/InputTextArea/InputTextArea';
 import InputList from '../../../components/Inputs/InputList/InputList';
 import InputTextAreaArray from '../../../components/Inputs/InputTextArea/InputTextAreaArray';
+import InputLink from '../../../components/Inputs/InputLink/InputLink';
 
 const NuevoConvenio = () => {
 
@@ -76,7 +77,23 @@ const NuevoConvenio = () => {
         />
       </div>
     ))
-  }
+  };
+
+  const funInputLink = () => {
+    const { values, errors, handlesubmit, handleChange } = InputList();
+    const { conv_links } = values;
+    const ArrayLink = [
+      {
+        label: "Selecciona Red",
+        id: "conv_links",
+        value: conv_links,
+        onChange: handleChange,
+        onBlur: (e)=>handleBlur(e.target.name),
+        type:"links"
+      },
+    ]
+    return <div className='inputlink'><InputLink data={ArrayLink}/></div>
+  };
 
   const funConvenio = (id) => {
     
@@ -206,7 +223,7 @@ const NuevoConvenio = () => {
           : null
       ))
     )
-  }
+  };
 
   const funInputText = (id) => {
     const ArrayText = [
@@ -260,7 +277,7 @@ const NuevoConvenio = () => {
           : null
       ))
     )
-  }
+  };
 
 
   return (
@@ -312,6 +329,7 @@ const NuevoConvenio = () => {
         ))}
         </div>
         {funTextAreaArrray()}
+        {funInputLink()}
       </ContainText>
     </ContainerCardForm>
   )
