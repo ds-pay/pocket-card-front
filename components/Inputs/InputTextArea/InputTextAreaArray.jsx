@@ -14,7 +14,7 @@ import {
   ContainerInput,
   InputAdd
 } from "./StylesInputTextArea";
-import ButtonIcon from "../../Buttons/ButtonIcon";
+import ButtonIcon from "../../Buttons/ButtonIcon/ButtonIcon";
 import Modal from "../../Modal/ModalReusable";
 
 const InputTextAreaArray = ({
