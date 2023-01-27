@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import InputTextAreaArray from "../components/Inputs/InputTextArea/InputTextAreaArray";
 import Navbar from "../components/Navbar/Navbar";
 import InputLink from "../components/Inputs/InputLink/InputLink";
+import InputTextEdit from "../components/Inputs/InputTextEdit/InputTextEdit";
 
 const Container = styled.div`
   width: 100%;
@@ -116,7 +117,7 @@ const inputlist = () => {
       <h1>Elige tu Red Social</h1>
 
         <div className="contain-form">
-          <InputLink data={Array}/>
+          <InputTextEdit data={Array}/>
         </div>
       </Container>
     </>

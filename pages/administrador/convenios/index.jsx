@@ -27,7 +27,7 @@ const Content = styled.div`
 const index = () => {
 
   const [isSelection, setIsSelection] = useState(false);
-  const [section, setSelection] = useState("");
+  const [section, setSelection] = useState("editagreements");
 
   const handleClick = (id) => {
     setIsSelection(!isSelection)

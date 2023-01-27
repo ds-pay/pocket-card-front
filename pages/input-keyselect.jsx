@@ -10,14 +10,14 @@ const inputKeyselect = () => {
     { title: "meperidina", year: 1957 },
     { title: "nifedipina", year: 1993 },
     { title: "nitroglicerina", year: 1994 },
-    { title: "propranolol", year: 2003,},
+    { title: "propranolol", year: 2003, },
     { title: "testosterona", year: 1966 },
     { title: "verapamilo", year: 1999 },
-    { title: "Difusión pasiva,", year: 2001,},
-    { title: "Difusión facilitada", year: 1980,},
+    { title: "Difusión pasiva,", year: 2001, },
+    { title: "Difusión facilitada", year: 1980, },
     { title: "Transporte activo", year: 1994 },
     { title: "Inception", year: 2010 },
-    { title: "Pinocitosis.", year: 2002,},
+    { title: "Pinocitosis.", year: 2002, },
   ];
 
   const carros = [
@@ -61,29 +61,32 @@ const inputKeyselect = () => {
     { title: "TVS", year: 1981 },
     { title: "Hero", year: 1941 },
     { title: "Kymco", year: 1959 },
-    { title: "Benelli", year: 1958 }, 
+    { title: "Benelli", year: 1958 },
   ]
 
   const arrayAutoComplete = [
     {
-        id: "limits1",
-        label: "Medicina",
-        array: medicina,
-        placeholder: "Eleje una Medicina"
+      id: "tags-standard",
+      label: "Medicina",
+      array: medicina,
+      placeholder: "Eleje una Medicina",
+      variant: "standard"
     },
     {
-        id: "limits2",
-        label: "Carros",
-        array: carros,
-        placeholder: "Eleje un Carro"
+      id: "tags-standard",
+      label: "Carros",
+      array: carros,
+      placeholder: "Eleje un Carro",
+      variant: "standard"
     },
     {
-        id: "limits3",
-        label: "Motos",
-        array: motos,
-        placeholder: "Eleje una Moto"
+      id: "tags-standard",
+      label: "Motos",
+      array: motos,
+      placeholder: "Eleje una Moto",
+      variant: "standard"
     }
-]
+  ]
 
   return <InputKeySelect array={arrayAutoComplete} />;
 };

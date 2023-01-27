@@ -3,7 +3,7 @@ import { ContainInputText } from "./StylesInputsText";
 import { dataText } from "./Interface";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 
-const InputText = ({ name, id, color, type, regis, eyetrue, value, onChange, onBlur, label }: dataText) => {
+const InputText = ({ name, id, color, type, regis, eyetrue, value, onChange, onBlur, label, disabled }: dataText) => {
   const [passIsView, setPassIsView] = useState(false);
 
   const handleClick = () => {
@@ -36,6 +36,8 @@ const InputText = ({ name, id, color, type, regis, eyetrue, value, onChange, onB
                 value={value}
                 onChange={onChange}
                 onBlur={onBlur}
+                disabled={disabled}
+                placeholder={value}
               />
               <label className="lbl-name">
                 <span className="text-name">{label ? label :name}</span>
