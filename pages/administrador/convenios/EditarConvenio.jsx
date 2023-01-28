@@ -24,18 +24,18 @@ const EditarConvenio = () => {
           arrayheader: [
             {
               id: "editimg",
-              editimglabel: "Editar Imagenes",
-              iconimages: <FaImages />,
+              editlabel: "Editar Imagenes",
+              icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editinfolabel: "Editar Informacion",
-              iconinfo: <FaHandshake />,
+              editlabel: "Editar Informacion",
+              icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              edittextlabel: "Editar Textos y Busqueda",
-              icontext: <GrTextAlignFull />,
+              editlabel: "Editar Textos y Busqueda",
+              icon: <GrTextAlignFull />,
             }
           ]
         }
@@ -55,18 +55,18 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editimglabel: "Editar Imagenes",
-              iconimages: <FaImages />,
+              editlabel: "Editar Imagenes",
+              icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editinfolabel: "Editar Informacion",
-              iconinfo: <FaHandshake />,
+              editlabel: "Editar Informacion",
+              icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              edittextlabel: "Editar Textos y Busqueda",
-              icontext: <GrTextAlignFull />,
+              editlabel: "Editar Textos y Busqueda",
+              icon: <GrTextAlignFull />,
             } 
           ]
         }
@@ -86,18 +86,18 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editimglabel: "Editar Imagenes",
-              iconimages: <FaImages />,
+              editlabel: "Editar Imagenes",
+              icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editinfolabel: "Editar Informacion",
-              iconinfo: <FaHandshake />,
+              editlabel: "Editar Informacion",
+              icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              edittextlabel: "Editar Textos y Busqueda",
-              icontext: <GrTextAlignFull />,
+              editlabel: "Editar Textos y Busqueda",
+              icon: <GrTextAlignFull />,
             } 
           ]
         }
@@ -117,18 +117,18 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editimglabel: "Editar Imagenes",
-              iconimages: <FaImages />,
+              editlabel: "Editar Imagenes",
+              icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editinfolabel: "Editar Informacion",
-              iconinfo: <FaHandshake />,
+              editlabel: "Editar Informacion",
+              icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              edittextlabel: "Editar Textos y Busqueda",
-              icontext: <GrTextAlignFull />,
+              editlabel: "Editar Textos y Busqueda",
+              icon: <GrTextAlignFull />,
             } 
           ]
         }
@@ -148,18 +148,18 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editimglabel: "Editar Imagenes",
-              iconimages: <FaImages />,
+              editlabel: "Editar Imagenes",
+              icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editinfolabel: "Editar Informacion",
-              iconinfo: <FaHandshake />,
+              editlabel: "Editar Informacion",
+              icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              edittextlabel: "Editar Textos y Busqueda",
-              icontext: <GrTextAlignFull />,
+              editlabel: "Editar Textos y Busqueda",
+              icon: <GrTextAlignFull />,
             } 
           ]
         }
