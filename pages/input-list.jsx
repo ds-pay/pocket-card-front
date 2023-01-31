@@ -1,10 +1,137 @@
-import React from "react";
+import React, { useState } from "react";
 import InputList from "../components/Inputs/InputList/InputList";
 import styled from "@emotion/styled";
 import InputTextAreaArray from "../components/Inputs/InputTextArea/InputTextAreaArray";
 import Navbar from "../components/Navbar/Navbar";
 import InputLink from "../components/Inputs/InputLink/InputLink";
 import InputTextEdit from "../components/Inputs/InputTextEdit/InputTextEdit";
+import { FiPlusCircle } from 'react-icons/fi'
+import { IoMdTrash, IoMdSave } from 'react-icons/io';
+import ButtonIcon from "../components/Buttons/ButtonIcon/ButtonIcon";
+import InputText from "../components/Inputs/InputText/InputText";
+
+
+
+export const App = () => {
+
+  const [isEditing, setIsEditing] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+
+
+  const ArrayInfoEdit = [
+    {
+      id: "infoedit1",
+      label: "Estado del Convenio",
+      placeholder: "EditaEstado del Convenio",
+    },
+    {
+      id: "infoedit2",
+      label: "Categoria Primaria",
+      placeholder: "Edita Categoria Primaria",
+    },
+    {
+      id: "infoedit3",
+      label: "Categoria Secundaria",
+      placeholder: "Edita Categoria Secundaria",
+    },
+    {
+      id: "infoedit4",
+      label: "Sub Categoria",
+      placeholder: "Edita Sub Categoria",
+    },
+    {
+      id: "infoedit5",
+      label: "Estado del Convenio",
+      placeholder: "Edita Estado del Convenio",
+    },
+    {
+      id: "infoedit6",
+      label: "Categoria Primaria",
+      placeholder: "Edita Categoria Primaria",
+    },
+    {
+      id: "infoedit7",
+      label: "Categoria Secundaria",
+      placeholder: "Edita Categoria Secundaria",
+    },
+    {
+      id: "infoedit8",
+      label: "Sub Categoria",
+      placeholder: "Edita Sub Categoria",
+    }
+  ]
+
+
+  const handleEdit = (index) => {
+    setIsEditing(true);
+  };
+
+  const handleSave = (index) => {
+    setIsEditing(false);
+  };
+
+  const handleUpdate = (id) => {
+    let name = id;
+    let value = inputValue;
+    let a = {
+      target: {
+        name,
+        value,
+      },
+    };
+  }
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const funInputedit = (id) => {
+    return(
+      ArrayInfoEdit.map((sec, index) => (
+        sec.id === id 
+        ?
+        <div>
+          {isEditing ?
+            (
+              <>
+                <InputText
+                  value={inputValue}
+                  onChange={handleInputChange}
+                />
+                <ButtonIcon text={"Save"} func={handleSave} />
+
+              </>
+            )
+            :
+            (
+              <>
+                <InputText disabled value={inputValue ? inputValue  : sec.placeholder} />
+                <ButtonIcon text={"Edit"} func={handleEdit} />
+              </>
+            )}
+        </div>
+        :null
+      ))
+    )
+  }
+
+  return (
+    <div style={{display :"flex", flexDirection: "column"}}>
+      <div>
+        {funInputedit("infoedit1")}
+      </div>
+      <div>
+        {funInputedit("infoedit2")}
+      </div>
+      <div>
+        {funInputedit("infoedit3")}
+      </div>
+      <div>
+        {funInputedit("infoedit4")}
+      </div>
+    </div>
+  );
+}
 
 const Container = styled.div`
   width: 100%;
@@ -35,89 +162,17 @@ const Container = styled.div`
   }
 `;
 
-// function validateAgreement(values) {
-//   let errors = {};
-
-//   if (values.conv_textos.length === 0) {
-//     errors.conv_textos = "Debe anexar almenos un parrafo";
-//   }
-
-//   return errors;
-// }
 
 const inputlist = () => {
-  const { values, errors, handlesubmit, handleChange } = InputList();
-
-  const { conv_textos, conv_links } = values;
-
-  const arrayTA = [
-    {
-      section: "textos",
-      label: "Escribe Textos",
-      icon: "align-left",
-      contInputs: [
-        {
-          label: "Texto",
-          id: "conv_textos",
-          type: "parrafos",
-          value: conv_textos,
-          onChange: handleChange,
-          placeholder: "",
-          rows: 3,
-        },
-      ],
-    },
-  ];
-
-  const loadInputs = (arrInputs) => {
-    return arrInputs.map((input, index) => {
-      if (input.type === "parrafos") {
-        return (
-          <InputTextAreaArray
-            key={index}
-            label={input.label}
-            id={input.id}
-            isBorderNone={true}
-            value={input.value}
-            onChange={input.onChange}
-          />
-        );
-      }
-    });
-  };
-
-  const Array = [
-    {
-      label: "Selecciona Red",
-      id: "conv_links",
-      value: conv_links,
-      onChange: handleChange,
-      onBlur: (e)=>handleBlur(e.target.name),
-      type:"links"
-    },
-  ]
-
-  const handleViewForm = (array) => {
-    return array.map((sec, index) => (
-      <div key={index} style={{ textAlign: "center" }}>
-        <label>
-          <h1>{sec.label}</h1>
-        </label>
-        <div>
-          <div key={index}>{loadInputs(sec.contInputs)}</div>
-        </div>
-      </div>
-    ));
-  };
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <Container>
-      <h1>Elige tu Red Social</h1>
+        <h1>Elige tu Red Social</h1>
 
         <div className="contain-form">
-          <InputTextEdit data={Array}/>
+          {App()}
         </div>
       </Container>
     </>

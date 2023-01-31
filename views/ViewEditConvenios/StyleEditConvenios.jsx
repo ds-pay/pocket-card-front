@@ -113,6 +113,7 @@ export const Header = styled.div`
 
 export const ContainImages = styled.div`
   display: flex;
+  margin: 2rem 0;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -146,6 +147,7 @@ export const ContainInfo = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  margin: 2rem 0;
   justify-content: center;
   align-items: center;
   .container-left, .container-right{
@@ -156,10 +158,8 @@ export const ContainInfo = styled.div`
     width: 100%;
   }
   .container-left{
-    background-color: red;
   }
   .container-right{
-    background-color: blue;
   }
 `;
 
@@ -201,4 +201,25 @@ export const InputTextview = styled.input`
     @media (max-width: 1024px) {
       background-color: var(--nextui-colors-backgroundForm);
     }
+`;
+
+export const ContainText = styled.div`
+  margin: 2rem 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  .inputlink{
+    width: 100%;
+  }
+  .inputkeyselect{
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .textarearray{
+    width: 100%;
+    margin: 0 0.5rem;
+  }
 `;
