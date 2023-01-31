@@ -13,7 +13,9 @@ export const Content = styled.div`
         -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-        
+        @media(max-width: 1024px){
+            background-color: white;
+        }
     }
     @media(max-width: 1000px){
         width: 100%;

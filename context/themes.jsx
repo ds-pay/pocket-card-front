@@ -68,9 +68,10 @@ export const lightTheme = createTheme({
 
       bgLoginCardAnimation: "#5040b9",
       textColorCardAnimate: "#e6e6e6",
-      textFormColor: "#000000",
+      textFormColor: "#292929",
       colorTextOrdinary: "#ffffff",
 
+      textlowContrast: "#e6e6e6",
       //Sombreado del narvbar y cards notifications
       boxShadowPrimary: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
       // tono oscuro de letra

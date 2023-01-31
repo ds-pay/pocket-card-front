@@ -31,8 +31,8 @@ export const ContainerCarForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px solid var(--nextui-colors-textFormColor);
-    border-bottom: 1px solid var(--nextui-colors-textFormColor);
+    border-top: 1px solid var(--nextui-colors-textlowContrast);
+    border-bottom: 1px solid var(--nextui-colors-textlowContrast);
     .container-img,
     .container-title {
       color: var(--nextui-colors-textFormColor);

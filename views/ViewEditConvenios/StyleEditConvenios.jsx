@@ -13,8 +13,6 @@ export const ContainerCardForm = styled.form`
     height: 46rem;
     width: 100%;
     justify-content: flex-start;
-    overflow: hidden;
-    overflow-y: scroll;
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -68,8 +66,8 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-top: 1px solid var(--nextui-colors-textFormColor);
-  border-bottom: 1px solid var(--nextui-colors-textFormColor);
+  border-top: 1px solid var(--nextui-colors-textlowContrast);
+  border-bottom: 1px solid var(--nextui-colors-textlowContrast);
   .container-img,
   .container-title,
   .container-butonback {
@@ -130,6 +128,9 @@ export const ContainImages = styled.div`
       padding: 2rem;
       width: 13rem;
       height: 13rem;
+      @media (max-width: 1024px) {
+        margin: 0.5rem 0;
+      }
       img{
         border-radius: 1rem;
         width: 9rem;
@@ -139,6 +140,10 @@ export const ContainImages = styled.div`
         font-size: 1.2rem;
         margin: 0;
       };
+    }
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 `;
@@ -160,6 +165,10 @@ export const ContainInfo = styled.div`
   .container-left{
   }
   .container-right{
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
