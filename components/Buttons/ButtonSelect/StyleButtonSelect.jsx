@@ -29,6 +29,12 @@ export const ContainerButton = styled.div`
     cursor: pointer;
     background-color: var(--nextui-colors-backgroundForm);
   }
+  @media(max-width: 1024px){
+    background-color: white;
+    :hover {
+      background-color: var(--nextui-colors-bgInputText);
+    }
+  }
 `;
 
 export const ContainerIcons = styled.div`

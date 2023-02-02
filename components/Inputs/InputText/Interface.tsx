@@ -21,7 +21,7 @@ export interface dataText {
     value: string,
     label: string,
     onBlur: any
-    
+    disabled: boolean
 }
 
 export interface ContainTextProps {

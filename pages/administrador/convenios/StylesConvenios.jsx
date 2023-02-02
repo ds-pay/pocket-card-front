@@ -31,22 +31,40 @@ export const ContainerCardForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px solid var(--nextui-colors-textFormColor);
-    border-bottom: 1px solid var(--nextui-colors-textFormColor);
+    border-top: 1px solid var(--nextui-colors-textlowContrast);
+    border-bottom: 1px solid var(--nextui-colors-textlowContrast);
     .container-img,
-    .container-title {
+    .container-title,
+    .container-butonback {
       color: var(--nextui-colors-textFormColor);
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.3s ease;
     }
     .container-img {
-      margin: 0 0.5rem 0 0.5rem;
+      margin: 0.5rem 0.5rem;
       font-size: 1.5rem;
-      width: 3rem;
-      height: 3rem;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 0.2rem;
       
+    }
+    .container-butonback{
+      margin: 0.5rem 0.5rem;
+      font-size: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.2rem;
+      :hover{
+        background-color: var(--nextui-colors-bgInputText);
+        cursor: pointer;
+      }
+      @media (max-width: 1024px){
+        :hover{
+          background-color: var(--nextui-colors-backgroundForm);
+        }
+      }
     }
     .container-title {
       h3 {
@@ -235,4 +253,118 @@ export const ContainText = styled.div`
   .inputlink{
     width: 100%;
   }
+  .inputkeyselect{
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+`;
+
+
+
+export const ContainerEdit = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const ContainerHeadEdit = styled.div`
+  width: 100%;
+  height: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+`;
+
+export const ContainerCardEdit = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 94%;
+  padding: 1rem;
+  flex-wrap: wrap;
+  
+`;
+
+export const Card = styled.div`
+    width: 12rem;
+    height: 15rem;
+    background-color: var(--nextui-colors-bgInputText);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1rem;
+    @media (max-width: 1024px) {
+      background-color: var(--nextui-colors-backgroundForm);
+      margin: 0.5rem 0;
+    }
+
+    .logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+    .title{
+      width: 100%;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem;
+      flex-direction: column;
+      h3{
+        font-size: 1rem;
+        margin: 0.3rem 0;
+      }
+      .button{
+        width: 80%;
+        border-radius: 0.4rem;
+        height: 2rem;
+        background-color: var(--nextui-colors-backgroundForm);
+        text-align: center;
+        margin: 0.2rem 0;
+        -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+        transition: 0.5s all ease;
+        border: none;
+        :hover{
+          background-color: #cacaca;
+          cursor: pointer;
+        }
+        @media (max-width: 1024px) {
+          background-color: var(--nextui-colors-bgInputText);
+          :hover{
+            background-color: var(--nextui-colors-backgroundForm);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+
 `;

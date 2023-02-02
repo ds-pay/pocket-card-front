@@ -16,6 +16,12 @@ export const ButtonContainer = styled.div`
   :hover {
     background-color: var(--nextui-colors-backgroundForm);
   }
+  @media(max-width: 1024px){
+    background-color: white;
+    :hover {
+      background-color: var(--nextui-colors-bgInputText);
+    }
+  }
 `;
 
 export const TextButton = styled.h6`
