@@ -41,6 +41,7 @@ export const DivLinks = styled.div`
 `;
 
 export const InputTextview = styled.input`
+    border: none;
     height: 100%;
     height: 3rem;
     background-color: var(--nextui-colors-bgInputText);

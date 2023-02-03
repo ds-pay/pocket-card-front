@@ -4,7 +4,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   border: none;
   height: 100%;
-  margin: 0.1rem 0.34rem;
+  margin: 0.1rem 0.3rem;
   padding: 0.3rem;
   background-color: var(--nextui-colors-bgInputText);
   cursor: pointer;
@@ -36,6 +36,9 @@ export const TextButton = styled.h6`
 
 export const IconButton = styled.div`
   margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 600px) {
     font-size: 0.8rem;
   }

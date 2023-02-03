@@ -27,17 +27,17 @@ const EditarConvenio = () => {
           arrayheader: [
             {
               id: "editimg",
-              editlabel: "Editar Imagenes",
+              editlabel: " Imagenes",
               icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editlabel: "Editar Informacion",
+              editlabel: " Informacion",
               icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              editlabel: "Editar Textos y Busqueda",
+              editlabel: " Textos y Busqueda",
               icon: <GrTextAlignFull />,
             }
           ]
@@ -58,17 +58,17 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editlabel: "Editar Imagenes",
+              editlabel: " Imagenes",
               icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editlabel: "Editar Informacion",
+              editlabel: " Informacion",
               icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              editlabel: "Editar Textos y Busqueda",
+              editlabel: " Textos y Busqueda",
               icon: <GrTextAlignFull />,
             } 
           ]
@@ -89,17 +89,17 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editlabel: "Editar Imagenes",
+              editlabel: " Imagenes",
               icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editlabel: "Editar Informacion",
+              editlabel: " Informacion",
               icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              editlabel: "Editar Textos y Busqueda",
+              editlabel: " Textos y Busqueda",
               icon: <GrTextAlignFull />,
             } 
           ]
@@ -120,17 +120,17 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editlabel: "Editar Imagenes",
+              editlabel: " Imagenes",
               icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editlabel: "Editar Informacion",
+              editlabel: " Informacion",
               icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              editlabel: "Editar Textos y Busqueda",
+              editlabel: " Textos y Busqueda",
               icon: <GrTextAlignFull />,
             } 
           ]
@@ -151,17 +151,17 @@ const EditarConvenio = () => {
           arrayheader:[
             {
               id: "editimg",
-              editlabel: "Editar Imagenes",
+              editlabel: " Imagenes",
               icon: <FaImages />,
             },
             {
               id: "editinfo",
-              editlabel: "Editar Informacion",
+              editlabel: " Informacion",
               icon: <FaHandshake />,
             },
             {
               id: "edittext",
-              editlabel: "Editar Textos y Busqueda",
+              editlabel: " Textos y Busqueda",
               icon: <GrTextAlignFull />,
             } 
           ]

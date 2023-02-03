@@ -28,44 +28,34 @@ const ViewEditConvenios = ({ array }) => {
     {
       id: "infoedit1",
       label: "Estado del Convenio",
-      placeholder: "EditaEstado del Convenio",
+      placeholder: "Activo",
     },
     {
       id: "infoedit2",
-      label: "Categoria Primaria",
-      placeholder: "Edita Categoria Primaria",
+      label: "Categoria Principal",
+      placeholder: "Mi Bienestar",
     },
     {
       id: "infoedit3",
       label: "Categoria Secundaria",
-      placeholder: "Edita Categoria Secundaria",
+      placeholder: "Vamos a Estudiar",
     },
     {
       id: "infoedit4",
-      label: "Sub Categoria",
-      placeholder: "Edita Sub Categoria",
+      label: "Nombre o Titulo",
+      placeholder: "El Michi Financiero Interprace",
     },
     {
       id: "infoedit5",
-      label: "Estado del Convenio",
-      placeholder: "Edita Estado del Convenio",
+      label: "Sub Categoria",
+      placeholder: "Mi Hogar",
     },
     {
       id: "infoedit6",
-      label: "Categoria Primaria",
-      placeholder: "Edita Categoria Primaria",
+      label: "Porcentaje de Descuento",
+      placeholder: "60%",
     },
-    {
-      id: "infoedit7",
-      label: "Categoria Secundaria",
-      placeholder: "Edita Categoria Secundaria",
-    },
-    {
-      id: "infoedit8",
-      label: "Sub Categoria",
-      placeholder: "Edita Sub Categoria",
-    }
-  ]
+  ];
 
   const funInputsEdits = (id) => {
     return (
@@ -82,6 +72,7 @@ const ViewEditConvenios = ({ array }) => {
                     type={"text"}
                     value={inputValue}
                     onChange={event => setInputValue(event.target.value)}
+                    isEditing={isEditing ? true : false}
                   />
                   :
                   <InputTextview
@@ -100,7 +91,7 @@ const ViewEditConvenios = ({ array }) => {
     )
   };
 
-  const funHeader = (array, id) => {
+  const funHeader = (text,array, id) => {
     return array.map((sec, index) => {
       if (sec.id === id) {
         return <Header>
@@ -108,7 +99,7 @@ const ViewEditConvenios = ({ array }) => {
             {sec.icon}
           </div>
           <div className="container-title">
-            <h3>{sec.editlabel}</h3>
+            <h3>{text}{sec.editlabel}</h3>
           </div>
         </Header>
       }
@@ -216,6 +207,7 @@ const ViewEditConvenios = ({ array }) => {
           isBorderNone={true}
           value={input.value}
           onChange={input.onChange}
+          buttonAdd={true}
         />
       </div>
     ))
@@ -229,7 +221,7 @@ const ViewEditConvenios = ({ array }) => {
             sec.arrayheader.map((edit, index) => (
               edit.id === "editimg"
                 ?
-                funHeader(sec.arrayheader, edit.id)
+                funHeader("Editar",sec.arrayheader, edit.id)
                 :
                 null
             ))
@@ -250,7 +242,7 @@ const ViewEditConvenios = ({ array }) => {
             sec.arrayheader.map((edit, index) => (
               edit.id === "editinfo"
                 ?
-                funHeader(sec.arrayheader, edit.id)
+                funHeader("Editar",sec.arrayheader, edit.id)
                 :
                 null
             ))
@@ -267,24 +259,18 @@ const ViewEditConvenios = ({ array }) => {
                 <>
                   {funInputsEdits("infoedit3")}
                 </>
-                <>
-                  {funInputsEdits("infoedit4")}
-                </>
               </DivLinks>
             </div>
             <div className='container-right'>
               <DivLinks>
                 <>
+                  {funInputsEdits("infoedit4")}
+                </>
+                <>
                   {funInputsEdits("infoedit5")}
                 </>
                 <>
                   {funInputsEdits("infoedit6")}
-                </>
-                <>
-                  {funInputsEdits("infoedit7")}
-                </>
-                <>
-                  {funInputsEdits("infoedit8")}
                 </>
               </DivLinks>
             </div>
@@ -293,7 +279,7 @@ const ViewEditConvenios = ({ array }) => {
             sec.arrayheader.map((edit, index) => (
               edit.id === "edittext"
                 ?
-                funHeader(sec.arrayheader, edit.id)
+                funHeader("Editar",sec.arrayheader, edit.id)
                 :
                 null
             ))

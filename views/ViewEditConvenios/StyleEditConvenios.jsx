@@ -206,6 +206,7 @@ export const InputTextview = styled.input`
     flex-direction: column;
     border-radius: 0.5rem;
     transition: 0.5s all ease;
+    border: ${(({ isEditing }) => isEditing ? null : "none")};
 
     @media (max-width: 1024px) {
       background-color: var(--nextui-colors-backgroundForm);

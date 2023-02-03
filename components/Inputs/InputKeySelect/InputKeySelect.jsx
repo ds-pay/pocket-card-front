@@ -20,6 +20,7 @@ const InputKeySelect = ({ array }) => {
                 id={sec.id}
                 options={sec.array}
                 getOptionLabel={(option) => option.title}
+                defaultValue={[sec.array[1], sec.array[5], sec.array[4]]}
                 renderInput={(params) => (
                     <TextField {...params} label={sec.label} placeholder={sec.placeholder} variant={sec.variant}/>
                 )}

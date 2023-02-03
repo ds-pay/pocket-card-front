@@ -75,6 +75,7 @@ const NuevoConvenio = () => {
           isBorderNone={true}
           value={input.value}
           onChange={input.onChange}
+          buttonAdd={true}
         />
       </div>
     ))
