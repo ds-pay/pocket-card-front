@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
-import { ContainerCardForm, Header, ContainImages, ContainInfo, DivLinks, InputTextview, ContainText } from './StyleEditConvenios';
+import { ContainerCardForm, Header, ContainImages, ContainInfo, DivLinks, InputTextview, ContainText } from './StylesDetails';
 import { IoMdTrash, IoMdSave } from 'react-icons/io';
 import { RiEdit2Fill } from 'react-icons/ri';
 import InputList from '../../components/Inputs/InputList/InputList'
@@ -8,7 +8,7 @@ import InputKeySelect from '../../components/Inputs/InputKeySelect/InputKeySelec
 import InputLink from '../../components/Inputs/InputLink/InputLink';
 import InputTextAreaArray from '../../components/Inputs/InputTextArea/InputTextAreaArray';
 
-const ViewEditConvenios = ({ array }) => {
+const DetailsAgreement = ({ array }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [inputValue, setInputValue] = useState('');
 
@@ -309,4 +309,4 @@ const ViewEditConvenios = ({ array }) => {
   )
 }
 
-export default ViewEditConvenios
+export default DetailsAgreement
