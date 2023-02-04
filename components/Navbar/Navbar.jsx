@@ -14,7 +14,7 @@ import SeccionMedium from './SeccionMedium'
 import SeccionRight from './SeccionRight'
 
 
-const Navbar = () => {
+const Navbar = ({ selectionBody }) => {
 
   // const [ handleTheme, setHandleTheme ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false)
@@ -31,6 +31,7 @@ const Navbar = () => {
 
   const selectionViw = (sec) => {
     setSelection(sec)
+    selectionBody(sec)
   }
 
   const SeccionViews = [
