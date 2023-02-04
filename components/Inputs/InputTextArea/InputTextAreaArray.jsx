@@ -25,6 +25,7 @@ const InputTextAreaArray = ({
   value,
   onChange,
   onBlur,
+  buttonAdd
 }) => {
   const [listTexts, setListTexts] = useState([]);
   const [changedText, setChangedText] = useState("");
@@ -117,13 +118,16 @@ const InputTextAreaArray = ({
             isMargin={true}
           />
         </div>
-        <OptionsList>
-          <ButtonIcon
-            icon={<GrAddCircle />}
-            func={addTextArea}
-            text={"Agregar"}
-          />
-        </OptionsList>
+        {
+          buttonAdd &&
+          <OptionsList>
+            <ButtonIcon
+              icon={<GrAddCircle />}
+              func={addTextArea}
+              text={"Agregar"}
+            />
+          </OptionsList>
+        }
       </ContainerInput>
       {listTexts &&
         listTexts.map((ltext, index) => (

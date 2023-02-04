@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
-import { ContainerCardForm, Header, ContainImages, ContainInfo, DivLinks, InputTextview, ContainText } from './StyleEditConvenios';
-import { IoMdTrash, IoMdSave } from 'react-icons/io';
-import { RiEdit2Fill } from 'react-icons/ri';
+import { ContainerCardForm, Header, ContainImages, ContainInfo, DivLinks, InputTextview, ContainText, ContainInputText } from './StylesDetails';
+import { BsFacebook } from 'react-icons/bs';
+import { TbWorld } from 'react-icons/tb';
+import { FaWhatsapp } from 'react-icons/fa';
 import InputList from '../../components/Inputs/InputList/InputList'
 import InputKeySelect from '../../components/Inputs/InputKeySelect/InputKeySelect';
 import InputLink from '../../components/Inputs/InputLink/InputLink';
 import InputTextAreaArray from '../../components/Inputs/InputTextArea/InputTextAreaArray';
+import InputTextArea from '../../components/Inputs/InputTextArea/InputTextArea';
+import InputText from '../../components/Inputs/InputText/InputText';
 
-const ViewEditConvenios = ({ array }) => {
+const DetailsAgreement = ({ array }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [inputValue, setInputValue] = useState('');
 
@@ -72,7 +75,7 @@ const ViewEditConvenios = ({ array }) => {
                     type={"text"}
                     value={inputValue}
                     onChange={event => setInputValue(event.target.value)}
-                    isEditing={isEditing ? true : false}
+                    isEditing={isEditing ? true :false}
                   />
                   :
                   <InputTextview
@@ -80,10 +83,10 @@ const ViewEditConvenios = ({ array }) => {
                     value={inputValue ? inputValue : sec.placeholder}
                   />
               }
-              <ButtonIcon
+              {/* <ButtonIcon
                 icon={isEditing ? <IoMdSave /> : <RiEdit2Fill />}
                 func={isEditing ? handleSave : handleEdit}
-              />
+              /> */}
             </div>
           </>
           : null
@@ -91,7 +94,7 @@ const ViewEditConvenios = ({ array }) => {
     )
   };
 
-  const funHeader = (text,array, id) => {
+  const funHeader = (array, id) => {
     return array.map((sec, index) => {
       if (sec.id === id) {
         return <Header>
@@ -99,7 +102,7 @@ const ViewEditConvenios = ({ array }) => {
             {sec.icon}
           </div>
           <div className="container-title">
-            <h3>{text}{sec.editlabel}</h3>
+            <h3>{sec.editlabel}</h3>
           </div>
         </Header>
       }
@@ -167,50 +170,75 @@ const ViewEditConvenios = ({ array }) => {
 
   };
 
-  const funInputLink = () => {
-    const { values, errors, handlesubmit, handleChange } = InputList();
-    const { conv_links } = values;
+  const funLink = () => {
     const ArrayLink = [
       {
-        label: "Selecciona Red",
-        id: "conv_links",
-        value: conv_links,
-        onChange: handleChange,
-        onBlur: (e) => handleBlur(e.target.name),
-        type: "links"
+        id: "web",
+        icon: <TbWorld/>,
+        label: "www.https://michinegocios.com.co"
       },
-    ]
-    return <div className='inputlink'><InputLink data={ArrayLink} /></div>
-  };
-
-  const funTextAreaArrray = () => {
-    const { values, errors, handlesubmit, handleChange } = InputList();
-    const { conv_textos } = values;
-    const ArrayTA = [
       {
-        label: "Texto",
-        id: "conv_textos",
-        type: "parrafos",
-        value: conv_textos,
-        onChange: handleChange,
-        placeholder: "",
-        rows: 3,
+        id: "facebook",
+        icon: <BsFacebook/>,
+        label: "www.https://facebook.com/michinedegocios/"
+      },
+      {
+        id: "whatsapp",
+        icon: <FaWhatsapp/>,
+        label: "www.https://whatsapp.com/michinedegocios/3245587855"
       },
     ]
 
-    return ArrayTA.map((input, index) => (
-      <div className='textarearray'>
-        <InputTextAreaArray
-          key={index}
-          label={input.label}
-          id={input.id}
-          isBorderNone={true}
-          value={input.value}
-          onChange={input.onChange}
-          buttonAdd={true}
-        />
+    return ArrayLink.map((sec, index) => (
+      <div className='inputlink'>
+        <div className='link-button'>
+          <ButtonIcon  icon={sec.icon} func={() =>{}}/>
+        </div>
+        <InputTextview value={sec.label} />
       </div>
     ))
+  }
+
+  const funTextAreaArrray = () => {
+    const ArrayTA = [
+      {
+        id: "conv_textos1",
+        label: "Texto nº 1:",
+        type: "parrafos",
+        value: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+        isBorderNone: true,
+        buttonAdd: false
+      },
+      {
+        id: "conv_textos2",
+        label: "Texto nº 2:",
+        type: "parrafos",
+        value: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        isBorderNone: true,
+        buttonAdd: false
+      },
+    ]
+
+    return(
+      <div className='contain'>
+        {
+          ArrayTA.map((input, index) => (
+            <>
+              <h1>{input.label}</h1>
+              <div className='contain-input'>
+                <InputTextArea
+                  isBorderNone={true}
+                  isBgNone={true}
+                  type={"area"}
+                  value={input.value}
+                  isMargin={true}
+                />
+              </div>
+            </>
+          ))
+        }
+      </div>
+    ) 
   };
 
   return (
@@ -221,7 +249,7 @@ const ViewEditConvenios = ({ array }) => {
             sec.arrayheader.map((edit, index) => (
               edit.id === "editimg"
                 ?
-                funHeader("Editar",sec.arrayheader, edit.id)
+                funHeader(sec.arrayheader, edit.id)
                 :
                 null
             ))
@@ -242,7 +270,7 @@ const ViewEditConvenios = ({ array }) => {
             sec.arrayheader.map((edit, index) => (
               edit.id === "editinfo"
                 ?
-                funHeader("Editar",sec.arrayheader, edit.id)
+                funHeader(sec.arrayheader, edit.id)
                 :
                 null
             ))
@@ -279,14 +307,14 @@ const ViewEditConvenios = ({ array }) => {
             sec.arrayheader.map((edit, index) => (
               edit.id === "edittext"
                 ?
-                funHeader("Editar",sec.arrayheader, edit.id)
+                funHeader(sec.arrayheader, edit.id)
                 :
                 null
             ))
           }
           <ContainText>
             {funTextAreaArrray()}
-            {funInputLink()}
+            {funLink()}
             {funInputKeySelect()}
           </ContainText>
         </>
@@ -295,4 +323,4 @@ const ViewEditConvenios = ({ array }) => {
   )
 }
 
-export default ViewEditConvenios
+export default DetailsAgreement

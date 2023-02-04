@@ -214,22 +214,67 @@ export const InputTextview = styled.input`
 `;
 
 export const ContainText = styled.div`
-  margin: 2rem 0;
+  margin: 1rem 0;
+  padding: 0 0.5rem;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  
+  h1{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
   .inputlink{
     width: 100%;
+    display: flex;
+    margin: 0.6rem 0;
+    .link-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
   }
   .inputkeyselect{
     width: 100%;
-    margin: 0.5rem 0;
   }
-  .textarearray{
-    width: 100%;
+  /* .textarearray{
     margin: 0 0.5rem;
+    width: 100%;
+  } */
+  .contain{
+    width: 100%;
+    margin: 1rem 0;
+    .contain-input {
+      width: 100%;
+      margin: 0rem 0rem;
+      height: 5rem;
+      padding: 0rem 0.5rem ;
+      border-radius: 0.3rem;
+      background-color: var(--nextui-colors-bgInputText);
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+      @media (max-width: 1024px) {
+        background-color: white;
+      }
+  
+    };
   }
 `;
+
+// export const ContainInputText = styled.div`
+//   display: flex;
+//   width: 100%;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   @media (max-width: 1000px) {
+//     flex-direction: column;
+//   }
+
+// `;
