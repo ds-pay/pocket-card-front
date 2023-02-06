@@ -4,12 +4,12 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: ${({ isActivate }) => (isActivate ? "4rem" : "15.5rem")};
-  height: 100%;
+  height: 97.1%;
   background: var(--nextui-colors-backgroundNavbar);
   position: absolute;
   transition: 0.5s all ease;
   white-space: nowrap;
-  z-index: 100;
+  z-index: 90;
 `;
 
 export const Content = styled.div`

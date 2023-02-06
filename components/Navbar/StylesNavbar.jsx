@@ -70,8 +70,10 @@ export const ContainSeccionsViews = styled.div`
   font-size: 1.3rem;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
-  color: var(--nextui-colors-colorTextOrdinary);
   background-color: ${({ isSelected }) => isSelected ? " var(--nextui-colors-bgCardLogin)" : null};
+  a{
+    color: var(--nextui-colors-colorTextOrdinary);
+  }
   :hover {
     background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;

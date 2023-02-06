@@ -11,6 +11,7 @@ export const ContentCard = styled.div`
   position: absolute;
   display: flex;
   width: 100%;
+  margin-top: 3rem;
   height: 4rem;
   top: 0;
   background: var(--nextui-colors-backgroundNavbar);
