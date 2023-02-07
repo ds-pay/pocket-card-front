@@ -26,6 +26,7 @@ export const ButtonContainer = styled.div`
 
 export const TextButton = styled.h6`
   text-align: center;
+  width: 100%;
   margin: 5px;
   font-size: 0.8rem;
   color: var(--nextui-colors-textFormColor);
