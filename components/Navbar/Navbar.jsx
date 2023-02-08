@@ -50,7 +50,7 @@ const Navbar = ({  }) => {
       state: true,
       id: "category",
       icon: <BiCategoryAlt />,
-      href: '/category'
+      href: '/categories'
     },
     {
       state: true,

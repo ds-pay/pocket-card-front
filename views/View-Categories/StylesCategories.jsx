@@ -68,7 +68,7 @@ export const MediumBody = styled.div`
   width: 100%;
   height: 100%;
 
-  .container-categorys{
+  .container-categories{
     display: flex;
     width: 100%;
     height: 100%;
@@ -99,10 +99,10 @@ export const CardCategory = styled.div`
       width: 6rem;
       transition: all ease 0.3s;
       transform: ${({ isSelected }) => isSelected ? "scale(1.2,1.2)" : null};
-      :hover{
+      /* :hover{
         transform: scale(1.2,1.2);
         cursor: pointer;
-      }
+      } */
     }
   }
   .container-title{

@@ -9,7 +9,7 @@ import styled from "@emotion/styled";
 import Navbar from "../components/Navbar/Navbar";
 import Home from '../views/View-Home/Home'
 import News from '../views/View-News/News'
-import Category from '../views/View-Category/Category'
+import Category from '../views/View-Categories/Categories'
 import User from '../views/View-User/User'
 import Footer from '../components/Footer/Footer';
 
