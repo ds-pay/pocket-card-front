@@ -6,6 +6,7 @@ export const ButtonContainer = styled.div`
   height: 100%;
   margin: 0.1rem 0.3rem;
   padding: 0.3rem;
+  border-radius: 0.5rem;
   background-color: var(--nextui-colors-bgInputText);
   cursor: pointer;
   transition: 0.5s all ease;

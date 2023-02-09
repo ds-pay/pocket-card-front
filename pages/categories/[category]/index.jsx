@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router';
+import Category from '../../../views/View-Category/Category';
 
 const index = ({ category }) => {
-  const [dataTitle, setDataTitle ] = useState(category.label)
   
   const router = useRouter()
   const handleBack = () => {
     router.push(`/categories/`)
   }
 
+  console.log(category)
+
   return (
     <>
-      <p onClick={() => handleBack()}>regresar</p>
-      <h1>{dataTitle}</h1>
+      <Category data={category} clickAction={() => handleBack()}/>
     </>
   )
 };
