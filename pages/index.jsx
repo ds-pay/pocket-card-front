@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 // import Image from "next/image";
 // import styles from "../styles/Home.module.css";
 import InputSelect from "../components/Inputs/InputSelect/InputSelect";
-import TestInputsReutility from '../components/TestComponents/TestInputsReutility'
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import styled from "@emotion/styled";
 import Navbar from "../components/Navbar/Navbar";

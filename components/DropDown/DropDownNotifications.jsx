@@ -70,11 +70,11 @@ const DropDownNotifications = ({ handleBell }) => {
             <h1>{sec.discount}</h1>
             <p>{sec.conditions}</p>
             <div className="ContainerTime">
-              <div move={true}>
+              <div>
                 {sec.rocket}
                 <p>{sec.time}</p>
               </div>
-              <div move={false}>
+              <div>
                 <p>{sec.issue}</p>
               </div>
             </div>
@@ -83,9 +83,9 @@ const DropDownNotifications = ({ handleBell }) => {
       ))}
 
       {Notifications.map((sec, index) => (
-        <div>
+        <div key={index}>
           {sec.id == idSelected ? (
-            <Modal key={index} stateModal={stateModal} setStateModal={setStateModal}>
+            <Modal stateModal={stateModal} setStateModal={setStateModal}>
               <ContentModal>
                 <div className="ContainerImg">
                   <img src={sec.img} alt={sec.alt} />
