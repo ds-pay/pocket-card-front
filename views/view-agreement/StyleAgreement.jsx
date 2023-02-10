@@ -156,6 +156,9 @@ export const Discount = styled.div`
         font-weight: 600;
         text-align: left;
       }
+    @media(max-width: 1040px){
+      
+    }
     }
     @media(max-width: 1040px){
       width: 80%;
