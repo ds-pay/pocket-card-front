@@ -6,10 +6,10 @@ import InputSelect from "../components/Inputs/InputSelect/InputSelect";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import styled from "@emotion/styled";
 import Navbar from "../components/Navbar/Navbar";
-import Home from '../views/View-Home/Home'
-import News from '../views/View-News/News'
-import Category from '../views/View-Categories/Categories'
-import User from '../views/View-User/User'
+import Home from '../views/view-home/Home'
+import News from '../views/view-news/News'
+import Category from '../views/view-categories/Categories'
+import User from '../views/view-user/User'
 import Footer from '../components/Footer/Footer';
 
 const Container = styled.div`

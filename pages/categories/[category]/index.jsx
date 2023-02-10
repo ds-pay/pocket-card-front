@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router';
-import Category from '../../../views/View-Category/Category';
+import Category from '../../../views/view-category/Category';
 
 const index = ({ category, agreements }) => {
   

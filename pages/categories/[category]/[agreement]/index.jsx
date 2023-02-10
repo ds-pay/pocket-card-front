@@ -1,13 +1,23 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import Agreement from '../../../../views/view-agreement/Agreement';
 
-const index = ({ agreement }) => {
+const index = ({ agreement, url }) => {
   const router = useRouter();
+
+  const handleRouter = () => {
+    router.push(url)
+  }
+
   const [agr, setAgr] = useState(null);
   useEffect(() => {setAgr(agreement)}, [agreement]);
   return (
-    <div>{agr?agr.title:"Loading..."}</div>
+    <Agreement data={agreement} />
+    // {agr?agr.title:"Loading..."}
   )
+  return {
+
+  }
 }
 
 export async function getStaticPaths() {
@@ -28,10 +38,11 @@ export async function getStaticProps({ params }) {
   const json = await res.json();
   return {
     props: {
-      agreement: json.agreement
+      agreement: json.agreement,
+      url
     }
   };
-}
+};
 
 export default index
 
