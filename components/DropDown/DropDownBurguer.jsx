@@ -36,11 +36,11 @@ const DropDown = ({ handleBurguer }) => {
     <DrpdownBurguer handleBurguer={handleBurguer}>
       {SeccionConfig.map((sec, index) => (
         <Seccion  id={sec.id} key={index}>
-          <div isJustify={true} className="seccion-1">
+          <div className="seccion-1">
             {sec.icon}
             <p>{sec.description}</p>
           </div>
-          <div isJustify={false} className="seccion-2">
+          <div className="seccion-2">
             {sec.arrow}
           </div>
         </Seccion>

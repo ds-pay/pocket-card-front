@@ -6,22 +6,23 @@ import { AiFillHeart } from 'react-icons/ai'
 import { useRouter } from 'next/router'
 
 const Category = ({ data, clickAction }) => {
-  const [titleCategory, setTitleCategory] = useState(data.label);
-  const [imageCategory, setImageCategory] = useState(data.icon);
-  const [idCategory, setIdCategory] = useState(data.id);
-  const [agreementsCategory, serAgreementsCategory] = useState(data.agreements);
+  const { category, agreements } = data;
+  const [titleCategory, setTitleCategory] = useState(category.label);
+  const [imageCategory, setImageCategory] = useState(category.icon);
+  const [idCategory, setIdCategory] = useState(category.id);
+  const [agreementsCategory, serAgreementsCategory] = useState(agreements);
 
   const router = useRouter()
 
-  const handleViewAgreement = (Categoryid, idAgreement) => {
-    router.push(`/categories/${Categoryid}/${idAgreement}`)
+  const handleViewAgreement = (idAgreement) => {
+    router.push(`/categories/${idCategory}/${idAgreement}`)
   }
 
   return (
     <ContainerGeneral>
       <BodyHeader>
         <div className="container-butonback">
-          <ButtonIcon icon={<BiArrowBack/>} func={clickAction}/>
+          <ButtonIcon icon={<BiArrowBack />} func={clickAction} />
         </div>
         <div className="container-title">
           <h3>{titleCategory}</h3>
@@ -33,8 +34,8 @@ const Category = ({ data, clickAction }) => {
 
       <MediumBody>
         {
-          agreementsCategory.map((sec, index) => (
-            <CardCategory onClick={() => handleViewAgreement(data.id, sec.id)}>
+          agreementsCategory?.map((sec, index) => (
+            <CardCategory key={index} onClick={() => handleViewAgreement(sec.id)}>
               <div className='container-icon'>
                 <img src={sec.img} alt={sec.id} />
               </div>

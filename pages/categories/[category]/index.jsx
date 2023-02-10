@@ -2,24 +2,24 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router';
 import Category from '../../../views/View-Category/Category';
 
-const index = ({ category }) => {
+const index = ({ category, agreements }) => {
   
   const router = useRouter()
   const handleBack = () => {
     router.push(`/categories/`)
   }
-
-  console.log(category)
+  const data = {
+    category,
+    agreements
+  }
 
   return (
-    <>
-      <Category data={category} clickAction={() => handleBack()}/>
-    </>
+      <Category data={data} clickAction={() => handleBack()}/>
   )
 };
 
 export async function getStaticPaths() {
-  const url = `${process.env.API_LOCAL}/api/categories/all`;
+  const url = `${process.env.API_LOCAL}/api/categories/`;
   const res = await fetch(url);
   const json = await res.json();
 
@@ -37,7 +37,8 @@ export async function getStaticProps({ params }){
   const json = await res.json();
   return {
     props: {
-      category: json.category
+      category: json.category,
+      agreements: json.agreements
     }
   }
 }

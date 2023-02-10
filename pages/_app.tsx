@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const observer = new MutationObserver((mutation) => {
       let newTheme = getDocumentTheme(document.documentElement);
-      setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light');
+      /* setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light'); */
     });
 
     observer.observe(document.documentElement, {

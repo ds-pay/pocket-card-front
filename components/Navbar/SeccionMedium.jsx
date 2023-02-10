@@ -9,8 +9,8 @@ const SeccionMedium = ({ SeccionViews, selection, setSelection, selectionViw, is
   return (
     <>
         {SeccionViews.map((viw, index) => (
-          <Link href={viw.href}>
-            <ContainSeccionsViews isDark={isDark} isSelected={ selection === viw.id? true : false } onClick={() => selectionViw(viw.id)} id={viw.id} key={index}>
+          <Link href={viw.href} key={index}>
+            <ContainSeccionsViews isDark={isDark} isSelected={ selection === viw.id? true : false } onClick={() => selectionViw(viw.id)} id={viw.id}>
               <a>{viw.icon}</a>
             </ContainSeccionsViews>
           </Link>

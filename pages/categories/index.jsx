@@ -11,7 +11,7 @@ const index = ({ category }) => {
 }
 
 export async function getStaticProps() {
-  const url = `${process.env.API_LOCAL}/api/categories/all`;
+  const url = `${process.env.API_LOCAL}/api/categories`;
   const res = await fetch(url);
   const json = await res.json();
   return {
