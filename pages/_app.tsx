@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import Navbar from '../components/Navbar/Navbar';
 import { darkTheme, lightTheme } from '../context/themes'
 import { useEffect, useState } from 'react'
+import Footer from '../components/Footer/Footer';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -16,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const observer = new MutationObserver((mutation) => {
       let newTheme = getDocumentTheme(document.documentElement);
-      setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light');
+      /* setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light'); */
     });
 
     observer.observe(document.documentElement, {
@@ -30,8 +31,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
-        {/* <Navbar />  */}
+        <Navbar />
         <Component {...pageProps} />
+        <Footer/>
       </NextUIProvider>
     </>
 

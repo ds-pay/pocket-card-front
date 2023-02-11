@@ -3,8 +3,8 @@ import { ContainerCardForm, ContainerEdit, ContainerHeadEdit, ContainerCardEdit,
 import { FaEdit, FaImages, FaHandshake } from 'react-icons/fa';
 import { GrTextAlignFull } from 'react-icons/gr'
 import { BiArrowBack } from 'react-icons/bi';
-import ViewEditConvenios from '../../../views/ViewEditConvenios/ViewEditConvenios';
-import DetailsAgreement from '../../../views/DetailsAgreement/DetailsAgreement';
+import ViewEditConvenios from '../../../views/view-edit-convenios/ViewEditConvenios';
+import DetailsAgreement from '../../../views/details-agreement/DetailsAgreement';
 import ButtonIcon from '../../../components/Buttons/ButtonIcon/ButtonIcon';
 
 const EditarConvenio = () => {

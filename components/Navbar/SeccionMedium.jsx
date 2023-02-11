@@ -1,5 +1,6 @@
 import React from 'react'
 import { ContainSeccionsViews } from "./StylesNavbar";
+import Link from 'next/link';
 
 
 const SeccionMedium = ({ SeccionViews, selection, setSelection, selectionViw, isDark }) => {
@@ -8,9 +9,11 @@ const SeccionMedium = ({ SeccionViews, selection, setSelection, selectionViw, is
   return (
     <>
         {SeccionViews.map((viw, index) => (
-            <ContainSeccionsViews isDark={isDark} isSelected={ selection === viw.id? true : false } onClick={() => selectionViw(viw.id)} id={viw.id} key={index}>
-                {viw.icon}
+          <Link href={viw.href} key={index}>
+            <ContainSeccionsViews isDark={isDark} isSelected={ selection === viw.id? true : false } onClick={() => selectionViw(viw.id)} id={viw.id}>
+              <a>{viw.icon}</a>
             </ContainSeccionsViews>
+          </Link>
         ))}
     </>
   )

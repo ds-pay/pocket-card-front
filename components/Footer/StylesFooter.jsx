@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const ContainerFooter = styled.div`
   display: flex;
+  z-index: 100;
   width: 100%;
   height: 20rem;
   background: linear-gradient(180deg, var(--nextui-colors-backgroundNavbar) , var(--nextui-colors-backGradiente2) );

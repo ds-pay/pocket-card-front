@@ -18,7 +18,7 @@ import { MdDoNotDisturbOnTotalSilence } from "react-icons/md";
 const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   overflow: hidden;
   overflow-y: scroll;
   @media(max-width: 600px){
@@ -87,18 +87,16 @@ const index = () => {
   ];
 
   return (
-    <>
-      <Container>
-        <Sidebar
-          ContentMenu={ContentMenu}
-          isSelected={isSelected}
-          setIsSelected={setIsSelected}
-        />
-        {ContentMenu.map((sec, index) =>
-          isSelected === sec.id ? <Content> {sec.route} </Content> : null
-        )}
-      </Container>
-    </>
+    <Container>
+      <Sidebar
+        ContentMenu={ContentMenu}
+        isSelected={isSelected}
+        setIsSelected={setIsSelected}
+      />
+      {ContentMenu.map((sec, index) =>
+        isSelected === sec.id ? <Content> {sec.route} </Content> : null
+      )}
+    </Container>
   );
 }
 

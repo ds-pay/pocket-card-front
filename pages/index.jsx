@@ -3,14 +3,13 @@ import React, { useState } from 'react'
 // import Image from "next/image";
 // import styles from "../styles/Home.module.css";
 import InputSelect from "../components/Inputs/InputSelect/InputSelect";
-import TestInputsReutility from '../components/TestComponents/TestInputsReutility'
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import styled from "@emotion/styled";
 import Navbar from "../components/Navbar/Navbar";
-import Home from '../views/View-Home/Home'
-import News from '../views/View-News/News'
-import Category from '../views/view-Category/Category'
-import User from '../views/View-User/User'
+import Home from '../views/view-home/Home'
+import News from '../views/view-news/News'
+import Category from '../views/view-categories/Categories'
+import User from '../views/view-user/User'
 import Footer from '../components/Footer/Footer';
 
 const Container = styled.div`
@@ -45,11 +44,9 @@ const Index = () => {
 
   return (
     <>
-      <Navbar selectionBody={selectionBody}/>
       <Container>
         {renderBody}
       </Container>
-      <Footer/>
     </>
   );
 };

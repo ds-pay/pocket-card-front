@@ -1,88 +1,59 @@
 import React, { useState } from 'react'
-import { ContainerGeneral, BodyHeader, MediumBody, CardCategory, ContentCategory } from './StylesCategory'
+import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon'
+import { ContainerGeneral, BodyHeader, MediumBody, CardCategory } from './StyleCategory'
+import { BiArrowBack } from 'react-icons/bi'
+import { AiFillHeart } from 'react-icons/ai'
+import { useRouter } from 'next/router'
 
-const Category = () => {
+const Category = ({ data, clickAction }) => {
+  const { category, agreements } = data;
+  const [titleCategory, setTitleCategory] = useState(category.label);
+  const [imageCategory, setImageCategory] = useState(category.icon);
+  const [idCategory, setIdCategory] = useState(category.id);
+  const [agreementsCategory, serAgreementsCategory] = useState(agreements);
 
-  const [categorySelected, setCategorySelected ] = useState("")
+  const router = useRouter()
 
-  const ArrayCategory = [
-    {
-      id:"bienestar",
-      icon: "img/Icons/cat_bienestar.svg",
-      label: "Mi Bienestar",
-    },
-    {
-      id:"diversion",
-      icon: "img/Icons/cat_diversion.svg",
-      label: "Vamos a Divertirnos",
-    },
-    {
-      id:"estudiar",
-      icon: "img/Icons/cat_estudiar.svg",
-      label: "Vamos a Estudiar",
-    },
-    {
-      id:"hogar",
-      icon: "img/Icons/cat_hogar.svg",
-      label: "Mi Hogar",
-    },
-    {
-      id:"mascotas",
-      icon: "img/Icons/cat_mascotas.svg",
-      label: "Mi Mascota",
-    },
-    {
-      id:"seguridad",
-      icon: "img/Icons/cat_seguridad.svg",
-      label: "Mi Seguridad",
-    },
-    {
-      id:"shopping",
-      icon: "img/Icons/cat_shopping.svg",
-      label: "Vamos de Shopping",
-    },
-    {
-      id:"transporte",
-      icon: "img/Icons/cat_transporte.svg",
-      label: "Mi Transporte",
-    },
-    {
-      id: "viajar",
-      icon: "img/Icons/cat_viajar.svg",
-      label: "Vamos a Viajar",
-    },
-  ]
+  const handleViewAgreement = (idAgreement) => {
+    router.push(`/categories/${idCategory}/${idAgreement}`)
+  }
 
   return (
     <ContainerGeneral>
       <BodyHeader>
-        <h1>Categorias</h1>
-      </BodyHeader>
-      <MediumBody>
-        <div className='container-categorys'> 
-          {
-            ArrayCategory.map((sec, index) => (
-              <CardCategory key={index}>
-                <div className='container-icon'>
-                  <img src={sec.icon} alt={sec.id} />
-                </div>
-                <div className='container-title'>
-                  <h3>{sec.label}</h3>
-                </div>
-              </CardCategory>
-            ))
-          }
+        <div className="container-butonback">
+          <ButtonIcon icon={<BiArrowBack />} func={clickAction} />
         </div>
-        <ContentCategory>
-          {
-            categorySelected
-              ?
-              <div>holis</div>
-              :
-              <div className='seleccion'><h3>Selecciona una Categoria</h3></div>
-          }
-        </ContentCategory>
+        <div className="container-title">
+          <h3>{titleCategory}</h3>
+        </div>
+        <div className="container-img">
+          <img src={`${imageCategory}`} alt={`img-${idCategory}`} />
+        </div>
+      </BodyHeader>
 
+      <MediumBody>
+        {
+          agreementsCategory?.map((sec, index) => (
+            <CardCategory key={index} onClick={() => handleViewAgreement(sec.id)}>
+              <div className='container-icon'>
+                <img src={sec.img} alt={sec.id} />
+              </div>
+              <div className='container-text'>
+                <div className='container-title'>
+                  <h3>{sec.title}</h3>
+                </div>
+                <div className='container-content'>
+                  <div><h3><AiFillHeart /> {sec.hearts}</h3></div>
+                  <div><h3>{sec.percent}</h3></div>
+                </div>
+              </div>
+              {/* <div className='container-button'>
+                <ButtonIcon func={() => handleViewCategory(sec.id)} text={"More"} />
+              </div> */}
+            </CardCategory>
+          ))
+        }
       </MediumBody>
     </ContainerGeneral>
   )
