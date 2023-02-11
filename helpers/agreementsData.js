@@ -186,7 +186,7 @@ const agreements = [
       },
     ],
     condition: "Indicar que van por parte de la alianza con Grupo Empresarial Happy",
-    coverage: "MEDELLíN/BOGOTA/IBAGUÉ/PEREIRA/MONTERÍA/BARRANQUILLA/APARTADÓ",
+    coverage: "MEDELLíN / BOGOTA / IBAGUÉ / PEREIRA / MONTERÍA / BARRANQUILLA / APARTADÓ",
     category: {
       id: "Bienestar",
     }
