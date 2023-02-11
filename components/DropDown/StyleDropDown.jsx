@@ -30,6 +30,7 @@ export const Seccion = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 3rem;
   padding: 0rem 1rem 0rem 1rem;
   transition: all 0.3s;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;

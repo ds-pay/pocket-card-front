@@ -158,7 +158,7 @@ export const CardCategory = styled.div`
       }
     }
     .container-text{
-      transform: translateY(-63%);
+      transform: translateY(-62%);
     }
   }
 `;
