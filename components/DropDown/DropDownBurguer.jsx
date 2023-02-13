@@ -25,7 +25,7 @@ const DropDown = ({ handleBurguer }) => {
       id: "bonus",
       icon: <IoIosRibbon />,
       description: "Mis Bonos",
-      href: "/mybonus"
+      href: "/my-bonus"
     },
     {
       id: "settings",

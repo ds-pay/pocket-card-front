@@ -17,22 +17,18 @@ const LoginView = () => {
     // setPassword(data.passwordpock)
     try {
       const response = await axios.post('http://localhost:3001/api/login', { idpocket: data.idpocket, passwordpock: data.passwordpock });
-      console.log(response.data);
       alert(response.data.message)
       Router.push("/layout-admin")
     } catch (error) {
-      console.error(error);
       alert(error.response.data.message)
     }
   };
   const onSubmitCommerce = async (data) => {
     try {
       const response = await axios.post('http://localhost:3001/api/login', { email: data.emailcommerce, password: data.password });
-      console.log(response.data);
       alert(response.data.message);
       Router.push("/")
     } catch (error) {
-      console.error(error);
       alert(error.response.data.message)
     }
   };

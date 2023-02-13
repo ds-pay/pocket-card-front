@@ -1,42 +1,27 @@
-import { ContainerGeneral, BodyHeader } from './StylesMyBonus';
+import { ContainerGeneral, BodyHeader, ContainerBonus, CardBonus, ContentModal } from './StylesMyBonus';
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
+import Modal from '../../components/Modal/ModalReusable'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 
-const MyBonus = () => {
+const MyBonus = ({data}) => {
+  const [stateModal, setStateModal] = useState(false);
+  const [idSelected, setIdSelected] = useState("");
 
-  const bonusArray = [
-    {
-      id: "1",
-      img: "/public/img/image/bonus.jpg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ipsum elit, tincidunt at maximus a, tincidunt in elit. Duis aliquet arcu nec risus efficitur gravida. Sed eget odio ex. Aliquam non massa sit amet elit molestie posuere. In gravida tincidunt ex, quis hendrerit magna volutpat et. Nam porta ullamcorper nunc sed iaculis. Proin hendrerit purus sit amet auctor maximus. Donec blandit rutrum vehicula. Maecenas ligula augue, consectetur a tristique sed, gravida vel libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      label: "Bono para viaje de 2x1",
-    },
-    {
-      id: "2",
-      img: "/public/img/image/bonus.jpg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ipsum elit, tincidunt at maximus a, tincidunt in elit. Duis aliquet arcu nec risus efficitur gravida. Sed eget odio ex. Aliquam non massa sit amet elit molestie posuere. In gravida tincidunt ex, quis hendrerit magna volutpat et. Nam porta ullamcorper nunc sed iaculis. Proin hendrerit purus sit amet auctor maximus. Donec blandit rutrum vehicula. Maecenas ligula augue, consectetur a tristique sed, gravida vel libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      label: "Bono para viaje de 2x1",
-    },
-    {
-      id: "3",
-      img: "/public/img/image/bonus.jpg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ipsum elit, tincidunt at maximus a, tincidunt in elit. Duis aliquet arcu nec risus efficitur gravida. Sed eget odio ex. Aliquam non massa sit amet elit molestie posuere. In gravida tincidunt ex, quis hendrerit magna volutpat et. Nam porta ullamcorper nunc sed iaculis. Proin hendrerit purus sit amet auctor maximus. Donec blandit rutrum vehicula. Maecenas ligula augue, consectetur a tristique sed, gravida vel libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      label: "Bono para viaje de 2x1",
-    },
-    {
-      id: "4",
-      img: "/public/img/image/bonus.jpg",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ipsum elit, tincidunt at maximus a, tincidunt in elit. Duis aliquet arcu nec risus efficitur gravida. Sed eget odio ex. Aliquam non massa sit amet elit molestie posuere. In gravida tincidunt ex, quis hendrerit magna volutpat et. Nam porta ullamcorper nunc sed iaculis. Proin hendrerit purus sit amet auctor maximus. Donec blandit rutrum vehicula. Maecenas ligula augue, consectetur a tristique sed, gravida vel libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-      label: "Bono para viaje de 2x1",
-    },
-    
-  ]
+  const router = useRouter();
+  const handleViewBond = (boundId) => {
+    router.push(`/my-bonus/${boundId}`)
+  }
+
+  // const handleSelected = (id) => {
+  //   setIdSelected(id)
+  //   setStateModal(!stateModal)
+  // }
+
 
   return (
     <ContainerGeneral>
       <BodyHeader>
-        {/* <div className="container-butonback">
-          <ButtonIcon icon={<BiArrowBack />} func={clickAction} />
-        </div> */}
         <div className="container-title">
           <h3>Mis Bonos</h3>
         </div>
@@ -44,6 +29,20 @@ const MyBonus = () => {
           <img src={`img/Icons/gift-box.svg`} alt={`img-bonus`} />
         </div>
       </BodyHeader>
+      <ContainerBonus>
+        {data.map((sec, index) => (
+          <CardBonus key={index}>
+            <div className='container-img'>
+              <img src={sec.img} alt={"bonus"} />
+            </div>
+            <div className='container-button'>
+              <div className='button'>
+                <ButtonIcon func={() => handleViewBond(sec.id)} text={"Ver Detalles"} />
+              </div>
+            </div>
+          </CardBonus>
+        ))}
+      </ContainerBonus>
     </ContainerGeneral>
   )
 }
