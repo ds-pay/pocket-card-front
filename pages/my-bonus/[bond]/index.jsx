@@ -1,13 +1,16 @@
 import { useRouter } from "next/router";
-import Bond from '../../../views/view-my-bonus/Bond'
+import Bond from '../../../views/view-my-bonus/Bond';
 
 const index = ({ bond }) => {
   const router = useRouter();
   const handleViewBond = () => {
     router.push(`/my-bonus`)
   }
+  
   return (
-    <Bond data={bond} clickBack={()=>handleViewBond()}/>
+    <>
+      <Bond data={bond} clickBack={()=>handleViewBond()}/>
+    </>
   );
 };
 
@@ -16,7 +19,7 @@ export async function getStaticPaths() {
   const res = await fetch(url);
   const json = await res.json();
 
-  const paths = await json.bonus.map(bond => ({
+  const paths = await json.bonus.map((bond) => ({
     params: { bond: bond.id }
   }));
 
@@ -28,10 +31,6 @@ export async function getStaticProps({ params }) {
   const url = `${process.env.API_LOCAL}/api/bonds/${bond}`;
   const res = await fetch(url);
   const json = await res.json();
-
-
-  console.log(json)
-
   return {
     props:{
       bond: json.bondFound

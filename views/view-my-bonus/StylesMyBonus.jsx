@@ -13,13 +13,17 @@ export const ContainerGeneral = styled.div`
 
 
 export const BodyHeader = styled.div`
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 2px solid #c9c9c9b8;
-    border-bottom: 2px solid #c9c9c9b8;
-    margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;  
+  width: 95%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--nextui-colors-backgroundForm);
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     .container-img,
     .container-title,
     .container-butonback {
@@ -35,8 +39,10 @@ export const BodyHeader = styled.div`
       width: 7rem;
       height: 7rem;
       border-radius: 0.2rem;
+      overflow: hidden;
       img {
         width: 7rem;
+        border-radius: 0.5rem;
       }
     }
     .container-butonback{
@@ -57,12 +63,13 @@ export const BodyHeader = styled.div`
     }
     .container-title {
       h3 {
-        font-size: 3.5rem;
+        font-size: 2.2rem;
         margin: 0;
       }
       h2 {
         font-size: 2.2rem;
         margin: 0;
+        color: var(--nextui-colors-backgroundNavbar);
       }
     }
 `;
@@ -120,61 +127,6 @@ export const CardBonus = styled.div`
 
 `;
 
-
-export const ContentModal = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .container-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--nextui-colors-backgroundNavbar);
-    color: white;
-    width: 100%;
-  }
-  .container-img{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    img{
-      width: 50%;
-      border-radius: 1.1rem;
-    }
-  }
-  .content-text{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    .content-code{
-      display: flex;
-      width: 100%;
-      h2{
-        text-align: left;
-      }
-    }
-    .container-paragraph{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      flex-direction: column;
-      p{
-        text-align: justify;
-      }
-    }
-  }
-`;
-
 export const ContentBond = styled.div`
   display: flex;
   justify-content: center;
@@ -195,5 +147,12 @@ export const ContentBond = styled.div`
       margin: 0;
       font-size: 1.3rem;
     }
+  }
+  .cotainer-button-down{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30%;
   }
 `;

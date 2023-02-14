@@ -1,7 +1,7 @@
 const bonus = [
   {
     id: "12234",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
@@ -28,7 +28,7 @@ const bonus = [
   },
   {
     id: "26557",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
@@ -55,7 +55,7 @@ const bonus = [
   },
   {
     id: "334456",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
@@ -82,7 +82,7 @@ const bonus = [
   },
   {
     id: "45672",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
@@ -109,7 +109,7 @@ const bonus = [
   },
   {
     id: "558572",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
@@ -136,7 +136,7 @@ const bonus = [
   },
   {
     id: "654672",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
@@ -163,7 +163,7 @@ const bonus = [
   },
   {
     id: "755672",
-    img: "img/image/bonus.jpg",
+    img: "/img/image/bonus.jpg",
     label: "Bono para viaje de 2x1",
     terms: [
       {
