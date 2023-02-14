@@ -15,9 +15,6 @@ const index = ({ agreement, url }) => {
     <Agreement data={agreement} />
     // {agr?agr.title:"Loading..."}
   )
-  return {
-
-  }
 }
 
 export async function getStaticPaths() {

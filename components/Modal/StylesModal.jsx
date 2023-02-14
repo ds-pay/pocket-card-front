@@ -8,6 +8,7 @@ export const Overlay = styled.div`
     top: 0;
     left: 0;
     z-index: 90;
+    overflow-y: scroll;
     background: ${({isOverlay}) => isOverlay ? 'rgb(0, 0, 0, 0)' : 'rgb(0, 0, 0, 0.5)'};
     padding: 2.5rem;
     display: flex;

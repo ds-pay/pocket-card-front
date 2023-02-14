@@ -82,6 +82,9 @@ export const Body = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 0 4rem;
+  @media (max-width: 1040px) {
+    padding:  0 2rem;
+  }
 
   .container-heart-percent{
     display: flex;
@@ -130,6 +133,9 @@ export const Body = styled.div`
         text-align: center;
       }
     }
+    @media(max-width: 1040px){
+      padding: 0 0.5rem;
+    }
   };
 `;
 
@@ -152,16 +158,18 @@ export const Discount = styled.div`
     .text-discount{
       display: flex;
       width: 70%;
-      p{
+      p{  
         font-weight: 600;
         text-align: left;
       }
     @media(max-width: 1040px){
-      
+      p{
+        text-align: justify;
+      }
     }
     }
     @media(max-width: 1040px){
-      width: 80%;
+      width: 100%;
       flex-direction: column;
     }
   }
@@ -185,6 +193,15 @@ export const Conditions = styled.div`
       font-weight: 600;
       text-align: left;
     }
+  @media(max-width: 1040px){
+    p{
+      text-align: justify;
+    }
+  }
+  }
+  @media(max-width: 1040px){
+    width: 100%;
+    flex-direction: column;
   }
 `;
 
@@ -205,5 +222,14 @@ export const Coverage = styled.div`
       font-weight: 600;
       text-align: left;
     }
+    @media(max-width: 1040px){
+      p{
+        text-align: justify;
+      }
+    }
+  }
+  @media(max-width: 1040px){
+    width: 100%;
+    flex-direction: column;
   }
 `;

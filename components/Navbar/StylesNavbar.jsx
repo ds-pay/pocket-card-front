@@ -85,9 +85,8 @@ export const ContainSeccionsViews = styled.div`
 
 export const ContainSeccionCtrls = styled.div`
   display: flex;
-  animation:  ${({ handle }) => handle ? "rotation 0.5s" : "rotationReverse 0.5s"};
   transition: 0.3s all ease;
-  @keyframes rotation {
+  /* @keyframes rotation {
     0%{
       transform: rotate(0deg);
     }
@@ -102,7 +101,7 @@ export const ContainSeccionCtrls = styled.div`
     100%{
       transform: rotate(0deg);
     }
-  }
+  } */
   transition: all 0.3s;
   justify-content: center;
   align-items: center;

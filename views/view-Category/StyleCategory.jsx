@@ -89,7 +89,7 @@ export const CardCategory = styled.div`
   overflow: hidden;
   width: 15rem;
   height: 22rem;
-  background-color: var(--nextui-colors-backgroundForm) ;
+  background-color: var(--nextui-colors-backgroundForm);
   margin: 1rem;
   border-radius: 1.5rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -158,7 +158,7 @@ export const CardCategory = styled.div`
       }
     }
     .container-text{
-      transform: translateY(-63%);
+      transform: translateY(-62%);
     }
   }
 `;
