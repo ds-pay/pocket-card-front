@@ -6,8 +6,8 @@ import { useRouter } from 'next/router'
 
 const Footer = () => {
 	const router = useRouter();
-	const handleRouter = (href) => {
-		router.push(href)
+	const handleRouter = (route) => {
+		router.push(route)
 	}
 
 	const ArrayItems = [
@@ -17,7 +17,7 @@ const Footer = () => {
 			label: "Habla con nosotros",
 			icon: <FaHeadset />,
 			labelbutton: "Servicio al cliente",
-			href: ""
+			route: "/contactus"
 		},
 		{
 			id: "button2",
@@ -25,7 +25,7 @@ const Footer = () => {
 			label: "Conoce lo nuevo",
 			icon: <FaNewspaper />,
 			labelbutton: "Noticias de Viajes",
-			href: ""
+			route: ""
 		},
 		{
 			id: "button3",
@@ -33,7 +33,7 @@ const Footer = () => {
 			label: "Resuelve tus dudas",
 			icon: <BsFillQuestionCircleFill />,
 			labelbutton: "Preguntas Frecuentes",
-			href: "/questions"
+			route: "/questions"
 		}
 	]
 
@@ -43,7 +43,7 @@ const Footer = () => {
 				{ArrayItems.map((sec, index) => (
 					<div key={index} className={sec.className}>
 						<h1>{sec.label}</h1>
-						<button onClick={() => handleRouter(sec.href)}>{sec.icon} {sec.labelbutton}</button>
+						<button onClick={() => handleRouter(sec.route)}>{sec.icon} {sec.labelbutton}</button>
 					</div>
 				))}
 			</div>

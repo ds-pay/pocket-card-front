@@ -1,14 +1,17 @@
 import { ContainerGeneral, BodyHeader, ContentQuestions } from './StyleQuestions'
+import { AiFillAlert } from 'react-icons/ai'
 
 const Questions = ({ data }) => {
+
+
   return (
     <ContainerGeneral>
       <BodyHeader>
-        <div className="container-title1">
+        {/* <div className="container-title1">
           <h2><strong>Preguntas Frecuentes</strong></h2>
-        </div>
+        </div> */}
         <div className="container-img">
-          <img src="/img/Icons/quiestion/pregunta.svg" alt={`img-bonus`} />
+          <img src={<AiFillAlert/>} alt={`img-bonus`} />
         </div>
       </BodyHeader>
       {
