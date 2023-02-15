@@ -1,9 +1,9 @@
-import News from "../../views/View-News/News"
+import Notices from "../../views/view-notices/Notices"
 
 const index = ({news}) => {
 
   return (
-    <News data={news}/>
+    <Notices data={news}/>
   )
 }
 

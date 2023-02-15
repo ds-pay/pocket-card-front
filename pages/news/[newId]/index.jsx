@@ -1,9 +1,14 @@
+import Notice from "../../../views/view-notices/Notice";
+import { useRouter } from 'next/router'
 
 const index = ({ notice }) => {
+  const router = useRouter()
+  const handleRouter = (newId) => {
+    router.push(`/news`)
+  }
+
   return (
-    <div>
-      <h1>{notice.label}</h1>
-    </div>
+    <Notice data={notice} clickBack={() => handleRouter()}/>
   )
 }
 
@@ -23,7 +28,6 @@ export async function getStaticProps({ params }) {
   const url = `${process.env.API_LOCAL}/api/news/${newId}`;
   const res = await fetch(url);
   const json = await res.json()
-  console.log(json)
 
   return {
     props:{

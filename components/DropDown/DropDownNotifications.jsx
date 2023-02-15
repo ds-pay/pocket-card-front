@@ -16,7 +16,7 @@ const DropDownNotifications = ({ handleBell }) => {
     {
       id: "notificcaion-1",
       title: "Promoción de Zapatos",
-      img: "/img/image/promocionzapatos.jpg",
+      img: "/img/image/notifications/promocionzapatos.jpg",
       alt: "promocionzapatos",
       discount: "50%",
       label: "50",
@@ -29,7 +29,7 @@ const DropDownNotifications = ({ handleBell }) => {
     {
       id: "notificcaion-2",
       title: "Promoción de Colchones",
-      img: "/img/image/promocionColchones.jpg",
+      img: "/img/image/notifications/promocionColchones.jpg",
       alt: "promocionColchones",
       discount: "20%",
       label: "20%",
@@ -42,7 +42,7 @@ const DropDownNotifications = ({ handleBell }) => {
     {
       id: "notificcaion-3",
       title: "Promoción de ropa KOAJ",
-      img: "/img/image/promocionKoaj.jpg",
+      img: "/img/image/notifications/promocionKoaj.jpg",
       alt: "promocionKoaj",
       discount: "15%",
       label: "15%",

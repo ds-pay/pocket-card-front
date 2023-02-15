@@ -12,13 +12,18 @@ export const ContainerGeneral = styled.div`
 `;
 
 export const BodyHeader = styled.div`
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 2px solid #c9c9c9b8;
-    border-bottom: 2px solid #c9c9c9b8;
-    margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--nextui-colors-backgroundForm);
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     .container-img,
     .container-title,
     .container-butonback {
@@ -54,10 +59,15 @@ export const BodyHeader = styled.div`
         }
       }
     }
-    .container-title {
+    .container-title1 {
       h3 {
-        font-size: 3.5rem;
+        font-size: 2.2rem;
         margin: 0;
+      }
+      h2 {
+        font-size: 2.2rem;
+        margin: 0;
+        color: var(--nextui-colors-backgroundNavbar);
       }
     }
 `;
@@ -65,11 +75,16 @@ export const BodyHeader = styled.div`
 export const MediumBody = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  flex-wrap:wrap ;
+  width: 95%;
   height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--nextui-colors-backgroundForm);
   margin: 2rem 0;
-  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 
   .container-categories{
     display: flex;
@@ -91,7 +106,7 @@ export const CardCategory = styled.div`
   height: 22rem;
   background-color: var(--nextui-colors-backgroundForm);
   margin: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -114,14 +129,14 @@ export const CardCategory = styled.div`
 
   .container-text{
     position: absolute;
-    border-radius: 1rem 1rem 0 0;
-    bottom: -5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    bottom: -3rem;
     width: 100%;
     background-color: var(--nextui-colors-backgroundForm) ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 8rem;
+    height: 6rem;
     overflow: hidden;
     transition: all 0.5s ease;
 
@@ -158,7 +173,7 @@ export const CardCategory = styled.div`
       }
     }
     .container-text{
-      transform: translateY(-62%);
+      bottom: 0;
     }
   }
 `;

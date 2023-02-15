@@ -12,13 +12,18 @@ export const ContainerGeneral = styled.div`
 `;
 
 export const BodyHeader = styled.div`
-    width: 95%;
-    margin-top: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 2px solid #c9c9c9b8;
-    border-bottom: 2px solid #c9c9c9b8;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--nextui-colors-backgroundForm);
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     .container-img,
     .container-title,
     .container-butonback {
@@ -31,33 +36,31 @@ export const BodyHeader = styled.div`
     .container-img {
       margin: 0.5rem 0.5rem;
       font-size: 1.5rem;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 7rem;
+      height: 7rem;
       border-radius: 0.2rem;
-      
-    }
-    /* .container-butonback{
-      margin: 0.5rem 0.5rem;
-      font-size: 1.5rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 0.2rem;
-      :hover{
-        background-color: var(--nextui-colors-bgInputText);
-        cursor: pointer;
+      overflow: hidden;
+      img {
+        width: 7rem;
+        border-radius: 0.5rem;
       }
+    }
+    .container-butonback{
+      width: 8rem;
       @media (max-width: 1024px){
-        :hover{
-          background-color: var(--nextui-colors-backgroundForm);
-        }
       }
     }
     .container-title {
       h3 {
-        font-size: 1rem;
+        font-size: 2.2rem;
         margin: 0;
       }
-    } */
+      h2 {
+        font-size: 2.2rem;
+        margin: 0;
+        color: var(--nextui-colors-backgroundNavbar);
+      }
+    }
 `;
 
 export const MediumBody = styled.div`

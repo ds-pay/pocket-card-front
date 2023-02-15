@@ -24,8 +24,8 @@ const Category = ({ data, clickAction }) => {
         <div className="container-butonback">
           <ButtonIcon icon={<BiArrowBack />} func={clickAction} />
         </div>
-        <div className="container-title">
-          <h3>{titleCategory}</h3>
+        <div className="container-title1">
+          <h2><strong>{titleCategory}</strong></h2>
         </div>
         <div className="container-img">
           <img src={`${imageCategory}`} alt={`img-${idCategory}`} />

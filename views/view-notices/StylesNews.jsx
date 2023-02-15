@@ -12,8 +12,10 @@ export const ContainerGeneral = styled.div`
 `;
 
 export const BodyHeader = styled.div`
+  position: relative;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+  align-items: center;
   width: 95%;
   height: 100%;
   border-radius: 0.5rem;
@@ -45,22 +47,13 @@ export const BodyHeader = styled.div`
       }
     }
     .container-butonback{
-      margin: 0.5rem 0.5rem;
-      font-size: 2rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 0.2rem;
-      :hover{
-        background-color: var(--nextui-colors-bgInputText);
-        cursor: pointer;
-      }
+      left: 0;
+      position: absolute;
+      width: 8rem;
       @media (max-width: 1024px){
-        :hover{
-          background-color: var(--nextui-colors-backgroundForm);
-        }
       }
     }
-    .container-title {
+    .container-title1 {
       h3 {
         font-size: 2.2rem;
         margin: 0;
@@ -71,6 +64,29 @@ export const BodyHeader = styled.div`
         color: var(--nextui-colors-backgroundNavbar);
       }
     }
+    .container-title2 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      h3 {
+        font-size: 2.2rem;
+        margin: 0;
+      }
+      h2 {
+        font-size: 2.2rem;
+        margin: 0;
+        color: var(--nextui-colors-backgroundNavbar);
+      }
+    }
+  @media (max-width: 1024px){
+    .container-title2{
+      width: 100%;
+      justify-content: flex-end;
+      h2{
+        font-size: 1rem;
+      }
+    }
+  }
 `;
 
 export const ContentNews = styled.div`
@@ -86,21 +102,62 @@ export const ContentNews = styled.div`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-  /* .container-terms{
+  .container-text{
     display: flex;
-    margin: 0.5rem 0;
-    li{
-      margin: 0;
-      font-size: 1.3rem;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+
+    .container-img {
+      margin: 0 2rem;
+      width: 40rem;
+      height: 40rem;
+      font-size: 1.5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+    .container-description{
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 55%;
+      h2{
+        text-align: left;
+        color: var(--nextui-colors-backgroundNavbar);
+      }
+      p{
+        text-align: justify;
+        font-weight: 600;
+      }
+      .container-links{
+        margin: 1rem 0;
+        width: 100%;
+      }
+    }
+    @media (max-width: 1024px){
+      flex-direction: column;
+      align-items: center;
+      .container-img{
+        width: 100%;
+        height: 20rem;
+      }
+      .container-description{
+        width: 100%;
+        padding: 1rem 0;
+        h2{
+          text-align: center;
+        }
+      }
     }
   }
-  .cotainer-button-down{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 30%;
-  } */
 `;
 
 export const CardNews = styled.div`
@@ -153,30 +210,26 @@ export const CardNews = styled.div`
       padding: 0 2rem;
     }
   }
-  /* .container-button{
-    transition: 0.4s all ease;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    .button{
-      transition: 0.4s all ease;
-      opacity: 0;
-    }
-  } */
   :hover{
     .container-title{
       bottom: 0;
     }
-    /* .container-button{
-      background-color: #00000053;
-      .button{
-        display: flex;
-        opacity: 1;
-      }
-    } */
   }
 
+`;
+
+export const ContentLinks = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0.5rem 0; 
+`;
+
+export const LinkUrl = styled.div`
+  display: flex;
+  margin: 0.5rem 0;
+  /* h3{
+    margin: 0;
+    font-weight: 400;
+  } */
 `;

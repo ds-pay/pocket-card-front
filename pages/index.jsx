@@ -5,12 +5,12 @@ import React, { useState } from 'react'
 import InputSelect from "../components/Inputs/InputSelect/InputSelect";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
 import styled from "@emotion/styled";
-import Navbar from "../components/Navbar/Navbar";
-import Home from '../views/view-home/Home'
-import News from '../views/view-news/News'
-import Category from '../views/view-categories/Categories'
-import User from '../views/view-user/User'
-import Footer from '../components/Footer/Footer';
+// import Navbar from "../components/Navbar/Navbar";
+// import Home from '../views/view-home/Home'
+// import News from '../views/view-notices/Notices'
+// import Category from '../views/view-categories/Categories'
+// import User from '../views/view-user/User'
+// import Footer from '../components/Footer/Footer';
 
 const Container = styled.div`
   display: flex;
@@ -28,25 +28,25 @@ const Container = styled.div`
 const Index = () => {
   const [seleccionar, setSeleccionar] = useState("home")
   
-  const selectedBody =
-  {
-    "home": <Home/>,
-    "news": <News/>,
-    "category": <Category/>,
-    "user": <User/>,
-  }
+  // const selectedBody =
+  // {
+  //   "home": <Home/>,
+  //   "news": <News/>,
+  //   "category": <Category/>,
+  //   "user": <User/>,
+  // }
 
-  const renderBody = selectedBody[seleccionar];
+  // const renderBody = selectedBody[seleccionar];
 
-  const selectionBody = (s) => {
-    setSeleccionar(s)
-  }
+  // const selectionBody = (s) => {
+  //   setSeleccionar(s)
+  // }
 
   return (
     <>
-      <Container>
+      {/* <Container>
         {renderBody}
-      </Container>
+      </Container> */}
     </>
   );
 };

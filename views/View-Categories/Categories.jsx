@@ -17,11 +17,11 @@ const Categories = ({ category }) => {
   return (
     <ContainerGeneral>
       <BodyHeader>
-        <div className="container-img">
-          <BiCategoryAlt />
-        </div>
         <div className="container-title">
-          <h3>Categorias</h3>
+          <h2><strong>Categorias</strong></h2>
+        </div>
+        <div className="container-img">
+          <img src="/img/image/agreements/categorias.png" alt="" />
         </div>
       </BodyHeader>
       <MediumBody>
