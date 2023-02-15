@@ -17,28 +17,28 @@ import SeccionRight from './SeccionRight'
 const Navbar = ({  }) => {
 
   // const [ handleTheme, setHandleTheme ] = useState(true)
-  const [ handleBurguer, setHandleBurguer ] = useState(false)
-  const [ handleBell, setHandleBell ] = useState(true)
-  const [ selection, setSelection ] = useState("home") 
+  const [ handleBurguer, setHandleBurguer ] = useState(false);
+  const [ handleBell, setHandleBell ] = useState(true);
+  const [ selection, setSelection ] = useState("home");
 
-  const { isDark, } = useTheme();
+  const { isDark } = useTheme();
   
   const handleChange = () => {
     const nextTheme = isDark ? 'light' : 'dark';
     window.localStorage.setItem('theme', nextTheme);
     changeTheme(nextTheme);
-  }
+  };
 
   const selectionViw = (sec) => {
     setSelection(sec)
-  }
+  };
 
   const SeccionViews = [
     {
       state: true,
       id: "home",
       icon: <FaHome />,
-      href: '/'
+      href: '/home'
     },
     {
       state: true,

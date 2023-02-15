@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
-import { ContentBody, ContentPock, BodyHead, ActivationCard, ContainerCard, Card } from './StylesHome'
+import { ContentBody, ContentPock, BodyHead, ActivationCard, ContainerCard, Card, BodyHeader } from './StylesHome'
 
 
 const Primary = () => {
@@ -40,15 +40,27 @@ const Primary = () => {
 	return (
 		<>
 			<ContentBody>
-				<ContentPock>
-					<h1>Pocket Card</h1>
+				<BodyHeader>
+					{/* <div className='container-butonback'>
+						<ButtonIcon icon={<IoMdArrowRoundBack />} text={"Regrasar"} func={clickBack} />
+					</div> */}
+					<div className="container-title">
+						<h2><strong>Pocket Card</strong></h2>
+					</div>
+					<div className="container-title">
+						<h2><strong>Un Mundo de Privilegios</strong></h2>
+					</div>
+					<div className="container-img">
+						<img src="https://mypocketvip.net/api/uploads/images/icons/CajaMundo.svg" alt="boxpocket" />
+					</div>
+					{/* <h1>Pocket Card</h1>
 
 					<div className='privilagios'>
 						<h1>Un Mundo de Privilegios</h1>
 						<img
 							className='boxpocket' src="https://mypocketvip.net/api/uploads/images/icons/CajaMundo.svg" alt="boxpocket" />
-					</div>
-				</ContentPock>
+					</div> */}
+				</BodyHeader>
 
 				<BodyHead>
 					<h1>¿Que es Pocket Card?</h1>

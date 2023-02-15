@@ -18,7 +18,6 @@ export async function getStaticPaths() {
   const url = `${process.env.API_LOCAL}/api/bonds`;
   const res = await fetch(url);
   const json = await res.json();
-
   const paths = await json.bonus.map((bond) => ({
     params: { bond: bond.id }
   }));
