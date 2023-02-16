@@ -7,11 +7,12 @@ const Questions = ({ data }) => {
   return (
     <ContainerGeneral>
       <BodyHeader>
-        {/* <div className="container-title1">
+        <div className="container-title1">
           <h2><strong>Preguntas Frecuentes</strong></h2>
-        </div> */}
+        </div>
         <div className="container-img">
-          <img src={<AiFillAlert/>} alt={`img-bonus`} />
+          {console.log(data)}
+          <img src="/img/Icons/quiestion/pregunta.svg" alt={`img-quiestion`} />
         </div>
       </BodyHeader>
       {
