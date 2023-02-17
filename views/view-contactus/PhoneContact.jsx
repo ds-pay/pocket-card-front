@@ -54,7 +54,7 @@ const PhoneContact = () => {
     <ContainerContact>
       <ContainerHeadPhone>
         <div className='container-text'>
-          <h2>Proporciona tu Nº Movil</h2>
+          <h2><strong>Proporciona tu Nº Movil</strong></h2>
         </div>
         <div className='container-img'>
           <img src="/img/Icons/contact/call.svg" alt="" />

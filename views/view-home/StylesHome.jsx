@@ -15,7 +15,6 @@ export const ContentPock = styled.div`
     align-items: center;
     padding: 1rem;
     width: 100%;
-    height: 10rem;
     background: linear-gradient(0deg, var(--nextui-colors-backgroundNavbar) , var(--nextui-colors-backGradiente2) );
     color: var(--nextui-colors-colorTextOrdinary);
 
@@ -58,6 +57,7 @@ export const BodyHeader = styled.div`
   background-color: var(--nextui-colors-backgroundForm);
   margin: 2rem 0;
   padding: 1rem 2rem;
+	transition: 0.3s all ease ;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -97,59 +97,92 @@ export const BodyHeader = styled.div`
         margin: 0;
         color: var(--nextui-colors-backgroundNavbar);
       }
+			@media(max-width: 500px){
+				h3{
+					font-size: 1rem;
+				}
+				h2{
+					font-size: 1.5rem;
+				}
+			}
+			@media(max-width: 500px){
+				h3{
+					font-size: 1rem;
+				}
+				h2{
+					font-size: 1rem;
+				}
+			}
     }
+  @media(max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 
 export const BodyHead = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10rem;
-    margin: 2rem 0;
-    background-color: var(--nextui-colors-backgroundNavbar);
-    color: var(--nextui-colors-colorTextOrdinary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--nextui-colors-backgroundForm);
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+	transition: 0.3s all ease ;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media(max-width: 1336px){
-        height: 17rem;
+      height: 17rem;
     }
     @media(max-width: 600px){
-        height: 24rem;
+      height: 24rem;
     }
 
     h1{
-        margin: 0.5rem 0;
-        font-size: 2rem;
-        @media(max-width: 1336px){
-            font-size: 1.3rem;
-        }
+      font-size: 2rem;
+			color: var(--nextui-colors-backgroundNavbar);
+      @media(max-width: 1336px){
+        font-size: 1.3rem;
+      }
     }
     p{
-        text-align: center;
-        font-weight: 200;
-        padding: 0 2rem;
-        @media(max-width: 1336px){
-            font-size: 1rem;
-            text-align: justify;
-        }
-        @media(max-width: 450px){
-            font-size: 0.8rem;
-            text-align: justify;
-        }
+      text-align: center;
+      font-weight: 500;
+      padding: 1rem 2rem 2rem 2rem;
+			color: var(--nextui-colors-backgroundNavbar);			
+      @media(max-width: 1336px){
+        font-size: 1rem;
+        text-align: justify;
+      }
+      @media(max-width: 450px){
+        font-size: 0.8rem;
+        text-align: justify;
+      }
     }
+  @media(max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const ActivationCard = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--nextui-colors-backgroundNavbar);
-    color: var(--nextui-colors-colorTextOrdinary);
-    width: 100%;
-    height: 30rem;
-    margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--nextui-colors-backgroundForm);
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+	transition: 0.3s all ease ;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media(max-width: 1336px){
         height: 50rem;
         justify-content: flex-start;
@@ -168,6 +201,9 @@ export const ActivationCard = styled.div`
         margin: 0.5rem 0;
         font-size: 2rem;
     }
+  @media(max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerCard = styled.div`
@@ -178,6 +214,8 @@ export const ContainerCard = styled.div`
     color: var(--nextui-colors-colorTextOrdinary);
     width: 100%;
     height: 20rem;
+		margin: 1rem 0;
+		transition: 0.3s all ease ;
     @media(max-width: 1340px){
         width: 100%;
         flex-wrap: wrap;
@@ -193,11 +231,12 @@ export const Card = styled.div`
     justify-content: center;
     align-items: center;
     height: 20rem;
-    width: 19rem;
+    width: 18rem;
     background-color:var(--nextui-colors-bgInputText) ;
     color: black;
     border-radius: 2rem;
     padding: 0 0.2rem;
+		margin: 0 1.5rem;
     @media(max-width: 1336px){
         margin: 1rem;
     }
@@ -225,7 +264,7 @@ export const Card = styled.div`
         width: 4.5rem;
         height: 4.5rem;
         background-color: #21c69b;
-        border: 5px solid var(--nextui-colors-backgroundNavbar);
+        border: 5px solid var(--nextui-colors-backgroundForm);
         border-radius: 50rem;
     }
     h3{

@@ -106,10 +106,10 @@ export const ContainerContact = styled.div`
   flex-direction: column;
   .container-button{
     display: flex;
-    width: 40%;
+    width: 30%;
     flex-direction: column;
     @media (max-width: 1024px) {
-      width: 50%;
+      width: 55%;
     }
   }
 `;
@@ -126,6 +126,7 @@ export const ContainerHeadEmail = styled.div`
   }
   .container-text{
     h2{
+      color: var(--nextui-colors-backgroundNavbar);
       margin: 0;
       font-size: 1.4rem;
     }
@@ -252,9 +253,18 @@ export const ContainerForm = styled.div`
           border-radius: 0.5rem;
           transition: 0.5s all ease;
           h3 {
-            font-size: 15px;
+            color: var(--nextui-colors-backgroundNavbar);
+            font-size: 1.3rem;
           }
-          @media (max-width: 1024px) {
+          h2 {
+            color: var(--nextui-colors-backgroundNavbar);
+            font-size: 1.3rem;
+
+          }
+          @media (max-width: 654px) {
+            h2{
+              font-size: 1rem;
+            }
           }
         }
         .img {
@@ -274,6 +284,27 @@ export const ContainerForm = styled.div`
           -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
           @media (max-width: 1024px) {
+          }
+        }
+        .checkbox{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 0 0.5rem 0 0;
+          font-size: 1.8rem;
+          width: 3rem;
+          height: 3rem;
+          color: var(--nextui-colors-textFormColor);
+          background-color: var(--nextui-colors-bgInputText);
+          border-radius: 0.3rem;
+          transition: 0.5s all ease;
+          -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+          @media (max-width: 654px) {
+            width: 2.5rem;
+            height: 2.5rem;
           }
         }
       }
@@ -309,6 +340,7 @@ export const ContainerHeadPhone = styled.div`
   }
   .container-text{
     h2{
+      color: var(--nextui-colors-backgroundNavbar);
       margin: 0;
       font-size: 1.4rem;
     }
@@ -319,6 +351,10 @@ export const ContainerHeadPhone = styled.div`
     img {
       width: 7rem;
       border-radius: 0.5rem;;
+    }
+    @media(max-width: 500px) {
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 `;
@@ -335,6 +371,7 @@ export const ContainerHeadWhatsapp = styled.div`
   }
   .container-text{
     h2{
+      color: var(--nextui-colors-backgroundNavbar);
       margin: 0;
       font-size: 1.4rem;
     }
@@ -345,6 +382,10 @@ export const ContainerHeadWhatsapp = styled.div`
     img {
       width: 7rem;
       border-radius: 0.5rem;;
+    }
+    @media(max-width: 500px) {
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 `;

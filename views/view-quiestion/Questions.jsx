@@ -11,7 +11,6 @@ const Questions = ({ data }) => {
           <h2><strong>Preguntas Frecuentes</strong></h2>
         </div>
         <div className="container-img">
-          {console.log(data)}
           <img src="/img/Icons/quiestion/pregunta.svg" alt={`img-quiestion`} />
         </div>
       </BodyHeader>

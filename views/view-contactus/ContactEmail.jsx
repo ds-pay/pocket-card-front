@@ -68,7 +68,7 @@ const ContactEmail = () => {
     <ContainerContact>
       <ContainerHeadEmail>
         <div className='container-text'>
-          <h2>Envianos un Email</h2>
+          <h2><strong>Envianos un Email</strong></h2>
         </div>
         <div className='container-img'>
           <img src="/img/Icons/contact/email.svg" alt="" />
