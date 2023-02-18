@@ -3,7 +3,7 @@ import { ContainInputText } from "./StylesInputsText";
 import { dataText } from "./Interface";
 import { GoEye, GoEyeClosed } from "react-icons/go";
 
-const InputText = ({ name, color, type, regis, eyetrue, id }: dataText) => {
+const InputText = ({ name, id, color, type, regis, eyetrue, value, onChange, onBlur, label, disabled }: dataText) => {
   const [passIsView, setPassIsView] = useState(false);
 
   const handleClick = () => {
@@ -14,7 +14,7 @@ const InputText = ({ name, color, type, regis, eyetrue, id }: dataText) => {
     <>
       <ContainInputText IsColor={color}>
         <form className="form">
-          { eyetrue ? (
+          {eyetrue ? (
             <>
               <input
                 {...regis}
@@ -22,18 +22,25 @@ const InputText = ({ name, color, type, regis, eyetrue, id }: dataText) => {
                 required
               />
               <label className="lbl-name">
-                <span className="text-name">{name}</span>
+                <div className="text-name">{name}</div>
               </label>
             </>
           ) : (
             <>
               <input
                 {...regis}
-                type={ type}
+                type={type}
                 required
+                name={id}
+                id={id}
+                value={value}
+                onChange={onChange}
+                onBlur={onBlur}
+                disabled={disabled}
+                placeholder={value}
               />
               <label className="lbl-name">
-                <span className="text-name">{name}</span>
+                <span className="text-name">{label ? label :name}</span>
               </label>
             </>
           )}

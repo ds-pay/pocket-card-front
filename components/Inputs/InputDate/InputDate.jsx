@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { DateTimePicker, KeyboardDateTimePicker  } from "@material-ui/pickers";
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { ContinerDate } from "./StylesInputDate";
 
 const InputDate = () => {
@@ -8,7 +9,7 @@ const InputDate = () => {
   return (
     <ContinerDate>
 
-      <KeyboardDateTimePicker
+      <DatePicker
         value={selectedDate}
         onChange={setSelectedDate}
         label="Keyboard with error handler"

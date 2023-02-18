@@ -10,6 +10,7 @@ export const ContainerNav = styled.div`
   align-items: center;
   width: 100%;
   height: 3.2rem;
+  z-index: 10;
   background-color: var(--nextui-colors-backgroundNavbar);
   border-bottom: solid var(--nextui-colors-bgIconPrimary) 1px;
 `;
@@ -30,31 +31,28 @@ export const Seccion = styled.div`
   .browser {
     display: flex;
     width: 14rem;
-    background-color: var(--nextui-colors-bgIconPrimary);
+    background-color: var(--nextui-colors-bgCardLogin);
     color: ${({ theme }) => theme.text};
     margin: 0rem 0.7rem 0rem 0.7rem;
     height: 2.2rem;
     align-items: center;
     padding: 0rem 0.75rem 0rem 0.75rem;
     border-radius: 2rem 2rem 2rem 2rem;
+    color: var(--nextui-colors-colorTextOrdinary);
     @media (max-width: 1024px) {
       width: 100%;
       cursor: pointer;
-      :focus {
-        transform: translateY(-120%);
-        font-size: 14px;
-        color: ${({ IsColor }) => IsColor ? "var(--nextui-colors-bgThridGlass)" :   "#fff"};
-      }
-      :focus {
-        transform: translateX(0%);
-      }
     }
     input {
       border: 0;
-      background-color: var(--nextui-colors-bgIconPrimary);
+      background-color: var(--nextui-colors-bgCardLogin);
       outline: none;
       text-align: justify;
-      color: var(--nextui-colors-textColor);
+      ::placeholder{
+        color: var(--nextui-colors-colorTextOrdinary);
+      
+
+      }
       @media (max-width: 1024px) {
         display: none;
       }
@@ -72,8 +70,10 @@ export const ContainSeccionsViews = styled.div`
   font-size: 1.3rem;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
-  color: white;
-  background-color: ${({ isSelected }) => isSelected ? " var(--nextui-colors-bgIconPrimary)": null };
+  background-color: ${({ isSelected }) => isSelected ? " var(--nextui-colors-bgCardLogin)" : null};
+  a{
+    color: var(--nextui-colors-colorTextOrdinary);
+  }
   :hover {
     background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;
@@ -85,9 +85,8 @@ export const ContainSeccionsViews = styled.div`
 
 export const ContainSeccionCtrls = styled.div`
   display: flex;
-  animation:  ${({ handle }) => handle? "rotation 0.5s" : "rotationReverse 0.5s"};
   transition: 0.3s all ease;
-  @keyframes rotation {
+  /* @keyframes rotation {
     0%{
       transform: rotate(0deg);
     }
@@ -102,7 +101,7 @@ export const ContainSeccionCtrls = styled.div`
     100%{
       transform: rotate(0deg);
     }
-  }
+  } */
   transition: all 0.3s;
   justify-content: center;
   align-items: center;
@@ -112,8 +111,8 @@ export const ContainSeccionCtrls = styled.div`
   font-size: 1.1rem;
   border-radius: 5rem;
   margin: 0.25rem 0.25rem;
-  background-color:  var(--nextui-colors-bgIconPrimary);
-  color: #eee;
+  background-color:  var(--nextui-colors-bgCardLogin);
+  color: var(--nextui-colors-colorTextOrdinary);
   :hover {
     background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;

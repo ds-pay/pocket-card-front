@@ -16,7 +16,7 @@ const DropDownNotifications = ({ handleBell }) => {
     {
       id: "notificcaion-1",
       title: "Promoción de Zapatos",
-      img: "/img/image/promocionzapatos.jpg",
+      img: "/img/image/notifications/promocionzapatos.jpg",
       alt: "promocionzapatos",
       discount: "50%",
       label: "50",
@@ -29,7 +29,7 @@ const DropDownNotifications = ({ handleBell }) => {
     {
       id: "notificcaion-2",
       title: "Promoción de Colchones",
-      img: "/img/image/promocionColchones.jpg",
+      img: "/img/image/notifications/promocionColchones.jpg",
       alt: "promocionColchones",
       discount: "20%",
       label: "20%",
@@ -42,7 +42,7 @@ const DropDownNotifications = ({ handleBell }) => {
     {
       id: "notificcaion-3",
       title: "Promoción de ropa KOAJ",
-      img: "/img/image/promocionKoaj.jpg",
+      img: "/img/image/notifications/promocionKoaj.jpg",
       alt: "promocionKoaj",
       discount: "15%",
       label: "15%",
@@ -70,11 +70,11 @@ const DropDownNotifications = ({ handleBell }) => {
             <h1>{sec.discount}</h1>
             <p>{sec.conditions}</p>
             <div className="ContainerTime">
-              <div move={true}>
+              <div>
                 {sec.rocket}
                 <p>{sec.time}</p>
               </div>
-              <div move={false}>
+              <div>
                 <p>{sec.issue}</p>
               </div>
             </div>
@@ -83,9 +83,9 @@ const DropDownNotifications = ({ handleBell }) => {
       ))}
 
       {Notifications.map((sec, index) => (
-        <div>
+        <div key={index}>
           {sec.id == idSelected ? (
-            <Modal key={index} stateModal={stateModal} setStateModal={setStateModal}>
+            <Modal stateModal={stateModal} setStateModal={setStateModal}>
               <ContentModal>
                 <div className="ContainerImg">
                   <img src={sec.img} alt={sec.alt} />

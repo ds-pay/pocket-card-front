@@ -38,9 +38,9 @@ const InputSelect = ({ dataSelectList, useIcons,}: InputSelectProps) => {
         <div className="input-content">
           {viewIconSelection()}
           {viewSelection()}
-          <span className="selection-arrow">
+          <div className="selection-arrow">
             <TiArrowSortedDown />
-          </span>
+          </div>
         </div>
       </ContainerInput>
       <ContainerDrop>

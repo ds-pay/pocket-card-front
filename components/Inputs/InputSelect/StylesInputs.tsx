@@ -2,26 +2,25 @@ import styled from "styled-components";
 import {ContainerDropProps} from './Interfaces'
 
 export const ContainerInput = styled.div<ContainerDropProps>`
-  max-width: 20rem;
-  width:90%;
+  width: 100%;
   height: 3rem;
-  color: #b9b9b9;
+  color: var(--nextui-colors-textFormColor);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: none;
   box-shadow: ${({ isActive }) =>
     isActive ? "0px 0px 4px 1px #638cfd" : "none"};
-  background-color: #474a50;
-  transition: all 0.2s;
+  background-color: var(--nextui-colors-bgInputText);
+  transition: all 0.5s;
   :hover {
-    color: #dddddd;
+    color: black;
     cursor: pointer;
-  };
-  span {
-    width: 30%;
-  };
+  }
+  @media (max-width: 1024px) {
+    background-color: var(--nextui-colors-backgroundForm);
+  }
   .input-content {
     width: 100%;
     display: flex;
@@ -29,7 +28,7 @@ export const ContainerInput = styled.div<ContainerDropProps>`
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem 0 1rem;
-  };
+  }
   .selection-icon {
     width: 10%;
     display: flex;
@@ -37,62 +36,60 @@ export const ContainerInput = styled.div<ContainerDropProps>`
     .svg-logo {
       margin: 0.5rem;
     }
-  };
+  }
   .selection-title {
     font-weight: bold;
-  };
-  .no-selection{
-    margin: 0.5rem;
-    width: 80%;
+  }
+  .no-selection {
   }
   .selection-arrow {
-    width: 10%;
     display: flex;
     justify-content: center;
     transition: all 0.3s;
-    transform: ${({ isActive }) =>
-      isActive ? "rotate(180deg)" : "rotate(0)"};
-  };
+    transform: ${({ isActive }) => (isActive ? "rotate(180deg)" : "rotate(0)")};
+  }
 `;
 
 export const ContainerDrop = styled.div`
-  width: 20rem;
-  height: 19rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  z-index: 10;
 `;
 
 export const Container = styled.div<ContainerDropProps>`
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20rem;
-  height: ${({ isActive }) => (isActive ? "20rem" : "0rem")};
+  width: calc(100% - 70%);
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: ${({ isActive }) => (isActive ? "10rem" : "0")};
   margin: 0.4rem;
   border-radius: 1rem;
   flex-direction: column;
-  color: #b9b9b9;
-  background-color: #474a50;
+  color: var(--nextui-colors-textFormColor);
+  background-color:  #d0d2d4;
   align-items: flex-start;
   transition: all 0.5s;
+  @media (max-width: 1024px){
+    width: calc(100% - 60%);
+  }
   div {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 90%;
     height: 3rem;
-    margin: 0.3rem 0.5rem 0.3rem 0.9rem;
+    margin: 0.3rem 0rem 0.3rem 0rem;
+    width: 100%;
     border-radius: 1rem;
     overflow: hidden;
     opacity: ${({ isActive }) => (isActive ? "1" : "0")};
     transition: ${({ isActive }) => (isActive ? "all 0.5s" : "all 0.1s")};
     :hover {
-      background-color: #383b3d;
-      color: #dddddd;
+      background-color:#ebeef3;
       cursor: pointer;
     }
     h1 {
