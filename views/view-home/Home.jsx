@@ -41,9 +41,6 @@ const Primary = () => {
 		<>
 			<ContentBody>
 				<BodyHeader>
-					{/* <div className='container-butonback'>
-						<ButtonIcon icon={<IoMdArrowRoundBack />} text={"Regrasar"} func={clickBack} />
-					</div> */}
 					<div className="container-title">
 						<h2><strong>Pocket Card</strong></h2>
 					</div>
@@ -53,18 +50,11 @@ const Primary = () => {
 					<div className="container-img">
 						<img src="https://mypocketvip.net/api/uploads/images/icons/CajaMundo.svg" alt="boxpocket" />
 					</div>
-					{/* <h1>Pocket Card</h1>
-
-					<div className='privilagios'>
-						<h1>Un Mundo de Privilegios</h1>
-						<img
-							className='boxpocket' src="https://mypocketvip.net/api/uploads/images/icons/CajaMundo.svg" alt="boxpocket" />
-					</div> */}
 				</BodyHeader>
 
 				<BodyHead>
 					<h1>¿Que es Pocket Card?</h1>
-					<p><b>POCKET CARD</b> !Fue creada con un solo propósito! Brindarte la Oportunidad de obtener <b>DESCUENTOS</b> en el ámbito comercial, al momento de hacer uso de servicios o realizar compras; accediendo así a distintos <b>BENEFICIOS</b> que no solo van dirigidos para ti sino también a tu <b>ENTORNO FAMILIAR</b>. Somos un gran equipo que trabaja Día a Día para brindarte el mejor servicio y así cumplir nuestro <b>MAYOR PROPÓSITO</b> brindarte <b>GRANDES DESCUENTOS</b></p>
+					<p><strong>POCKET CARD</strong> !Fue creada con un solo propósito! Brindarte la Oportunidad de obtener <strong>DESCUENTOS</strong> en el ámbito comercial, al momento de hacer uso de servicios o realizar compras; accediendo así a distintos <strong>BENEFICIOS</strong> que no solo van dirigidos para ti sino también a tu <strong>ENTORNO FAMILIAR</strong>. Somos un gran equipo que trabaja Día a Día para brindarte el mejor servicio y así cumplir nuestro <strong>MAYOR PROPÓSITO</strong> brindarte <strong>GRANDES DESCUENTOS</strong></p>
 				</BodyHead>
 
 				<ActivationCard>
