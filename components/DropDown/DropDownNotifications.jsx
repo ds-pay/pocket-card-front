@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosRocket } from "react-icons/io";
 import { ContianerNotifications, SeccionNotifications, ContentModal } from "./StyleDropDown";
 import Modal from "../Modal/ModalReusable";
 
-const DropDownNotifications = ({ handleBell }) => {
+const DropDownNotifications = ({ handleBell, datanotifications }) => {
   const [stateModal, setStateModal] = useState(false);
   const [idSelected, setIdSelected] = useState("")
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/api/notifications")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error(error));
+  }, []);
 
   const notiSelected = (event) => {
     setIdSelected(event)
@@ -14,7 +22,15 @@ const DropDownNotifications = ({ handleBell }) => {
 
   return (
     <ContianerNotifications handleBell={handleBell}>
-      {Notifications.map((sec, index) => (
+      <div>
+        <h1>My Data</h1>
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      </div>
+      {/* {notifications?.map((sec, index) => (
         <SeccionNotifications
           onClick={() => notiSelected(sec.id)}
           handleBell={handleBell}
@@ -40,7 +56,7 @@ const DropDownNotifications = ({ handleBell }) => {
         </SeccionNotifications>
       ))}
 
-      {Notifications.map((sec, index) => (
+      {notifications?.map((sec, index) => (
         <div key={index}>
           {sec.id == idSelected ? (
             <Modal stateModal={stateModal} setStateModal={setStateModal}>
@@ -72,7 +88,7 @@ const DropDownNotifications = ({ handleBell }) => {
             ""
           )}
         </div>
-      ))}
+      ))} */}
     </ContianerNotifications>
   );
 };

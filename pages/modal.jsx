@@ -77,4 +77,17 @@ const ModalTest = () => {
   )
 }
 
+
+export async function getStaticProps() {
+    const url = `${process.env.API_LOCAL}/api/notifications`;
+    const res = await fetch(url);
+    const json = await res.json();
+    
+    return {
+        props: {
+            notifications: json.notifications
+        }
+    }
+}
+
 export default ModalTest

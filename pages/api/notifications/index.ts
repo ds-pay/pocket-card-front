@@ -1,6 +1,6 @@
-import notificationsData from '../../../helpers/notificationsData';
+import notifications from '../../../helpers/notificationsData';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export const handler = (req: NextApiRequest, res: NextApiResponse) => {
-  return res.status(200).json({notificationsData})
-}
+export default function handler(req: NextApiRequest, res: NextApiResponse ){
+  return res.status(200).json({notifications});
+};
