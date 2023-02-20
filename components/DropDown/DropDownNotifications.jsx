@@ -12,48 +12,6 @@ const DropDownNotifications = ({ handleBell }) => {
     setStateModal(!stateModal)
   }
 
-  const Notifications = [
-    {
-      id: "notificcaion-1",
-      title: "Promoción de Zapatos",
-      img: "/img/image/notifications/promocionzapatos.jpg",
-      alt: "promocionzapatos",
-      discount: "50%",
-      label: "50",
-      time: "Hace 13 dias",
-      conditions: "terminos y condiciones",
-      rocket: <IoIosRocket />,
-      issue: "Vence: 12/12/2022",
-      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
-    },
-    {
-      id: "notificcaion-2",
-      title: "Promoción de Colchones",
-      img: "/img/image/notifications/promocionColchones.jpg",
-      alt: "promocionColchones",
-      discount: "20%",
-      label: "20%",
-      time: "Hace un mes",
-      conditions: "terminos y condiciones",
-      rocket: <IoIosRocket />,
-      issue: "Vence: 12/12/2022",
-      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
-    },
-    {
-      id: "notificcaion-3",
-      title: "Promoción de ropa KOAJ",
-      img: "/img/image/notifications/promocionKoaj.jpg",
-      alt: "promocionKoaj",
-      discount: "15%",
-      label: "15%",
-      time: "Hace un año",
-      conditions: "terminos y condiciones",
-      rocket: <IoIosRocket />,
-      issue: "Vence: 12/12/2022",
-      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
-    },
-  ];
-
   return (
     <ContianerNotifications handleBell={handleBell}>
       {Notifications.map((sec, index) => (
@@ -71,7 +29,7 @@ const DropDownNotifications = ({ handleBell }) => {
             <p>{sec.conditions}</p>
             <div className="ContainerTime">
               <div>
-                {sec.rocket}
+                <IoIosRocket/>
                 <p>{sec.time}</p>
               </div>
               <div>
