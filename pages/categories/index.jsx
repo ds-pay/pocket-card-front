@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Categories from '../../views/View-Categories/Categories'
 
 const index = ({ category }) => {
@@ -5,6 +6,7 @@ const index = ({ category }) => {
 
   return (
     <>
+      <Head><title>Categorias</title></Head>
       <Categories category={category}/>
     </>
   )

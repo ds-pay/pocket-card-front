@@ -1,8 +1,12 @@
+import Head from "next/head";
 import MyBonus from "../../views/view-my-bonus/MyBonus"
 
 const index = ({ bonds }) => {
   return (
-    <MyBonus data={bonds} />
+    <>
+      <Head><title>Mis Bonos</title></Head>
+      <MyBonus data={bonds} />
+    </>
   );
 };
 

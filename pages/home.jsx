@@ -1,9 +1,15 @@
+import Head from 'next/head'
 import React from 'react'
 import Home from '../views/view-home/Home'
 
 const primary = () => {
   return (
-    <Home />
+    <>
+      <Head>
+        <title>Inicio</title>
+      </Head>
+      <Home />
+    </>
   )
 }
 
