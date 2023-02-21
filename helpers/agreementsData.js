@@ -2,7 +2,7 @@ const agreements = [
   {
     id: "ortodentis",
     title: "ORTODENTIS",
-    img: "/img/image/agreements/ORTODENTIS.jpg",
+    img: "/img/image/agreements/bienestar/ORTODENTIS.jpg",
     hearts: "11",
     percent: "50%",
     description: "Porque la sonrisa refleja tu salud y tu seguridad. Aprovecha estos descuentos que el Dr. Mauricio Rojas, trae para ti:",
@@ -29,7 +29,7 @@ const agreements = [
   {
     id: "gmo",
     title: "GMO",
-    img: "/img/image/agreements/GMO.jpg",
+    img: "/img/image/agreements/bienestar/GMO.jpg",
     hearts: "19",
     percent: "40%",
     description: "En GMO encontrarás las gafas oftálmicas y de sol perfectas para que veas, te veas y te sientas bien.",
@@ -60,7 +60,7 @@ const agreements = [
   {
     id: "dentisalud",
     title: "DENTISALUD",
-    img: "/img/image/agreements/DENTISALUD.jpg",
+    img: "/img/image/agreements/bienestar/DENTISALUD.jpg",
     hearts: "17",
     percent: "7-30%",
     description: "Por que tu salud dental es lo mas importante en DENTISALUD encontrarás a los mejores especialistas experimentados, dispuestos a prestarte Excelente calidad y alta tecnología.",
@@ -87,7 +87,7 @@ const agreements = [
   {
     id: "coodontologos",
     title: "COODONTOLOGOS",
-    img: "/img/image/agreements/COODONTOLOGOS.jpg",
+    img: "/img/image/agreements/bienestar/COODONTOLOGOS.jpg",
     hearts: "10",
     percent: "30%",
     description: "Obtén 1 profilaxis gratis al año para el titular de la membresía Semiología, blanqueamiento, cirugía oral, implantes, ortodoncia, rehabilitación, odonto kid, encías, diseño de sonrisa y profilaxis.",
@@ -106,7 +106,7 @@ const agreements = [
   {
     id: "sonria",
     title: "SONRÍA",
-    img: "/img/image/agreements/SONRÍA.jpg",
+    img: "/img/image/agreements/bienestar/SONRÍA.jpg",
     hearts: "17",
     percent: "30-35%",
     description: "Prepárate para descubrir el poder de tu sonrisa.",
@@ -129,7 +129,7 @@ const agreements = [
   {
     id: "medplus",
     title: "MEDPLUS",
-    img: "/img/image/agreements/MEDPLUS.jpg",
+    img: "/img/image/agreements/bienestar/MEDPLUS.jpg",
     hearts: "12",
     percent: "Tarifa Especial",
     description: "Un plan de medicina prepagada pensado a la medida de las necesidades de tu familias",
@@ -148,7 +148,7 @@ const agreements = [
   {
     id: "ceadltda",
     title: "CEAD LTDA",
-    img: "/img/image/agreements/CEADLTDA.jpg",
+    img: "/img/image/agreements/bienestar/CEADLTDA.jpg",
     hearts: "7",
     percent: "35%",
     description: "En CEAD LTDA Te ofrecemos el mejor servicio para realizar Diagnósticos Médicos de Calidad, Confiables y de Calidad",
@@ -167,7 +167,7 @@ const agreements = [
   {
     id: "clinicaopticasantalucia",
     title: "CLÍNICA ÓPTICA SANTA LUCÍA",
-    img: "/img/image/agreements/CLÍNICAÓPTICASANTALUCÍA.jpg",
+    img: "/img/image/agreements/bienestar/CLÍNICAÓPTICASANTALUCÍA.jpg",
     hearts: "8",
     percent: "10%",
     description: "No pierdas de vista tu salud visual. Cuida tus ojos, son tu ventana al mundo",
@@ -189,6 +189,843 @@ const agreements = [
     coverage: "MEDELLíN / BOGOTA / IBAGUÉ / PEREIRA / MONTERÍA / BARRANQUILLA / APARTADÓ",
     category: {
       id: "Bienestar",
+    }
+  },
+  {
+    id: "beer",
+    title: "BEER",
+    img: "/img/image/agreements/diversion/BEER.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Diversion",
+    }
+  },
+  {
+    id: "lamontañatitos",
+    title: "BOLERA LA MONTAÑA TITOS",
+    img: "/img/image/agreements/diversion/BOLERA LA MONTAÑATITOS.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Diversion",
+    }
+  },
+  {
+    id: "multibolo",
+    title: "BOLERA MULTIBOLO",
+    img: "/img/image/agreements/diversion/BOLERAMULTIBOLO.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Diversion",
+    }
+  },
+  {
+    id: "brazzeiro",
+    title: "BRAZZEIRO",
+    img: "/img/image/agreements/diversion/BRAZZEIRO.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Diversion",
+    }
+  },
+  {
+    id: "smart",
+    title: "ACADEMIA SMART",
+    img: "/img/image/agreements/estudiar/ACADEMIASMART.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Estudiar",
+    }
+  },
+  {
+    id: "american",
+    title: "AMERICAN SCHOOL WAY",
+    img: "/img/image/agreements/estudiar/AMERICANSCHOOLWAY.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Estudiar",
+    }
+  },
+  {
+    id: "ensamble",
+    title: "CASA ENSAMBLE",
+    img: "/img/image/agreements/estudiar/CASAENSAMBLE.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Estudiar",
+    }
+  },
+  {
+    id: "personalizado",
+    title: "CENTRO DE INGLES INTERNACIONAL PERSONALIZADO",
+    img: "/img/image/agreements/estudiar/CENTRODEINGLESINTERNACIONALPERSONALIZADO.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Estudiar",
+    }
+  },
+  {
+    id: "chiper",
+    title: "CHIPER S.A.S",
+    img: "/img/image/agreements/hogar/CHIPERS.A.S.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Hogar",
+    }
+  },
+  {
+    id: "ciencuadras",
+    title: "CIEN CUADRAS",
+    img: "/img/image/agreements/hogar/CIENCUADRAS.gif",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Hogar",
+    }
+  },
+  {
+    id: "paraiso",
+    title: "COLCHONES PARAISO",
+    img: "/img/image/agreements/hogar/COLCHONESPARAISO.gif",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Hogar",
+    }
+  },
+  {
+    id: "encarguelo",
+    title: "ENCARGUELO.COM",
+    img: "/img/image/agreements/hogar/ENCARGUELO.COM.gif",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Hogar",
+    }
+  },
+  {
+    id: "amoresperros",
+    title: "AMORES PERROS",
+    img: "/img/image/agreements/mascota/AMORESPERROS.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Mascotas",
+    }
+  },
+  {
+    id: "animalclubmanizales",
+    title: "ANIMAL'S CLUB MANIZALES",
+    img: "/img/image/agreements/mascota/ANIMAL'SCLUBMANIZALES.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Mascotas",
+    }
+  },
+  {
+    id: "animalesconcola",
+    title: "ANIMALES CON COLA",
+    img: "/img/image/agreements/mascota/ANIMALESCONCOLA.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Mascotas",
+    }
+  },
+  {
+    id: "animasclub",
+    title: "ANIMALS CLUB",
+    img: "/img/image/agreements/mascota/ANIMALSCLUB.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Mascotas",
+    }
+  },
+  {
+    id: "bame",
+    title: "BAME",
+    img: "/img/image/agreements/seguridad/BAME.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Seguridad",
+    }
+  },
+  {
+    id: "gaviria",
+    title: "FUNERARIA GAVIRIA",
+    img: "/img/image/agreements/seguridad/FUNERARIAGAVIRIA.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Seguridad",
+    }
+  },
+  {
+    id: "metlife",
+    title: "METLIFE",
+    img: "/img/image/agreements/seguridad/METLIFE.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Seguridad",
+    }
+  },
+  {
+    id: "afraniuz",
+    title: "AFRANIUZ",
+    img: "/img/image/agreements/shopping/AFRANIUZ.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Shopping",
+    }
+  },
+  {
+    id: "emir",
+    title: "BARBERIA EMIR",
+    img: "/img/image/agreements/shopping/BARBERIAEMIR.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Shopping",
+    }
+  },
+  {
+    id: "estilista",
+    title: "BEAUTY MUNDO ESTILISTA",
+    img: "/img/image/agreements/shopping/BEAUTYMUNDOESTILISTA.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Shopping",
+    }
+  },
+  {
+    id: "brands",
+    title: "BH BRANDS",
+    img: "/img/image/agreements/shopping/BHBRANDS.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Shopping",
+    }
+  },
+  {
+    id: "auapp",
+    title: "AUAPP",
+    img: "/img/image/agreements/transporte/AUAPP.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Transporte",
+    }
+  },
+  {
+    id: "cardwash",
+    title: "CAR WASH",
+    img: "/img/image/agreements/transporte/CARWASH.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Transporte",
+    }
+  },
+  {
+    id: "torousados",
+    title: "CASA TORO USADOS",
+    img: "/img/image/agreements/transporte/CASATOROUSADOS.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Transporte",
+    }
+  },
+  {
+    id: "colserauto",
+    title: "COLSERAUTO",
+    img: "/img/image/agreements/transporte/COLSERAUTO.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Transporte",
+    }
+  },
+  {
+    id: "alquilerdevehiculo",
+    title: "ALQUILER DE VEHICULO",
+    img: "/img/image/agreements/viajar/ALQUILERDEVEHICULO.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Viajar",
+    }
+  },
+  {
+    id: "copetran",
+    title: "COPETRAN",
+    img: "/img/image/agreements/viajar/COPETRAN.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Viajar",
+    }
+  },
+  {
+    id: "expresopazderios",
+    title: "EXPRESO PAZ DE RIOS.A",
+    img: "/img/image/agreements/viajar/EXPRESOPAZDERIOS.A.jpg",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Viajar",
+    }
+  },
+  {
+    id: "flotamagdalena",
+    title: "FLOTA MAGDALENA",
+    img: "/img/image/agreements/viajar/FLOTAMAGDALENA.gif",
+    hearts: "8",
+    percent: "Fuera de servicio",
+    description: "",
+    discounts: [
+      {
+        id: "discount1",
+        discount: "",
+      },
+      {
+        id: "discount2",
+        discount: "",
+      },
+      {
+        id: "discount3",
+        discount: "",
+      },
+    ],
+    condition: "",
+    coverage: "",
+    category: {
+      id: "Viajar",
     }
   },
 ]

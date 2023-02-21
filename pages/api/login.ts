@@ -12,8 +12,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     } else {
       return res.status(401).json({ message: "Usuario o contraseña invalido" });
     }
-
-
+    
   } catch (err) {
     return res.status(500).json({ message: "Error interno del servidor" });
   }
