@@ -6,12 +6,12 @@ import Modal from "../Modal/ModalReusable";
 const DropDownNotifications = ({ handleBell, datanotifications }) => {
   const [stateModal, setStateModal] = useState(false);
   const [idSelected, setIdSelected] = useState("")
-  const [data, setData] = useState([]);
+  const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3001/api/notifications")
       .then((response) => response.json())
-      .then((data) => setData(data))
+      .then((data) => setNotifications(data.notifications))
       .catch((error) => console.error(error));
   }, []);
 
@@ -22,15 +22,7 @@ const DropDownNotifications = ({ handleBell, datanotifications }) => {
 
   return (
     <ContianerNotifications handleBell={handleBell}>
-      <div>
-        <h1>My Data</h1>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>{item.name}</li>
-          ))}
-        </ul>
-      </div>
-      {/* {notifications?.map((sec, index) => (
+      {notifications?.map((sec, index) => (
         <SeccionNotifications
           onClick={() => notiSelected(sec.id)}
           handleBell={handleBell}
@@ -88,7 +80,7 @@ const DropDownNotifications = ({ handleBell, datanotifications }) => {
             ""
           )}
         </div>
-      ))} */}
+      ))}
     </ContianerNotifications>
   );
 };
