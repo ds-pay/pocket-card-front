@@ -92,7 +92,7 @@ export const SeccionNotifications = styled.div`
   transition: 0.5s all ease;
   opacity: ${({ handleBell }) => (handleBell ? "0" : "1")};
   :hover {
-    background-color: var(--nextui-colors-bgIconPrimary);
+    background-color: var(--nextui-colors-bgThridGlass);
     cursor: pointer;
   }
   .ContainerImg {

@@ -14,7 +14,7 @@ import SeccionMedium from './SeccionMedium'
 import SeccionRight from './SeccionRight'
 
 
-const Navbar = ({  }) => {
+const Navbar = () => {
 
   // const [ handleTheme, setHandleTheme ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false);
@@ -105,5 +105,19 @@ const Navbar = ({  }) => {
     </ContainerNav>
   );
 };
+
+
+export async function getStaticProps() {
+  const url = `${process.env.API_LOCAL}/api/notifications`;
+  const res = await fetch(url);
+  const json = await res.json();
+  console.log(json.notifications)
+
+  return {
+    props: {
+      notifications: json.notifications
+    }
+  }
+}
 
 export default Navbar;

@@ -1,9 +1,13 @@
+import Head from "next/head";
 import Questions from "../../views/view-quiestion/Questions"
 
 
 const index = ({ questions }) => {
   return (
-    <Questions data={questions} />
+    <>
+      <Head><title>Preguntas Frecuentes</title></Head>
+      <Questions data={questions} />
+    </>
   )
 }
 

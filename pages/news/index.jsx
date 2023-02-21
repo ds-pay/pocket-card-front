@@ -1,9 +1,13 @@
+import Head from "next/head"
 import Notices from "../../views/view-notices/Notices"
 
 const index = ({news}) => {
 
   return (
-    <Notices data={news}/>
+    <>
+      <Head><title>Noticias</title></Head>
+      <Notices data={news}/>
+    </>
   )
 }
 

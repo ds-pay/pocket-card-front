@@ -25,7 +25,7 @@ const Footer = () => {
 			label: "Conoce lo nuevo",
 			icon: <FaNewspaper />,
 			labelbutton: "Noticias de Viajes",
-			route: ""
+			route: "/news"
 		},
 		{
 			id: "button3",

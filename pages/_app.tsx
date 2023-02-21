@@ -32,12 +32,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
         <Navbar />
-        <Component {...pageProps} />
+          <Component {...pageProps} />
         <Footer/>
       </NextUIProvider>
     </>
-
   )
 };
-
 export default MyApp;
