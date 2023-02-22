@@ -6,6 +6,7 @@ export const ContentBody = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding: 0 3%;
     height: 100%;
 `;
 
@@ -51,7 +52,7 @@ export const BodyHeader = styled.div`
   display: flex;
   justify-content: space-between;  
   align-items: center;
-  width: 95%;
+  width: 100%;
   height: 100%;
   border-radius: 0.5rem;
   background-color: var(--nextui-colors-backgroundForm);
@@ -125,7 +126,7 @@ export const BodyHead = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 95%;
+  width: 100%;
   height: 100%;
   border-radius: 0.5rem;
   background-color: var(--nextui-colors-backgroundForm);
@@ -173,7 +174,7 @@ export const ActivationCard = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
   height: 100%;
   border-radius: 0.5rem;
   background-color: var(--nextui-colors-backgroundForm);

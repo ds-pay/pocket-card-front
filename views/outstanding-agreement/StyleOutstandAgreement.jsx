@@ -2,26 +2,62 @@ import styled from "@emotion/styled";
 
 export const ContainerGeneral = styled.div`
   display: flex;
-  justify-content: space-between;  
+  position: relative;
+  flex-direction: column;
   align-items: center;
-  width: 95%;
+  overflow: hidden;
+  width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   background-color: var(--nextui-colors-backgroundForm);
   margin: 2rem 0;
-  padding: 1rem 2rem;
 	transition: 0.3s all ease ;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  .cardcotainer{
-    width: 20rem;
+  .containerslider{
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    margin: 0 0.5rem;
+    width: 80%;
+    margin: 1rem 0;
+    z-index: 1;
+    justify-content: flex-start;
   }
 `;
 
+export const ContainerCardsSlider = styled.div`
+  display: flex;
+  transition: 0.5s;
+  width: 200%;
+`;
+
+export const Arrows = styled.div`
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 100%;
+    font-size: 3rem;
+    background-color: #ffffff5a;
+    transition: all ease 0.5s;
+    color: #3d366f;
+    :hover {
+      background-color: #3d366f;
+      cursor: pointer;
+      color: white;
+    }
+  }
+  @media only screen and (max-width: 800px){
+    bottom: 44.8rem;
+    justify-content: flex-end;
+    display: none;
+  }
+`;
 
