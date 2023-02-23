@@ -175,7 +175,6 @@ export const ActivationCard = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   border-radius: 0.5rem;
   background-color: var(--nextui-colors-backgroundForm);
   margin: 2rem 0;
@@ -185,22 +184,23 @@ export const ActivationCard = styled.div`
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media(max-width: 1336px){
-        height: 50rem;
+        height: 52rem;
         justify-content: flex-start;
-        h1{
+        h2{
             text-align: center;
         }
     }
-    @media(max-width: 720px){
-        height: 95rem;
+    @media(max-width: 800px){
+        height: 99rem;
         justify-content: flex-start;
-        h1{
+        h2{
             text-align: center;
         }
     }
-    h1{
-        margin: 0.5rem 0;
-        font-size: 2rem;
+    h2{
+      margin: 0.5rem 0;
+      font-size: 2rem;
+      color: var(--nextui-colors-backgroundNavbar);	
     }
   @media(max-width: 500px) {
     width: 100%;

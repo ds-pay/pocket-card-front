@@ -59,7 +59,7 @@ const Primary = ({ data }) => {
 				</BodyHead>
 
 				<ActivationCard>
-					<h1>¿Como Activo mi Pocket Card?</h1>
+					<h2><strong>¿Como Activo mi Pocket Card?</strong></h2>
 					<ContainerCard>
 						{ArrayContent.map((sec, index) => (
 							<Card key={index}>

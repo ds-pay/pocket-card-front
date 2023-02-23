@@ -15,6 +15,11 @@ export const ContainerGeneral = styled.div`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  h2{
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    color: var(--nextui-colors-backgroundNavbar);	
+  }
   .containerslider{
     overflow: hidden;
     display: flex;
@@ -28,7 +33,6 @@ export const ContainerGeneral = styled.div`
 export const ContainerCardsSlider = styled.div`
   display: flex;
   transition: 0.5s;
-  width: 200%;
 `;
 
 export const Arrows = styled.div`

@@ -1,13 +1,19 @@
+import { useRouter } from 'next/router'
 import { CardGeneral } from './StyleCardZoom'
 
 const CardZoom = ({ data, icon }) => {
+  const router = useRouter()
+  const handleClick = (categoryId, agreementId ) => {
+    router.push(`/categories/${categoryId.toLowerCase()}/${agreementId}`)
+  }
+
   return (
     <>
       {
         data
           ?
           data.map((sec, index) => (
-            <CardGeneral key={index}>
+            <CardGeneral onClick={() => handleClick(sec.category.id, sec.id)} key={index}>
               <div className='container-icon'>
                 <img src={sec.img} alt={sec.id} />
               </div>
