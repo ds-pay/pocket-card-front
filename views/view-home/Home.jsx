@@ -1,10 +1,11 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
-import { ContentBody, ContentPock, BodyHead, ActivationCard, ContainerCard, Card, BodyHeader } from './StylesHome'
+import { ContentBody, ContentPock, BodyHead, ActivationCard, ContainerCard, Card, BodyHeader } from './StylesHome';
+import OutstandAgreement from '../outstanding-agreement/OutstandAgreement';
 
 
-const Primary = () => {
+const Primary = ({ data }) => {
 
 	const ArrayContent = [
 		{
@@ -58,10 +59,10 @@ const Primary = () => {
 				</BodyHead>
 
 				<ActivationCard>
-					<h1>¿Como Activo mi Pocket Card?</h1>
+					<h2><strong>¿Como Activo mi Pocket Card?</strong></h2>
 					<ContainerCard>
 						{ArrayContent.map((sec, index) => (
-							<Card>
+							<Card key={index}>
 								<div className='numberindex'>{parseInt(index) + 1}</div>
 								<div style={{ backgroundColor: sec.bground }} className='img'>
 									<img src={sec.img} alt="img" />
@@ -72,6 +73,7 @@ const Primary = () => {
 						))}
 					</ContainerCard>
 				</ActivationCard>
+				<OutstandAgreement data={data} />
 			</ContentBody>
 		</>
 	)
