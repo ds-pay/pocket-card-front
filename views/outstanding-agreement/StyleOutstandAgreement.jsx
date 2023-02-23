@@ -26,7 +26,6 @@ export const ContainerGeneral = styled.div`
     width: 80%;
     margin: 1rem 0;
     z-index: 1;
-    justify-content: flex-start;
   }
 `;
 

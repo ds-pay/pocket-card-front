@@ -1,10 +1,15 @@
 import { useRouter } from 'next/router'
 import { CardGeneral } from './StyleCardZoom'
+import { FaShareSquare } from 'react-icons/fa'
 
 const CardZoom = ({ data, icon }) => {
   const router = useRouter()
   const handleClick = (categoryId, agreementId ) => {
     router.push(`/categories/${categoryId.toLowerCase()}/${agreementId}`)
+  }
+
+  const handleShare = () => {
+    console.log('holis como estas')
   }
 
   return (
@@ -13,9 +18,13 @@ const CardZoom = ({ data, icon }) => {
         data
           ?
           data.map((sec, index) => (
-            <CardGeneral onClick={() => handleClick(sec.category.id, sec.id)} key={index}>
+            <CardGeneral key={index}>
               <div className='container-icon'>
-                <img src={sec.img} alt={sec.id} />
+              <div className='button-share' onClick={handleShare}>
+                <h4><FaShareSquare /></h4>
+                <h2>Compartir</h2>
+              </div>
+                <img onClick={() => handleClick(sec.category.id, sec.id)} src={sec.img} alt={sec.id} />
               </div>
               <div className='container-text'>
                 <div className='container-title'>
