@@ -64,3 +64,34 @@ export const Arrows = styled.div`
   }
 `;
 
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .container-button{
+    display: flex;
+    width: 100%;
+  }
+
+  h1{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+    vertical-align: top;
+      border-radius: 3px;
+  }
+`;

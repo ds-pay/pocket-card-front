@@ -27,6 +27,9 @@ export const ButtonContainer = styled.div`
 
 export const TextButton = styled.h6`
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin: 5px;
   font-size: 0.8rem;
