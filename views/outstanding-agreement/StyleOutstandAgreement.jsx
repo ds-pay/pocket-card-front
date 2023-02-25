@@ -73,6 +73,7 @@ export const Content = styled.div`
   .container-button{
     display: flex;
     width: 100%;
+    justify-content: center;
   }
 
   h1{

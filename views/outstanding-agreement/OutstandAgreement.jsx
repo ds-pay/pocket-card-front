@@ -6,7 +6,7 @@ import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 import ModalReusable from '../../components/Modal/ModalReusable';
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
 import { BsFacebook, BsWhatsapp, BsTwitter, BsInstagram } from 'react-icons/bs';
-import { WhatsappShareButton, FacebookShareButton, TwitterShareButton,   } from 'next-share';
+import { WhatsappShareButton, FacebookShareButton, TwitterShareButton, InstapaperShareButton  } from 'next-share';
 
 
 const OutstandAgreement = ({data}) => {
@@ -48,7 +48,7 @@ const OutstandAgreement = ({data}) => {
       id: "1323454",
       icon: <BsFacebook/>,
       label: "FACEBOOK",
-      href: "https://www.facebook.com/sharer/sharer.php?u=www.mypocketvip.com.co",
+      href: "https://m.facebook.com/sharer/sharer.php?u=www.mypocketvip.com.co",
     },
     {
       id: "25564356",
@@ -74,21 +74,6 @@ const OutstandAgreement = ({data}) => {
     setStateModal(true)
     setCurrentId(shareId)
   };
-
-  const handlecompartir = (label) => {
-    if ( "FACEBOOK" === label){
-      return(
-        <FacebookShareButton
-          url={'https://github.com/next-share'}
-          quote={'next-share is a social share buttons for your next React apps.'}
-          hashtag={'#nextshare'}
-        >
-        <ButtonIcon text={"holis"} />
-        </FacebookShareButton>
-      )
-    }
-  }
-
 
   const arrws = () => {
     return (
@@ -130,8 +115,10 @@ const OutstandAgreement = ({data}) => {
               <p>¿Donde Deseas compartirlo?</p>
               <div className="container-button">
                 {arrayRedSocial.map((social, index) => (
-                  // <ButtonIcon key={index} icon={social.icon} text={social.label} func={() => handlecompartir(social.href, sec.title, social.id, social.label)} />
-                  handlecompartir(social.label)
+                  <a href={social.href}>
+                    <ButtonIcon key={index} icon={social.icon} text={social.label} func={() => handlecompartir(social.href, sec.title, social.id, social.label)} />
+                  </a>
+                  // handlecompartir(social.label, social.icon, sec.id)
                 ))}
               </div>
             </Content>
