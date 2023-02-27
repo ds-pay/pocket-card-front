@@ -56,7 +56,7 @@ const Navbar = () => {
       state: true,
       id: "user",
       icon: <HiUser />,
-      href: '/login'
+      href: '/my-profile'
     },
   ];
 

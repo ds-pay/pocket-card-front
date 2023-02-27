@@ -6,7 +6,6 @@ import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 import ModalReusable from '../../components/Modal/ModalReusable';
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
 import { BsFacebook, BsWhatsapp, BsTwitter, BsInstagram } from 'react-icons/bs';
-import { WhatsappShareButton, FacebookShareButton, TwitterShareButton, InstapaperShareButton  } from 'next-share';
 
 
 const OutstandAgreement = ({data}) => {

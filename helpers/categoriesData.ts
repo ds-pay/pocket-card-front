@@ -62,6 +62,6 @@ const categories = [
     text: "Suspendisse posuere scelerisque leo ac varius. Aliquam bibendum eu sem vitae mattis.",
     colorcategory: "#340064c5"
   },
-]
+];
 
-export default categories
+export default categories;

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { ContainerGeneral, BodyHeader, MediumBody, CardCategory, ContentCategory } from './StylesCategories';
+import { ContainerGeneral, MediumBody, CardCategory, ContentCategory } from './StylesCategories';
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon'
 import { FaImages } from 'react-icons/fa';
 import { BiCategoryAlt } from 'react-icons/bi'
 import { useRouter } from 'next/router';
+import BodyHeader from '../../components/BodyHeader/BodyHeader';
 
 const Categories = ({ category }) => {
 
@@ -16,14 +17,7 @@ const Categories = ({ category }) => {
 
   return (
     <ContainerGeneral>
-      <BodyHeader>
-        <div className="container-title">
-          <h2><strong>Categorias</strong></h2>
-        </div>
-        <div className="container-img">
-          <img src="/img/image/agreements/categorias.png" alt="" />
-        </div>
-      </BodyHeader>
+      <BodyHeader title={"Categorias"} img={"/img/image/agreements/categorias.png"} alt={"categorias"}/>
       <MediumBody>
         <div className='container-categories'> 
           {

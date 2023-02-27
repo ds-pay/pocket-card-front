@@ -1,6 +1,7 @@
-import { useRouter } from 'next/router'
-import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon'
-import { ContainerGeneral, BodyHeader, ContentNews, CardNews } from './StylesNews'
+import { useRouter } from 'next/router';
+import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
+import { ContainerGeneral, ContentNews, CardNews } from './StylesNews';
+import BodyHeader from '../../components/BodyHeader/BodyHeader';
 
 const Notices = ({ data }) => {
   const router = useRouter()
@@ -10,14 +11,7 @@ const Notices = ({ data }) => {
 
   return (
     <ContainerGeneral>
-      <BodyHeader>
-        <div className="container-title1">
-          <h2><strong>Noticias My PocketCard</strong></h2>
-        </div>
-        <div className="container-img">
-          <img src="/img/image/news/newspocket.png" alt={`img-bonus`} />
-        </div>
-      </BodyHeader>
+      <BodyHeader title={"Noticias My PocketCard"} img={"/img/image/news/newspocket.png"} alt={"img-bonus"}/>
       <ContentNews>
         {data.map((sec, index) => (
           <CardNews onClick={() => handleRouter(sec.id)} key={index}>
