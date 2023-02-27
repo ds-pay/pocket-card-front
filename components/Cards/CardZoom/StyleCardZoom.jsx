@@ -16,6 +16,44 @@ export const CardGeneral = styled.div`
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
 
+  .button-share{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    transform: translate(-180%);
+    top: 1rem;
+    left: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    transition: 0.5s all ease;
+    background-color: #ffffff;
+    padding: 0 0.6rem ;
+    overflow: hidden;
+    h4{
+      font-size: 2rem;
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--nextui-colors-backgroundNavbar);
+    }
+    h2{
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--nextui-colors-backgroundNavbar);
+      font-weight: 500;
+      margin: 0 0.3rem;
+      opacity: 0;
+      transition: 0.5s all ease;
+    }
+    :hover{
+      width: 9.3rem;
+      h2{
+        opacity: 1;
+      }
+    }
+  }
   .container-icon{
     display: flex;
     width: 100%;
@@ -48,10 +86,12 @@ export const CardGeneral = styled.div`
       text-align: center;
       font-weight: 600;
     }
-    .container-title{
+    .container-title,
+    .container-share{
       width: 100%;
       display: flex;
       justify-content: center;
+      align-items: center;
       h3{
         font-size: 1rem;
         font-weight: 700;
@@ -63,7 +103,8 @@ export const CardGeneral = styled.div`
       justify-content: space-between;
       padding: 0 2rem;
       h3{
-        font-size: 1rem;
+        margin: 0;
+        font-size: 1.2rem;
         font-weight: 700;
         color: var(--nextui-colors-backgroundNavbar);
       }
@@ -71,6 +112,9 @@ export const CardGeneral = styled.div`
   }
   :hover{
     cursor: pointer;
+    .button-share{
+      transform: translate(0);
+    }
     .container-icon{
       img{
         transform: scale(1.1, 1.1);
