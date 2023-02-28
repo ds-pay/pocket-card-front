@@ -92,6 +92,7 @@ const index = () => {
         ContentMenu={ContentMenu}
         isSelected={isSelected}
         setIsSelected={setIsSelected}
+        title={"PocketCard"}
       />
       {ContentMenu.map((sec, index) =>
         isSelected === sec.id ? <Content> {sec.route} </Content> : null

@@ -78,7 +78,7 @@ const Navbar = () => {
     {
       state: true,
       id: "img",
-      icon1: <img className="imgUser" src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
+      icon1: <img className="imgUser" src="/img/image/gatodenegocios.jpeg" alt="" />
     },
     {
       state: false,

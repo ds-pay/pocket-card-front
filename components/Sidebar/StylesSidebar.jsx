@@ -3,13 +3,14 @@ import styled from "@emotion/styled";
 export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: ${({ isActivate }) => (isActivate ? "4rem" : "15.5rem")};
-  height: 97.1%;
+  width: ${({ isActivate }) => (isActivate ? "4rem" : "20rem")};
+  height: 100%;
   background: var(--nextui-colors-backgroundNavbar);
   position: absolute;
   transition: 0.5s all ease;
   white-space: nowrap;
   z-index: 90;
+  border-bottom: solid var(--nextui-colors-bgIconPrimary) 1px;
 `;
 
 export const Content = styled.div`
@@ -29,6 +30,7 @@ export const Content = styled.div`
     border-bottom: 0.2px solid white;
     margin: 0rem 0.8rem 0rem 1rem;
     text-align: left;
+    overflow: hidden;
   }
 `;
 
@@ -93,6 +95,7 @@ export const Head = styled.div`
   color: white;
   .content {
     display: flex;
+    justify-content: center;
     margin: 0.5rem;
     white-space: normal;
     overflow: hidden;
@@ -106,12 +109,24 @@ export const Head = styled.div`
     }
     .contain-logo {
       margin: 0.6rem;
+      transition: 0.5s all ease;
+      overflow: hidden;
+      width: ${({ isActivate }) => (isActivate ? "60rem" : "40%")};
+      img{
+        border-radius: 10rem;
+        width: 70rem;
+      }
     }
     .contain-name {
       white-space: normal;
       overflow: hidden;
       font-size: 1.5rem;
       font-weight: 600;
+      text-align: center;
+      h3{
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 `;
