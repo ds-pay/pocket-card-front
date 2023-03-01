@@ -10,7 +10,7 @@ const userData = [
     phone: "3242574768",
     tarjet: "Gold",
     coverage: "Nacional",
-    expiration: "2027-07",
+    expiration: "07/2027",
     pointspocket: 0,
     terms: {
       title: "TÉRMINOS Y CONDICIONES GENERALES TARJETA DE AFINIDAD POCKET CARD",

@@ -10,7 +10,7 @@ export const ContainerGeneral = styled.div`
   align-items: center;
   position: relative;
   .container-header {
-    width: 95%;
+    width: 100%;
     margin: 1rem 0;  
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@ export const ContainerGeneral = styled.div`
 
 export const BodyUser = styled.ol`
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -61,6 +61,9 @@ export const ContainerUser = styled.div`
   display: flex;
   justify-content: center;
   width: 70%;
+  @media(max-width: 1024px){
+    width: 100%;
+  }
 `;
 
 export const HeaderUser = styled.div`
@@ -71,7 +74,7 @@ export const HeaderUser = styled.div`
   height: 15rem;
   background-color: #4c52ad;
   position: relative;
-  padding: 0 0.2rem;
+  padding: 0 0.3rem;
     .content-edit{
       display: flex;
       justify-content: center;
@@ -111,6 +114,12 @@ export const HeaderUser = styled.div`
         cursor: pointer;
       }
     }
+  @media(max-width: 1024px){
+    padding: 1rem 0;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18rem;
+  }
 `;
 
 export const DataUser = styled.div`
@@ -119,11 +128,15 @@ export const DataUser = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 0 2rem;
   margin: 2rem 0;
   .container-cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  @media(max-width: 1024px){
+    padding: 0;
   }
 `;
 
@@ -137,7 +150,7 @@ export const ContentUSer = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 18rem;
+      width: 50%;
       height: 100%;
       left: 17rem;
       color: #e6e6e6;
@@ -155,7 +168,9 @@ export const ContentUSer = styled.div`
     }
     .img-user{
       display: flex;
-      width: 11rem;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
       padding: 0.5rem;
       margin: 0 0.7rem;
       overflow: hidden;
@@ -168,32 +183,56 @@ export const ContentUSer = styled.div`
         border-radius: 10rem;
       }
     }
-    `;
+  @media(max-width: 1024px){
+    width: 100%;
+    justify-content: center;
+    margin: 0.5rem 0;
+    .name-user{
+      h2{
+        font-size: 1rem;
+      }
+    }
+    .img-user{
+      width: 8rem;
+      img{
+
+      }
+    }
+  }
+`;
 
 
 export const CardDate = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: column;
   width: 100%;
-  height: 6rem;
-  margin: 1rem 1rem;
+  margin: 0.5rem 0;
+  background-color: #f7f7f7c6;
   border-radius: 0.5rem;
-  background-color: #ebeef3;
   .title{
-    width: 100%;
+    width: 30%;
+    display: flex;
     h2{
       font-size: 1.2rem;
       margin: 0 1rem;
-      color: #575757;
+      color: #2d2d2d;
     }
   }
   .content{
-    width: 100%;
+    width: 20%;
     padding: 0 1rem;
     h2{
       font-size: 1.1rem;
-      color: #2d2d2d;
+      color: #575757;
+    }
+  }
+  @media(max-width: 1024px){
+    .title{
+      width: 100%;
+    }
+    .content{
+      width: 100%;
+      text-align: right;
     }
   }
 `;
@@ -215,6 +254,16 @@ export const ContactUser = styled.div`
       }
     }
   }
+  @media(max-width: 1024px){
+    width: 100%;
+    flex-direction: row;
+    overflow-x: scroll;
+    .section{
+      margin: 0 0.5rem;
+      .section-icon, .section-label{
+      }
+    }
+  }
 `;
 
 export const ContainerSelection = styled.div`
@@ -223,6 +272,9 @@ export const ContainerSelection = styled.div`
   display: flex;
   justify-content: flex-start;
   background-color: #4c52ad8d;
+  @media(max-width: 1024px){
+    justify-content: center;
+  }
 `;
 
 export const SectionProfile = styled.div`
@@ -232,7 +284,7 @@ export const SectionProfile = styled.div`
   border-top: ${({ isSelected }) => isSelected ? "solid white 5px" : "solid transparent 5px"};
   border-bottom: solid transparent 5px;
   border-radius: 0.2rem;
-  color: ${({ isSelected }) => isSelected ? "white" : "#22276a8d"} ;
+  color: ${({ isSelected }) => isSelected ? "white" : "#22276af5"} ;
   .section-selected{
     display: flex;
     justify-content: center;
@@ -247,5 +299,12 @@ export const SectionProfile = styled.div`
     color: white;
     cursor: pointer;
     border-top: solid white 5px;
+  }
+  @media(max-width: 1024px){
+    .section-selected{
+      h3{
+        font-size: 1rem;
+      }
+    }
   }
 `;

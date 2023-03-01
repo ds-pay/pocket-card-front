@@ -1,9 +1,9 @@
 import React from 'react';
-import MyProfile from '../../views/my-profile/MyProfile';
+import ViewProfile from '../../views/my-profile/ViewProfile';
 
 const index = ({user}) => {
   return (
-    <MyProfile data={user}/>
+    <ViewProfile data={user}/>
   )
 };
 

@@ -87,15 +87,6 @@ const MyProfile = ({ data }) => {
     },
   ]
 
-  const Card = (title, content) => {
-    return (
-      <CardDate>
-        <div className='title'><h2>{title}</h2></div>
-        <div className="content"><h2><strong>{content}</strong></h2></div>
-      </CardDate>
-    )
-  }
-
   const sectionContact = (sectionID, label) => {
     return (
       contentMenu.map((contact, index) => (
@@ -115,24 +106,23 @@ const MyProfile = ({ data }) => {
   }
 
   return (
-    data &&
-    data.map((sec, index) => (
+    data 
+    ? data.map((sec, index) => (
       <ContainerGeneral key={index}>
         <ContainerUser>
           <BodyUser>
             <HeaderUser>
-              <div className='content-edit'>
+              {/* <div className='content-edit'>
                 <div className="contain-logo">
                   <RiEdit2Fill />
                 </div>
                 <div className="contain-name"><h3>Editar</h3></div>
-              </div>
+              </div> */}
               <ContentUSer>
                 <div className='img-user'>
                   <img src={sec.img} alt={sec.id} />
                 </div>
                 <div className='name-user'>
-                  <h4>Nombre:</h4>
                   <h2>{sec.name}</h2>
                   <h2>{sec.lastname}</h2>
                 </div>
@@ -172,29 +162,12 @@ const MyProfile = ({ data }) => {
                     : null
                 ))
               }
-              {/* <div className="container-header">
-              <div className="container-img">
-                <BsFillCreditCard2FrontFill />
-              </div>
-              <div className="container-title">
-                <h3>Informacion de la credencial y del usuario</h3>
-              </div>
-            </div>
-              <div className='container-cards'>
-                {Card("Departamento:", sec.department)}
-                {Card("Ciudad:", sec.city)}
-                {Card("Correo:", sec.email)}
-                {Card("Telefono:", sec.phone)}
-                {Card("Tipo de Membresia:", sec.tarjet)}
-                {Card("Cobertura:", sec.coverage)}
-                {Card("Vencimiento:", sec.expiration)}
-                {Card("Cantidad Pocket Puntos:", sec.pointspocket)}
-              </div> */}
             </DataUser>
           </BodyUser>
         </ContainerUser>
       </ContainerGeneral>
     ))
+    : <h1>LOADING...</h1>
   )
 }
 
