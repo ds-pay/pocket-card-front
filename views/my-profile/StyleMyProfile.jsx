@@ -57,14 +57,6 @@ export const BodyUser = styled.ol`
   overflow: hidden;
 `;
 
-export const ContainerSideBar = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 5%;
-  height: 100%;
-`;
-
 export const ContainerUser = styled.div`
   display: flex;
   justify-content: center;
@@ -76,10 +68,10 @@ export const HeaderUser = styled.div`
   justify-content:center;
   align-items: center;
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   background-color: #4c52ad;
   position: relative;
-  padding: 0 2rem;
+  padding: 0 0.2rem;
     .content-edit{
       display: flex;
       justify-content: center;
@@ -124,6 +116,8 @@ export const HeaderUser = styled.div`
 export const DataUser = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 2rem 0;
   .container-cards{
@@ -155,10 +149,13 @@ export const ContentUSer = styled.div`
 
         margin: 0 1rem;
       }
+      h4{
+        margin: 0;
+      }
     }
     .img-user{
       display: flex;
-      width: 14rem;
+      width: 11rem;
       padding: 0.5rem;
       margin: 0 0.7rem;
       overflow: hidden;
@@ -204,5 +201,51 @@ export const CardDate = styled.div`
 export const ContactUser = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   width: 50%;
+  .section{
+    width: 50%;
+    display: flex;
+    .section-icon, .section-label{
+      h2{
+        font-size: 1rem;
+        margin: 0 0.3rem;
+        color: white;
+      }
+    }
+  }
+`;
+
+export const ContainerSelection = styled.div`
+  width: 100%;
+  padding: 0 0.2rem;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #4c52ad8d;
+`;
+
+export const SectionProfile = styled.div`
+  margin: 0rem 0.5rem;
+  padding: 0.6rem;
+  transition: all ease 0.5s;
+  border-top: ${({ isSelected }) => isSelected ? "solid white 5px" : "solid transparent 5px"};
+  border-bottom: solid transparent 5px;
+  border-radius: 0.2rem;
+  color: ${({ isSelected }) => isSelected ? "white" : "#22276a8d"} ;
+  .section-selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3{
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+  };
+  :hover{
+    color: white;
+    cursor: pointer;
+    border-top: solid white 5px;
+  }
 `;
