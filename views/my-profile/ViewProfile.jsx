@@ -11,6 +11,7 @@ import { MdDateRange } from 'react-icons/md';
 import { IoLogoGameControllerB } from 'react-icons/io';
 import Credentials from './Credentials';
 import Favorites from './Favorites';
+import Terms from './Terms';
 
 
 const MyProfile = ({ data }) => {
@@ -83,6 +84,11 @@ const MyProfile = ({ data }) => {
       id: "3546",
       label: "Mis Favoritos",
       content: <Favorites data={data}/>
+    },
+    {
+      id: "4856",
+      label: "Terminos",
+      content: <Terms data={data} />
     },
   ]
 

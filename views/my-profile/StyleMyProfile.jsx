@@ -410,3 +410,39 @@ export const SelectionAgreement = styled.div`
   }
 `;
 
+export const ContentTerms = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const HeaderTerms = styled.div`
+  
+  .content-header{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: #22276a73;
+    color: #22276af5;
+    .button-arrow{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    };
+    h2{
+      font-size: 1.3rem;
+      margin: 0;
+    };
+    :hover{
+      cursor: pointer;
+    }
+  };
+  .container-content{
+    width: 100%;
+    height: 15rem;
+    background-color: #c9c9cf73;
+  }
+`;
