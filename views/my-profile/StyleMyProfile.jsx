@@ -177,7 +177,7 @@ export const ContentUSer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 30%;
+      width: 28%;
       padding: 0.5rem;
       margin: 0 0.7rem;
       overflow: hidden;
@@ -200,8 +200,10 @@ export const ContentUSer = styled.div`
         font-size: 1.3rem;
       }
     }
+  }
+  @media(max-width: 400px){
     .img-user{
-      width: 50%;
+      width:70%;
       img{
 
       }
@@ -269,7 +271,7 @@ export const ContactUser = styled.div`
   @media(max-width: 1024px){
     width: 100%;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-y: scroll;
     .section{
       margin: 0 0.5rem;
       .section-icon, .section-label{
@@ -352,3 +354,59 @@ export const BackGroundTarjet = styled.div`
     }
   }
 `;
+
+export const ContainerFavorites = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0;
+  .container-agreement{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+`;
+
+export const SelectionAgreement = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 15rem;
+  height: 10rem;
+  margin:  0 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4c52ad8d;
+  border-radius: 0.7rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  .container-button{
+    transition: 0.3s all ease;
+    background-color: #22276a73;
+    position: absolute;
+    width: 100%;
+    padding: 4rem 3rem;
+    height: 100%;
+    opacity: 0;
+  }
+  h2{
+    margin: 0;
+    font-size: 1.1rem;
+    color: #22276af5;
+  }
+  :hover{
+    .container-button{
+      opacity: 1;
+    }
+  }
+`;
+

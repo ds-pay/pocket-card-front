@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ContainerGeneral, BodyUser, ContainerUser, HeaderUser, DataUser, ContentUSer, CardDate, ContactUser, ContainerSelection, SectionProfile } from './StyleMyProfile';
 import Profile from './Profile';
-import { RiImageAddFill, RiEdit2Fill, RiLuggageDepositFill } from 'react-icons/ri';
+import { RiLuggageDepositFill } from 'react-icons/ri';
 import { FaCity } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 import { ImPhone } from 'react-icons/im';
@@ -9,9 +9,8 @@ import { HiIdentification } from 'react-icons/hi';
 import { AiFillHome } from 'react-icons/ai';
 import { MdDateRange } from 'react-icons/md';
 import { IoLogoGameControllerB } from 'react-icons/io';
-import { BsFillCreditCard2FrontFill } from 'react-icons/bs';
-import { RiUser3Fill } from 'react-icons/ri';
 import Credentials from './Credentials';
+import Favorites from './Favorites';
 
 
 const MyProfile = ({ data }) => {
@@ -83,7 +82,7 @@ const MyProfile = ({ data }) => {
     {
       id: "3546",
       label: "Mis Favoritos",
-      content: <Profile />
+      content: <Favorites data={data}/>
     },
   ]
 
@@ -112,12 +111,6 @@ const MyProfile = ({ data }) => {
         <ContainerUser>
           <BodyUser>
             <HeaderUser>
-              {/* <div className='content-edit'>
-                <div className="contain-logo">
-                  <RiEdit2Fill />
-                </div>
-                <div className="contain-name"><h3>Editar</h3></div>
-              </div> */}
               <ContentUSer>
                 <div className='img-user'>
                   <img src={sec.img} alt={sec.id} />

@@ -17,7 +17,7 @@ const Profile = ({ data }) => {
       ?
       data.map((sec, index) => (
         <>
-          <div className='container-cards'>
+          <div key={index} className='container-cards'>
             {Card("Nombre (s):", sec.name)}
             {Card("Apellido (s):", sec.lastname)}
             {Card("Departamento:", sec.department)}
