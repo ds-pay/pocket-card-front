@@ -18,8 +18,8 @@ const Profile = ({ data }) => {
       data.map((sec, index) => (
         <>
           <div className='container-cards'>
-            {Card("Nombres:", sec.name)}
-            {Card("Apellidos:", sec.lastname)}
+            {Card("Nombre (s):", sec.name)}
+            {Card("Apellido (s):", sec.lastname)}
             {Card("Departamento:", sec.department)}
             {Card("Ciudad:", sec.city)}
             {Card("Correo:", sec.email)}

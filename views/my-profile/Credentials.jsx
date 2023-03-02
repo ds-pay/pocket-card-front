@@ -1,4 +1,4 @@
-import { CardDate, ContainerGeneral } from './StyleMyProfile';
+import { CardDate, ContainerGeneral, BackGroundTarjet } from './StyleMyProfile';
 import { BsPersonFill } from 'react-icons/bs'
 
 const Credentials = ({ data }) => {
@@ -17,9 +17,26 @@ const Credentials = ({ data }) => {
       ?
       data.map((sec, index) => (
         <>
+          <BackGroundTarjet>
+            <div className="container">
+              <img src="/img/image/tarjetgold/pocket_dorada.png" alt="" />
+              <div className="container-text">
+                <div className="text-left">
+                  <h1>{sec.name} {sec.lastname}</h1>
+                  <h2>28425070</h2>
+                  <h3>No. 90336</h3>
+                </div>
+                <div className="text-right">
+                  <h1>Vence</h1>
+                  <h2>{sec.expiration}</h2>
+                  <h3>CA-04B</h3>
+                </div>
+              </div>
+            </div>
+          </BackGroundTarjet>
           <div className='container-cards'>
-            {Card("Nombres:", sec.name)}
-            {Card("Apellidos:", sec.lastname)}
+            {Card("Nombre (s):", sec.name)}
+            {Card("Apellido (s):", sec.lastname)}
             {Card("Cedula:", "28425070")}
             {Card("Tipo de Membresia:", sec.tarjet)}
             {Card("Cobertura:", sec.coverage)}

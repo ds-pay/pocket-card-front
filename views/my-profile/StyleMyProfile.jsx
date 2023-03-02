@@ -1,4 +1,5 @@
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
+import img from '../../public/img/image/tarjetgold/pocket_dorada.png'
 
 export const ContainerGeneral = styled.div`
   display: flex;
@@ -130,6 +131,12 @@ export const DataUser = styled.div`
   width: 100%;
   padding: 0 2rem;
   margin: 2rem 0;
+  .img-tarjet{
+    width: 100%;
+    height: 8rem;
+    background-color: black;
+    background-image: url(${img});
+  }
   .container-cards{
     display: flex;
     flex-wrap: wrap;
@@ -185,15 +192,16 @@ export const ContentUSer = styled.div`
     }
   @media(max-width: 1024px){
     width: 100%;
-    justify-content: center;
-    margin: 0.5rem 0;
+    justify-content: space-between;
+    margin: 0.8rem 0;
     .name-user{
+      width: 100%;
       h2{
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
     }
     .img-user{
-      width: 8rem;
+      width: 50%;
       img{
 
       }
@@ -205,23 +213,27 @@ export const ContentUSer = styled.div`
 export const CardDate = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   margin: 0.5rem 0;
   background-color: #f7f7f7c6;
   border-radius: 0.5rem;
   .title{
+    padding: 0 0.5rem;
     width: 30%;
     display: flex;
     h2{
       font-size: 1.2rem;
       margin: 0 1rem;
       color: #2d2d2d;
+      margin: 0;
     }
   }
   .content{
     width: 20%;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     h2{
+      margin: 0.5rem 0;
       font-size: 1.1rem;
       color: #575757;
     }
@@ -304,6 +316,38 @@ export const SectionProfile = styled.div`
     .section-selected{
       h3{
         font-size: 1rem;
+      }
+    }
+  }
+`;
+
+export const BackGroundTarjet = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 1.5rem 0;
+  .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .container-text{
+      width: 100%;
+      bottom: 0;
+      padding: 0 2rem;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      color: black;
+      .text-left, .text-right{
+        h1{
+          font-size: 1.7rem;
+        }
+        h2{
+          font-size: 1.5rem;
+        }
       }
     }
   }

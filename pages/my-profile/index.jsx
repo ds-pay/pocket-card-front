@@ -8,9 +8,9 @@ const index = ({user}) => {
 };
 
 export async function getServerSideProps(){
-  const url = `${process.env.API_LOCAL}/api/user`
-  const res = await fetch(url);
-  const json = await res.json()
+  const urlUser = `${process.env.API_LOCAL}/api/user`
+  const resUSer = await fetch(urlUser);
+  const json = await resUSer.json()
 
   return {
     props:{
