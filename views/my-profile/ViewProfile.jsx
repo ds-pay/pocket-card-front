@@ -14,7 +14,7 @@ import Favorites from './Favorites';
 import Terms from './Terms';
 
 
-const MyProfile = ({ data }) => {
+const MyProfile = ({ data, dataTerms }) => {
 
   const [selected, setSelected] = useState("")
 
@@ -88,7 +88,7 @@ const MyProfile = ({ data }) => {
     {
       id: "4856",
       label: "Terminos",
-      content: <Terms data={data} />
+      content: <Terms dataTerms={dataTerms} />
     },
   ]
 
