@@ -3,7 +3,7 @@ import { IoIosRocket } from "react-icons/io";
 import { ContianerNotifications, SeccionNotifications, ContentModal } from "./StyleDropDown";
 import Modal from "../Modal/ModalReusable";
 
-const DropDownNotifications = ({ handleBell, datanotifications }) => {
+const DropDownNotifications = ({ handleBell, datanotifications, setHandleBell }) => {
   const [stateModal, setStateModal] = useState(false);
   const [idSelected, setIdSelected] = useState("")
   const [notifications, setNotifications] = useState([]);
@@ -18,6 +18,7 @@ const DropDownNotifications = ({ handleBell, datanotifications }) => {
   const notiSelected = (event) => {
     setIdSelected(event)
     setStateModal(!stateModal)
+    setHandleBell(!handleBell)
   }
 
   return (
