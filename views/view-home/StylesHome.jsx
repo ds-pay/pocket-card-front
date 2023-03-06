@@ -115,8 +115,9 @@ export const BodyHeader = styled.div`
 				}
 			}
     }
-  @media(max-width: 500px) {
+  @media(max-width: 825px) {
     width: 100%;
+    padding: 1rem 1rem;
   }
 `;
 
@@ -153,20 +154,22 @@ export const BodyHead = styled.div`
     p{
       text-align: center;
       font-weight: 500;
-      padding: 1rem 2rem 2rem 2rem;
+      padding: 1rem 2rem;
 			color: var(--nextui-colors-backgroundNavbar);			
-      @media(max-width: 1336px){
-        font-size: 1rem;
-        text-align: justify;
-      }
-      @media(max-width: 450px){
-        font-size: 0.8rem;
-        text-align: justify;
-      }
     }
-  @media(max-width: 500px) {
-    width: 100%;
-  }
+    @media(max-width: 825px) {
+      width: 100%;
+      padding: 0 0.5rem;
+      p{
+        padding: 1rem 1rem;
+        text-align: justify;
+        @media(max-width: 450px){
+          font-size: 0.8rem;
+          text-align: justify;
+        }
+      }
+
+    }
 `;
 
 export const ActivationCard = styled.div`
@@ -204,6 +207,7 @@ export const ActivationCard = styled.div`
     }
   @media(max-width: 500px) {
     width: 100%;
+    padding: 1rem 0.5rem;
   }
 `;
 
@@ -211,7 +215,6 @@ export const ContainerCard = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 3rem;
     color: var(--nextui-colors-colorTextOrdinary);
     width: 100%;
     height: 20rem;
@@ -242,10 +245,10 @@ export const Card = styled.div`
         margin: 1rem;
     }
     .img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
         height: 8rem;
         border-radius: 50rem;
         object-fit: cover;
@@ -253,8 +256,8 @@ export const Card = styled.div`
             width: 7rem;
             height: 7rem;
         }
-    }
-    .numberindex{
+      }
+      .numberindex{
         position: absolute;
         display: flex;
         justify-content: center;
@@ -267,11 +270,16 @@ export const Card = styled.div`
         background-color: #21c69b;
         border: 5px solid var(--nextui-colors-backgroundForm);
         border-radius: 50rem;
-    }
-    h3{
+        @media(max-width: 1336px){
+          width: 4rem;
+          height: 4rem;
+          left: -2rem;
+        }
+      }
+      h3{
         margin: 0;
-    }
-
+      }
+      
     p{
         text-align: center;
         padding: 0 1rem;

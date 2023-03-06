@@ -13,6 +13,7 @@ export const ContainerGeneral = styled.div`
 `;
 
 export const ContentNews = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap:wrap ;
@@ -25,6 +26,13 @@ export const ContentNews = styled.div`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  .title-notice{
+    margin: 2rem 0 0 0;
+  }
+  .container-buttonback{
+    position: absolute;
+    left: 1rem;
+  }
   .container-text{
     display: flex;
     justify-content: space-evenly;

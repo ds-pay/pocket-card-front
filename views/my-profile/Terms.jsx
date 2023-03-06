@@ -6,6 +6,11 @@ const Terms = ({ dataTerms }) => {
   const [selectedTerms, setSelectedTerms] = useState(false);
   const [selectedProtection, setSelectedProtection] = useState(false);
 
+  const handleClick = (state, setstate, changeState, setChangeState) =>{
+    setstate(!state)
+    setChangeState(!changeState)
+  }
+
   const Conditions = (terms) => {
     return (
       <HeaderTerms onClick={() => setSelectedTerms(!selectedTerms)} isSelected={selectedTerms}>

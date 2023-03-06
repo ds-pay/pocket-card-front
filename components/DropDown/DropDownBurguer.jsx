@@ -7,11 +7,12 @@ import { VscSignOut } from "react-icons/vsc";
 import { IoIosRibbon } from "react-icons/io";
 import { useRouter } from "next/router";
 
-const DropDown = ({ handleBurguer }) => {
+const DropDown = ({ handleBurguer, setHandleBurguer }) => {
   const router = useRouter()
 
   const handleRouter = (href) => {
     router.push(`/${href}`)
+    setHandleBurguer(!handleBurguer)
   }
 
   const SeccionConfig = [
@@ -19,7 +20,7 @@ const DropDown = ({ handleBurguer }) => {
       id: "profile",
       icon: <HiUser />,
       description: "Mi perfil",
-      href: "/"
+      href: "/my-profile"
     },
     {
       id: "bonus",
@@ -41,10 +42,10 @@ const DropDown = ({ handleBurguer }) => {
       href: "/"
     },
   ];
+
   // const render = () => {
   //   if (!handleBurguer) return;
   //   return (
-
   //   );
   // };
 

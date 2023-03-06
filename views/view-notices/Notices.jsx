@@ -7,6 +7,7 @@ const Notices = ({ data }) => {
   const router = useRouter()
   const handleRouter = (newId) => {
     router.push(`/news/${newId}`)
+    console.log(newId)
   }
 
   return (

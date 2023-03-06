@@ -241,12 +241,19 @@ export const CardDate = styled.div`
     }
   }
   @media(max-width: 1024px){
+    padding: 0 0.5rem;
     .title{
       width: 100%;
+      h2{
+        font-size: 1rem;
+      }
     }
     .content{
-      width: 100%;
+      width: 70%;
       text-align: right;
+      h2{
+        font-size: 0.9rem;
+      }
     }
   }
 `;
@@ -321,6 +328,13 @@ export const SectionProfile = styled.div`
       }
     }
   }
+  @media(max-width: 485px){
+    .section-selected{
+      h3{
+        font-size: 0.9rem;
+      }
+    }
+  }
 `;
 
 export const BackGroundTarjet = styled.div`
@@ -329,6 +343,7 @@ export const BackGroundTarjet = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 0 1.5rem 0;
+  padding: 0 1rem;
   .container{
     position: relative;
     display: flex;
@@ -350,6 +365,34 @@ export const BackGroundTarjet = styled.div`
         h2{
           font-size: 1.5rem;
         }
+        h3{
+          font-size: 1.5rem;
+        }
+        @media(max-width: 525px){
+          h1{
+            font-size: 1.3rem;
+          }
+          h2{
+            font-size: 1.2rem;
+          }
+          h3{
+            font-size: 1.2rem;
+          }
+        }
+        @media(max-width: 415px){
+          h1{
+            font-size: 1rem;
+          }
+          h2{
+            font-size: 0.8rem;
+          }
+          h3{
+            font-size: 0.8rem;
+          }
+        }
+      }
+      @media(max-width: 525px){
+        padding: 0 1rem;
       }
     }
   }
@@ -447,6 +490,11 @@ export const HeaderTerms = styled.div`
     :hover{
       cursor: pointer;
     }
+    @media(max-width: 485px){
+      h2{
+        font-size: 1rem;
+      }
+    }
   };
   .container-content{
     transition: 0.5s all ease;
@@ -477,6 +525,14 @@ export const HeaderTerms = styled.div`
     ::-webkit-scrollbar-thumb{
       background-color: #e2e2e2ea;
       border-radius: 1rem;
+    }
+    @media(max-width: 485px){
+      h2{
+        font-size: 1rem;
+      }
+      p{
+        font-size: 0.9rem;
+      }
     }
   }
 `;

@@ -19,7 +19,7 @@ const Credentials = ({ data }) => {
         <>
           <BackGroundTarjet>
             <div className="container">
-              <img src="/img/image/tarjetgold/pocket_dorada.png" alt="" />
+              <img src="/img/image/tarjetgold/pocket_dorada.png" alt="card" />
               <div className="container-text">
                 <div className="text-left">
                   <h1>{sec.name} {sec.lastname}</h1>

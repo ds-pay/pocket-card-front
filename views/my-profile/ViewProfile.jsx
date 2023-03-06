@@ -72,17 +72,17 @@ const MyProfile = ({ data, dataTerms }) => {
   const profileSection = [
     {
       id: "14325",
-      label: "Mi Perfil",
+      label: "Perfil",
       content: <Profile data={data} />
     },
     {
       id: "23454",
-      label: "Mis Credenciales",
+      label: "Credenciales",
       content: <Credentials data={data} />
     },
     {
       id: "3546",
-      label: "Mis Favoritos",
+      label: "Favoritos",
       content: <Favorites data={data}/>
     },
     {
