@@ -118,7 +118,7 @@ export const ButtonUrl = styled.div `
     margin:  0.5rem 2rem;
     padding: 0 0.5rem;
     width: 15rem;
-    height: 4rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -129,7 +129,7 @@ export const ButtonUrl = styled.div `
     box-shadow: 0px 5px 5px 0px rgba(149, 149, 149, 0.591);
     transition: all ease 0.3s;
     h2{
-      font-size: 3rem;
+      font-size: 2.4rem;
       margin: 0;
     }
     h3{
@@ -187,6 +187,13 @@ export const ButtonUrl = styled.div `
 
 export const ContentBottom = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 2rem;
+  @media(max-width: 740px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const ContainerApp = styled.div`
@@ -211,4 +218,58 @@ export const ContainerApp = styled.div`
       display: none;
     }
   } 
+`;
+
+export const TitleText = styled.div`
+  .title{
+    display: flex;
+    transition: 0.3s all ease;
+    color: #ffffff;
+    h2{
+      font-size: 1.4rem;
+      margin: 0 0.2rem;
+    }
+    :hover{
+      color: #b4b4b4;
+      cursor: pointer;
+    }
+    .arrow{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s all ease;
+      transform: ${({ isId }) => isId ? "rotate(180deg)" : null };
+      @media(max-width: 740px){
+        flex-direction: column;
+        display: flex;
+      }
+    }
+  }
+  .sub-labels{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+    padding: 0 1rem 0rem 2rem;
+    height: 6rem;
+    justify-content: space-around;
+    overflow: hidden;
+    h2{
+      color: #b4b4b4;
+      transition: 0.3s all ease;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      font-size: 1rem;
+      :hover{
+        color: white;
+        cursor: pointer;
+      }
+    }
+    @media(max-width: 740px){
+      height: 0;
+    }
+  }
+  @media(max-width: 740px){
+    flex-direction: column;
+  }
 `;

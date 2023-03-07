@@ -1,16 +1,24 @@
-import React from 'react'
-import { ContainerFooter, RedSocial, ContentSocial, ButtonUrl, ContentBottom, ContainerApp } from './StylesFooter';
+import { useState } from 'react'
+import { ContainerFooter, RedSocial, ContentSocial, ButtonUrl, ContentBottom, ContainerApp, TitleText } from './StylesFooter';
 import { FaHeadset, FaNewspaper } from 'react-icons/fa';
 import { BsFillQuestionCircleFill } from 'react-icons/bs';
 import { useRouter } from 'next/router';
-import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp, AiFillAndroid, AiFillApple } from 'react-icons/ai'
-import { FcHeadset, FcNews, FcInfo } from 'react-icons/fc'
-
+import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp, AiFillAndroid, AiFillApple } from 'react-icons/ai';
+import { FcHeadset, FcNews, FcInfo } from 'react-icons/fc';
+import { TiArrowSortedDown } from 'react-icons/ti';
 
 const Footer = () => {
+	const [open, setOpen] = useState(false);
+	const [is, setIs] = useState("")
+
 	const router = useRouter();
 	const handleRouter = (route) => {
 		router.push(route)
+	}
+
+	const handleClick = (id) => {
+		setOpen(!open);
+		setIs(id)
 	}
 
 	const arrayIconRedSocial = [
@@ -44,7 +52,7 @@ const Footer = () => {
 			label: "Decarga para IOS",
 			url: "",
 		},
-	]
+	];
 
 	const ArrayItems = [
 		{
@@ -73,20 +81,90 @@ const Footer = () => {
 		}
 	];
 
+	const arrayText = [
+		{
+			id: "",
+			title: "¿Necesitas ayuda?",
+			icon: <FaHeadset />,
+			content: [
+				{
+					label: "Envianos un Email"
+				},
+				{
+					label: "Proporciona tu nº Movil"
+				},
+				{
+					label: "Contactanos por Whatsapp"
+				},
+			],
+			route: "/contactus"
+		},
+		{
+			id: "",
+			title: "Noticias Pocket",
+			icon: <FaNewspaper />,
+			content: [
+				{
+					label: "Nuevos Convenios"
+				},
+				{
+					label: "Convenios Destacados"
+				},
+				{
+					label: "Informacion de covenios"
+				},
+			],
+			route: "/news"
+		},
+		{
+			id: "",
+			title: "Resuelve tus Dudas",
+			icon: <BsFillQuestionCircleFill />,
+			content: [
+				{
+					label: "Quienes Somos"
+				},
+				{
+					label: "Preguntas Frecuentes"
+				},
+				{
+					label: "Que promocionamos"
+				},
+			],
+			route: "/questions"
+		},
+	]
+
 	return (
 		<ContainerFooter>
 			<ContentBottom>
-				<ButtonUrl>
+				{/* <ButtonUrl>
 					{ArrayItems.map((sec, index) => (
-						<div key={index} onClick={() => handleRouter(sec.route)} className={sec.className}>
+						<div key={index} onClick={() => handleRouter(sec.route)} className={sec.className}> */}
 							{/* <h1>{sec.label}</h1> */}
 							{/* <button > */}
-							<h2>{sec.icon}</h2>
-							<h3><strong>{sec.labelbutton}</strong></h3>
+							{/* <h2>{sec.icon}</h2>
+							<h3><strong>{sec.labelbutton}</strong></h3> */}
 							{/* </button> */}
-						</div>
+						{/* </div>
 					))}
-				</ButtonUrl>
+				</ButtonUrl> */}
+				{
+					arrayText.map((sec, index) => (
+						<TitleText isId={is === sec.id} key={index}>
+							<div className='title' >
+								<h2>{sec.icon}</h2>
+								<h2 onClick={() => handleClick(sec.id)}><strong>{sec.title}</strong></h2>
+								<h2 className='arrow'><TiArrowSortedDown/></h2>
+							</div>
+							<div className='sub-labels' onClick={() => handleRouter(sec.route)}>
+								{sec.content.map((text) => (
+									<h2>{text.label}</h2>
+								))}
+							</div>
+						</TitleText>
+					))
+				}
 			</ContentBottom>
 				<div className='divFooterSecundary'> <h1>Pocket Card - Todos los derechos reservados © {new Date().getFullYear()}</h1></div>
 			<ContentSocial>
