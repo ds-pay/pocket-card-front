@@ -67,7 +67,6 @@ const SliderMultiControl = ({ array, timeSecond }) => {
     <ContainerSlider>
       <Slider style={{transform: `translateX(${-currentSlide * 20}%)`}}>
         {array.map((sec, index) => (
-          <>
             <BoxNumber key={index}>
               <div className="background"></div>
               <Details>
@@ -79,7 +78,6 @@ const SliderMultiControl = ({ array, timeSecond }) => {
                 <img src={sec.img} alt="" />
               </ContainImg>
             </BoxNumber>
-          </>
         ))}
       </Slider>
       {viewTrail()}

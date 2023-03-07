@@ -11,15 +11,11 @@ const Notice = ({ data, clickBack }) => {
 
   return (
     <ContainerGeneral>
-      <BodyHeader >
-        <div className='container-butonback'>
-          <ButtonIcon icon={<IoMdArrowRoundBack />} text={"Regrasar"} func={clickBack} />
-        </div>
-        <div className="container-title2">
-          <h2><strong>{data.label}</strong></h2>
-        </div>
-      </BodyHeader>
       <ContentNews>
+        <div className='container-buttonback'>
+          <ButtonIcon icon={<IoMdArrowRoundBack/>} text={"Regresar"} func={clickBack}/>
+        </div>
+        <h2 className='title-notice'><strong>{data.label}</strong></h2>
         <div className='container-text'>
           <div className="container-img">
             <img src={data.img} alt={data.id} />

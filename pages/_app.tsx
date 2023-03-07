@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const observer = new MutationObserver((mutation) => {
       let newTheme = getDocumentTheme(document.documentElement);
-      setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light');
+      // setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light');
     });
 
     observer.observe(document.documentElement, {
@@ -32,12 +32,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
         <Navbar />
-        <Component {...pageProps} />
+          <Component {...pageProps} />
         <Footer/>
       </NextUIProvider>
     </>
-
   )
 };
-
 export default MyApp;

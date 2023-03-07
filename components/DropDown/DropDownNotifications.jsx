@@ -1,62 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosRocket } from "react-icons/io";
 import { ContianerNotifications, SeccionNotifications, ContentModal } from "./StyleDropDown";
 import Modal from "../Modal/ModalReusable";
 
-const DropDownNotifications = ({ handleBell }) => {
+const DropDownNotifications = ({ handleBell, datanotifications, setHandleBell }) => {
   const [stateModal, setStateModal] = useState(false);
   const [idSelected, setIdSelected] = useState("")
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/api/notifications")
+      .then((response) => response.json())
+      .then((data) => setNotifications(data.notifications))
+      .catch((error) => console.error(error));
+  }, []);
 
   const notiSelected = (event) => {
     setIdSelected(event)
     setStateModal(!stateModal)
+    setHandleBell(!handleBell)
   }
-
-  const Notifications = [
-    {
-      id: "notificcaion-1",
-      title: "Promoción de Zapatos",
-      img: "/img/image/notifications/promocionzapatos.jpg",
-      alt: "promocionzapatos",
-      discount: "50%",
-      label: "50",
-      time: "Hace 13 dias",
-      conditions: "terminos y condiciones",
-      rocket: <IoIosRocket />,
-      issue: "Vence: 12/12/2022",
-      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
-    },
-    {
-      id: "notificcaion-2",
-      title: "Promoción de Colchones",
-      img: "/img/image/notifications/promocionColchones.jpg",
-      alt: "promocionColchones",
-      discount: "20%",
-      label: "20%",
-      time: "Hace un mes",
-      conditions: "terminos y condiciones",
-      rocket: <IoIosRocket />,
-      issue: "Vence: 12/12/2022",
-      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
-    },
-    {
-      id: "notificcaion-3",
-      title: "Promoción de ropa KOAJ",
-      img: "/img/image/notifications/promocionKoaj.jpg",
-      alt: "promocionKoaj",
-      discount: "15%",
-      label: "15%",
-      time: "Hace un año",
-      conditions: "terminos y condiciones",
-      rocket: <IoIosRocket />,
-      issue: "Vence: 12/12/2022",
-      paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus non reiciendis corporis voluptatum laudantium tempore, cum dolor atque quidem repellat minima rerum, aspernatur velit ullam sunt? Doloribus, tenetur accusamus."
-    },
-  ];
 
   return (
     <ContianerNotifications handleBell={handleBell}>
-      {Notifications.map((sec, index) => (
+      {notifications?.map((sec, index) => (
         <SeccionNotifications
           onClick={() => notiSelected(sec.id)}
           handleBell={handleBell}
@@ -71,7 +38,7 @@ const DropDownNotifications = ({ handleBell }) => {
             <p>{sec.conditions}</p>
             <div className="ContainerTime">
               <div>
-                {sec.rocket}
+                <IoIosRocket/>
                 <p>{sec.time}</p>
               </div>
               <div>
@@ -82,7 +49,7 @@ const DropDownNotifications = ({ handleBell }) => {
         </SeccionNotifications>
       ))}
 
-      {Notifications.map((sec, index) => (
+      {notifications?.map((sec, index) => (
         <div key={index}>
           {sec.id == idSelected ? (
             <Modal stateModal={stateModal} setStateModal={setStateModal}>

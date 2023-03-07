@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon'
-import { ContainerGeneral, BodyHeader, MediumBody, CardCategory } from './StyleCategory'
-import { BiArrowBack } from 'react-icons/bi'
-import { AiFillHeart } from 'react-icons/ai'
-import { useRouter } from 'next/router'
+import { useState } from 'react';
+import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
+import { ContainerGeneral, BodyHeader, MediumBody, CardCategory } from './StyleCategory';
+import { BiArrowBack } from 'react-icons/bi';
+import { AiFillHeart } from 'react-icons/ai';
+import { useRouter } from 'next/router';
+import CardZoom from '../../components/Cards/CardZoom/CardZoom';
 
 const Category = ({ data, clickAction }) => {
   const { category, agreements } = data;
@@ -33,7 +34,8 @@ const Category = ({ data, clickAction }) => {
       </BodyHeader>
 
       <MediumBody>
-        {
+        <CardZoom icon={<AiFillHeart/>} data={agreementsCategory}/>
+        {/* {
           agreementsCategory?.map((sec, index) => (
             <CardCategory key={index} onClick={() => handleViewAgreement(sec.id)}>
               <div className='container-icon'>
@@ -48,12 +50,12 @@ const Category = ({ data, clickAction }) => {
                   <div><h3>{sec.percent}</h3></div>
                 </div>
               </div>
-              {/* <div className='container-button'>
+              <div className='container-button'>
                 <ButtonIcon func={() => handleViewCategory(sec.id)} text={"More"} />
-              </div> */}
+              </div>
             </CardCategory>
           ))
-        }
+        } */}
       </MediumBody>
     </ContainerGeneral>
   )

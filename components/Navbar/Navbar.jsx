@@ -14,7 +14,7 @@ import SeccionMedium from './SeccionMedium'
 import SeccionRight from './SeccionRight'
 
 
-const Navbar = ({  }) => {
+const Navbar = () => {
 
   // const [ handleTheme, setHandleTheme ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false);
@@ -56,7 +56,7 @@ const Navbar = ({  }) => {
       state: true,
       id: "user",
       icon: <HiUser />,
-      href: '/login'
+      href: '/my-profile'
     },
   ];
 
@@ -78,7 +78,7 @@ const Navbar = ({  }) => {
     {
       state: true,
       id: "img",
-      icon1: <img className="imgUser" src="/img/image/289103911_2199402636883740_4251348543198983925_n.jpg" alt="" />
+      icon1: <img className="imgUser" src="/img/image/gatodenegocios.jpeg" alt="" />
     },
     {
       state: false,
@@ -105,5 +105,19 @@ const Navbar = ({  }) => {
     </ContainerNav>
   );
 };
+
+
+export async function getStaticProps() {
+  const url = `${process.env.API_LOCAL}/api/notifications`;
+  const res = await fetch(url);
+  const json = await res.json();
+  console.log(json.notifications)
+
+  return {
+    props: {
+      notifications: json.notifications
+    }
+  }
+}
 
 export default Navbar;
