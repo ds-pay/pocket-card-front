@@ -57,8 +57,7 @@ export const Header = styled.div`
       color: var(--nextui-colors-backgroundForm);
       font-size: 3rem;
       text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      filter: drop-shadow( 0px 0px 10px #000000)
+      filter: drop-shadow( 0px 0px 10px #b2b2b2)
     }
     @media (max-width: 800px) {
       align-items: flex-end;

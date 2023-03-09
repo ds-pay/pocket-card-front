@@ -225,7 +225,7 @@ export const CardDate = styled.div`
     width: 30%;
     display: flex;
     h2{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin: 0 1rem;
       color: #2d2d2d;
       margin: 0;
@@ -312,7 +312,7 @@ export const SectionProfile = styled.div`
     align-items: center;
     h3{
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
   };
@@ -324,14 +324,14 @@ export const SectionProfile = styled.div`
   @media(max-width: 1024px){
     .section-selected{
       h3{
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
   }
   @media(max-width: 485px){
     .section-selected{
       h3{
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
     }
   }
@@ -484,7 +484,7 @@ export const HeaderTerms = styled.div`
       }
     };
     h2{
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       margin: 0;
     };
     :hover{
@@ -492,7 +492,7 @@ export const HeaderTerms = styled.div`
     }
     @media(max-width: 485px){
       h2{
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
   };
@@ -511,10 +511,10 @@ export const HeaderTerms = styled.div`
     h2{
       margin: 1rem 0 0 0 ;
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     p{
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       margin-bottom:0.8rem ;
       text-align: justify;
@@ -528,10 +528,10 @@ export const HeaderTerms = styled.div`
     }
     @media(max-width: 485px){
       h2{
-        font-size: 1rem;
+        font-size: 0.89rem;
       }
       p{
-        font-size: 0.9rem;
+        font-size: 0.79rem;
       }
     }
   }

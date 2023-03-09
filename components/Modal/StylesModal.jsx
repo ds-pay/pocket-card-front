@@ -14,6 +14,9 @@ export const Overlay = styled.div`
     display: flex;
     justify-content: ${({modalPositionX}) => modalPositionX ? modalPositionX : 'center'} ;
     align-items: ${({modalPositionY}) => modalPositionY ? modalPositionY : 'center' };
+    @media(max-width: 1336px){
+        padding: 1.5rem;
+    }
 `;
 
 export const ModalContainer = styled.div`
@@ -27,6 +30,9 @@ export const ModalContainer = styled.div`
     display: flex;
     justify-content: center;
     transition: 0.5s all ease;
+    @media(max-width: 1336px){
+        width: 100vh;
+    }
 `;
 
 export const ModalHeader = styled.div`
