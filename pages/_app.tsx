@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar/Navbar';
 import { darkTheme, lightTheme } from '../context/themes'
 import { useEffect, useState } from 'react'
 import Footer from '../components/Footer/Footer';
+import LayoutPrincipal from '../components/LayoutPrincipal/LayoutPrincipal';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -31,9 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextUIProvider theme={ isDark ? darkTheme : lightTheme }>
-        <Navbar />
+        <LayoutPrincipal>
           <Component {...pageProps} />
-        <Footer/>
+        </LayoutPrincipal>
       </NextUIProvider>
     </>
   )

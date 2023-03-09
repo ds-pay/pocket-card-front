@@ -35,12 +35,12 @@ export const CardGeneral = styled.div`
     h4{
       font-size: 2rem;
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--nextui-colors-backgroundNavbar);
     }
     h2{
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--nextui-colors-backgroundNavbar);
       font-weight: 500;
       margin: 0 0.3rem;
@@ -48,7 +48,7 @@ export const CardGeneral = styled.div`
       transition: 0.5s all ease;
     }
     :hover{
-      width: 9.3rem;
+      width: 8rem;
       h2{
         opacity: 1;
       }
@@ -97,6 +97,9 @@ export const CardGeneral = styled.div`
         font-weight: 700;
         color: var(--nextui-colors-backgroundNavbar);
       }
+      h2{
+        font-size: 1.2rem;
+      }
     }
     .container-content{
       display: flex;
@@ -104,7 +107,7 @@ export const CardGeneral = styled.div`
       padding: 0 2rem;
       h3{
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: var(--nextui-colors-backgroundNavbar);
       }

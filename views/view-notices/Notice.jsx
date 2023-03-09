@@ -3,6 +3,7 @@ import { ContainerGeneral, BodyHeader, ContentNews, ContentLinks, LinkUrl } from
 import { IoMdArrowRoundBack } from 'react-icons/io'
 import { useRouter } from 'next/router';
 import { BiLinkAlt } from 'react-icons/bi'
+import Head from 'next/head';
 const Notice = ({ data, clickBack }) => {
   const router = useRouter()
   const handleRouter = (urlLink) => {
@@ -11,6 +12,9 @@ const Notice = ({ data, clickBack }) => {
 
   return (
     <ContainerGeneral>
+      <Head>
+        <title>{data.label}</title>
+      </Head>
       <ContentNews>
         <div className='container-buttonback'>
           <ButtonIcon icon={<IoMdArrowRoundBack/>} text={"Regresar"} func={clickBack}/>

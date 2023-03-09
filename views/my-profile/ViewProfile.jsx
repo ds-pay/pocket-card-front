@@ -16,7 +16,7 @@ import Terms from './Terms';
 
 const MyProfile = ({ data, dataTerms }) => {
 
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("14325")
 
   const contentMenu = [
     {

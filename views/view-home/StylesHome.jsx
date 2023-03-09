@@ -186,28 +186,26 @@ export const ActivationCard = styled.div`
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-    @media(max-width: 1336px){
-        height: 52rem;
-        justify-content: flex-start;
-        h2{
-            text-align: center;
-        }
-    }
-    @media(max-width: 800px){
-        height: 99rem;
-        justify-content: flex-start;
-        h2{
-            text-align: center;
-        }
-    }
+  h2{
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    color: var(--nextui-colors-backgroundNavbar);	
+  }
+  @media(max-width: 1336px){
+    height: 52rem;
+    justify-content: flex-start;
+    padding: 1rem;
     h2{
-      margin: 0.5rem 0;
-      font-size: 2rem;
-      color: var(--nextui-colors-backgroundNavbar);	
+      text-align: center;
+      font-size: 1.5rem;
     }
-  @media(max-width: 500px) {
-    width: 100%;
-    padding: 1rem 0.5rem;
+  }
+  @media(max-width: 800px){
+    height: 99rem;
+    justify-content: flex-start;
+    h2{
+      text-align: center;
+    }
   }
 `;
 

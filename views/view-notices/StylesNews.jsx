@@ -27,7 +27,11 @@ export const ContentNews = styled.div`
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
   .title-notice{
-    margin: 2rem 0 0 0;
+    margin: 2.5rem 0 0 0;
+    @media(max-width: 1336px){
+      font-size: 1.8rem;
+      color: var(--nextui-colors-backgroundNavbar);
+    }
   }
   .container-buttonback{
     position: absolute;
@@ -68,9 +72,19 @@ export const ContentNews = styled.div`
         text-align: justify;
         font-weight: 600;
       }
+      @media(max-width: 1336px){
+        h2{
+          font-size: 1.5rem;
+        }
+      }
       .container-links{
         margin: 1rem 0;
         width: 100%;
+        @media(max-width: 1336px){
+          h2{
+            font-size: 1.5rem;
+          }
+        }
       }
     }
     @media (max-width: 1024px){

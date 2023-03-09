@@ -20,18 +20,28 @@ export const ContainerGeneral = styled.div`
     font-size: 2rem;
     color: var(--nextui-colors-backgroundNavbar);	
   }
+
   .containerslider{
     overflow: hidden;
     display: flex;
-    width: 80%;
+    width: 92%;
     margin: 1rem 0;
     z-index: 1;
+    @media(max-width: 830px){
+      width: 83%;
+    }
+  }
+  @media(max-width: 1336px){
+    h2{
+      font-size: 1.5rem;
+    }
   }
 `;
 
 export const ContainerCardsSlider = styled.div`
   display: flex;
   transition: 0.5s;
+  
 `;
 
 export const Arrows = styled.div`
@@ -45,7 +55,7 @@ export const Arrows = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
+    width: 4rem;
     height: 100%;
     font-size: 3rem;
     background-color: #ffffff5a;
@@ -74,10 +84,14 @@ export const Content = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+    a{
+      margin: 0.2rem;
+    }
   }
 
   h1{
-    font-size: 42px;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
     margin: 0;
