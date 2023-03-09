@@ -19,7 +19,6 @@ const Footer = () => {
 	const handleClick = (id) => {
 		setOpen(!open);
 		setIs(id)
-		console.log(open)
 	}
 
 	const arrayIconRedSocial = [
@@ -152,7 +151,7 @@ const Footer = () => {
 				</ButtonUrl> */}
 				{
 					arrayText.map((sec, index) => (
-						<TitleText isId={is === sec.id ? true : false} key={index}>
+						<TitleText isId={is === sec.id && open ? true : false} key={index}>
 							<div className='title' >
 								<h2>{sec.icon}</h2>
 								<h2 onClick={() => handleClick(sec.id)} ><strong>{sec.title}</strong></h2>
