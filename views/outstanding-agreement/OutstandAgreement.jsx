@@ -22,24 +22,7 @@ const OutstandAgreement = ({data}) => {
   const Next = () => {
     const index = currentSlide < data.length - 1 ? currentSlide + 1 : 0
     setCurrentSLide(index)
-    // if( slidershow.current.children.length > 0){
 
-    //   const primerElemento = slidershow.current.children[0];
-
-    //   slidershow.current.style.transition = `700ms ease-out all`;
-      
-    //   const tamañoSlide = slidershow.current.children[0].offsetWidth;
-
-    //   slidershow.current.style.transform = `translateX(-${tamañoSlide * 1.1}px)`;
-
-    //   const transicion = () => {
-    //     slidershow.current.style.transition = 'none';
-    //     slidershow.current.style.transform = `translateX(0)`;
-    //     slidershow.current.appendChild(primerElemento);
-    //   }
-
-    //   slidershow.current.addEventListener('transitionend', transicion)
-    // };
   };
 
   const arrayRedSocial = [
@@ -53,7 +36,7 @@ const OutstandAgreement = ({data}) => {
       id: "25564356",
       icon: <BsWhatsapp/>,
       label: "WHATSAPP",
-      href: "https://api.whatsapp.com/send?text=holiscomoestas",
+      href: "https://api.whatsapp.com/send?",
     },
     {
       id: "3657657",
@@ -83,13 +66,13 @@ const OutstandAgreement = ({data}) => {
     );
   };
 
-  // useEffect(() => {
-  //   const sliderInterval = setInterval(() => {
-  //     setCurrentSLide(currentSlide => currentSlide < data.length - 1 ? currentSlide + 1 : 0)
-  //   }, 4000)
+  useEffect(() => {
+    const sliderInterval = setInterval(() => {
+      setCurrentSLide(currentSlide => currentSlide < data.length - 1 ? currentSlide + 1 : 0)
+    }, 4000)
 
-  //   return () => clearInterval(sliderInterval)
-  // }, []);
+    return () => clearInterval(sliderInterval)
+  }, []);
 
   return (
     <ContainerGeneral>

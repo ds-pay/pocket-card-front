@@ -19,6 +19,7 @@ const Footer = () => {
 	const handleClick = (id) => {
 		setOpen(!open);
 		setIs(id)
+		console.log(open)
 	}
 
 	const arrayIconRedSocial = [
@@ -77,13 +78,13 @@ const Footer = () => {
 			label: "Resuelve tus dudas",
 			icon: <FcInfo />,
 			labelbutton: "Preguntas Frecuentes",
-			route: "/questions"
+			route: "/questions",
 		}
 	];
 
 	const arrayText = [
 		{
-			id: "",
+			id: "13423",
 			title: "¿Necesitas ayuda?",
 			icon: <FaHeadset />,
 			content: [
@@ -100,7 +101,7 @@ const Footer = () => {
 			route: "/contactus"
 		},
 		{
-			id: "",
+			id: "2143",
 			title: "Noticias Pocket",
 			icon: <FaNewspaper />,
 			content: [
@@ -117,7 +118,7 @@ const Footer = () => {
 			route: "/news"
 		},
 		{
-			id: "",
+			id: "34324",
 			title: "Resuelve tus Dudas",
 			icon: <BsFillQuestionCircleFill />,
 			content: [
@@ -151,15 +152,15 @@ const Footer = () => {
 				</ButtonUrl> */}
 				{
 					arrayText.map((sec, index) => (
-						<TitleText isId={is === sec.id} key={index}>
+						<TitleText isId={is === sec.id ? true : false} key={index}>
 							<div className='title' >
 								<h2>{sec.icon}</h2>
-								<h2 onClick={() => handleClick(sec.id)}><strong>{sec.title}</strong></h2>
-								<h2 className='arrow'><TiArrowSortedDown/></h2>
+								<h2 onClick={() => handleClick(sec.id)} ><strong>{sec.title}</strong></h2>
+								<h2 className='arrow'><TiArrowSortedDown /></h2>
 							</div>
 							<div className='sub-labels' onClick={() => handleRouter(sec.route)}>
-								{sec.content.map((text) => (
-									<h2>{text.label}</h2>
+								{sec.content.map((text, index) => (
+									<h2 key={index}>{text.label}</h2>
 								))}
 							</div>
 						</TitleText>

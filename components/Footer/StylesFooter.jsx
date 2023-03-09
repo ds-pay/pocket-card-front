@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
 
-export const ContainerFooter = styled.div`
+export const ContainerFooter = styled.footer`
+  margin-top:3rem ;
   display: flex;
   z-index: 100;
   width: 100%;
+  height: 21rem;
   padding: 2rem 0 0.5rem 0;
   transition: 0.3s;
   /* background: linear-gradient(180deg, var(--nextui-colors-backgroundNavbar) , var(--nextui-colors-backGradiente2) ); */
@@ -221,6 +223,8 @@ export const ContainerApp = styled.div`
 `;
 
 export const TitleText = styled.div`
+  height: 100%;
+  margin: 0.5rem 0;
   .title{
     display: flex;
     transition: 0.3s all ease;
@@ -229,10 +233,11 @@ export const TitleText = styled.div`
       font-size: 1.4rem;
       margin: 0 0.2rem;
     }
-    :hover{
+    /* :hover{
       color: #b4b4b4;
       cursor: pointer;
-    }
+    } */
+
     .arrow{
       display: none;
       justify-content: center;
@@ -253,6 +258,7 @@ export const TitleText = styled.div`
     height: 6rem;
     justify-content: space-around;
     overflow: hidden;
+    transition: .3s all ease;
     h2{
       color: #b4b4b4;
       transition: 0.3s all ease;
@@ -266,7 +272,8 @@ export const TitleText = styled.div`
       }
     }
     @media(max-width: 740px){
-      height: 0;
+      transition: 0.3s all ease;
+      height: ${({ isId }) => isId ? "8rem" : "0" };
     }
   }
   @media(max-width: 740px){
