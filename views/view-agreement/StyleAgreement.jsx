@@ -14,7 +14,7 @@ export const ContainerGeneral = styled.div`
     height: 35rem;
     
     h1{
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
     }
   }
 `;
@@ -54,7 +54,7 @@ export const Header = styled.div`
     background: linear-gradient(80deg, rgba(12, 12, 12, 0.616), rgba(0,255,0,0) 70.71%),      
                 linear-gradient(336deg, rgba(255, 255, 255, 0.075), rgba(0,0,255,0) 70.71%);
     h1{
-      color: var(--nextui-colors-backgroundForm);
+      color: var(--backgroundForm);
       font-size: 3rem;
       text-align: center;
       filter: drop-shadow( 0px 0px 10px #b2b2b2)
@@ -95,7 +95,7 @@ export const Body = styled.div`
     background-color: #000000;
     margin: 2rem 0rem;
     border-radius: 1rem;
-    background-color: var(--nextui-colors-backgroundForm);
+    background-color: var(--backgroundForm);
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -103,7 +103,7 @@ export const Body = styled.div`
       margin: 0;
       font-weight: 700;
       text-align: center;
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
       @media (max-width: 800px) {
         font-size: 1.2rem;
       }
@@ -118,7 +118,7 @@ export const Body = styled.div`
     height: 100%;
     padding: 0 2rem;
     margin: 2rem 1rem;
-    background-color: var(--nextui-colors-backgroundForm);
+    background-color: var(--backgroundForm);
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -126,7 +126,7 @@ export const Body = styled.div`
     h1{
       font-size: 2rem;
       margin: 0;
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
       @media (max-width: 800px){
         font-size: 1.5rem;
         text-align: center;
@@ -151,7 +151,7 @@ export const Discount = styled.div`
     justify-content: space-between;
     align-items: center;
     h3{
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
       font-size: 800;
     }
     .text-discount{
@@ -182,7 +182,7 @@ export const Conditions = styled.div`
   align-items: center;
   margin: 1rem 0;
   h3{
-    color: var(--nextui-colors-backgroundNavbar);
+    color: var(--backgroundNavbar);
     font-size: 700;
   }
   .text-condition{
@@ -211,7 +211,7 @@ export const Coverage = styled.div`
   align-items: center;
   margin: 1rem 0;
   h3{
-    color: var(--nextui-colors-backgroundNavbar);
+    color: var(--backgroundNavbar);
     font-size: 700;
   }
   .text-coverage{

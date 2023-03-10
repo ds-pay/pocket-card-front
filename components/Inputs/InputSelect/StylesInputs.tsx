@@ -4,7 +4,7 @@ import {ContainerDropProps} from './Interfaces'
 export const ContainerInput = styled.div<ContainerDropProps>`
   width: 100%;
   height: 3rem;
-  color: var(--nextui-colors-textFormColor);
+  color: var(--textFormColor);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,14 +12,14 @@ export const ContainerInput = styled.div<ContainerDropProps>`
   border: none;
   box-shadow: ${({ isActive }) =>
     isActive ? "0px 0px 4px 1px #638cfd" : "none"};
-  background-color: var(--nextui-colors-bgInputText);
+  background-color: var(--bgInputText);
   transition: all 0.5s;
   :hover {
     color: black;
     cursor: pointer;
   }
   @media (max-width: 1024px) {
-    background-color: var(--nextui-colors-backgroundForm);
+    background-color: var(--backgroundForm);
   }
   .input-content {
     width: 100%;
@@ -68,7 +68,7 @@ export const Container = styled.div<ContainerDropProps>`
   margin: 0.4rem;
   border-radius: 1rem;
   flex-direction: column;
-  color: var(--nextui-colors-textFormColor);
+  color: var(--textFormColor);
   background-color:  #d0d2d4;
   align-items: flex-start;
   transition: all 0.5s;

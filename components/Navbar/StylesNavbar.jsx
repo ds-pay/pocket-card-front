@@ -11,7 +11,7 @@ export const ContainerNav = styled.div`
   width: 100%;
   height: 3.2rem;
   z-index: 10;
-  background-color: var(--bgPrimary);
+  background-color: var(--backgroundNavbar);
   border-bottom: solid var(--bgIconPrimary) 1px;
 `;
 
@@ -86,6 +86,18 @@ export const ContainSeccionsViews = styled.div`
 export const ContainSeccionCtrls = styled.div`
   display: flex;
   transition: 0.3s all ease;
+  .rotate-icon{
+      animation-duration: 1s;
+      animation-name: rotateIcon;
+      @keyframes rotateIcon {
+      from {
+        transform: rotate(0Deg);
+      }
+      to {
+        transform: rotate(360Deg);
+      }
+    }
+  }
   /* @keyframes rotation {
     0%{
       transform: rotate(0deg);

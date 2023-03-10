@@ -36,7 +36,7 @@ export const ContainerInput = styled.div`
   .contain-input {
     width: 100%;
     border-radius: 0.3rem;
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -58,7 +58,7 @@ export const InputAdd = styled.div`
     width: 100%;
     border-radius: 0.3rem;
     background-color: ${({ isBackground }) =>
-      isBackground ? "var(--nextui-colors-bgInputText)" : null};
+      isBackground ? "var(--bgInputText)" : null};
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);

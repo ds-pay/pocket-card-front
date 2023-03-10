@@ -8,7 +8,7 @@ export const Content = styled.div`
         justify-content: center;
         align-items: center;
         margin: 1rem 0;
-        background-color: var(--nextui-colors-bgInputText);
+        background-color: var(--bgInputText);
         padding: 0.25rem 0.25rem 0 0.5rem;
         -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
         -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);

@@ -7,7 +7,7 @@ export const ContainerGeneral = styled.div`
   flex-direction: column;
   .inputtext {
     height: 100%;
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -22,7 +22,7 @@ export const ContainerGeneral = styled.div`
       font-size: 15px;
     }
     @media (max-width: 1024px) {
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
   }
 `;
@@ -45,7 +45,7 @@ export const DivLinks = styled.div`
 export const InputTextview = styled.input`
     height: 100%;
     height: 3rem;
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -60,6 +60,6 @@ export const InputTextview = styled.input`
       font-size: 15px;
     }
     @media (max-width: 1024px) {
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
 `;

@@ -15,14 +15,14 @@ export const ContainerLogin = styled.div`
   align-items: center;
   width: 50rem;
   height: 40rem;
-  background-color: var(--nextui-colors-bgCardLogin);
+  background-color: var(--bgCardLogin);
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
   -webkit-box-shadow: 0px 0px 5px 0px #666666;
   -moz-box-shadow: 0px 0px 5px 0px #666666;
   box-shadow: 0px 0px 5px 0px #666666;
   h1, h2, h3{
-    color: var(--nextui-colors-textColorCardAnimate);
+    color: var(--textColorCardAnimate);
   }  
 
   .container-title {
@@ -72,7 +72,7 @@ export const Login = styled.div`
         padding: 1rem;
         width: 3rem;
         height: 3rem;
-        background-color: var(--nextui-colors-bgIconPrimary);
+        background-color: var(--bgIconPrimary);
         border-radius: 0.2rem;
       }
     }
@@ -81,17 +81,17 @@ export const Login = styled.div`
     width: 70%;
     height: 2.3rem;
     h1{
-      color: var(--nextui-colors-textColorCardAnimate);
+      color: var(--textColorCardAnimate);
     } 
     input {
       width: 100%;
       height: 100%;
-      background-color: var(--nextui-colors-bgIconPrimary);
+      background-color: var(--bgIconPrimary);
       transition: 0.3s all ease;
       border: none;
       border-radius: 0.3rem;
       :hover {
-        background-color: var(--nextui-colors-bgThridGlass);
+        background-color: var(--bgThridGlass);
         cursor: pointer;
       }
     }
@@ -124,12 +124,12 @@ export const ContainerNetworks = styled.div`
       justify-content: center;
       align-items: center;
       margin: 0.5rem 1.3rem 0.5rem 1.3rem;
-      background-color: var(--nextui-colors-bgIconPrimary);
+      background-color: var(--bgIconPrimary);
       padding: 0.5rem;
       border-radius: 0.5rem;
       transition: 0.3s all ease;
       :hover {
-        background-color: var(--nextui-colors-bgThridGlass);
+        background-color: var(--bgThridGlass);
         cursor: pointer;
       }
     }

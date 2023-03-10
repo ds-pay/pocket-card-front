@@ -13,7 +13,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
         position: absolute;
         right: 0;
         cursor: pointer;
-        color: var(--nextui-colors-textFormColor);
+        color: var(--textFormColor);
     }
     .form{
         width: 100%;
@@ -24,7 +24,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             width: 100%;
             height: 100%;
             background: none;
-            color: var(--nextui-colors-textFormColor);
+            color: var(--textFormColor);
             padding-top: 20px;
             border: none;
             outline: 0px;
@@ -37,7 +37,7 @@ export const ContainInputText = styled.div<ContainTextProps>`
             width: 100%;
             height: 100%;
             pointer-events: none;
-            border-bottom: ${({ IsColor }) => IsColor ? "1px solid  var(--nextui-colors-textFormColor)" : "1px solid white"};
+            border-bottom: ${({ IsColor }) => IsColor ? "1px solid  var(--textFormColor)" : "1px solid white"};
         }
         .lbl-name:after{
             content: '';
@@ -46,8 +46,8 @@ export const ContainInputText = styled.div<ContainTextProps>`
             bottom: -1px;
             width: 100%;
             height: 100%;
-            border-bottom: ${({ IsColor }) => IsColor ? "3px solid  var(--nextui-colors-textFormColor)" : "1px solid #c7c7c7"};
-            border-bottom: 3px solid var(--nextui-colors-bgThridGlass);
+            border-bottom: ${({ IsColor }) => IsColor ? "3px solid  var(--textFormColor)" : "1px solid #c7c7c7"};
+            border-bottom: 3px solid var(--bgThridGlass);
             transform: translateX(-100%);
             transition: all 0.3s ease;
         }
@@ -57,12 +57,12 @@ export const ContainInputText = styled.div<ContainTextProps>`
             left: 0;
             transform: translateY(-30%);
             transition: all 0.3s ease;
-            color: ${({ IsColor }) => IsColor ? " var(--nextui-colors-textFormColor)" : " var(--nextui-colors-textFormColor)"};
+            color: ${({ IsColor }) => IsColor ? " var(--textFormColor)" : " var(--textFormColor)"};
         }
         input:focus + .lbl-name .text-name, input:valid + .lbl-name .text-name, input:focus + .eye-pass, input:valid + .eye-pass{
             transform: translateY(-120%);
             font-size: 14px;
-            color: ${({ IsColor }) => IsColor ? "var(--nextui-colors-bgThridGlass)" : "#fff"};
+            color: ${({ IsColor }) => IsColor ? "var(--bgThridGlass)" : "#fff"};
         }
         input:focus + .lbl-name:after, input:valid + .lbl-name:after{
             transform: translateX(0%);

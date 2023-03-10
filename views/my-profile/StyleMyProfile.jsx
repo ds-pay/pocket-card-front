@@ -16,11 +16,11 @@ export const ContainerGeneral = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px solid var(--nextui-colors-textlowContrast);
-    border-bottom: 1px solid var(--nextui-colors-textlowContrast);
+    border-top: 1px solid var(--textlowContrast);
+    border-bottom: 1px solid var(--textlowContrast);
     .container-img,
     .container-title {
-      color: var(--nextui-colors-textFormColor);
+      color: var(--textFormColor);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -48,13 +48,13 @@ export const BodyUser = styled.ol`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   border-radius: 0.5rem;
   margin: 1rem 0;
+  padding: 0;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
-  color: #353979;
   overflow: hidden;
 `;
 
@@ -73,7 +73,7 @@ export const HeaderUser = styled.div`
   align-items: center;
   width: 100%;
   height: 15rem;
-  background-color: #4c52ad;
+  background-color: var(--bgLoginCardAnimation) /*#4c52ad*/;
   position: relative;
   padding: 0 0.3rem;
     .content-edit{
@@ -187,6 +187,7 @@ export const ContentUSer = styled.div`
       -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
       box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
       img{
+        width: 100%;
         border-radius: 10rem;
       }
     }
@@ -218,7 +219,7 @@ export const CardDate = styled.div`
   align-items: center;
   width: 100%;
   margin: 0.5rem 0;
-  background-color: #f7f7f7c6;
+  background-color: var(--barDateUser);
   border-radius: 0.5rem;
   .title{
     padding: 0 0.5rem;
@@ -237,7 +238,7 @@ export const CardDate = styled.div`
     h2{
       margin: 0.5rem 0;
       font-size: 1.1rem;
-      color: #575757;
+      color: var(--textDateUser);
     }
   }
   @media(max-width: 1024px){
@@ -292,7 +293,7 @@ export const ContainerSelection = styled.div`
   padding: 0 0.2rem;
   display: flex;
   justify-content: flex-start;
-  background-color: #4c52ad8d;
+  background-color: var(--bgThridGlass);
   @media(max-width: 1024px){
     justify-content: center;
   }
@@ -305,7 +306,7 @@ export const SectionProfile = styled.div`
   border-top: ${({ isSelected }) => isSelected ? "solid white 5px" : "solid transparent 5px"};
   border-bottom: solid transparent 5px;
   border-radius: 0.2rem;
-  color: ${({ isSelected }) => isSelected ? "white" : "#22276af5"} ;
+  color: ${({ isSelected }) => isSelected ? "white" : "var(--textColorDark)"} ;
   .section-selected{
     display: flex;
     justify-content: center;

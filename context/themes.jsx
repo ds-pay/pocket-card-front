@@ -13,6 +13,9 @@ export const darkTheme = {
   bgInputText: "#797979",
   bgAdminMenu: "#3c3e41",
 
+  barDateUser: "#6f6f6fc5",
+  textDateUser: "#dddddd",
+
   bgLoginCardAnimation: "#2b2b2b",
   bgCardLogin: "#3c3e41",
   textFormColor: "#ffffff",
@@ -58,6 +61,8 @@ export const lightTheme = {
   bgThridGlass: "#b4abf5",
   bgCardLogin: "#5a51a0",
 
+  barDateUser: "#f7f7f7c6",
+  textDateUser: "#575757",
 
   bgLoginCardAnimation: "#5040b9",
   textColorCardAnimate: "#e6e6e6",
@@ -68,7 +73,7 @@ export const lightTheme = {
   //Sombreado del narvbar y cards notifications
   boxShadowPrimary: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
   // tono oscuro de letra
-  textColorDark: "#000000",
+  textColorDark: "#4a4287",
   // tono morado de letra
   textColorPurple: "#3D366F",
   // fondoNavbar
@@ -115,6 +120,15 @@ export const GlobalStyle = createGlobalStyle`
     --bgThridGlassGray: ${(props) => props.theme.bgThridGlassGray};
     --bgCardLogin: ${(props) => props.theme.bgCardLogin};
     --colorTextOrdinary: ${(props) => props.theme.colorTextOrdinary};
+    --bgThridGlass: ${(props) => props.theme.bgThridGlass};
+    --textColorCardAnimate: ${(props) => props.theme.textColorCardAnimate};
+    --backgroundForm: ${(props) => props.theme.backgroundForm};
+    --bgInputText: ${(props) => props.theme.bgInputText};
+    --textFormColor: ${(props) => props.theme.textFormColor};
+    --textlowContrast: ${(props) => props.theme.textlowContrast};
+    --bgLoginCardAnimation: ${(props) => props.theme.bgLoginCardAnimation};
+    --barDateUser: ${(props) => props.theme.barDateUser};
+    --textDateUser: ${(props) => props.theme.textDateUser};
   }
 `;
 

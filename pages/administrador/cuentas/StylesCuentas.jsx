@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const ContainerCarForm = styled.form`
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   width: 80%;
   height: 40rem;
   overflow: hidden;
@@ -31,11 +31,11 @@ export const ContainerCarForm = styled.form`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border-top: 1px solid var(--nextui-colors-textlowContrast);
-    border-bottom: 1px solid var(--nextui-colors-textlowContrast);
+    border-top: 1px solid var(--textlowContrast);
+    border-bottom: 1px solid var(--textlowContrast);
     .container-img,
     .container-title {
-      color: var(--nextui-colors-textFormColor);
+      color: var(--textFormColor);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -55,7 +55,7 @@ export const ContainerCarForm = styled.form`
     }
   }
   .inputtext {
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -70,7 +70,7 @@ export const ContainerCarForm = styled.form`
       font-size: 15px;
     }
     @media (max-width: 1024px) {
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
   }
   .img {
@@ -82,15 +82,15 @@ export const ContainerCarForm = styled.form`
     font-size: 1.8rem;
     width: 3rem;
     height: 3rem;
-    color: var(--nextui-colors-textFormColor);
-    background-color: var(--nextui-colors-bgInputText);
+    color: var(--textFormColor);
+    background-color: var(--bgInputText);
     border-radius: 0.2rem;
     transition: 0.5s all ease;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media (max-width: 1024px) {
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
   }
 `;
@@ -125,7 +125,7 @@ export const UpFormClient = styled.div`
     .content-left {
       h3 {
         font-size: 15px;
-        color: var(--nextui-colors-textFormColor);
+        color: var(--textFormColor);
         margin: 0.1rem 0 0 0;
       }
       .content-credencial {
@@ -141,12 +141,12 @@ export const UpFormClient = styled.div`
     .content-right {
       h3 {
         font-size: 15px;
-        color: var(--nextui-colors-textFormColor);
+        color: var(--textFormColor);
         margin: 0.1rem 0 0 0;
       }
       justify-content: flex-start;
       h3 {
-        color: var(--nextui-colors-textFormColor);
+        color: var(--textFormColor);
         font-size: 15px;
         margin: 0.1rem;
       }

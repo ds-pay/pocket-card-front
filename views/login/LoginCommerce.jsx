@@ -43,7 +43,7 @@ const LoginCommerce = ({ onSubmitCommerce, setIsCommerce, isCommerce }) => {
                 </div>
                 <form className="seccionLogin" onSubmit={handleSubmit(onSubmitCommerce)}>
                     {LogiCommerce.map((sec, index) => (
-                        <div className="container">
+                        <div key={index} className="container">
                             <div className="container-img">{sec.img}</div>
                             <div className="container-text">
                                 <InputText

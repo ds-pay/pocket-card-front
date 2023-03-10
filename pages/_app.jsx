@@ -6,9 +6,10 @@ import '../styles/globals.css';
 import LayoutPrincipal from '../components/LayoutPrincipal/LayoutPrincipal';
 import { darkTheme, lightTheme, GlobalStyle } from '../context/themes';
 import { ThemeProvider } from 'styled-components'
-
+import { GlobalContext } from '../context/globalcontext'
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState(lightTheme);
+  const [istrue, setIsTrue] = useState(false)
 
   useEffect(() => {
     
@@ -22,20 +23,6 @@ function MyApp({ Component, pageProps }) {
     } else {
       setTheme(lightTheme)
     }
-    // let theme = window.localStorage.getItem('data-theme');
-    // setIsDark(isDark ? theme === 'dark' : theme === 'light');
-
-    // const observer = new MutationObserver((mutation) => {
-    //   let newTheme = getDocumentTheme(document.documentElement);
-    //   // setIsDark(isDark ? newTheme === 'dark' : newTheme === 'light');
-    // });
-
-    // observer.observe(document.documentElement, {
-    //   attributes: true,
-    //   attributeFilter: ['theme', 'style']
-    // });
-
-    // return () => observer.disconnect();
   }, []);
 
   const themeToggler = () => {
@@ -55,14 +42,15 @@ function MyApp({ Component, pageProps }) {
 
  
   return (
-    <>
+    <GlobalContext.Provider value={valuesContext}>
       <ThemeProvider theme={theme}>
+        {/* <button onClick={() => themeToggler()}>tema</button> */}
         <GlobalStyle/>
         <LayoutPrincipal>
           <Component {...pageProps} />
         </LayoutPrincipal>
       </ThemeProvider>
-    </>
+    </GlobalContext.Provider>
   )
 };
 export default MyApp;

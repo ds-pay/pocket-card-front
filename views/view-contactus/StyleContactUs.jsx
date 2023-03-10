@@ -20,7 +20,7 @@ export const BodyHeader = styled.div`
   height: 100%;
   border-radius: 0.5rem;
   transition: 0.5s all ease;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0 1rem 0;
   padding: 1rem 2rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -72,7 +72,7 @@ export const ContentContactUS = styled.div`
   border-radius: 0.5rem;
   margin: 1rem  0 2rem 0 ;
   padding: 1rem 2rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
@@ -87,7 +87,7 @@ export const ContentContactUS = styled.div`
     h2 {
       font-size: 2.2rem;
       margin: 0;
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
     }
   }
   @media(max-width: 1050px) {
@@ -126,7 +126,7 @@ export const ContainerHeadEmail = styled.div`
   }
   .container-text{
     h2{
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
       margin: 0;
       font-size: 1.4rem;
     }
@@ -179,7 +179,7 @@ export const ContainerForm = styled.div`
           }
 
           .inputtext {
-            background-color: var(--nextui-colors-bgInputText);
+            background-color: var(--bgInputText);
             margin: 0.25rem 0rem 0.25rem 0rem;
             padding: 0.25rem 0.25rem 0 0.5rem;
             -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -205,8 +205,8 @@ export const ContainerForm = styled.div`
             font-size: 1.8rem;
             width: 3.5rem;
             height: 3rem;
-            color: var(--nextui-colors-textFormColor);
-            background-color: var(--nextui-colors-bgInputText);
+            color: var(--textFormColor);
+            background-color: var(--bgInputText);
             border-radius: 0.2rem;
             transition: 0.5s all ease;
             -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -241,7 +241,7 @@ export const ContainerForm = styled.div`
           width: 95%;
         }
         .inputtext {
-          background-color: var(--nextui-colors-bgInputText);
+          background-color: var(--bgInputText);
           margin: 0.25rem 0rem 0.25rem 0rem;
           padding: 0.25rem 0.25rem 0 0.5rem;
           -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -253,11 +253,11 @@ export const ContainerForm = styled.div`
           border-radius: 0.5rem;
           transition: 0.5s all ease;
           h3 {
-            color: var(--nextui-colors-backgroundNavbar);
+            color: var(--backgroundNavbar);
             font-size: 1.3rem;
           }
           h2 {
-            color: var(--nextui-colors-backgroundNavbar);
+            color: var(--backgroundNavbar);
             font-size: 1.3rem;
 
           }
@@ -276,8 +276,8 @@ export const ContainerForm = styled.div`
           font-size: 1.8rem;
           width: 3rem;
           height: 3rem;
-          color: var(--nextui-colors-textFormColor);
-          background-color: var(--nextui-colors-bgInputText);
+          color: var(--textFormColor);
+          background-color: var(--bgInputText);
           border-radius: 0.3rem;
           transition: 0.5s all ease;
           -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -295,8 +295,8 @@ export const ContainerForm = styled.div`
           font-size: 1.8rem;
           width: 3rem;
           height: 3rem;
-          color: var(--nextui-colors-textFormColor);
-          background-color: var(--nextui-colors-bgInputText);
+          color: var(--textFormColor);
+          background-color: var(--bgInputText);
           border-radius: 0.3rem;
           transition: 0.5s all ease;
           -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -315,7 +315,7 @@ export const ContainerForm = styled.div`
       justify-content: center;
       .input-textarea{
         width: 95%;
-        background-color: var(--nextui-colors-bgInputText);
+        background-color: var(--bgInputText);
         margin: 1rem 0.25rem;
         padding: 0.25rem 0.25rem 0 0.5rem;
         -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -340,7 +340,7 @@ export const ContainerHeadPhone = styled.div`
   }
   .container-text{
     h2{
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
       margin: 0;
       font-size: 1.4rem;
     }
@@ -371,7 +371,7 @@ export const ContainerHeadWhatsapp = styled.div`
   }
   .container-text{
     h2{
-      color: var(--nextui-colors-backgroundNavbar);
+      color: var(--backgroundNavbar);
       margin: 0;
       font-size: 1.4rem;
     }

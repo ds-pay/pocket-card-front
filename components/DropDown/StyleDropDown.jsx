@@ -6,11 +6,11 @@ export const ContainerDropdown = styled.div`
   right: 0;
   top: 3.5rem;
   position: absolute;
-  background-color: var(--nextui-colors-backgroundNavbar);
+  background-color: var(--backgroundNavbar);
   border-radius: 1rem 0rem 0rem 1rem;
-  transition: 0.5s;
-  height: ${({ handleBurguer }) => (!handleBurguer ? "0rem" : "20rem")};
-  color: var(--nextui-colors-textColorCardAnimate);
+  transition: 0.3s;
+  height: ${({ handleBurguer }) => (!handleBurguer ? "0" : "20rem")};
+  color: var(--textColorCardAnimate);
   
 `;
 
@@ -36,7 +36,7 @@ export const Seccion = styled.div`
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   transition: 0.5s;
   :hover {
-    background-color: var(--nextui-colors-bgThridGlass);
+    background-color: var(--bgThridGlass);
     cursor: pointer;
   }
   .seccion-1 {
@@ -64,7 +64,7 @@ export const ContianerNotifications = styled.div`
   top: 3.5rem;
   width: 30rem;
   position: absolute;
-  background-color: var(--nextui-colors-backgroundNavbar);
+  background-color: var(--backgroundNavbar);
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 0.5s all;
   height: 20rem;
@@ -72,7 +72,7 @@ export const ContianerNotifications = styled.div`
   overflow-x: hidden;
   transition: 0.5s;
   height: ${({ handleBell }) => (handleBell ? "0rem" : "20rem")};
-  color: var(--nextui-colors-textColorCardAnimate);
+  color: var(--textColorCardAnimate);
   /* border: ${({ handleBell }) =>
     handleBell ? "none" : "solid #535353 0.5px"}; */
 
@@ -92,7 +92,7 @@ export const SeccionNotifications = styled.div`
   transition: 0.5s all ease;
   opacity: ${({ handleBell }) => (handleBell ? "0" : "1")};
   :hover {
-    background-color: var(--nextui-colors-bgThridGlass);
+    background-color: var(--bgThridGlass);
     cursor: pointer;
   }
   .ContainerImg {
