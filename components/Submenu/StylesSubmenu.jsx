@@ -14,7 +14,7 @@ export const ContentCard = styled.div`
   margin-top: 3rem;
   height: 4rem;
   top: 0;
-  background: var(--nextui-colors-backgroundNavbar);
+  background: var(--backgroundNavbar);
 
   .cardContent {
     display: flex;
@@ -37,13 +37,13 @@ export const Card = styled.div`
   margin: 0rem 0.5rem 0rem 0.5rem;
   color: ${({ isSelection }) =>
     !isSelection
-      ? "var(--nextui-colors-textColorCardAnimate)"
-      : "var(--nextui-colors-textFormColor)"};
+      ? "var(--textColorCardAnimate)"
+      : "var(--textFormColor)"};
   border-radius: ${({ isSelection }) =>
     isSelection ? "1rem 1rem 0 0" : "1rem 1rem 1rem 1rem"};
   transition: 0.3s all ease;
   background-color: ${({ isSelection }) =>
-    isSelection ? "var(--nextui-colors-backgroundForm)" : null};
+    isSelection ? "var(--backgroundForm)" : null};
   @media (max-width: 1024px) {
     width: 3rem;
     height: 3rem;
@@ -55,8 +55,8 @@ export const Card = styled.div`
 
   :hover {
     cursor: pointer;
-    color: var(--nextui-colors-textFormColor);
-    background-color: var(--nextui-colors-backgroundForm);
+    color: var(--textFormColor);
+    background-color: var(--backgroundForm);
   }
   .container-icon {
     font-size: 1.2rem;
@@ -86,7 +86,7 @@ export const Card = styled.div`
     border-bottom-right-radius: 20px;
     box-shadow: ${({ isSelection }) =>
       isSelection
-        ? "4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm)"
+        ? "4px 1.5px 0 1.5px var(--backgroundForm)"
         : null};
   }
   .curva-derecha {
@@ -94,7 +94,7 @@ export const Card = styled.div`
     border-bottom-left-radius: 30px;
     box-shadow: ${({ isSelection }) =>
       isSelection
-        ? "-4px 1.5px 0 1.5px var(--nextui-colors-backgroundForm)"
+        ? "-4px 1.5px 0 1.5px var(--backgroundForm)"
         : null};
   }
 `;

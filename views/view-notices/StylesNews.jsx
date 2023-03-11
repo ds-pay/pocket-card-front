@@ -20,17 +20,17 @@ export const ContentNews = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0;
   padding: 1rem 2rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  color: var(--textColorDark);
   .title-notice{
     margin: 2.5rem 0 0 0;
     @media(max-width: 1336px){
       font-size: 1.8rem;
-      color: var(--nextui-colors-backgroundNavbar);
     }
   }
   .container-buttonback{
@@ -66,7 +66,6 @@ export const ContentNews = styled.div`
       width: 55%;
       h2{
         text-align: left;
-        color: var(--nextui-colors-backgroundNavbar);
       }
       p{
         text-align: justify;
@@ -115,7 +114,7 @@ export const CardNews = styled.div`
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 1rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -132,7 +131,7 @@ export const CardNews = styled.div`
   }
   .container-title{
     width: 100%;
-    height: 6rem;
+    height: 7rem;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -142,10 +141,12 @@ export const CardNews = styled.div`
     border-radius: 0.3rem 0.3rem 0 0;
     padding: 0.5rem 0.5rem;
     transition: 0.3s all ease;
-    background-color: var(--nextui-colors-backgroundForm);    
+    background-color: white /*var(--backgroundForm)*/; 
+    color: #0e0f0f ;
     h2{
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      margin: 0.4rem 0;
     }
     .container-button{
       display: flex;
@@ -173,8 +174,4 @@ export const ContentLinks = styled.div`
 export const LinkUrl = styled.div`
   display: flex;
   margin: 0.5rem 0;
-  /* h3{
-    margin: 0;
-    font-weight: 400;
-  } */
 `;

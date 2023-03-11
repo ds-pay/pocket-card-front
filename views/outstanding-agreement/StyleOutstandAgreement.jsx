@@ -9,16 +9,16 @@ export const ContainerGeneral = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 0.7rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0;
 	transition: 0.3s all ease ;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  color: var(--textColorDark);	
   h2{
     margin: 0.5rem 0;
     font-size: 2rem;
-    color: var(--nextui-colors-backgroundNavbar);	
   }
 
   .containerslider{
@@ -58,11 +58,10 @@ export const Arrows = styled.div`
     width: 4rem;
     height: 100%;
     font-size: 3rem;
-    background-color: #ffffff5a;
     transition: all ease 0.5s;
-    color: #3d366f;
+    color: var(--textColorDark);
     :hover {
-      background-color: #3d366f;
+      background-color: var(--backgroundNavbar);
       cursor: pointer;
       color: white;
     }

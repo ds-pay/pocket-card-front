@@ -17,7 +17,7 @@ z-index: 2;
   width: 22rem;
   height: 28rem;
   padding: 0 0 0 1.3rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
@@ -28,11 +28,13 @@ z-index: 2;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
   transform: ${({isCommerce}) => isCommerce ? "translateX(20%)" : "translateX(115%)"};
   @media (max-width: 900px) {
-    transform: translateX(0);
+    transform: translateX(50%);
+    z-index: ${({ isCommerce }) => isCommerce ? "1" :  null};
+    padding: 0;
   }
   h1,
   h3 {
-    color: var(--nextui-colors-textFormColor);
+    color: var(--textFormColor);
   }
   h1 {
     font-size: 2.5rem;
@@ -48,8 +50,8 @@ z-index: 2;
     padding: 1rem;
     width: 3rem;
     height: 100%;
-    background-color: var(--nextui-colors-bgInputText);
-    color: var(--nextui-colors-textFormColor);
+    background-color: var(--bgInputText);
+    color: var(--textFormColor);
     border-radius: 0.2rem;
   }
 
@@ -86,7 +88,7 @@ z-index: 2;
         color: #ff5959;
       }
       .container-text {
-        background-color: var(--nextui-colors-bgInputText);
+        background-color: var(--bgInputText);
         margin: 0.25rem;
         padding: 0.25rem 0.25rem 0 0.5rem;
         width: 13.6rem;
@@ -101,12 +103,12 @@ z-index: 2;
     width: 70%;
     height: 2.3rem;
     h1 {
-      color: var(--nextui-colors-textColorCardAnimate);
+      color: var(--textColorCardAnimate);
     }
     input {
       width: 100%;
       height: 100%;
-      background-color: var(--nextui-colors-bgInputText);
+      background-color: var(--bgInputText);
       transition: 0.3s all ease;
       border: none;
       border-radius: 0.3rem;
@@ -117,11 +119,11 @@ z-index: 2;
     }
   }
   .boton-switch{
-    color: var(--nextui-colors-textFormColor);
+    color: var(--textFormColor);
     transition: 0.3s all ease;
     :hover{
       cursor: pointer;
-      color: var(--nextui-colors-textColorCardAnimate);
+      color: var(--textColorCardAnimate);
     }
   }
 `;
@@ -134,7 +136,7 @@ export const ContainerLoginCommerce = styled.div`
   width: 22rem;
   height: 28rem;
   padding: 0 0 0 1.3rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
   transition: 1s all ease;
@@ -145,11 +147,12 @@ export const ContainerLoginCommerce = styled.div`
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.20);
   transform: ${({isCommerce}) => isCommerce ? "translateX(15%)" : "translateX(-80%)"};
   @media (max-width: 900px) {
-    transform: translateX(0);
+    transform: translateX(-50%);
+    padding: 0;
   }
   h1,
   h3 {
-    color: var(--nextui-colors-textFormColor);
+    color: var(--textFormColor);
   }
   h1 {
     font-size: 2.5rem;
@@ -172,8 +175,8 @@ export const ContainerLoginCommerce = styled.div`
     padding: 1rem;
     width: 3rem;
     height: 100%;
-    background-color: var(--nextui-colors-bgInputText);
-    color: var(--nextui-colors-textFormColor);
+    background-color: var(--bgInputText);
+    color: var(--textFormColor);
     border-radius: 0.2rem;
   }
 
@@ -210,7 +213,7 @@ export const ContainerLoginCommerce = styled.div`
         color: #ff5959;
       }
       .container-text {
-        background-color: var(--nextui-colors-bgInputText);
+        background-color: var(--bgInputText);
         margin: 0.25rem;
         padding: 0.25rem 0.25rem 0 0.5rem;
         width: 13.6rem;
@@ -225,12 +228,12 @@ export const ContainerLoginCommerce = styled.div`
     width: 70%;
     height: 2.3rem;
     h1 {
-      color: var(--nextui-colors-textColorCardAnimate);
+      color: var(--textColorCardAnimate);
     }
     input {
       width: 100%;
       height: 100%;
-      background-color: var(--nextui-colors-bgInputText);
+      background-color: var(--bgInputText);
       transition: 0.3s all ease;
       border: none;
       border-radius: 0.3rem;
@@ -241,11 +244,11 @@ export const ContainerLoginCommerce = styled.div`
     }
   }
   .boton-switch{
-    color: var(--nextui-colors-textFormColor);
+    color: var(--textFormColor);
     transition: 0.3s all ease;
     :hover{
       cursor: pointer;
-      color: var(--nextui-colors-textColorCardAnimate);
+      color: var(--textColorCardAnimate);
     }
   }
 `;
@@ -266,7 +269,7 @@ export const ContainerCard = styled.div`
   align-items: center;
   width: 24rem;
   height: 35rem;
-  background: var(--nextui-colors-bgLoginCardAnimation);
+  background: var(--bgLoginCardAnimation);
   border-radius: 2rem;
   transition: 1s all ease;
   transform: translateX(-30%);
@@ -275,7 +278,7 @@ export const ContainerCard = styled.div`
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
-  color: var(--nextui-colors-textColorCardAnimate);
+  color: var(--textColorCardAnimate);
   @media(max-width: 900px) {
     display: none;
   }

@@ -5,12 +5,12 @@ export const SidebarContainer = styled.div`
   flex-direction: column;
   width: ${({ isActivate }) => (isActivate ? "4rem" : "20rem")};
   height: 100%;
-  background: var(--nextui-colors-backgroundNavbar);
+  background: var(--backgroundNavbar);
   position: absolute;
   transition: 0.5s all ease;
   white-space: nowrap;
   z-index: 90;
-  border-bottom: solid var(--nextui-colors-bgIconPrimary) 1px;
+  border-bottom: solid var(--bgIconPrimary) 1px;
 `;
 
 export const Content = styled.div`
@@ -42,9 +42,9 @@ export const ContainerSeccion = styled.div`
   border-radius: 0.5rem;
   transition: 0.5s all ease;
   justify-content: space-between;
-  background-color: ${({ isSelected }) => isSelected ? "var(--nextui-colors-bgThridGlass)" : null} ;
+  background-color: ${({ isSelected }) => isSelected ? "var(--bgThridGlass)" : null} ;
   :hover {
-    background-color: var(--nextui-colors-bgThridGlass);
+    background-color: var(--bgThridGlass);
     cursor: pointer;
   }
   .contain-img,
@@ -74,7 +74,7 @@ export const ContainerSeccion = styled.div`
     width: 2.9rem;
     height: 1.8rem;
     border-radius: 1rem;
-    background: var(--nextui-colors-bgIconPrimary);
+    background: var(--bgIconPrimary);
     margin: 0.5rem;
     transition: 0.7s all ease;
     opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
@@ -134,7 +134,7 @@ export const Head = styled.div`
 export const ButtonArrow = styled.div`
     width: 1.85rem;
     height: 1.85rem;
-    background-color: var(--nextui-colors-bgThridGlass);
+    background-color: var(--bgThridGlass);
     position: absolute;
     display: flex;
     justify-content: center;

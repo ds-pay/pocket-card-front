@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Navbar/Navbar.jsx", "components/Inputs/InputDate/InputDate.js", "components/Inputs/InputDate/InputDate.jsx", "pages/_app.tsx", "components/Inputs/InputTextArea/InputTextArea.jsx", "components/Inputs/InputTextArea/StylesInputTextArea.jsx", "pages/index.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Navbar/Navbar.jsx", "components/Inputs/InputDate/InputDate.js", "components/Inputs/InputDate/InputDate.jsx", "pages/_app.jsx", "components/Inputs/InputTextArea/InputTextArea.jsx", "components/Inputs/InputTextArea/StylesInputTextArea.jsx", "pages/index.jsx"],
   "exclude": ["node_modules"]
 }

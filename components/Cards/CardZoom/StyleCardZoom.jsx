@@ -9,7 +9,7 @@ export const CardGeneral = styled.div`
   overflow: hidden;
   width: 17.5rem;
   height: 22rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 1rem;
   border-radius: 1rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -29,19 +29,18 @@ export const CardGeneral = styled.div`
     height: 2.5rem;
     border-radius: 0.5rem;
     transition: 0.5s all ease;
-    background-color: #ffffff;
+    background-color: #ffffff /*var(--backgroundForm)*/ ;
     padding: 0 0.6rem ;
+    color: black /*var(--textColorDark)*/;
     overflow: hidden;
     h4{
       font-size: 2rem;
       margin: 0;
       font-size: 1.2rem;
-      color: var(--nextui-colors-backgroundNavbar);
     }
     h2{
       margin: 0;
       font-size: 1.2rem;
-      color: var(--nextui-colors-backgroundNavbar);
       font-weight: 500;
       margin: 0 0.3rem;
       opacity: 0;
@@ -60,6 +59,7 @@ export const CardGeneral = styled.div`
     height: 32rem;
     img{
       object-fit: cover;
+      width: 100%;
       transition: all ease 0.3s;
       transform: ${({ isSelected }) => isSelected ? "scale(1.2,1.2)" : null};
       /* :hover{
@@ -74,14 +74,14 @@ export const CardGeneral = styled.div`
     border-radius: 0.5rem 0.5rem 0 0;
     bottom: -3rem;
     width: 100%;
-    background-color: var(--nextui-colors-backgroundForm) ;
+    background-color: #ffffff /*var(--backgroundForm)*/ ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 6rem;
     overflow: hidden;
     transition: all 0.5s ease;
-
+    color: black /*var(--textColorDark)*/;
     p{
       text-align: center;
       font-weight: 600;
@@ -95,10 +95,10 @@ export const CardGeneral = styled.div`
       h3{
         font-size: 1rem;
         font-weight: 700;
-        color: var(--nextui-colors-backgroundNavbar);
       }
       h2{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
       }
     }
     .container-content{
@@ -106,10 +106,9 @@ export const CardGeneral = styled.div`
       justify-content: space-between;
       padding: 0 2rem;
       h3{
-        margin: 0;
+        margin: 0 0 1rem 0;
         font-size: 1.1rem;
         font-weight: 700;
-        color: var(--nextui-colors-backgroundNavbar);
       }
     }
   }

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const ContainerCardForm = styled.form`
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   width: 100%;
   height: 100%;
   display: flex;
@@ -20,7 +20,7 @@ export const ContainerCardForm = styled.form`
 
   .inputtext {
     z-index: 0;
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -35,7 +35,7 @@ export const ContainerCardForm = styled.form`
       font-size: 15px;
     }
     @media (max-width: 1024px){
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
   }
   .img {
@@ -47,15 +47,15 @@ export const ContainerCardForm = styled.form`
     font-size: 1.8rem;
     width: 3rem;
     height: 3rem;
-    color: var(--nextui-colors-textFormColor);
-    background-color: var(--nextui-colors-bgInputText);
+    color: var(--textFormColor);
+    background-color: var(--bgInputText);
     border-radius: 0.2rem;
     transition: 0.5s all ease;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
     @media (max-width: 1024px){
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
   }
 `;
@@ -66,12 +66,12 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-top: 1px solid var(--nextui-colors-textlowContrast);
-  border-bottom: 1px solid var(--nextui-colors-textlowContrast);
+  border-top: 1px solid var(--textlowContrast);
+  border-bottom: 1px solid var(--textlowContrast);
   .container-img,
   .container-title,
   .container-butonback {
-    color: var(--nextui-colors-textFormColor);
+    color: var(--textFormColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,12 +92,12 @@ export const Header = styled.div`
     height: 1.5rem;
     border-radius: 0.2rem;
     :hover{
-      background-color: var(--nextui-colors-bgInputText);
+      background-color: var(--bgInputText);
       cursor: pointer;
     }
     @media (max-width: 1024px){
       :hover{
-        background-color: var(--nextui-colors-backgroundForm);
+        background-color: var(--backgroundForm);
       }
     }
   }
@@ -180,7 +180,7 @@ export const DivLinks = styled.div`
   width: 100%;
 	  h3 {
 	    font-size: 15px;
-      color: var(--nextui-colors-textFormColor);
+      color: var(--textFormColor);
       margin: 0.1rem 0 0 0;
     }
 		.container-input{
@@ -195,7 +195,7 @@ export const DivLinks = styled.div`
 export const InputTextview = styled.input`
     height: 100%;
     height: 3rem;
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
     margin: 0.25rem 0rem 0.25rem 0rem;
     padding: 0.25rem 0.25rem 0 0.5rem;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -209,7 +209,7 @@ export const InputTextview = styled.input`
     border: ${(({ isEditing }) => isEditing ? null : "none")};
 
     @media (max-width: 1024px) {
-      background-color: var(--nextui-colors-backgroundForm);
+      background-color: var(--backgroundForm);
     }
 `;
 

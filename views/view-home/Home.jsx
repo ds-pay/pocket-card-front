@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
-import { ContentBody, ContentPock, BodyHead, ActivationCard, ContainerCard, Card, BodyHeader } from './StylesHome';
+import { ContentBody, BodyHead, ActivationCard, ContainerCard, Card, BodyHeader } from './StylesHome';
 import OutstandAgreement from '../outstanding-agreement/OutstandAgreement';
 
 

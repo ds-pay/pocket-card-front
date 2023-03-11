@@ -1,4 +1,4 @@
-import React, { useState, FC } from "react";
+import { useState, useContext} from "react";
 import { ContainerNav, Seccion, ContainSeccionCtrls} from "./StylesNavbar";
 import { FaHome, FaBell } from "react-icons/fa";
 import { HiUser } from "react-icons/hi";
@@ -12,22 +12,15 @@ import DropDownNotifications from '../DropDown/DropDownNotifications'
 import Search from './Search'
 import SeccionMedium from './SeccionMedium'
 import SeccionRight from './SeccionRight'
+import { GlobalContext } from "../../context/globalcontext";
 
 
 const Navbar = () => {
-
-  // const [ handleTheme, setHandleTheme ] = useState(true)
   const [ handleBurguer, setHandleBurguer ] = useState(false);
   const [ handleBell, setHandleBell ] = useState(true);
   const [ selection, setSelection ] = useState("home");
-
-  const { isDark } = useTheme();
+  const { themeToggler, theme } = useContext(GlobalContext)
   
-  const handleChange = () => {
-    const nextTheme = isDark ? 'light' : 'dark';
-    window.localStorage.setItem('theme', nextTheme);
-    changeTheme(nextTheme);
-  };
 
   const selectionViw = (sec) => {
     setSelection(sec)
@@ -64,9 +57,9 @@ const Navbar = () => {
     {
       state: true,
       id: "ctrl-theme",
-      icon1: isDark ? <BsFillMoonFill /> : <BsFillSunFill />,
-      ctrol: isDark,
-      funcion: handleChange,
+      icon1: theme.current === "light" ? <BsFillSunFill className="rotate-icon" /> : <BsFillMoonFill className="rotate-icon"/>,
+      ctrol: theme,
+      funcion: themeToggler,
     },
     {
       state: true,
@@ -90,18 +83,18 @@ const Navbar = () => {
   ];
 
   return (
-    <ContainerNav isDark={isDark} >
-      <Seccion isDark={isDark}>
+    <ContainerNav >
+      <Seccion>
         <Search/>
       </Seccion>
       <Seccion>
-        <SeccionMedium isDark={isDark} selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
+        <SeccionMedium selection={selection} setSelection={setSelection} selectionViw={selectionViw} SeccionViews={SeccionViews}/>
       </Seccion>
       <Seccion>
-        <SeccionRight isDark={isDark} SeccionLogsCtrls={SeccionLogsCtrls}/>
+        <SeccionRight SeccionLogsCtrls={SeccionLogsCtrls}/>
       </Seccion>
-      <DropDownBurguer isDark={isDark} handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
-      <DropDownNotifications isDark={isDark} handleBell={handleBell} setHandleBell={setHandleBell}/>
+      <DropDownBurguer handleBurguer={handleBurguer} setHandleBurguer={setHandleBurguer}/>
+      <DropDownNotifications  handleBell={handleBell} setHandleBell={setHandleBell}/>
     </ContainerNav>
   );
 };

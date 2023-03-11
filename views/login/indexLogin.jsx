@@ -124,18 +124,16 @@ const LoginView = () => {
             <div className="bubbles">
               <span></span>
               {ArrayStyleTest.map((sec, index) => (
-                <>
-                  <span
-                    inputColor="white"
-                    style={{
-                      boxShadow: `${sec.boxshadow}`,
-                      background: `${sec.color}`,
-                      animationDuration: `calc( 125s / ${parseInt(
-                        sec.random
-                      )})`,
-                    }}
-                  ></span>
-                </>
+                <span
+                  style={{
+                    boxShadow: `${sec.boxshadow}`,
+                    background: `${sec.color}`,
+                    animationDuration: `calc( 125s / ${parseInt(
+                      sec.random
+                    )})`,
+                  }}
+                  key={index}
+                ></span>
               ))}
             </div>
           </div>

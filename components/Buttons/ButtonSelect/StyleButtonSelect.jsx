@@ -8,7 +8,7 @@ export const ContainerGeneral = styled.div`
 export const TitleButton = styled.span`
   margin-left: 0.6rem;
   font-size: 0.9rem;
-  color: var(--nextui-colors-textFormColor);
+  color: var(--textFormColor);
 `;
 
 export const ContainerButton = styled.div`
@@ -17,7 +17,7 @@ export const ContainerButton = styled.div`
   align-items: center;
   width: 4rem;
   height: 2.7rem;
-  background-color: var(--nextui-colors-bgInputText);
+  background-color: var(--bgInputText);
   border-radius: ${(props) => (props.radius ? props.radius : "0.2rem")};
   padding: 0.3rem;
   margin: 0.1rem 0.34rem;
@@ -27,12 +27,12 @@ export const ContainerButton = styled.div`
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
   :hover {
     cursor: pointer;
-    background-color: var(--nextui-colors-backgroundForm);
+    background-color: var(--backgroundForm);
   }
   @media(max-width: 1024px){
     background-color: white;
     :hover {
-      background-color: var(--nextui-colors-bgInputText);
+      background-color: var(--bgInputText);
     }
   }
 `;
@@ -44,7 +44,7 @@ export const ContainerIcons = styled.div`
 `;
 
 export const Icon = styled.div`
-  color:  var(--nextui-colors-textFormColor);
+  color:  var(--textFormColor);
   margin: 5px;
   @media (max-width: 600px) {
     font-size: 0.8rem;
@@ -56,7 +56,7 @@ export const DropDownMenu = styled.div`
   margin-top: 3rem;
   width: 10rem;
   transform: translate(4%);
-  background-color: var(--nextui-colors-bgInputText);
+  background-color: var(--bgInputText);
   border-radius: 8px;
   padding: 0.5rem;
   overflow: hidden;
@@ -73,10 +73,10 @@ export const DropDownItem = styled.div`
   padding: 0.5rem;
   :hover {
     cursor: pointer;
-    background-color: var(--nextui-colors-bgInputText);
+    background-color: var(--bgInputText);
   }
   span {
-    color:  var(--nextui-colors-textFormColor);
+    color:  var(--textFormColor);
     margin-left: 0.5rem;
   }
 `;

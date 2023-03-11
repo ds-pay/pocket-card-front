@@ -19,7 +19,7 @@ export const BodyHeader = styled.div`
   width: 95%;
   height: 100%;
   border-radius: 0.5rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0;
   padding: 1rem 2rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -28,7 +28,7 @@ export const BodyHeader = styled.div`
     .container-img,
     .container-title,
     .container-butonback {
-      color: var(--nextui-colors-textFormColor);
+      color: var(--textColorDark);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,7 +59,6 @@ export const BodyHeader = styled.div`
       h2 {
         font-size: 2.2rem;
         margin: 0;
-        color: var(--nextui-colors-backgroundNavbar);
       }
     }
 `;
@@ -90,12 +89,13 @@ export const CardCategory = styled.div`
   flex-direction: column;
   width: 15rem;
   height: 22rem;
-  background-color: var(--nextui-colors-backgroundForm) ;
+  background-color: var(--backgroundForm) ;
   margin: 1rem;
   border-radius: 1.5rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  color: var(--textColorDark);
 
   .container-icon{
     display: flex;
@@ -115,7 +115,6 @@ export const CardCategory = styled.div`
       font-size: 1rem;
       font-weight: 700;
       margin: var(--nextui-space-5) 0;
-      color: var(--nextui-colors-backgroundNavbar);
     }
   }
   .container-text{
@@ -147,7 +146,7 @@ export const ContentCategory = styled.div`
     width: 100%;
     h3{
       font-size: 3rem;
-      color: var(--nextui-colors-backGradiente2);
+      color: var(--backGradiente2);
     }
   }
 `;

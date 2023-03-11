@@ -9,7 +9,7 @@ export const ContainerFooter = styled.footer`
   padding: 2rem 0 0.5rem 0;
   transition: 0.3s;
   /* background: linear-gradient(180deg, var(--nextui-colors-backgroundNavbar) , var(--nextui-colors-backGradiente2) ); */
-  background-color: var(--nextui-colors-backgroundNavbar);
+  background-color: var(--backgroundNavbar);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@ export const RedSocial = styled.div`
   align-items: center;
   margin: 0 1rem;
   width: 4rem;
-  background-color: var(--nextui-colors-backgroundNavbar);
+  background-color: var(--backgroundNavbar);
   h2{
     transition: all ease 0.3s;
     margin: 1rem 2rem;
@@ -206,7 +206,7 @@ export const ContainerApp = styled.div`
   z-index: 1;
   color: white;
   transition: 0.3s;
-  background-color: var(--nextui-colors-backgroundNavbar);
+  background-color: var(--backgroundNavbar);
   h2{
     margin: 0;
   }
