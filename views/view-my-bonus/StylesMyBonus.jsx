@@ -18,7 +18,7 @@ export const BodyHeader = styled.div`
   width: 95%;
   height: 100%;
   border-radius: 0.5rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0;
   padding: 1rem 2rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -27,7 +27,7 @@ export const BodyHeader = styled.div`
     .container-img,
     .container-title,
     .container-butonback {
-      color: var(--nextui-colors-textFormColor);
+      color: var(--textFormColor);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,12 +52,12 @@ export const BodyHeader = styled.div`
       height: 2.5rem;
       border-radius: 0.2rem;
       :hover{
-        background-color: var(--nextui-colors-bgInputText);
+        background-color: var(--bgInputText);
         cursor: pointer;
       }
       @media (max-width: 1024px){
         :hover{
-          background-color: var(--nextui-colors-backgroundForm);
+          background-color: var(--backgroundForm);
         }
       }
     }
@@ -69,7 +69,7 @@ export const BodyHeader = styled.div`
       h2 {
         font-size: 2.2rem;
         margin: 0;
-        color: var(--nextui-colors-backgroundNavbar);
+        color: var(--backgroundNavbar);
       }
     }
 `;
@@ -92,7 +92,7 @@ export const CardBonus = styled.div`
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 1rem;
   .container-img{
     display: flex;
@@ -134,7 +134,7 @@ export const ContentBond = styled.div`
   width: 95%;
   height: 100%;
   border-radius: 0.5rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0;
   padding: 1rem 2rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);

@@ -17,7 +17,7 @@ const Credentials = ({ data }) => {
       ?
       data.map((sec, index) => (
         <>
-          <BackGroundTarjet>
+          <BackGroundTarjet key={index}>
             <div className="container">
               <img src="/img/image/tarjetgold/pocket_dorada.png" alt="card" />
               <div className="container-text">

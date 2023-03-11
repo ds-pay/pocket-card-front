@@ -19,7 +19,6 @@ const Footer = () => {
 	const handleClick = (id) => {
 		setOpen(!open);
 		setIs(id)
-		console.log(open)
 	}
 
 	const arrayIconRedSocial = [
@@ -139,20 +138,9 @@ const Footer = () => {
 	return (
 		<ContainerFooter>
 			<ContentBottom>
-				{/* <ButtonUrl>
-					{ArrayItems.map((sec, index) => (
-						<div key={index} onClick={() => handleRouter(sec.route)} className={sec.className}> */}
-							{/* <h1>{sec.label}</h1> */}
-							{/* <button > */}
-							{/* <h2>{sec.icon}</h2>
-							<h3><strong>{sec.labelbutton}</strong></h3> */}
-							{/* </button> */}
-						{/* </div>
-					))}
-				</ButtonUrl> */}
 				{
 					arrayText.map((sec, index) => (
-						<TitleText isId={is === sec.id ? true : false} key={index}>
+						<TitleText isId={is === sec.id && open ? true : false} key={index}>
 							<div className='title' >
 								<h2>{sec.icon}</h2>
 								<h2 onClick={() => handleClick(sec.id)} ><strong>{sec.title}</strong></h2>

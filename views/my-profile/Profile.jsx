@@ -6,7 +6,7 @@ const Profile = ({ data }) => {
   const Card = (title, content) => {
     return (
       <CardDate>
-        <div className='title'><h2><strong>{title}</strong></h2></div>
+        <div className='title'><h2>{title}</h2></div>
         <div className="content"><h2>{content}</h2></div>
       </CardDate>
     )
@@ -24,10 +24,6 @@ const Profile = ({ data }) => {
             {Card("Ciudad:", sec.city)}
             {Card("Correo:", sec.email)}
             {Card("Telefono:", sec.phone)}
-            {/* {Card("Tipo de Membresia:", sec.tarjet)}
-            {Card("Cobertura:", sec.coverage)}
-            {Card("Vencimiento:", sec.expiration)}
-            {Card("Cantidad Pocket Puntos:", sec.pointspocket)} */}
           </div>
         </>
       ))

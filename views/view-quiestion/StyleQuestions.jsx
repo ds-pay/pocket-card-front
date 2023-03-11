@@ -19,7 +19,7 @@ export const BodyHeader = styled.div`
   width: 95%;
   height: 100%;
   border-radius: 0.5rem;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 2rem 0 1rem 0;
   padding: 1rem 2rem;
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
@@ -28,7 +28,7 @@ export const BodyHeader = styled.div`
     .container-img,
     .container-title,
     .container-butonback {
-      color: var(--nextui-colors-textFormColor);
+      color: var(--textFormColor);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -61,7 +61,7 @@ export const BodyHeader = styled.div`
       h2 {
         font-size: 2.2rem;
         margin: 0;
-        color: var(--nextui-colors-backgroundNavbar);
+        color: var(--backgroundNavbar);
       }
     }
     .container-title2 {
@@ -75,7 +75,7 @@ export const BodyHeader = styled.div`
       h2 {
         font-size: 2.2rem;
         margin: 0;
-        color: var(--nextui-colors-backgroundNavbar);
+        color: var(--backgroundNavbar);
       }
     }
   @media (max-width: 1024px){
@@ -94,7 +94,7 @@ export const ContentQuestions = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--nextui-colors-backgroundForm);
+  background-color: var(--backgroundForm);
   margin: 1rem 0 2rem 0;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
@@ -104,7 +104,7 @@ export const ContentQuestions = styled.div`
   h2 {
     font-size: 1.7rem;
     margin: 0;
-    color: var(--nextui-colors-backgroundNavbar);
+    color: var(--backgroundNavbar);
   }
   p{
     font-size: 1.2rem;

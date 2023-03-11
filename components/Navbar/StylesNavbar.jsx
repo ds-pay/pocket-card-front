@@ -11,8 +11,8 @@ export const ContainerNav = styled.div`
   width: 100%;
   height: 3.2rem;
   z-index: 10;
-  background-color: var(--nextui-colors-backgroundNavbar);
-  border-bottom: solid var(--nextui-colors-bgIconPrimary) 1px;
+  background-color: var(--backgroundNavbar);
+  border-bottom: solid var(--bgIconPrimary) 1px;
 `;
 
 export const Seccion = styled.div`
@@ -31,25 +31,25 @@ export const Seccion = styled.div`
   .browser {
     display: flex;
     width: 14rem;
-    background-color: var(--nextui-colors-bgCardLogin);
+    background-color: var(--bgCardLogin);
     color: ${({ theme }) => theme.text};
     margin: 0rem 0.7rem 0rem 0.7rem;
     height: 2.2rem;
     align-items: center;
     padding: 0rem 0.75rem 0rem 0.75rem;
     border-radius: 2rem 2rem 2rem 2rem;
-    color: var(--nextui-colors-colorTextOrdinary);
+    color: var(--colorTextOrdinary);
     @media (max-width: 1024px) {
       width: 100%;
       cursor: pointer;
     }
     input {
       border: 0;
-      background-color: var(--nextui-colors-bgCardLogin);
+      background-color: var(--bgCardLogin);
       outline: none;
       text-align: justify;
       ::placeholder{
-        color: var(--nextui-colors-colorTextOrdinary);
+        color: var(--colorTextOrdinary);
       
 
       }
@@ -70,12 +70,12 @@ export const ContainSeccionsViews = styled.div`
   font-size: 1.3rem;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.15rem 0.15rem;
-  background-color: ${({ isSelected }) => isSelected ? " var(--nextui-colors-bgCardLogin)" : null};
+  background-color: ${({ isSelected }) => isSelected ? " var(--bgCardLogin)" : null};
   a{
-    color: var(--nextui-colors-colorTextOrdinary);
+    color: var(--colorTextOrdinary);
   }
   :hover {
-    background-color: var(--nextui-colors-bgThridGlass);
+    background-color: var(--bgThridGlass);
     cursor: pointer;
   }
   @media(max-width: 1024px){
@@ -86,22 +86,18 @@ export const ContainSeccionsViews = styled.div`
 export const ContainSeccionCtrls = styled.div`
   display: flex;
   transition: 0.3s all ease;
-  /* @keyframes rotation {
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(720deg);
+  .rotate-icon{
+      animation-duration: 1s;
+      animation-name: rotateIcon;
+      @keyframes rotateIcon {
+      from {
+        transform: rotate(0Deg);
+      }
+      to {
+        transform: rotate(360Deg);
+      }
     }
   }
-  @keyframes rotationReverse {
-    0%{
-      transform: rotate(360deg);
-    }
-    100%{
-      transform: rotate(0deg);
-    }
-  } */
   transition: all 0.3s;
   justify-content: center;
   align-items: center;
@@ -111,10 +107,10 @@ export const ContainSeccionCtrls = styled.div`
   font-size: 1.1rem;
   border-radius: 5rem;
   margin: 0.25rem 0.25rem;
-  background-color:  var(--nextui-colors-bgCardLogin);
-  color: var(--nextui-colors-colorTextOrdinary);
+  background-color:  var(--bgCardLogin);
+  color: var(--colorTextOrdinary);
   :hover {
-    background-color: var(--nextui-colors-bgThridGlass);
+    background-color: var(--bgThridGlass);
     cursor: pointer;
   }
   @media(max-width: 1024px){
