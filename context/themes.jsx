@@ -9,11 +9,11 @@ export const darkTheme = {
   bgSecondGlass: "rgba( 152, 148, 187, 0.80 )",
 
   bgThridGlass: "#989a9d",
-  backgroundForm: "#5c5c5c",
+  backgroundForm: "#242526",
   bgInputText: "#797979",
-  bgAdminMenu: "#3c3e41",
+  bgAdminMenu: "#5f6368",
 
-  barDateUser: "#6f6f6fc5",
+  barDataUser: "#333536",
   textDateUser: "#dddddd",
 
   bgLoginCardAnimation: "#2b2b2b",
@@ -61,7 +61,7 @@ export const lightTheme = {
   bgThridGlass: "#b4abf5",
   bgCardLogin: "#5a51a0",
 
-  barDateUser: "#f7f7f7c6",
+  barDataUser: "#f7f7f7c6",
   textDateUser: "#575757",
 
   bgLoginCardAnimation: "#5040b9",
@@ -127,7 +127,7 @@ export const GlobalStyle = createGlobalStyle`
     --textFormColor: ${(props) => props.theme.textFormColor};
     --textlowContrast: ${(props) => props.theme.textlowContrast};
     --bgLoginCardAnimation: ${(props) => props.theme.bgLoginCardAnimation};
-    --barDateUser: ${(props) => props.theme.barDateUser};
+    --barDataUser: ${(props) => props.theme.barDataUser};
     --textDateUser: ${(props) => props.theme.textDateUser};
   }
 `;

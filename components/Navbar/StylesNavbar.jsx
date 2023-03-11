@@ -98,22 +98,6 @@ export const ContainSeccionCtrls = styled.div`
       }
     }
   }
-  /* @keyframes rotation {
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(720deg);
-    }
-  }
-  @keyframes rotationReverse {
-    0%{
-      transform: rotate(360deg);
-    }
-    100%{
-      transform: rotate(0deg);
-    }
-  } */
   transition: all 0.3s;
   justify-content: center;
   align-items: center;

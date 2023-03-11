@@ -138,17 +138,6 @@ const Footer = () => {
 	return (
 		<ContainerFooter>
 			<ContentBottom>
-				{/* <ButtonUrl>
-					{ArrayItems.map((sec, index) => (
-						<div key={index} onClick={() => handleRouter(sec.route)} className={sec.className}> */}
-							{/* <h1>{sec.label}</h1> */}
-							{/* <button > */}
-							{/* <h2>{sec.icon}</h2>
-							<h3><strong>{sec.labelbutton}</strong></h3> */}
-							{/* </button> */}
-						{/* </div>
-					))}
-				</ButtonUrl> */}
 				{
 					arrayText.map((sec, index) => (
 						<TitleText isId={is === sec.id && open ? true : false} key={index}>

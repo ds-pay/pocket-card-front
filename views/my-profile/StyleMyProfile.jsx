@@ -73,7 +73,7 @@ export const HeaderUser = styled.div`
   align-items: center;
   width: 100%;
   height: 15rem;
-  background-color: var(--bgLoginCardAnimation) /*#4c52ad*/;
+  background-color: var(--backgroundNavbar) /*#4c52ad*/;
   position: relative;
   padding: 0 0.3rem;
     .content-edit{
@@ -219,7 +219,7 @@ export const CardDate = styled.div`
   align-items: center;
   width: 100%;
   margin: 0.5rem 0;
-  background-color: var(--barDateUser);
+  background-color: var(--barDataUser);
   border-radius: 0.5rem;
   .title{
     padding: 0 0.5rem;
@@ -228,7 +228,7 @@ export const CardDate = styled.div`
     h2{
       font-size: 1.1rem;
       margin: 0 1rem;
-      color: #2d2d2d;
+      color: var(--textDateUser);
       margin: 0;
     }
   }
@@ -293,7 +293,7 @@ export const ContainerSelection = styled.div`
   padding: 0 0.2rem;
   display: flex;
   justify-content: flex-start;
-  background-color: var(--bgThridGlass);
+  background-color: var(--bgCardLogin);
   @media(max-width: 1024px){
     justify-content: center;
   }
@@ -306,7 +306,7 @@ export const SectionProfile = styled.div`
   border-top: ${({ isSelected }) => isSelected ? "solid white 5px" : "solid transparent 5px"};
   border-bottom: solid transparent 5px;
   border-radius: 0.2rem;
-  color: ${({ isSelected }) => isSelected ? "white" : "var(--textColorDark)"} ;
+  color: #ffffff;
   .section-selected{
     display: flex;
     justify-content: center;
@@ -318,7 +318,7 @@ export const SectionProfile = styled.div`
 
   };
   :hover{
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     border-top: solid white 5px;
   }

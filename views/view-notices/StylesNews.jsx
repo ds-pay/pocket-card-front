@@ -142,7 +142,7 @@ export const CardNews = styled.div`
     padding: 0.5rem 0.5rem;
     transition: 0.3s all ease;
     background-color: white /*var(--backgroundForm)*/; 
-    color: black ;
+    color: #0e0f0f ;
     h2{
       text-align: center;
       font-size: 1.2rem;
