@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import Sidebar from '../../components/Sidebar/Sidebar';
-import Cuentas from '../administrador/cuentas'
-import Convenios from '../administrador/convenios'
-import Bonos from '../administrador/bonos'
-import SlideShow from '../administrador/slider'
-import Noticias from '../administrador/noticias'
-import Notificaciones from '../administrador/notificaciones'
-import Estadisticas from '../administrador/stadistics'
+import Cuentas from './cuentas'
+import Convenios from './convenios'
+import Bonos from './bonos'
+import SlideShow from './slider'
+import Noticias from './noticias'
+import Notificaciones from './notificaciones'
+import Estadisticas from './stadistics'
 import { IoMdNotifications } from "react-icons/io";
 import { SiTheconversation } from "react-icons/si";
 import { HiUser } from "react-icons/hi";
@@ -35,7 +35,7 @@ const Content = styled.div`
 
 
 const index = () => {
-  const [isSelected, setIsSelected] = useState("convenios");
+  const [isSelected, setIsSelected] = useState("cuentas");
   
   const ContentMenu = [
     {
@@ -93,8 +93,9 @@ const index = () => {
         isSelected={isSelected}
         setIsSelected={setIsSelected}
         title={"PocketCard"}
+        img={"/img/Icons/Icono-Pocket.png"}
       />
-      {ContentMenu.map((sec, index) =>
+      {ContentMenu.map((sec) =>
         isSelected === sec.id ? <Content> {sec.route} </Content> : null
       )}
     </Container>

@@ -1,19 +1,20 @@
 import styled from "@emotion/styled";
+import { IsActivate, ContainerActiveSelected } from './Interface'
 
-export const SidebarContainer = styled.div`
+export const SidebarContainer = styled.div <IsActivate>`
   display: flex;
   flex-direction: column;
-  width: ${({ isActivate }) => (isActivate ? "4rem" : "20rem")};
+  width: ${({ isActivate }) => (isActivate ? "4.1rem" : "20rem")};
   height: 100%;
   background: var(--backgroundNavbar);
   position: absolute;
-  transition: 0.5s all ease;
+  transition: 0.3s all ease;
   white-space: nowrap;
   z-index: 90;
   border-bottom: solid var(--bgIconPrimary) 1px;
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<IsActivate>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -29,12 +30,12 @@ export const Content = styled.div`
     width: ${({ isActivate }) => (isActivate ? "60%" : "90%")};
     border-bottom: 0.2px solid white;
     margin: 0rem 0.8rem 0rem 1rem;
-    text-align: left;
+    text-align:center;
     overflow: hidden;
   }
 `;
 
-export const ContainerSeccion = styled.div`
+export const ContainerSeccion = styled.div<ContainerActiveSelected>`
   display: flex;
   margin: 0.3rem 1rem 0.3rem 1rem;
   width: ${({ isActivate }) => (isActivate ? "56%" : "90%")};
@@ -50,10 +51,10 @@ export const ContainerSeccion = styled.div`
   .contain-img,
   .contain-label {
     display: flex;
-    justify-content: ${({ leftIsTrue }) =>
-      !leftIsTrue ? "flex-start" : "flex-end"};
+    justify-content: flex-start/*${({ leftIsTrue }) =>
+      !leftIsTrue ? "flex-start" : "flex-end"}*/;
     align-items: center;
-    transition: 0.5s all ease;
+    transition: 0.3s all ease;
   }
   .contain-img {
     margin: 0.5rem;
@@ -76,7 +77,7 @@ export const ContainerSeccion = styled.div`
     border-radius: 1rem;
     background: var(--bgIconPrimary);
     margin: 0.5rem;
-    transition: 0.7s all ease;
+    transition: 0.3s all ease;
     opacity: ${({ isActivate }) => (isActivate ? "0" : "1")};
     white-space: normal;
     overflow: hidden;
@@ -87,7 +88,7 @@ export const ContainerSeccion = styled.div`
   }
 `;
 
-export const Head = styled.div`
+export const Head = styled.div<IsActivate>`
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -109,12 +110,10 @@ export const Head = styled.div`
     }
     .contain-logo {
       margin: 0.6rem;
-      transition: 0.5s all ease;
-      overflow: hidden;
-      width: ${({ isActivate }) => (isActivate ? "60rem" : "40%")};
+      max-width: 3.5rem;
+      max-height: 3.5rem;
       img{
-        border-radius: 10rem;
-        width: 70rem;
+        width: 100%;
       }
     }
     .contain-name {
@@ -122,7 +121,7 @@ export const Head = styled.div`
       overflow: hidden;
       font-size: 1.5rem;
       font-weight: 600;
-      text-align: center;
+      flex-wrap: nowrap;
       h3{
         width: 100%;
         text-align: center;
@@ -131,7 +130,7 @@ export const Head = styled.div`
   }
 `;
 
-export const ButtonArrow = styled.div`
+export const ButtonArrow = styled.div<IsActivate>`
     width: 1.85rem;
     height: 1.85rem;
     background-color: var(--bgThridGlass);
@@ -145,7 +144,7 @@ export const ButtonArrow = styled.div`
     font-size: 1.75rem;
     border-radius: 2rem;
     transform: ${({isActivate}) => isActivate ? "rotate(180deg)" : "rotate(0deg)"};
-    transition: 0.2s all ease;
+    transition: 0.3s all ease;
     z-index: 1;
     :hover{
         cursor: pointer;
