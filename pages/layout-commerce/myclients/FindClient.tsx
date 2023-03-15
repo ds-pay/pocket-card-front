@@ -1,21 +1,20 @@
-import React from 'react'
-import FindClient from './FindClient'
+import Table from '../../../components/Table/Table'
 import styled from '@emotion/styled'
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
 `;
 
-const index = () => {
+const FindClient = () => {
   return (
     <Container>
-      <FindClient/>
+      <Table/>
     </Container>
   )
 }
 
-export default index
+export default FindClient
