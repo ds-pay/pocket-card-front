@@ -20,44 +20,41 @@ import { BiFilter } from 'react-icons/bi';
 import { visuallyHidden } from '@mui/utils';
 
 interface Data {
+  id: string, 
   name: string;
   email: string;
-  fat: string;
-  carbs: string;
-  protein: string;
+  state: string;
+  card: string;
+  number: string;
+  cliente: any
 }
 
-function createData(
+interface DataProps {
+  data: Data[],
+  setCurrentId: () => {}
+}
+
+const createData = (
+  id: string,
   name: string,
   email: string,
-  fat: string,
-  carbs: string,
-  protein: string,
-): Data {
+  state: string,
+  card: string,
+  number: string,
+  cliente: any
+): Data => {
   return {
+    id,
     name,
     email,
-    fat,
-    carbs,
-    protein,
+    state,
+    card,
+    number,
+    cliente
   };
 }
 
-const rows = [
-  createData('Anderson Lopez', "Anderson@gmail.com", "Activo", "Gold"," 4.3"),
-  createData('Braiyan Rodriguez', "Braiyan@gmail.com", "Activo", "Blue", "4.9"),
-  createData('Elian Jhon', "Elian@gmail.com", "Activo", "Blue", "6.0"),
-  createData('Eliezer Lopez', "Eliezer@gmail.com", "Activo", "Black", "4.0"),
-  createData('Melmira Mirian', "Melmira@gmail.com", "Activar", "Blue", "3.9"),
-  createData('Nathan Champes', "Nathan@gmail.com", "Activar", "Gold", "6.5"),
-  createData('Maiborys Milñi', "Maiborys@gmail.com", "Activo", "Black", "4.3"),
-  createData('Juan Camilo', "Juan@gmail.com", "Activo", "Gold", "0.0"),
-  createData('KitKat', "KitKat@gmail.com", "Activar", "Black", "7.0"),
-  createData('Jean Carlos', "Jean@gmail.com", "Activo", "Blue", "0.0"),
-  createData('Marol Nean', "Marol@gmail.com", "Activar", "Black", "2.0"),
-  createData('Morgan Nevean', "Morgan@gmail.com", "Activo", "Gold", "37.0"),
-  createData('Humberto Norean', "Humberto@gmail.com", "Activar", "Blue", "4.0"),
-];
+
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -116,22 +113,28 @@ const headCells: readonly HeadCell[] = [
     label: 'Correo',
   },
   {
-    id: 'fat',
+    id: 'state',
     numeric: true,
     disablePadding: false,
     label: 'Estado',
   },
   {
-    id: 'carbs',
+    id: 'card',
     numeric: true,
     disablePadding: false,
     label: 'Tarjeta',
   },
   {
-    id: 'protein',
+    id: 'number',
     numeric: true,
     disablePadding: false,
     label: 'Nº',
+  },
+  {
+    id: 'cliente',
+    numeric: true,
+    disablePadding: false,
+    label: 'Cliente',
   },
 ];
 
@@ -145,6 +148,9 @@ interface EnhancedTableProps {
 }
 
 function EnhancedTableHead(props: EnhancedTableProps) {
+
+
+
   const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
     props;
   const createSortHandler =
@@ -246,12 +252,18 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
   );
 }
 
-export default function EnhancedTable() {
+const TableReusable = ({ data, setCurrentId }: DataProps) => {
   const [order, setOrder] = React.useState<Order>('asc');
   const [orderBy, setOrderBy] = React.useState<keyof Data>('email');
   const [selected, setSelected] = React.useState<readonly string[]>([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+
+  const rows = [
+    data.map((cliente) => (
+      createData(cliente.id, cliente.name, cliente.email, cliente.state, cliente.card, cliente.number, cliente.cliente)
+    ))
+  ];
 
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
@@ -264,7 +276,7 @@ export default function EnhancedTable() {
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.name);
+      const newSelected = data.map((n) => n.name);
       setSelected(newSelected);
       return;
     }
@@ -325,9 +337,10 @@ export default function EnhancedTable() {
               rowCount={rows.length}
             />
             <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
+              {
+              // stableSort(data, getComparator(order, orderBy))
+              //   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                data.map((row, index) => {
                   const isItemSelected = isSelected(row.name);
                   const labelId = `enhanced-table-checkbox-${index}`;
 
@@ -359,9 +372,10 @@ export default function EnhancedTable() {
                         {row.name}
                       </TableCell>
                       <TableCell align="right">{row.email.toLowerCase()}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      <TableCell align="right">{row.protein}</TableCell>
+                      <TableCell align="right">{row.state}</TableCell>
+                      <TableCell align="right">{row.card}</TableCell>
+                      <TableCell align="right">{row.number}</TableCell>
+                      <TableCell onClick={() => setCurrentId(row.id)} align="right">{row.cliente}</TableCell>
                     </TableRow>
                   );
                 })}
@@ -381,3 +395,74 @@ export default function EnhancedTable() {
     </Box>
   );
 }
+
+export default TableReusable
+
+
+
+// import MUIDataTable from "mui-datatables";
+// import { useEffect, useState } from "react";
+
+// interface Data{
+//   id: string,
+//   name: string,
+//   email: string,
+//   state: string,
+//   card: string,
+//   number: string,
+// }
+
+// interface DataProps {
+//   data: Data[]
+// }
+
+
+// const TableReusable = ({ data }: DataProps) => {
+
+//   const columns = [
+//     {
+//       name: "id",
+//       label: "ID"
+//     },
+//     {
+//       name: "name",
+//       label: "Nombre"
+//     },
+//     {
+//       name: "email",
+//       label: "Correo"
+//     },
+//     {
+//       name: "state",
+//       label: "Estado"
+//     },
+//     {
+//       name: "card",
+//       label: "Tarjeta"
+//     },
+//     {
+//       name: "number",
+//       label: "Nº"
+//     },
+//     {
+//       name: "view",
+//       label: "Ver Cliente"
+//     },
+//   ];
+  
+  
+//   const options = {
+//     filterType: 'checkbox',
+//   };
+
+//   return (
+//     <MUIDataTable
+//       title={"Mis Clientes"}
+//       data={data}
+//       columns={columns}
+//       options={options}
+//     />
+//   )
+// }
+
+// export default TableReusable
