@@ -18,6 +18,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { IoMdTrash } from 'react-icons/io';
 import { BiFilter } from 'react-icons/bi';
 import { visuallyHidden } from '@mui/utils';
+import { BsArrowRight } from "react-icons/bs";
 
 interface Data {
   id: string, 
@@ -31,7 +32,7 @@ interface Data {
 
 interface DataProps {
   data: Data[],
-  setCurrentId: () => {}
+  handleSelected:any
 }
 
 const createData = (
@@ -252,7 +253,7 @@ function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
   );
 }
 
-const TableReusable = ({ data, setCurrentId }: DataProps) => {
+const TableReusable = ({ data, handleSelected }: DataProps) => {
   const [order, setOrder] = React.useState<Order>('asc');
   const [orderBy, setOrderBy] = React.useState<keyof Data>('email');
   const [selected, setSelected] = React.useState<readonly string[]>([]);
@@ -375,7 +376,7 @@ const TableReusable = ({ data, setCurrentId }: DataProps) => {
                       <TableCell align="right">{row.state}</TableCell>
                       <TableCell align="right">{row.card}</TableCell>
                       <TableCell align="right">{row.number}</TableCell>
-                      <TableCell onClick={() => setCurrentId(row.id)} align="right">{row.cliente}</TableCell>
+                      <TableCell onClick={() => handleSelected(row.id)} align="right"><BsArrowRight/></TableCell>
                     </TableRow>
                   );
                 })}

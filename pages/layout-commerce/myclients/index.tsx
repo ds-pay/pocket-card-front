@@ -1,6 +1,7 @@
-import React from 'react'
 import FindClient from './FindClient'
 import styled from '@emotion/styled'
+import { useEffect } from 'react';
+import { UserCommerceData } from "./indefaces";
 
 const Container = styled.div`
   display: flex;
@@ -10,12 +11,16 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const index = () => {
+const index = ({ data, terms }: UserCommerceData) => {
+
   return (
     <Container>
-      <FindClient/>
+      <FindClient terms={terms} data={data}/>
     </Container>
   )
 }
+
+
+
 
 export default index

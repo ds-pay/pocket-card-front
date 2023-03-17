@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ButtonIcon from '../../components/Buttons/ButtonIcon/ButtonIcon';
-import { ContainerGeneral, BodyHeader, MediumBody, CardCategory } from './StyleCategory';
+import { ContainerGeneral, BodyHeader, MediumBody, CardCategory, Content } from './StyleCategory';
 import { BiArrowBack } from 'react-icons/bi';
 import { AiFillHeart } from 'react-icons/ai';
+import { BsFacebook, BsWhatsapp, BsTwitter, BsInstagram } from 'react-icons/bs';
 import { useRouter } from 'next/router';
 import CardZoom from '../../components/Cards/CardZoom/CardZoom';
+import ModalReusable from '../../components/Modal/ModalReusable';
 
 const Category = ({ data, clickAction }) => {
   const { category, agreements } = data;
@@ -12,12 +14,50 @@ const Category = ({ data, clickAction }) => {
   const [imageCategory, setImageCategory] = useState(category.icon);
   const [idCategory, setIdCategory] = useState(category.id);
   const [agreementsCategory, serAgreementsCategory] = useState(agreements);
+  const [stateModal, setStateModal] = useState(false);
+  const [currentId, setCurrentId] = useState("");
 
   const router = useRouter()
 
   const handleViewAgreement = (idAgreement) => {
     router.push(`/categories/${idCategory}/${idAgreement}`)
   }
+
+  useEffect(() => {
+    console.log(data)
+  },)
+
+  const arrayRedSocial = [
+    {
+      id: "1323454",
+      icon: <BsFacebook />,
+      label: "FACEBOOK",
+      href: "https://m.facebook.com/sharer/sharer.php?u=www.mypocketvip.com.co",
+    },
+    {
+      id: "25564356",
+      icon: <BsWhatsapp />,
+      label: "WHATSAPP",
+      href: "https://api.whatsapp.com/send?",
+    },
+    {
+      id: "3657657",
+      icon: <BsTwitter />,
+      label: "TWITTER",
+      href: "",
+    },
+    {
+      id: "45465474",
+      icon: <BsInstagram />,
+      label: "INSTAGRAM",
+      href: "",
+    },
+  ];
+
+  const handleShare = (shareId) => {
+    setStateModal(true)
+    setCurrentId(shareId)
+  };
 
   return (
     <ContainerGeneral>
@@ -34,28 +74,32 @@ const Category = ({ data, clickAction }) => {
       </BodyHeader>
 
       <MediumBody>
-        <CardZoom icon={<AiFillHeart/>} data={agreementsCategory}/>
-        {/* {
-          agreementsCategory?.map((sec, index) => (
-            <CardCategory key={index} onClick={() => handleViewAgreement(sec.id)}>
-              <div className='container-icon'>
-                <img src={sec.img} alt={sec.id} />
-              </div>
-              <div className='container-text'>
-                <div className='container-title'>
-                  <h3>{sec.title}</h3>
+        <CardZoom handleShare={handleShare} icon={<AiFillHeart />} data={agreementsCategory} />
+        {agreementsCategory.map((sec, index) => (
+          sec.id === currentId
+            ?
+            <ModalReusable
+              isTitle={true}
+              title={""}
+              stateModal={stateModal}
+              setStateModal={setStateModal}
+            >
+              <Content>
+                <h1>{sec.title}</h1>
+                <p>¿Donde Deseas compartirlo?</p>
+                <div className="container-button">
+                  {arrayRedSocial.map((social, index) => (
+                    <a href={social.href}>
+                      <ButtonIcon key={index} icon={social.icon} text={social.label} func={() => handlecompartir(social.href, sec.title, social.id, social.label)} />
+                    </a>
+                    // handlecompartir(social.label, social.icon, sec.id)
+                  ))}
                 </div>
-                <div className='container-content'>
-                  <div><h3><AiFillHeart /> {sec.hearts}</h3></div>
-                  <div><h3>{sec.percent}</h3></div>
-                </div>
-              </div>
-              <div className='container-button'>
-                <ButtonIcon func={() => handleViewCategory(sec.id)} text={"More"} />
-              </div>
-            </CardCategory>
-          ))
-        } */}
+              </Content>
+            </ModalReusable>
+            :
+            null
+        ))}
       </MediumBody>
     </ContainerGeneral>
   )

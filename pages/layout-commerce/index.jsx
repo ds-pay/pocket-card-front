@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import SideBar from '../../components/Sidebar/Sidebar'
 import { HiUser } from "react-icons/hi";
@@ -26,14 +26,14 @@ const Content = styled.div`
   align-items: center;
 `;
 
-const index = () => {
+const index = ({ userCommerceData, terms }) => {
 
   const [isSelected, setIsSelected] = useState("1243")
 
   const ContentMenu = [
     {
       id: "1243",
-      route: <MyClients />,
+      route: <MyClients terms={terms} data={userCommerceData} />,
       img: <HiUser />,
       label: "Mis Clientes"
     },
@@ -72,6 +72,21 @@ const index = () => {
       )}
     </Container>
   )
-}
+};
 
+export async function getStaticProps() {
+  const urlUserCommerce = `${process.env.API_LOCAL}/api/userCommerceData/`;
+  const urlTerms = `${process.env.API_LOCAL}/api/terms`
+  const resUserCommerce = await fetch(urlUserCommerce)
+  const resTerms = await fetch(urlTerms);
+  const jsonUserCommerce = await resUserCommerce.json();
+  const jsonTerms = await resTerms.json();
+
+  return {
+    props: {
+      userCommerceData: jsonUserCommerce.userCommerceData,
+      terms: jsonTerms.terms
+    }
+  }
+}
 export default index

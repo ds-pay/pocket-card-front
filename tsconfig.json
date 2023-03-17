@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Navbar/Navbar.jsx", "components/Inputs/InputDate/InputDate.js", "components/Inputs/InputDate/InputDate.jsx", "pages/_app.jsx", "components/Inputs/InputTextArea/InputTextArea.jsx", "components/Inputs/InputTextArea/StylesInputTextArea.jsx", "pages/index.jsx", "pages/layout-commerce/index.jsx", "components/Table/TableReusable.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Navbar/Navbar.jsx", "components/Inputs/InputDate/InputDate.js", "components/Inputs/InputDate/InputDate.jsx", "pages/_app.jsx", "components/Inputs/InputTextArea/InputTextArea.jsx", "components/Inputs/InputTextArea/StylesInputTextArea.jsx", "pages/index.jsx", "pages/layout-commerce/index.jsx", "components/Table/TableReusable.jsx", "pages/layout-commerce/myclients/FindClient.tsx", "pages/layout-commerce/myclients/index.tsx"],
   "exclude": ["node_modules"]
 }

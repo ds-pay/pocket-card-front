@@ -177,3 +177,39 @@ export const CardCategory = styled.div`
     }
   }
 `;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .container-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    a{
+      margin: 0.2rem;
+    }
+  }
+
+  h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+    vertical-align: top;
+      border-radius: 3px;
+  }
+`;
