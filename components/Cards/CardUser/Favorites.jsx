@@ -52,7 +52,7 @@ const Favorites = ({ data, currentId }) => {
   ];
 
   const handleClick = (category, categoryId) => {
-    router.push(`http://localhost:3001/categories/${category.toLowerCase()}/${categoryId}`)
+    router.push(`http://localhost:3000/categories/${category.toLowerCase()}/${categoryId}`)
   }
 
   const favorites = (arrayfavorites, category) => {

@@ -27,7 +27,7 @@ interface Data {
   state: string;
   card: string;
   number: string;
-  cliente: any
+  cliente?: any
 }
 
 interface DataProps {
