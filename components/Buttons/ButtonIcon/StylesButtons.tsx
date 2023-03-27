@@ -17,12 +17,12 @@ export const ButtonContainer = styled.div`
   :hover {
     background-color: var(--bgThridGlass);
   }
-  @media(max-width: 1024px){
+  /* @media(max-width: 1024px){
     background-color: var(--backgroundForm);
     :hover {
       background-color: var(--bgInputText);
     }
-  }
+  } */
 `;
 
 export const TextButton = styled.h6`

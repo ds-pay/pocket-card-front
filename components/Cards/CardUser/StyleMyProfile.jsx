@@ -6,10 +6,20 @@ export const ContainerGeneral = styled.div`
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 88%;
+  padding: 0;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  overflow: hidden;
+  overflow-y: scroll;
   position: relative;
+      ::-webkit-scrollbar{
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: #d7d7d7;
+      border-radius: 1rem;
+    }
   .container-header {
     width: 100%;
     margin: 1rem 0;  
@@ -295,7 +305,7 @@ export const ContainerSelection = styled.div`
   justify-content: flex-start;
   background-color: var(--bgCardLogin);
   @media(max-width: 1024px){
-    justify-content: center;
+    overflow-x: scroll;
   }
 `;
 
@@ -396,6 +406,11 @@ export const BackGroundTarjet = styled.div`
         padding: 0 1rem;
       }
     }
+    @media(max-width: 525px){
+      img{
+        width: 100%;
+      }
+    }
   }
 `;
 
@@ -479,7 +494,7 @@ export const HeaderTerms = styled.div`
       justify-content: center;
       align-items: center;
       border-radius: 1rem;
-      transform: ${({ isSelected }) => isSelected ? "rotate(180deg)" : "rotate(0)" };
+      transform: ${({ isSelected }) => isSelected ? "rotate(180deg)" : "rotate(0)"};
       :hover{
         background-color: white;
       }

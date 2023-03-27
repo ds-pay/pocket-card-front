@@ -1,5 +1,6 @@
-import React from 'react'
-import { ButtonContainer, IconButton, TextButton } from './StylesButtons'
+import React from 'react';
+import { ButtonContainer, IconButton, TextButton } from './StylesButtons';
+import { Props } from "./interfaces";
 
 
 const ButtonIcon = ({ text, icon, func, background, height, width, onlyView=false}) => {
